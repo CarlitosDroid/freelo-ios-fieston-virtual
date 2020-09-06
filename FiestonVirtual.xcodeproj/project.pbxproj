@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256CE250546D100B433CC /* AppDelegate.swift */; };
+		2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256D0250546D100B433CC /* SceneDelegate.swift */; };
+		2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256D2250546D100B433CC /* FiestonVirtual.xcdatamodeld */; };
+		2BC256D6250546D100B433CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256D5250546D100B433CC /* ContentView.swift */; };
+		2BC256D8250546D200B433CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC256D7250546D200B433CC /* Assets.xcassets */; };
+		2BC256DB250546D200B433CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC256DA250546D200B433CC /* Preview Assets.xcassets */; };
+		2BC256DE250546D200B433CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC256DC250546D200B433CC /* LaunchScreen.storyboard */; };
+		2BC256E9250546D200B433CC /* FiestonVirtualTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256E8250546D200B433CC /* FiestonVirtualTests.swift */; };
+		2BC256F4250546D200B433CC /* FiestonVirtualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256F3250546D200B433CC /* FiestonVirtualUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BC256E5250546D200B433CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BC256C3250546D100B433CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC256CA250546D100B433CC;
+			remoteInfo = FiestonVirtual;
+		};
+		2BC256F0250546D200B433CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BC256C3250546D100B433CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC256CA250546D100B433CC;
+			remoteInfo = FiestonVirtual;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BC256CB250546D100B433CC /* FiestonVirtual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiestonVirtual.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC256CE250546D100B433CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BC256D0250546D100B433CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2BC256D3250546D100B433CC /* FiestonVirtual.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FiestonVirtual.xcdatamodel; sourceTree = "<group>"; };
+		2BC256D5250546D100B433CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2BC256D7250546D200B433CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BC256DA250546D200B433CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2BC256DD250546D200B433CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BC256DF250546D200B433CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC256E4250546D200B433CC /* FiestonVirtualTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiestonVirtualTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC256E8250546D200B433CC /* FiestonVirtualTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiestonVirtualTests.swift; sourceTree = "<group>"; };
+		2BC256EA250546D200B433CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC256EF250546D200B433CC /* FiestonVirtualUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiestonVirtualUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC256F3250546D200B433CC /* FiestonVirtualUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiestonVirtualUITests.swift; sourceTree = "<group>"; };
+		2BC256F5250546D200B433CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BC256C8250546D100B433CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC256E1250546D200B433CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC256EC250546D200B433CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BC256C2250546D100B433CC = {
+			isa = PBXGroup;
+			children = (
+				2BC256CD250546D100B433CC /* FiestonVirtual */,
+				2BC256E7250546D200B433CC /* FiestonVirtualTests */,
+				2BC256F2250546D200B433CC /* FiestonVirtualUITests */,
+				2BC256CC250546D100B433CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BC256CC250546D100B433CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BC256CB250546D100B433CC /* FiestonVirtual.app */,
+				2BC256E4250546D200B433CC /* FiestonVirtualTests.xctest */,
+				2BC256EF250546D200B433CC /* FiestonVirtualUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BC256CD250546D100B433CC /* FiestonVirtual */ = {
+			isa = PBXGroup;
+			children = (
+				2BC256CE250546D100B433CC /* AppDelegate.swift */,
+				2BC256D0250546D100B433CC /* SceneDelegate.swift */,
+				2BC256D5250546D100B433CC /* ContentView.swift */,
+				2BC256D7250546D200B433CC /* Assets.xcassets */,
+				2BC256DC250546D200B433CC /* LaunchScreen.storyboard */,
+				2BC256DF250546D200B433CC /* Info.plist */,
+				2BC256D2250546D100B433CC /* FiestonVirtual.xcdatamodeld */,
+				2BC256D9250546D200B433CC /* Preview Content */,
+			);
+			path = FiestonVirtual;
+			sourceTree = "<group>";
+		};
+		2BC256D9250546D200B433CC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2BC256DA250546D200B433CC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BC256E7250546D200B433CC /* FiestonVirtualTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BC256E8250546D200B433CC /* FiestonVirtualTests.swift */,
+				2BC256EA250546D200B433CC /* Info.plist */,
+			);
+			path = FiestonVirtualTests;
+			sourceTree = "<group>";
+		};
+		2BC256F2250546D200B433CC /* FiestonVirtualUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BC256F3250546D200B433CC /* FiestonVirtualUITests.swift */,
+				2BC256F5250546D200B433CC /* Info.plist */,
+			);
+			path = FiestonVirtualUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BC256CA250546D100B433CC /* FiestonVirtual */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC256F8250546D200B433CC /* Build configuration list for PBXNativeTarget "FiestonVirtual" */;
+			buildPhases = (
+				2BC256C7250546D100B433CC /* Sources */,
+				2BC256C8250546D100B433CC /* Frameworks */,
+				2BC256C9250546D100B433CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FiestonVirtual;
+			productName = FiestonVirtual;
+			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BC256E3250546D200B433CC /* FiestonVirtualTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC256FB250546D200B433CC /* Build configuration list for PBXNativeTarget "FiestonVirtualTests" */;
+			buildPhases = (
+				2BC256E0250546D200B433CC /* Sources */,
+				2BC256E1250546D200B433CC /* Frameworks */,
+				2BC256E2250546D200B433CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BC256E6250546D200B433CC /* PBXTargetDependency */,
+			);
+			name = FiestonVirtualTests;
+			productName = FiestonVirtualTests;
+			productReference = 2BC256E4250546D200B433CC /* FiestonVirtualTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BC256EE250546D200B433CC /* FiestonVirtualUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC256FE250546D200B433CC /* Build configuration list for PBXNativeTarget "FiestonVirtualUITests" */;
+			buildPhases = (
+				2BC256EB250546D200B433CC /* Sources */,
+				2BC256EC250546D200B433CC /* Frameworks */,
+				2BC256ED250546D200B433CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BC256F1250546D200B433CC /* PBXTargetDependency */,
+			);
+			name = FiestonVirtualUITests;
+			productName = FiestonVirtualUITests;
+			productReference = 2BC256EF250546D200B433CC /* FiestonVirtualUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BC256C3250546D100B433CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = Spydevs;
+				TargetAttributes = {
+					2BC256CA250546D100B433CC = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					2BC256E3250546D200B433CC = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 2BC256CA250546D100B433CC;
+					};
+					2BC256EE250546D200B433CC = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 2BC256CA250546D100B433CC;
+					};
+				};
+			};
+			buildConfigurationList = 2BC256C6250546D100B433CC /* Build configuration list for PBXProject "FiestonVirtual" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BC256C2250546D100B433CC;
+			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BC256CA250546D100B433CC /* FiestonVirtual */,
+				2BC256E3250546D200B433CC /* FiestonVirtualTests */,
+				2BC256EE250546D200B433CC /* FiestonVirtualUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BC256C9250546D100B433CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC256DE250546D200B433CC /* LaunchScreen.storyboard in Resources */,
+				2BC256DB250546D200B433CC /* Preview Assets.xcassets in Resources */,
+				2BC256D8250546D200B433CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC256E2250546D200B433CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC256ED250546D200B433CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BC256C7250546D100B433CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */,
+				2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */,
+				2BC256D6250546D100B433CC /* ContentView.swift in Sources */,
+				2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC256E0250546D200B433CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC256E9250546D200B433CC /* FiestonVirtualTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC256EB250546D200B433CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC256F4250546D200B433CC /* FiestonVirtualUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BC256E6250546D200B433CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC256CA250546D100B433CC /* FiestonVirtual */;
+			targetProxy = 2BC256E5250546D200B433CC /* PBXContainerItemProxy */;
+		};
+		2BC256F1250546D200B433CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC256CA250546D100B433CC /* FiestonVirtual */;
+			targetProxy = 2BC256F0250546D200B433CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BC256DC250546D200B433CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BC256DD250546D200B433CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BC256F6250546D200B433CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BC256F7250546D200B433CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BC256F9250546D200B433CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FiestonVirtual/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spydevs.FiestonVirtual;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BC256FA250546D200B433CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FiestonVirtual/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spydevs.FiestonVirtual;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2BC256FC250546D200B433CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FiestonVirtualTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spydevs.FiestonVirtualTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FiestonVirtual.app/FiestonVirtual";
+			};
+			name = Debug;
+		};
+		2BC256FD250546D200B433CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FiestonVirtualTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spydevs.FiestonVirtualTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FiestonVirtual.app/FiestonVirtual";
+			};
+			name = Release;
+		};
+		2BC256FF250546D200B433CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FiestonVirtualUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spydevs.FiestonVirtualUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FiestonVirtual;
+			};
+			name = Debug;
+		};
+		2BC25700250546D200B433CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FiestonVirtualUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.spydevs.FiestonVirtualUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FiestonVirtual;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BC256C6250546D100B433CC /* Build configuration list for PBXProject "FiestonVirtual" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC256F6250546D200B433CC /* Debug */,
+				2BC256F7250546D200B433CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC256F8250546D200B433CC /* Build configuration list for PBXNativeTarget "FiestonVirtual" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC256F9250546D200B433CC /* Debug */,
+				2BC256FA250546D200B433CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC256FB250546D200B433CC /* Build configuration list for PBXNativeTarget "FiestonVirtualTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC256FC250546D200B433CC /* Debug */,
+				2BC256FD250546D200B433CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC256FE250546D200B433CC /* Build configuration list for PBXNativeTarget "FiestonVirtualUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC256FF250546D200B433CC /* Debug */,
+				2BC25700250546D200B433CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2BC256D2250546D100B433CC /* FiestonVirtual.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2BC256D3250546D100B433CC /* FiestonVirtual.xcdatamodel */,
+			);
+			currentVersion = 2BC256D3250546D100B433CC /* FiestonVirtual.xcdatamodel */;
+			path = FiestonVirtual.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2BC256C3250546D100B433CC /* Project object */;
+}
