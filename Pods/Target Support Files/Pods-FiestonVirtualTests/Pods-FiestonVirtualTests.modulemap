@@ -1,0 +1,6 @@
+framework module Pods_FiestonVirtualTests {
+  umbrella header "Pods-FiestonVirtualTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

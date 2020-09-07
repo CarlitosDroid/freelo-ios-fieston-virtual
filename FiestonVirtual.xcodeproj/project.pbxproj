@@ -16,6 +16,27 @@
 		2BC256DE250546D200B433CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC256DC250546D200B433CC /* LaunchScreen.storyboard */; };
 		2BC256E9250546D200B433CC /* FiestonVirtualTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256E8250546D200B433CC /* FiestonVirtualTests.swift */; };
 		2BC256F4250546D200B433CC /* FiestonVirtualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256F3250546D200B433CC /* FiestonVirtualUITests.swift */; };
+		2BC2570A25055A3900B433CC /* CodeVerificationResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2570925055A3900B433CC /* CodeVerificationResponseEntity.swift */; };
+		2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2570D25055CAB00B433CC /* EventCodeApi.swift */; };
+		2BC2571125055D0500B433CC /* ExternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2571025055D0500B433CC /* ExternalError.swift */; };
+		2BC2571325055D8C00B433CC /* EventCodeApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2571225055D8C00B433CC /* EventCodeApiImpl.swift */; };
+		2BC2571625055F7A00B433CC /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2571525055F7A00B433CC /* Parsing.swift */; };
+		2BC25719250561B700B433CC /* CodeRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC25718250561B700B433CC /* CodeRemoteDataSourceImpl.swift */; };
+		2BC2571C250561D800B433CC /* EventCodeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2571B250561D800B433CC /* EventCodeRemoteDataSource.swift */; };
+		2BC257202505623000B433CC /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2571F2505623000B433CC /* ErrorResponse.swift */; };
+		2BC257232505627200B433CC /* EventCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC257222505627100B433CC /* EventCode.swift */; };
+		2BC25726250563FB00B433CC /* EventCodeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC25725250563FB00B433CC /* EventCodeMapper.swift */; };
+		2BC25729250564A100B433CC /* EventCodeRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC25728250564A100B433CC /* EventCodeRepositoryImpl.swift */; };
+		2BC2572E250564FB00B433CC /* EventCodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2572D250564FB00B433CC /* EventCodeRepository.swift */; };
+		2BC257312505A38C00B433CC /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC257302505A38C00B433CC /* LoginUseCase.swift */; };
+		2BC257342505A3B500B433CC /* LoginUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC257332505A3B500B433CC /* LoginUseCaseImpl.swift */; };
+		2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC257352505A91B00B433CC /* UsersRepository.swift */; };
+		2BC2573A2505AAD200B433CC /* CodeVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC257392505AAD200B433CC /* CodeVerificationView.swift */; };
+		2BC2573C2505AAE000B433CC /* CodeVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2573B2505AAE000B433CC /* CodeVerificationViewModel.swift */; };
+		2BC2573E2505AEF100B433CC /* UsersRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2573D2505AEF100B433CC /* UsersRepositoryImpl.swift */; };
+		54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */; };
+		8C82C592C931C185D0216CC5 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
+		E25AF77D539E83B4A5422C67 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BF84B5663CE195EAC8CBC96 /* Pods-FiestonVirtualTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.release.xcconfig"; sourceTree = "<group>"; };
+		129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtualTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC256CB250546D100B433CC /* FiestonVirtual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiestonVirtual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC256CE250546D100B433CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC256D0250546D100B433CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +75,30 @@
 		2BC256EF250546D200B433CC /* FiestonVirtualUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiestonVirtualUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC256F3250546D200B433CC /* FiestonVirtualUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiestonVirtualUITests.swift; sourceTree = "<group>"; };
 		2BC256F5250546D200B433CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC2570925055A3900B433CC /* CodeVerificationResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationResponseEntity.swift; sourceTree = "<group>"; };
+		2BC2570D25055CAB00B433CC /* EventCodeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCodeApi.swift; sourceTree = "<group>"; };
+		2BC2571025055D0500B433CC /* ExternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalError.swift; sourceTree = "<group>"; };
+		2BC2571225055D8C00B433CC /* EventCodeApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCodeApiImpl.swift; sourceTree = "<group>"; };
+		2BC2571525055F7A00B433CC /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
+		2BC25718250561B700B433CC /* CodeRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
+		2BC2571B250561D800B433CC /* EventCodeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCodeRemoteDataSource.swift; sourceTree = "<group>"; };
+		2BC2571F2505623000B433CC /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		2BC257222505627100B433CC /* EventCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCode.swift; sourceTree = "<group>"; };
+		2BC25725250563FB00B433CC /* EventCodeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCodeMapper.swift; sourceTree = "<group>"; };
+		2BC25728250564A100B433CC /* EventCodeRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCodeRepositoryImpl.swift; sourceTree = "<group>"; };
+		2BC2572D250564FB00B433CC /* EventCodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCodeRepository.swift; sourceTree = "<group>"; };
+		2BC257302505A38C00B433CC /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		2BC257332505A3B500B433CC /* LoginUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseImpl.swift; sourceTree = "<group>"; };
+		2BC257352505A91B00B433CC /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
+		2BC257392505AAD200B433CC /* CodeVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationView.swift; sourceTree = "<group>"; };
+		2BC2573B2505AAE000B433CC /* CodeVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationViewModel.swift; sourceTree = "<group>"; };
+		2BC2573D2505AEF100B433CC /* UsersRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepositoryImpl.swift; sourceTree = "<group>"; };
+		717F0F31C57CD52FE931E080 /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig"; sourceTree = "<group>"; };
+		71F1E84C6AEBAAFFCDDDBC36 /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual_FiestonVirtualUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13A0579CBC4D34FA84373F9 /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4E7F3136016DAA75F1C68C8 /* Pods-FiestonVirtual.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.debug.xcconfig"; sourceTree = "<group>"; };
+		C8723C841DAAB5A94BCE0483 /* Pods-FiestonVirtual.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25AF77D539E83B4A5422C67 /* Pods_FiestonVirtualTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C82C592C931C185D0216CC5 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +136,8 @@
 				2BC256E7250546D200B433CC /* FiestonVirtualTests */,
 				2BC256F2250546D200B433CC /* FiestonVirtualUITests */,
 				2BC256CC250546D100B433CC /* Products */,
+				4E0D32F2F7FE4263E57A0C6B /* Pods */,
+				2C3F4AB21EC84553E27A9277 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,13 +154,12 @@
 		2BC256CD250546D100B433CC /* FiestonVirtual */ = {
 			isa = PBXGroup;
 			children = (
-				2BC256CE250546D100B433CC /* AppDelegate.swift */,
-				2BC256D0250546D100B433CC /* SceneDelegate.swift */,
-				2BC256D5250546D100B433CC /* ContentView.swift */,
-				2BC256D7250546D200B433CC /* Assets.xcassets */,
-				2BC256DC250546D200B433CC /* LaunchScreen.storyboard */,
-				2BC256DF250546D200B433CC /* Info.plist */,
-				2BC256D2250546D100B433CC /* FiestonVirtual.xcdatamodeld */,
+				2BC257062505489400B433CC /* DataBase */,
+				2BC257052505487500B433CC /* Resources */,
+				2BC257012505473300B433CC /* Data */,
+				2BC257022505473900B433CC /* Domain */,
+				2BC257042505484A00B433CC /* Presentation */,
+				2BC257032505478200B433CC /* SupportingFiles */,
 				2BC256D9250546D200B433CC /* Preview Content */,
 			);
 			path = FiestonVirtual;
@@ -139,6 +191,240 @@
 			path = FiestonVirtualUITests;
 			sourceTree = "<group>";
 		};
+		2BC257012505473300B433CC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2BC257272505648500B433CC /* Repository */,
+				2BC2571A250561C600B433CC /* DataSource */,
+				2BC2570F25055CF800B433CC /* Models */,
+				2BC2570725055A0A00B433CC /* Entities */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2BC257022505473900B433CC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2BC2572F2505A37400B433CC /* UseCases */,
+				2BC2572C250564EB00B433CC /* Repository */,
+				2BC2571D2505621700B433CC /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2BC257032505478200B433CC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2BC256DC250546D200B433CC /* LaunchScreen.storyboard */,
+				2BC256DF250546D200B433CC /* Info.plist */,
+				2BC256D0250546D100B433CC /* SceneDelegate.swift */,
+				2BC256CE250546D100B433CC /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2BC257042505484A00B433CC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2BC257372505AA7700B433CC /* UI */,
+				2BC2571425055F6800B433CC /* Utilities */,
+				2BC2570B25055C3700B433CC /* Framework */,
+				2BC256D5250546D100B433CC /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2BC257052505487500B433CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BC256D7250546D200B433CC /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2BC257062505489400B433CC /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				2BC256D2250546D100B433CC /* FiestonVirtual.xcdatamodeld */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		2BC2570725055A0A00B433CC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2BC2570825055A0F00B433CC /* Response */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2BC2570825055A0F00B433CC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2BC2570925055A3900B433CC /* CodeVerificationResponseEntity.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		2BC2570B25055C3700B433CC /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				2BC25724250563DE00B433CC /* Mapper */,
+				2BC257172505617E00B433CC /* DataSource */,
+				2BC2570C25055C6E00B433CC /* Api */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		2BC2570C25055C6E00B433CC /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				2BC2570D25055CAB00B433CC /* EventCodeApi.swift */,
+				2BC2571225055D8C00B433CC /* EventCodeApiImpl.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		2BC2570F25055CF800B433CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BC2571025055D0500B433CC /* ExternalError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2BC2571425055F6800B433CC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2BC2571525055F7A00B433CC /* Parsing.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2BC257172505617E00B433CC /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2BC25718250561B700B433CC /* CodeRemoteDataSourceImpl.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		2BC2571A250561C600B433CC /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				2BC2571B250561D800B433CC /* EventCodeRemoteDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		2BC2571D2505621700B433CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BC257212505624300B433CC /* Code */,
+				2BC2571E2505622000B433CC /* Error */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2BC2571E2505622000B433CC /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				2BC2571F2505623000B433CC /* ErrorResponse.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		2BC257212505624300B433CC /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				2BC257222505627100B433CC /* EventCode.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		2BC25724250563DE00B433CC /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				2BC25725250563FB00B433CC /* EventCodeMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		2BC257272505648500B433CC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2BC25728250564A100B433CC /* EventCodeRepositoryImpl.swift */,
+				2BC2573D2505AEF100B433CC /* UsersRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2BC2572C250564EB00B433CC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2BC2572D250564FB00B433CC /* EventCodeRepository.swift */,
+				2BC257352505A91B00B433CC /* UsersRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2BC2572F2505A37400B433CC /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				2BC257322505A3A400B433CC /* Login */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		2BC257322505A3A400B433CC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2BC257302505A38C00B433CC /* LoginUseCase.swift */,
+				2BC257332505A3B500B433CC /* LoginUseCaseImpl.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2BC257372505AA7700B433CC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2BC257382505AA8500B433CC /* EventCode */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2BC257382505AA8500B433CC /* EventCode */ = {
+			isa = PBXGroup;
+			children = (
+				2BC257392505AAD200B433CC /* CodeVerificationView.swift */,
+				2BC2573B2505AAE000B433CC /* CodeVerificationViewModel.swift */,
+			);
+			path = EventCode;
+			sourceTree = "<group>";
+		};
+		2C3F4AB21EC84553E27A9277 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */,
+				9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */,
+				29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E0D32F2F7FE4263E57A0C6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4E7F3136016DAA75F1C68C8 /* Pods-FiestonVirtual.debug.xcconfig */,
+				C8723C841DAAB5A94BCE0483 /* Pods-FiestonVirtual.release.xcconfig */,
+				A13A0579CBC4D34FA84373F9 /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */,
+				717F0F31C57CD52FE931E080 /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */,
+				71F1E84C6AEBAAFFCDDDBC36 /* Pods-FiestonVirtualTests.debug.xcconfig */,
+				0BF84B5663CE195EAC8CBC96 /* Pods-FiestonVirtualTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +432,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BC256F8250546D200B433CC /* Build configuration list for PBXNativeTarget "FiestonVirtual" */;
 			buildPhases = (
+				C4B2E0E6419B3C01D4A1B210 /* [CP] Check Pods Manifest.lock */,
 				2BC256C7250546D100B433CC /* Sources */,
 				2BC256C8250546D100B433CC /* Frameworks */,
 				2BC256C9250546D100B433CC /* Resources */,
@@ -163,6 +450,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BC256FB250546D200B433CC /* Build configuration list for PBXNativeTarget "FiestonVirtualTests" */;
 			buildPhases = (
+				B49F20F03AA423245BC1D4AD /* [CP] Check Pods Manifest.lock */,
 				2BC256E0250546D200B433CC /* Sources */,
 				2BC256E1250546D200B433CC /* Frameworks */,
 				2BC256E2250546D200B433CC /* Resources */,
@@ -181,6 +469,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BC256FE250546D200B433CC /* Build configuration list for PBXNativeTarget "FiestonVirtualUITests" */;
 			buildPhases = (
+				CB7C1C2542BB06CBB866CB1A /* [CP] Check Pods Manifest.lock */,
 				2BC256EB250546D200B433CC /* Sources */,
 				2BC256EC250546D200B433CC /* Frameworks */,
 				2BC256ED250546D200B433CC /* Resources */,
@@ -265,14 +554,101 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B49F20F03AA423245BC1D4AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FiestonVirtualTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4B2E0E6419B3C01D4A1B210 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FiestonVirtual-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB7C1C2542BB06CBB866CB1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FiestonVirtual-FiestonVirtualUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2BC256C7250546D100B433CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */,
+				2BC2571C250561D800B433CC /* EventCodeRemoteDataSource.swift in Sources */,
+				2BC257312505A38C00B433CC /* LoginUseCase.swift in Sources */,
+				2BC257342505A3B500B433CC /* LoginUseCaseImpl.swift in Sources */,
+				2BC2573C2505AAE000B433CC /* CodeVerificationViewModel.swift in Sources */,
+				2BC2572E250564FB00B433CC /* EventCodeRepository.swift in Sources */,
+				2BC2571625055F7A00B433CC /* Parsing.swift in Sources */,
+				2BC257202505623000B433CC /* ErrorResponse.swift in Sources */,
+				2BC257232505627200B433CC /* EventCode.swift in Sources */,
+				2BC2571125055D0500B433CC /* ExternalError.swift in Sources */,
+				2BC25726250563FB00B433CC /* EventCodeMapper.swift in Sources */,
+				2BC25729250564A100B433CC /* EventCodeRepositoryImpl.swift in Sources */,
+				2BC25719250561B700B433CC /* CodeRemoteDataSourceImpl.swift in Sources */,
+				2BC2571325055D8C00B433CC /* EventCodeApiImpl.swift in Sources */,
 				2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */,
+				2BC2573E2505AEF100B433CC /* UsersRepositoryImpl.swift in Sources */,
+				2BC2573A2505AAD200B433CC /* CodeVerificationView.swift in Sources */,
+				2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */,
+				2BC2570A25055A3900B433CC /* CodeVerificationResponseEntity.swift in Sources */,
 				2BC256D6250546D100B433CC /* ContentView.swift in Sources */,
+				2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */,
 				2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,12 +812,13 @@
 		};
 		2BC256F9250546D200B433CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4E7F3136016DAA75F1C68C8 /* Pods-FiestonVirtual.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = FiestonVirtual/Info.plist;
+				INFOPLIST_FILE = FiestonVirtual/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,12 +832,13 @@
 		};
 		2BC256FA250546D200B433CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8723C841DAAB5A94BCE0483 /* Pods-FiestonVirtual.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = FiestonVirtual/Info.plist;
+				INFOPLIST_FILE = FiestonVirtual/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,6 +852,7 @@
 		};
 		2BC256FC250546D200B433CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71F1E84C6AEBAAFFCDDDBC36 /* Pods-FiestonVirtualTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -495,6 +874,7 @@
 		};
 		2BC256FD250546D200B433CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BF84B5663CE195EAC8CBC96 /* Pods-FiestonVirtualTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +896,7 @@
 		};
 		2BC256FF250546D200B433CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A13A0579CBC4D34FA84373F9 /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +916,7 @@
 		};
 		2BC25700250546D200B433CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 717F0F31C57CD52FE931E080 /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A9B164A112ADDD6D6D9CA41496ECDE6 /* Pods-FiestonVirtualTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F12B10315F33B131734668C5762FCA /* Pods-FiestonVirtualTests-dummy.m */; };
+		1BDD9E497076987108CD2A69B103F1CC /* Pods-FiestonVirtual-FiestonVirtualUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC1E06D55F391F454848B242583F6DA6 /* Pods-FiestonVirtual-FiestonVirtualUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E7E31F3DE3470680EA509AFAF5F54B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		1F6364772455DF5166BF1827ADD1D2CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		28775219053CEAD4EC21DAA82B0B1502 /* Pods-FiestonVirtual-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64505C851D90B0D3C66BFBB279D62E02 /* Pods-FiestonVirtual-dummy.m */; };
+		504A399E06A09A149C3571FDF221164A /* Pods-FiestonVirtualTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F1B54B2C13094EF7A7A4DD19AACEDE8 /* Pods-FiestonVirtualTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78F87F14943D2D0A22848BB168ED6875 /* Pods-FiestonVirtual-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AFEE90AEB13B5FA6C92AA47D99C90F6A /* Pods-FiestonVirtual-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FA95C1973278D54ED266DA1F125C085 /* Pods-FiestonVirtual-FiestonVirtualUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5804BAF2A639C46E9CBFF1A03E2AC3B3 /* Pods-FiestonVirtual-FiestonVirtualUITests-dummy.m */; };
+		F0512E16B86CBFE6357D50C89B106D47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52E46AC32722C8834132EFBDAB22C4C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B00559CA5EADE7E5608160EB5E6EDE19;
+			remoteInfo = "Pods-FiestonVirtual";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01B1728167789455AF7F66FBEE1BF938 /* Pods-FiestonVirtual-FiestonVirtualUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FiestonVirtual-FiestonVirtualUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		03156DF82837914FCFC94D466E9B262D /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F1B54B2C13094EF7A7A4DD19AACEDE8 /* Pods-FiestonVirtualTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FiestonVirtualTests-umbrella.h"; sourceTree = "<group>"; };
+		0F9B5789756FA1F99E3126362AB72E5A /* Pods-FiestonVirtual.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FiestonVirtual.modulemap"; sourceTree = "<group>"; };
+		102BAFC57DD1A238BF3747833145BAAF /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		303F8739B5F877CB170BDA5781007AFB /* Pods-FiestonVirtual-FiestonVirtualUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FiestonVirtual-FiestonVirtualUITests.modulemap"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4722B2AEE84611829E98FF6173AB6C3A /* Pods-FiestonVirtual-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FiestonVirtual-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4828A38F42F0FD982CD9140DF78FC415 /* Pods-FiestonVirtual-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FiestonVirtual-acknowledgements.plist"; sourceTree = "<group>"; };
+		5804BAF2A639C46E9CBFF1A03E2AC3B3 /* Pods-FiestonVirtual-FiestonVirtualUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FiestonVirtual-FiestonVirtualUITests-dummy.m"; sourceTree = "<group>"; };
+		5D5959C3269B9EFCFDCCE51354E040B7 /* Pods-FiestonVirtual-FiestonVirtualUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FiestonVirtual-FiestonVirtualUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		64505C851D90B0D3C66BFBB279D62E02 /* Pods-FiestonVirtual-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FiestonVirtual-dummy.m"; sourceTree = "<group>"; };
+		7EF12A9DE9EDED9E2C084806F2F72BB5 /* Pods_FiestonVirtual.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FiestonVirtual.framework; path = "Pods-FiestonVirtual.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82E4AD0E6A8AC003DE130073E1F47E96 /* Pods-FiestonVirtualTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FiestonVirtualTests.release.xcconfig"; sourceTree = "<group>"; };
+		831B346AC3871CE6200313F89649B31A /* Pods-FiestonVirtual-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FiestonVirtual-Info.plist"; sourceTree = "<group>"; };
+		8B8BBF03E4A35F858B81E4888669C31E /* Pods-FiestonVirtual.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FiestonVirtual.release.xcconfig"; sourceTree = "<group>"; };
+		8F693B21A41ADA4806B40B1ED1FE3032 /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig"; sourceTree = "<group>"; };
+		93DAB51EB075C4994C32E1DB1833355E /* Pods-FiestonVirtualTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FiestonVirtualTests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AFEE90AEB13B5FA6C92AA47D99C90F6A /* Pods-FiestonVirtual-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FiestonVirtual-umbrella.h"; sourceTree = "<group>"; };
+		BAF888E7458187691428984C686A6061 /* Pods_FiestonVirtualTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FiestonVirtualTests.framework; path = "Pods-FiestonVirtualTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1E06D55F391F454848B242583F6DA6 /* Pods-FiestonVirtual-FiestonVirtualUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FiestonVirtual-FiestonVirtualUITests-umbrella.h"; sourceTree = "<group>"; };
+		BD53BB364C34D8CDC91648AF955201C0 /* Pods-FiestonVirtual-FiestonVirtualUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FiestonVirtual-FiestonVirtualUITests-Info.plist"; sourceTree = "<group>"; };
+		C2F12B10315F33B131734668C5762FCA /* Pods-FiestonVirtualTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FiestonVirtualTests-dummy.m"; sourceTree = "<group>"; };
+		C3581A9FD257891912756E6D8C040510 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FiestonVirtual_FiestonVirtualUITests.framework; path = "Pods-FiestonVirtual-FiestonVirtualUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD4182192E9FA028D17A124E8773C8B /* Pods-FiestonVirtualTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FiestonVirtualTests.modulemap"; sourceTree = "<group>"; };
+		D4683592A40F3FE0225CE7F1673AE9A0 /* Pods-FiestonVirtual.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FiestonVirtual.debug.xcconfig"; sourceTree = "<group>"; };
+		E3664AF616AC00592485CF798A86434D /* Pods-FiestonVirtualTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FiestonVirtualTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E93EDC1927F51B36AB92ED3398B32922 /* Pods-FiestonVirtualTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FiestonVirtualTests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09087D61CF280525DE377FDFF36B4C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F6364772455DF5166BF1827ADD1D2CA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD637EB2C51FAB1B2D4DEDE6660E536E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7E31F3DE3470680EA509AFAF5F54B6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D01C0B4788044509FA0C2D0839A2DAFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0512E16B86CBFE6357D50C89B106D47 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		129A193DBB8191012C1B5A5C4C582BBD /* Pods-FiestonVirtual-FiestonVirtualUITests */ = {
+			isa = PBXGroup;
+			children = (
+				303F8739B5F877CB170BDA5781007AFB /* Pods-FiestonVirtual-FiestonVirtualUITests.modulemap */,
+				5D5959C3269B9EFCFDCCE51354E040B7 /* Pods-FiestonVirtual-FiestonVirtualUITests-acknowledgements.markdown */,
+				01B1728167789455AF7F66FBEE1BF938 /* Pods-FiestonVirtual-FiestonVirtualUITests-acknowledgements.plist */,
+				5804BAF2A639C46E9CBFF1A03E2AC3B3 /* Pods-FiestonVirtual-FiestonVirtualUITests-dummy.m */,
+				BD53BB364C34D8CDC91648AF955201C0 /* Pods-FiestonVirtual-FiestonVirtualUITests-Info.plist */,
+				BC1E06D55F391F454848B242583F6DA6 /* Pods-FiestonVirtual-FiestonVirtualUITests-umbrella.h */,
+				102BAFC57DD1A238BF3747833145BAAF /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */,
+				8F693B21A41ADA4806B40B1ED1FE3032 /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */,
+			);
+			name = "Pods-FiestonVirtual-FiestonVirtualUITests";
+			path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests";
+			sourceTree = "<group>";
+		};
+		4EA4CF087BCE3679EB2869A6756A3A34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EF12A9DE9EDED9E2C084806F2F72BB5 /* Pods_FiestonVirtual.framework */,
+				C3581A9FD257891912756E6D8C040510 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */,
+				BAF888E7458187691428984C686A6061 /* Pods_FiestonVirtualTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BE4A646059FAABDE9ADD8AC8E0B6F1F /* Pods-FiestonVirtual */ = {
+			isa = PBXGroup;
+			children = (
+				0F9B5789756FA1F99E3126362AB72E5A /* Pods-FiestonVirtual.modulemap */,
+				4722B2AEE84611829E98FF6173AB6C3A /* Pods-FiestonVirtual-acknowledgements.markdown */,
+				4828A38F42F0FD982CD9140DF78FC415 /* Pods-FiestonVirtual-acknowledgements.plist */,
+				64505C851D90B0D3C66BFBB279D62E02 /* Pods-FiestonVirtual-dummy.m */,
+				831B346AC3871CE6200313F89649B31A /* Pods-FiestonVirtual-Info.plist */,
+				AFEE90AEB13B5FA6C92AA47D99C90F6A /* Pods-FiestonVirtual-umbrella.h */,
+				D4683592A40F3FE0225CE7F1673AE9A0 /* Pods-FiestonVirtual.debug.xcconfig */,
+				8B8BBF03E4A35F858B81E4888669C31E /* Pods-FiestonVirtual.release.xcconfig */,
+			);
+			name = "Pods-FiestonVirtual";
+			path = "Target Support Files/Pods-FiestonVirtual";
+			sourceTree = "<group>";
+		};
+		7D7E0E92DCE250120C5F0F72F630A094 /* Pods-FiestonVirtualTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFD4182192E9FA028D17A124E8773C8B /* Pods-FiestonVirtualTests.modulemap */,
+				E3664AF616AC00592485CF798A86434D /* Pods-FiestonVirtualTests-acknowledgements.markdown */,
+				E93EDC1927F51B36AB92ED3398B32922 /* Pods-FiestonVirtualTests-acknowledgements.plist */,
+				C2F12B10315F33B131734668C5762FCA /* Pods-FiestonVirtualTests-dummy.m */,
+				93DAB51EB075C4994C32E1DB1833355E /* Pods-FiestonVirtualTests-Info.plist */,
+				0F1B54B2C13094EF7A7A4DD19AACEDE8 /* Pods-FiestonVirtualTests-umbrella.h */,
+				03156DF82837914FCFC94D466E9B262D /* Pods-FiestonVirtualTests.debug.xcconfig */,
+				82E4AD0E6A8AC003DE130073E1F47E96 /* Pods-FiestonVirtualTests.release.xcconfig */,
+			);
+			name = "Pods-FiestonVirtualTests";
+			path = "Target Support Files/Pods-FiestonVirtualTests";
+			sourceTree = "<group>";
+		};
+		8756CB4ECDFCDB727EEB26D3E54D0217 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BE4A646059FAABDE9ADD8AC8E0B6F1F /* Pods-FiestonVirtual */,
+				129A193DBB8191012C1B5A5C4C582BBD /* Pods-FiestonVirtual-FiestonVirtualUITests */,
+				7D7E0E92DCE250120C5F0F72F630A094 /* Pods-FiestonVirtualTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				4EA4CF087BCE3679EB2869A6756A3A34 /* Products */,
+				8756CB4ECDFCDB727EEB26D3E54D0217 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		840577300C362DD4E403E8DD54915E7D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78F87F14943D2D0A22848BB168ED6875 /* Pods-FiestonVirtual-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92458D44A80BC55F72CF11EC131DAA3F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				504A399E06A09A149C3571FDF221164A /* Pods-FiestonVirtualTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB4CE1EFF3B590448230535B40976199 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BDD9E497076987108CD2A69B103F1CC /* Pods-FiestonVirtual-FiestonVirtualUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8B04F29C2CD4637FDC596FC9926F5B43 /* Pods-FiestonVirtual-FiestonVirtualUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78F9FA2066E46452928363155D7722E5 /* Build configuration list for PBXNativeTarget "Pods-FiestonVirtual-FiestonVirtualUITests" */;
+			buildPhases = (
+				FB4CE1EFF3B590448230535B40976199 /* Headers */,
+				D7B2F2BB7888D8AEADA99D4CEDEE4C74 /* Sources */,
+				D01C0B4788044509FA0C2D0839A2DAFD /* Frameworks */,
+				6E34D4733A2D4D2B3DA4E71C604A19B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FiestonVirtual-FiestonVirtualUITests";
+			productName = "Pods-FiestonVirtual-FiestonVirtualUITests";
+			productReference = C3581A9FD257891912756E6D8C040510 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B00559CA5EADE7E5608160EB5E6EDE19 /* Pods-FiestonVirtual */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB44224ECF711EFD7B0CA3573FD5936A /* Build configuration list for PBXNativeTarget "Pods-FiestonVirtual" */;
+			buildPhases = (
+				840577300C362DD4E403E8DD54915E7D /* Headers */,
+				5655A8008C1D07E37B95EF1533AC8B38 /* Sources */,
+				BD637EB2C51FAB1B2D4DEDE6660E536E /* Frameworks */,
+				77C415774CCC344E7F95F5AABED7AA1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FiestonVirtual";
+			productName = "Pods-FiestonVirtual";
+			productReference = 7EF12A9DE9EDED9E2C084806F2F72BB5 /* Pods_FiestonVirtual.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CD60E0CF4E14F21AFA882884FE90452F /* Pods-FiestonVirtualTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8383ACCD63F69201F0FC8A9892700C7A /* Build configuration list for PBXNativeTarget "Pods-FiestonVirtualTests" */;
+			buildPhases = (
+				92458D44A80BC55F72CF11EC131DAA3F /* Headers */,
+				428DC739982DB5F53845A37C0D721A5B /* Sources */,
+				09087D61CF280525DE377FDFF36B4C1B /* Frameworks */,
+				B48FC4FEC4B6611A0D42CF316B83C511 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				476C08AD17C79F705768CF9B4F80B7FB /* PBXTargetDependency */,
+			);
+			name = "Pods-FiestonVirtualTests";
+			productName = "Pods-FiestonVirtualTests";
+			productReference = BAF888E7458187691428984C686A6061 /* Pods_FiestonVirtualTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 4EA4CF087BCE3679EB2869A6756A3A34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B00559CA5EADE7E5608160EB5E6EDE19 /* Pods-FiestonVirtual */,
+				8B04F29C2CD4637FDC596FC9926F5B43 /* Pods-FiestonVirtual-FiestonVirtualUITests */,
+				CD60E0CF4E14F21AFA882884FE90452F /* Pods-FiestonVirtualTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E34D4733A2D4D2B3DA4E71C604A19B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77C415774CCC344E7F95F5AABED7AA1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B48FC4FEC4B6611A0D42CF316B83C511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		428DC739982DB5F53845A37C0D721A5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9B164A112ADDD6D6D9CA41496ECDE6 /* Pods-FiestonVirtualTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5655A8008C1D07E37B95EF1533AC8B38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28775219053CEAD4EC21DAA82B0B1502 /* Pods-FiestonVirtual-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B2F2BB7888D8AEADA99D4CEDEE4C74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA95C1973278D54ED266DA1F125C085 /* Pods-FiestonVirtual-FiestonVirtualUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		476C08AD17C79F705768CF9B4F80B7FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-FiestonVirtual";
+			target = B00559CA5EADE7E5608160EB5E6EDE19 /* Pods-FiestonVirtual */;
+			targetProxy = 52E46AC32722C8834132EFBDAB22C4C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12DB07D72EEC795A61D5427309469C94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4683592A40F3FE0225CE7F1673AE9A0 /* Pods-FiestonVirtual.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		553C1961A9469C5DA35B849104D1607C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82E4AD0E6A8AC003DE130073E1F47E96 /* Pods-FiestonVirtualTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		61FC5749665EDDB2D90E737333B3BA8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		662013F3AFC82B2AF55C02ADB0B0781A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B8BBF03E4A35F858B81E4888669C31E /* Pods-FiestonVirtual.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7BB96AE8F78F17345021F117DC69C1EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03156DF82837914FCFC94D466E9B262D /* Pods-FiestonVirtualTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A294D8CC924EA6BD32C53060D1F15BA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F693B21A41ADA4806B40B1ED1FE3032 /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B711DB74BB6532D924FDD02962E734E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 102BAFC57DD1A238BF3747833145BAAF /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F671B4D3AA8F2CA18D12CD74BD1CDEF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61FC5749665EDDB2D90E737333B3BA8D /* Debug */,
+				F671B4D3AA8F2CA18D12CD74BD1CDEF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78F9FA2066E46452928363155D7722E5 /* Build configuration list for PBXNativeTarget "Pods-FiestonVirtual-FiestonVirtualUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B711DB74BB6532D924FDD02962E734E1 /* Debug */,
+				A294D8CC924EA6BD32C53060D1F15BA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8383ACCD63F69201F0FC8A9892700C7A /* Build configuration list for PBXNativeTarget "Pods-FiestonVirtualTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB96AE8F78F17345021F117DC69C1EB /* Debug */,
+				553C1961A9469C5DA35B849104D1607C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB44224ECF711EFD7B0CA3573FD5936A /* Build configuration list for PBXNativeTarget "Pods-FiestonVirtual" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12DB07D72EEC795A61D5427309469C94 /* Debug */,
+				662013F3AFC82B2AF55C02ADB0B0781A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
