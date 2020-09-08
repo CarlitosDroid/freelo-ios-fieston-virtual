@@ -16,15 +16,19 @@ class UsersRepositoryImpl {
     
     private let context: NSManagedObjectContext
     
-    //    let userLocalDataSource: UserLocalDataSource
+    let userRemoteDataSource: UserRemoteDataSource
     //
     //    init(userLocalDataSource: UserLocalDataSource) {
     //        self.userLocalDataSource = userLocalDataSource
     //    }
     
-    init(context: NSManagedObjectContext) {
+    init(
+        context: NSManagedObjectContext,
+        userRemoteDataSource: UserRemoteDataSource
+    ) {
         self.repository = CoreDataRepository<UserEntity>(managedObjectContext: context)
         self.context = context
+        self.userRemoteDataSource = userRemoteDataSource
     }
     
     
@@ -39,7 +43,12 @@ class UsersRepositoryImpl {
 }
 
 extension UsersRepositoryImpl: UsersRepository {
+    func getRemoteUser(idUser: Int) -> AnyPublisher<User, ErrorResponse> {
+        return self.userRemoteDataSource.getUsers(idUser: idUser)
+    }
     
+
+    // MARK: - LOCAL DATABASE
     @discardableResult func create(user: User) -> Result<Bool, Error> {
         let result = repository.create()
         switch result {
@@ -47,6 +56,8 @@ extension UsersRepositoryImpl: UsersRepository {
             userEntity.name = user.name
             userEntity.age = user.age
             
+            
+            //TODO: - use unit of work pattern instead of calling context here
             do {
                 try context.save()
             } catch {
@@ -61,7 +72,7 @@ extension UsersRepositoryImpl: UsersRepository {
     
     @discardableResult func getLocalUsers(predicate: NSPredicate?) -> Result<[User], Error> {
     
-        //TODO: Use this predicate when you want to filter
+        // TODO: Use this predicate when you want to filter
 //        let filter = "CarlitosDroid"
 //        let commitPredicate = NSPredicate(format: "name == %@", filter)
 

@@ -27,12 +27,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
         
         let eventCodeApi = EventCodeApiImpl()
+        let userApi = UserApiImpl()
         let eventCodeRemoteDataSource = EventCodeRemoteDataSourceImpl(eventCodeApi: eventCodeApi)
         let eventCodeRepository = EventCodeRepositoryImpl(eventCodeRemoteDataSource:eventCodeRemoteDataSource)
         let userLocalDataSource = UserLocalDataSourceImpl()
+        let userRemoteDataSource = UserRemoteDataSourceImpl(userApi: userApi)
         let coredatacontext =  CoreDataContextProvider().viewContext
         
-        let usersRepository1 = UsersRepositoryImpl(context: coredatacontext)
+        let usersRepository1 = UsersRepositoryImpl(context: coredatacontext, userRemoteDataSource: userRemoteDataSource)
        // let usersRepository2 = UsersRepositoryImpl(context: CoreDataContextProvider().viewContext)
         
         let loginUseCase = LoginUseCaseImpl(
