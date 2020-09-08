@@ -6,6 +6,8 @@ target 'FiestonVirtual' do
   use_frameworks!
 
   # Pods for FiestonVirtual
+  pod 'Alamofire', '~> 5.2'
+  pod 'Swinject', '~> 2.7'
 
   target 'FiestonVirtualTests' do
     inherit! :search_paths
