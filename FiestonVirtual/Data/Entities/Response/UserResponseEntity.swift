@@ -9,22 +9,47 @@
 import Foundation
 
 // MARK: - UserResponseEntity
-struct UserResponseEntity: Codable {
-    let data: ChildDataUserResponse
+struct UserResponseEntity: Decodable {
     let message: String
+    let data: ChildDataUserResponse
+    
+    enum CodingKeys: String, CodingKey {
+        case message = "message"
+        case data = "data"
+    }
 }
 
 // MARK: - ChildDataUserResponse
-struct ChildDataUserResponse: Codable {
+struct ChildDataUserResponse: Decodable {
     let user: ChildUserResponse
+    enum CodingKeys: String, CodingKey {
+        case user
+    }
 }
 
 // MARK: - ChildUserResponse
-struct ChildUserResponse: Codable {
+struct ChildUserResponse: Decodable {
     let idUser, idEvent: Int
     let userName, userLastName, userSurName, userEmail: String
     let userPhone, userCell: String
     let userTotalScore, userStatus: Int
     let avatar: String
     let userLikesPhotos, userLikesVideos, userRanking: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case idUser
+        case idEvent
+        case userName
+        case userLastName
+        case userSurName
+        case userEmail
+        case userPhone
+        case userCell
+        case userTotalScore
+        case userStatus
+        case avatar
+        case userLikesPhotos
+        case userLikesVideos
+        case userRanking
+    }
 }

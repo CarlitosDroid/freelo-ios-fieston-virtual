@@ -20,6 +20,7 @@ struct CodeVerificationView: View {
         NavigationView {
             
             VStack {
+            
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
                 TextField("Enter your name", text: $eventCode)
                 Button(action: {
