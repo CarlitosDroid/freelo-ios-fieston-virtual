@@ -18,6 +18,7 @@ class CodeVerificationViewModel: ObservableObject {
     @Published var eventCode: EventCode?
     @Published var isLoading = false
     @Published var errorMessage = ""
+    @Published var isSuccessCode = false
     
     private var disposables = Set<AnyCancellable>()
     
@@ -43,7 +44,7 @@ class CodeVerificationViewModel: ObservableObject {
                 }
             }, receiveValue: { (eventCode: Bool) in
                 self.isLoading = false
-                print("\(eventCode)")
+                self.isSuccessCode = true
             })
             .store(in: &disposables)
     }
