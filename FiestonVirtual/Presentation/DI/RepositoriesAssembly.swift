@@ -14,5 +14,10 @@ class RepositoriesAssembly: Assembly {
         container.register(EventCodeRepository.self) { resolver in
             EventCodeRepositoryImpl(eventCodeRemoteDataSource: resolver.resolve(EventCodeRemoteDataSource.self)!)
         }
+        
+        container.register(UsersRepository.self) { resolver in
+            let coreDataContext = CoreDataContextProvider().viewContext
+            return UsersRepositoryImpl(context: coreDataContext, userRemoteDataSource: UserRemoteDataSourceImpl(userApi: resolver.resolve(UserApi.self)!))
+        }
     }
 }

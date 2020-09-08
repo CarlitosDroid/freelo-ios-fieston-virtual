@@ -11,6 +11,7 @@ import Combine
 
 class EventCodeRepositoryImpl: EventCodeRepository {
    
+    let loginUseCase = DependencyProvider().assembler.resolver.resolve(EventCodeRemoteDataSource.self)!
     let eventCodeRemoteDataSource: EventCodeRemoteDataSource
     
     init(eventCodeRemoteDataSource: EventCodeRemoteDataSource) {

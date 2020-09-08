@@ -26,24 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
         
-        let eventCodeApi = EventCodeApiImpl()
-        let userApi = UserApiImpl()
-        let eventCodeRemoteDataSource = EventCodeRemoteDataSourceImpl(eventCodeApi: eventCodeApi)
-        let eventCodeRepository = EventCodeRepositoryImpl(eventCodeRemoteDataSource:eventCodeRemoteDataSource)
-        let userLocalDataSource = UserLocalDataSourceImpl()
-        let userRemoteDataSource = UserRemoteDataSourceImpl(userApi: userApi)
-        let coredatacontext =  CoreDataContextProvider().viewContext
-        
-        let usersRepository1 = UsersRepositoryImpl(context: coredatacontext, userRemoteDataSource: userRemoteDataSource)
-       // let usersRepository2 = UsersRepositoryImpl(context: CoreDataContextProvider().viewContext)
-        
-        let loginUseCase = LoginUseCaseImpl(
-            eventCodeRepository: eventCodeRepository,
-            usersRepository:    usersRepository1
-        )
-        let verifySessionUseCase = VerifySessionUseCaseImpl(usersRepository: usersRepository1)
-        
-        let viewModel = CodeVerificationViewModel(loginUseCase: loginUseCase, verifySessionUseCase: verifySessionUseCase)
+        let viewModel = CodeVerificationViewModel()
         let contentView = CodeVerificationView(viewModel: viewModel).environment(\.managedObjectContext, context)
         
         // Use a UIHostingController as window root view controller.

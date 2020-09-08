@@ -8,9 +8,9 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 class UserApiImpl: UserApi {
-    
     
     private let session: URLSession
     
@@ -19,41 +19,51 @@ class UserApiImpl: UserApi {
     }
     
     func getUserData(idUser: Int) -> AnyPublisher<UserResponseEntity, ExternalError> {
-        return requestUser(with: makeUserComponents(), idUser: idUser)
-    }
-    
-    private func requestUser<T>(
-        with components: URLComponents,
-        idUser: Int
-    ) -> AnyPublisher<T, ExternalError> where T: Decodable {
-        guard let url = components.url else {
+      
+        let getRemoteUserRequest = GetRemoteUserRequest(idUser: idUser)
+        
+        // TODO: - use headers if necessary or create a function for this snippet
+        //        let headers = [
+        //                "Authorization": "Basic \(getBase64Credentials())",
+        //                "Content-Type": "application/x-www-form-urlencoded"
+        //        ]
+        
+        
+        guard let url = makeUserComponents().url else {
             let error = ExternalError.NetworkError(description: "Couldn't create URL")
             return Fail(error: error).eraseToAnyPublisher()
         }
         
-        let urlRequest = makeUserPostUrlRequest(url: url, idUser: idUser)
+        return AF.request(url,
+                          method: .post,
+                          parameters: getRemoteUserRequest,
+                          encoder: JSONParameterEncoder.default,
+                          headers: nil,
+                          interceptor: nil,
+                          requestModifier: nil)
+            .validate()
+            .publishDecodable(type: UserResponseEntity.self)
+            .mapError({ (never : Never) -> ExternalError in
+                ExternalError.UnknowError(description: never.localizedDescription)
+            })
+            .flatMap({ (dataResponse: DataResponse<UserResponseEntity, AFError>)-> AnyPublisher<UserResponseEntity, ExternalError> in
+                Future<UserResponseEntity, ExternalError> { promise in
+                    switch dataResponse.result {
+                        
+                    case .failure(let afError):
+                        promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
+                        break
+                        
+                    case .success(let userResponseEntity):
+                        promise(.success(userResponseEntity))
+                        break
+                    }
+                    
+                }.eraseToAnyPublisher()
+            }).eraseToAnyPublisher()
         
-        return session.dataTaskPublisher(for: urlRequest)
-            .mapError { (error: Error) -> ExternalError in
-                ExternalError.NetworkError(description: error.localizedDescription)
-        }
-        .flatMap({ (output: URLSession.DataTaskPublisher.Output) in
-            return decode(output.data)
-        })
-            .eraseToAnyPublisher()
     }
-    
-    private func makeUserPostUrlRequest(url: URL, idUser: Int) -> URLRequest {
-        // Prepare URL Request Object
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "POST"
-        let body = [
-            "idUser" : "\(idUser)"
-        ]
-        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        return urlRequest
-    }
-    
+
 }
 
 private extension UserApiImpl {
@@ -69,21 +79,7 @@ private extension UserApiImpl {
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
         urlComponents.path = FiestonVirtualAPI.path + "/detalle_usuario.php"
-        
-        /** We could use this code in order to make form-data
-         let queryStringParam  =  [
-         "page":"1",
-         "size":"5",
-         "sortBy":"profile_locality"
-         ]
-         
-         let queryItems = queryStringParam.map  { URLQueryItem(name: $0.key, value: $0.value) }
-         */
-        
         return urlComponents
     }
-    
-    
-    
     
 }
