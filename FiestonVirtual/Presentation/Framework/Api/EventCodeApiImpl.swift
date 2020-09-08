@@ -18,20 +18,19 @@ class EventCodeApiImpl: EventCodeApi {
     }
     
     func validateCode(userInvitationCode: Int) -> AnyPublisher<CodeVerificationResponseEntity, ExternalError> {
-        return request(with: makeCodeVerificationComponents(userInvitationCode: String(userInvitationCode)))
+        return requestVerificationCode(with: makeCodeVerificationComponents(), userInvitationCode: userInvitationCode)
     }
     
-    private func request<T>(
-        with components: URLComponents
+    private func requestVerificationCode<T>(
+        with components: URLComponents,
+        userInvitationCode: Int
     ) -> AnyPublisher<T, ExternalError> where T: Decodable {
         guard let url = components.url else {
             let error = ExternalError.NetworkError(description: "Couldn't create URL")
             return Fail(error: error).eraseToAnyPublisher()
         }
         
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "POST"
-//        urlRequest.setValue("application/x-www-form-urlencoded;charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        let urlRequest = makeVerificationPostUrlRequest(url: url, userInvitationCode: userInvitationCode)
         
         return session.dataTaskPublisher(for: urlRequest)
             .mapError { (error: Error) -> ExternalError in
@@ -41,6 +40,17 @@ class EventCodeApiImpl: EventCodeApi {
                 return decode(output.data)
             })
             .eraseToAnyPublisher()
+    }
+    
+    private func makeVerificationPostUrlRequest(url: URL, userInvitationCode: Int) -> URLRequest {
+        // Prepare URL Request Object
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        let body = [
+            "userInvitationCode" : "\(userInvitationCode)"
+        ]
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body)
+        return urlRequest
     }
     
 }
@@ -53,17 +63,23 @@ private extension EventCodeApiImpl {
         static let key = "<your key>"
     }
     
-    func makeCodeVerificationComponents(userInvitationCode: String) -> URLComponents {
-        var components = URLComponents()
-        components.scheme = FiestonVirtualAPI.scheme
-        components.host = FiestonVirtualAPI.host
-        components.path = FiestonVirtualAPI.path + "/consulta_codigo.php"
+    func makeCodeVerificationComponents() -> URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = FiestonVirtualAPI.scheme
+        urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.path = FiestonVirtualAPI.path + "/consulta_codigo.php"
         
-        components.queryItems = [
-            URLQueryItem(name: "userInvitationCode", value: userInvitationCode)
+        /** We could use this code in order to make form-data
+        let queryStringParam  =  [
+            "page":"1",
+            "size":"5",
+            "sortBy":"profile_locality"
         ]
         
-        return components
+        let queryItems = queryStringParam.map  { URLQueryItem(name: $0.key, value: $0.value) }
+        */
+        
+        return urlComponents
     }
 
 }
