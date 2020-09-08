@@ -12,8 +12,8 @@ import CoreData
 
 class CodeVerificationViewModel: ObservableObject {
     
-    let loginUseCase: LoginUseCase
-    let verifySessionUseCase: VerifySessionUseCase
+    let loginUseCase = DependencyProvider().assembler.resolver.resolve(LoginUseCase.self)!
+    let verifySessionUseCase = DependencyProvider().assembler.resolver.resolve(VerifySessionUseCase.self)!
     
     @Published var eventCode: EventCode?
     @Published var isLoading = false
@@ -22,12 +22,10 @@ class CodeVerificationViewModel: ObservableObject {
     
     private var disposables = Set<AnyCancellable>()
     
-    init(loginUseCase: LoginUseCase, verifySessionUseCase: VerifySessionUseCase) {
-        self.loginUseCase = loginUseCase
-        self.verifySessionUseCase = verifySessionUseCase
+    init() {
     }
     
-    func verifyCode() {
+    func verifyCode(code: String) {
         self.isLoading = true
         loginUseCase.invoke()
             .receive(on: DispatchQueue.main)
@@ -49,32 +47,8 @@ class CodeVerificationViewModel: ObservableObject {
             .store(in: &disposables)
     }
     
-    func inserrt() {
-        //        let coreDataContextProvider = CoreDataContextProvider()
-        //        let context = coreDataContextProvider.viewContext
-        //
-        //        let bookRepository = CoreDataRepository<UserEntity>(managedObjectContext: context)
-        //
-        //        let bookResult = bookRepository.create()
-        //        switch bookResult {
-        //        case .success(let userEntity):
-        //            userEntity.name = "The Swift Handbook"
-        //        case .failure(let error):
-        //            fatalError("Failed to create book: \(error)")
-        //        }
-        //
-        //        do {
-        //            try context.save()
-        //        } catch {
-        //            fatalError("Failed to fetch books: \(error)")
-        //        }
-    }
-    
-    
-    func readd() {
-        
+    func verifySession() {
         let result = self.verifySessionUseCase.invoke()
-        
         switch result {
         case .success(let users):
             print(users)
@@ -83,19 +57,5 @@ class CodeVerificationViewModel: ObservableObject {
             print(error)
             break
         }
-        
-        //        let coreDataContextProvider = CoreDataContextProvider()
-        //        let moc = coreDataContextProvider.viewContext
-        //        let bookFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "UserEntity")
-        //
-        //
-        //        do {
-        //            let fetchedBooks = try moc.fetch(bookFetch) as! [UserEntity]
-        //            fetchedBooks.forEach { (userEntity: UserEntity) in
-        //                print(userEntity.name)
-        //            }
-        //        } catch {
-        //            fatalError("Failed to fetch books: \(error)")
-        //        }
     }
 }

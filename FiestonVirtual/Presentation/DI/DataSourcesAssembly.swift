@@ -19,6 +19,10 @@ class DataSourcesAssembly: Assembly {
         container.register(UserLocalDataSource.self) { (resolver: Resolver) in
             UserLocalDataSourceImpl()
         }
+        
+        container.register(EventCodeRemoteDataSource.self) { (resolver: Resolver) in
+            EventCodeRemoteDataSourceImpl(eventCodeApi: resolver.resolve(EventCodeApi.self)!)
+        }
     }
     
 }

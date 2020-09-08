@@ -23,6 +23,8 @@
 		2B81FCEB2507443F00EC9E10 /* DataSourcesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCEA2507443F00EC9E10 /* DataSourcesAssembly.swift */; };
 		2B81FCED2507454D00EC9E10 /* ApiAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCEC2507454D00EC9E10 /* ApiAssembly.swift */; };
 		2B81FCEF25074CE900EC9E10 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCEE25074CE900EC9E10 /* RepositoriesAssembly.swift */; };
+		2B81FCF12507553100EC9E10 /* UseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCF02507553100EC9E10 /* UseCaseAssembly.swift */; };
+		2B81FCF52507567800EC9E10 /* DependecyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCF42507567800EC9E10 /* DependecyProvider.swift */; };
 		2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339A2507093B007C3FFC /* DomainModel.swift */; };
 		2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339D250714C4007C3FFC /* VerifySessionUseCase.swift */; };
 		2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339F250714D1007C3FFC /* VerifySessionUseCaseImpl.swift */; };
@@ -97,6 +99,8 @@
 		2B81FCEA2507443F00EC9E10 /* DataSourcesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourcesAssembly.swift; sourceTree = "<group>"; };
 		2B81FCEC2507454D00EC9E10 /* ApiAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiAssembly.swift; sourceTree = "<group>"; };
 		2B81FCEE25074CE900EC9E10 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
+		2B81FCF02507553100EC9E10 /* UseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseAssembly.swift; sourceTree = "<group>"; };
+		2B81FCF42507567800EC9E10 /* DependecyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependecyProvider.swift; sourceTree = "<group>"; };
 		2B8B339A2507093B007C3FFC /* DomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModel.swift; sourceTree = "<group>"; };
 		2B8B339D250714C4007C3FFC /* VerifySessionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifySessionUseCase.swift; sourceTree = "<group>"; };
 		2B8B339F250714D1007C3FFC /* VerifySessionUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifySessionUseCaseImpl.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 				2B81FCEC2507454D00EC9E10 /* ApiAssembly.swift */,
 				2B81FCEA2507443F00EC9E10 /* DataSourcesAssembly.swift */,
 				2B81FCEE25074CE900EC9E10 /* RepositoriesAssembly.swift */,
+				2B81FCF02507553100EC9E10 /* UseCaseAssembly.swift */,
+				2B81FCF42507567800EC9E10 /* DependecyProvider.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -768,6 +774,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B48231F25068B4400AF312D /* User.swift in Sources */,
+				2B81FCF12507553100EC9E10 /* UseCaseAssembly.swift in Sources */,
+				2B81FCF52507567800EC9E10 /* DependecyProvider.swift in Sources */,
 				2B48232425069FA100AF312D /* TextingData.swift in Sources */,
 				2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */,
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
