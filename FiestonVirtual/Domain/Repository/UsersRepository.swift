@@ -10,5 +10,8 @@ import Foundation
 import Combine
 
 protocol UsersRepository {
-    func setLoggedInUser(user: User)
+    func getLocalUsers(predicate: NSPredicate?) -> Result<[User], Error>
+    func create(user: User) -> Result<Bool, Error>
+    
+    func getRemoteUser(idUser: Int) -> AnyPublisher<User, ErrorResponse>
 }
