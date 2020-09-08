@@ -10,5 +10,5 @@ import Foundation
 import Combine
 
 protocol LoginUseCase {
-    func invoke() -> AnyPublisher<EventCode, ErrorResponse>
+    func invoke() -> AnyPublisher<Bool, ErrorResponse>
 }
