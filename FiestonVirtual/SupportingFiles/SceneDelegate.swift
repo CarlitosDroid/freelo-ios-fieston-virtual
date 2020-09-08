@@ -29,12 +29,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let eventCodeApi = EventCodeApiImpl()
         let eventCodeRemoteDataSource = EventCodeRemoteDataSourceImpl(eventCodeApi: eventCodeApi)
         let eventCodeRepository = EventCodeRepositoryImpl(eventCodeRemoteDataSource:eventCodeRemoteDataSource)
-        let usersRepository = UsersRepositoryImpl()
+        let userLocalDataSource = UserLocalDataSourceImpl()
+        let coredatacontext =  CoreDataContextProvider().viewContext
+        
+        let usersRepository1 = UsersRepositoryImpl(context: coredatacontext)
+       // let usersRepository2 = UsersRepositoryImpl(context: CoreDataContextProvider().viewContext)
+        
         let loginUseCase = LoginUseCaseImpl(
             eventCodeRepository: eventCodeRepository,
-            usersRepository:    usersRepository
+            usersRepository:    usersRepository1
         )
-        let viewModel = CodeVerificationViewModel(loginUseCase: loginUseCase)
+        let verifySessionUseCase = VerifySessionUseCaseImpl(usersRepository: usersRepository1)
+        
+        let viewModel = CodeVerificationViewModel(loginUseCase: loginUseCase, verifySessionUseCase: verifySessionUseCase)
         let contentView = CodeVerificationView(viewModel: viewModel).environment(\.managedObjectContext, context)
         
         // Use a UIHostingController as window root view controller.
@@ -94,10 +101,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // MARK: - Core Data Saving support
     
     func saveContext() {
-        let context = persistenceContainer.viewContext
-        if context.hasChanges {
+        let viewContextManagedObject = persistenceContainer.viewContext
+        if viewContextManagedObject.hasChanges {
             do {
-                try context.save()
+                try viewContextManagedObject.save()
             } catch {
                 // The context couldn't be saved.
                 // You should add your own error handling here.

@@ -10,14 +10,7 @@ import SwiftUI
 
 struct CodeVerificationView: View {
     
-    @Environment(\.managedObjectContext) var managedObjectContext
     
-    @FetchRequest(
-        entity: UserEntity.entity(),
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \UserEntity.name, ascending: true)
-        ]
-    ) var userEntities: FetchedResults<UserEntity>
     
     @ObservedObject var viewModel: CodeVerificationViewModel
     
@@ -33,45 +26,48 @@ struct CodeVerificationView: View {
                 Text("Entrar")
             }
             Button(action: {
-                print(self.userEntities[0])
+              self.viewModel.readd()
             }) {
                 Text("Mostrar")
             }
         }
     }
     
-    func addUser() {
-        let userEntity = UserEntity(context: managedObjectContext)
-        userEntity.name = "Carlos"
-        userEntity.age = "87"
-        saveContext()
-    }
-    
-    func deleteUser() {
-        
-    }
-   
-    func saveContext() {
-        do {
-            try managedObjectContext.save()
-        } catch {
-            print("Error saving managed object context \(error)")
-        }
-    }
+//    func addUser() {
+//        let userEntity = UserEntity(context: managedObjectContext)
+//        userEntity.name = "Carlos"
+//        userEntity.age = "87"
+//        saveContext()
+//    }
+//
+//    func deleteUser() {
+//
+//    }
+//
+//    func saveContext() {
+//        do {
+//            try managedObjectContext.save()
+//        } catch {
+//            print("Error saving managed object context \(error)")
+//        }
+//    }
 }
 
-struct CodeVerificationView_Previews: PreviewProvider {
-    static var previews: some View {
-        CodeVerificationView(
-            viewModel: CodeVerificationViewModel(
-                loginUseCase: LoginUseCaseImpl(
-                    eventCodeRepository: EventCodeRepositoryImpl(
-                        eventCodeRemoteDataSource: EventCodeRemoteDataSourceImpl(
-                            eventCodeApi: EventCodeApiImpl())
-                    ),
-                    usersRepository: UsersRepositoryImpl()
-                )
-            )
-        )
-    }
-}
+//struct CodeVerificationView_Previews: PreviewProvider {
+//
+//
+//    static var previews: some View {
+//
+//        CodeVerificationView(
+//            viewModel: CodeVerificationViewModel(
+//                loginUseCase: LoginUseCaseImpl(
+//                    eventCodeRepository: EventCodeRepositoryImpl(
+//                        eventCodeRemoteDataSource: EventCodeRemoteDataSourceImpl(
+//                            eventCodeApi: EventCodeApiImpl())
+//                    ),
+//                    usersRepository: UsersRepositoryImpl(userLocalDataSource: UserLocalDataSourceImpl(managedObjectContext: Manager))
+//                )
+//            )
+//        )
+//    }
+//}

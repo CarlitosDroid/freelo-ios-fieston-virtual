@@ -9,6 +9,7 @@
 import Foundation
 
 struct EventCode {
+    var mensajito: String
     var idEvent: Int
     var idUser: Int
 }

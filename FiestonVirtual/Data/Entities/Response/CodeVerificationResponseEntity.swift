@@ -11,21 +11,21 @@ import Foundation
 // MARK: - Welcome
 struct CodeVerificationResponseEntity: Codable {
     let message: String
-    let data: DataClass
+    let data: DataClass?
 }
 
 // MARK: - DataClass
 struct DataClass: Codable {
-    let user: User
-    let event: Event
+    let user: UserResponse?
+    let event: EventResponse?
 }
 
 // MARK: - Event
-struct Event: Codable {
+struct EventResponse: Codable {
     let idEvent: Int
 }
 
 // MARK: - User
-struct User: Codable {
+struct UserResponse: Codable {
     let idUser: Int
 }
