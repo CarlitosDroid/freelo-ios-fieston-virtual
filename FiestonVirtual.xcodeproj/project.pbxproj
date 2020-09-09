@@ -65,6 +65,10 @@
 		54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */; };
 		8C82C592C931C185D0216CC5 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
 		E25AF77D539E83B4A5422C67 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */; };
+		FB1014D025086338002C91ED /* RankingResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014CF25086338002C91ED /* RankingResponseEntity.swift */; };
+		FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */; };
+		FB1014D525086E0A002C91ED /* RankingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014D425086E0A002C91ED /* RankingApi.swift */; };
+		FB1014D725086F1C002C91ED /* RankingApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014D625086F1C002C91ED /* RankingApiImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +159,10 @@
 		A13A0579CBC4D34FA84373F9 /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4E7F3136016DAA75F1C68C8 /* Pods-FiestonVirtual.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.debug.xcconfig"; sourceTree = "<group>"; };
 		C8723C841DAAB5A94BCE0483 /* Pods-FiestonVirtual.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.release.xcconfig"; sourceTree = "<group>"; };
+		FB1014CF25086338002C91ED /* RankingResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingResponseEntity.swift; sourceTree = "<group>"; };
+		FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteRankingRequest.swift; sourceTree = "<group>"; };
+		FB1014D425086E0A002C91ED /* RankingApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingApi.swift; sourceTree = "<group>"; };
+		FB1014D625086F1C002C91ED /* RankingApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingApiImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +386,7 @@
 			children = (
 				2BC2570925055A3900B433CC /* CodeVerificationResponseEntity.swift */,
 				2B81FCE02507352300EC9E10 /* UserResponseEntity.swift */,
+				FB1014CF25086338002C91ED /* RankingResponseEntity.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -399,6 +408,8 @@
 				2BC2571225055D8C00B433CC /* EventCodeApiImpl.swift */,
 				2B81FCDE250734D500EC9E10 /* UserApi.swift */,
 				2B81FCE425073B0A00EC9E10 /* UserApiImpl.swift */,
+				FB1014D425086E0A002C91ED /* RankingApi.swift */,
+				FB1014D625086F1C002C91ED /* RankingApiImpl.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -443,6 +454,7 @@
 		2BC2571D2505621700B433CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FB1014D125086D3B002C91ED /* Ranking */,
 				2B48231D25068B3700AF312D /* User */,
 				2BC257212505624300B433CC /* Code */,
 				2BC2571E2505622000B433CC /* Error */,
@@ -555,6 +567,14 @@
 				0BF84B5663CE195EAC8CBC96 /* Pods-FiestonVirtualTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FB1014D125086D3B002C91ED /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */,
+			);
+			path = Ranking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -811,6 +831,7 @@
 				2BC2573C2505AAE000B433CC /* CodeVerificationViewModel.swift in Sources */,
 				2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */,
 				2B4823282506A32400AF312D /* CoreDataRepository.swift in Sources */,
+				FB1014D525086E0A002C91ED /* RankingApi.swift in Sources */,
 				2BC2572E250564FB00B433CC /* EventCodeRepository.swift in Sources */,
 				2BC2571625055F7A00B433CC /* Parsing.swift in Sources */,
 				2BC257202505623000B433CC /* ErrorResponse.swift in Sources */,
@@ -822,6 +843,7 @@
 				2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */,
 				2B83E7932507F6E4004B1BF2 /* TextFields.swift in Sources */,
 				2BC25726250563FB00B433CC /* EventCodeMapper.swift in Sources */,
+				FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */,
 				2BC25729250564A100B433CC /* EventCodeRepositoryImpl.swift in Sources */,
 				2B81FCE3250736C800EC9E10 /* UserResponseEntityMapper.swift in Sources */,
 				2BC25719250561B700B433CC /* CodeRemoteDataSourceImpl.swift in Sources */,
@@ -837,6 +859,7 @@
 				2B83E7912507F584004B1BF2 /* LoadingIndicator.swift in Sources */,
 				2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */,
 				2B81FCE825073DCC00EC9E10 /* MainView.swift in Sources */,
+				FB1014D025086338002C91ED /* RankingResponseEntity.swift in Sources */,
 				2BC256D6250546D100B433CC /* ContentView.swift in Sources */,
 				2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */,
 				2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */,
@@ -846,6 +869,7 @@
 				2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */,
 				2B81FCDB2507342400EC9E10 /* UserRemoteDataSource.swift in Sources */,
 				2B83E78F2507F519004B1BF2 /* LoadingView.swift in Sources */,
+				FB1014D725086F1C002C91ED /* RankingApiImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
