@@ -11,4 +11,7 @@ import Combine
 
 protocol EventCodeRepository {
     func verifyCode(userInvitationCode: Int) -> AnyPublisher<EventCode, ErrorResponse>
+    
+    func getWelcome (welcomeRequest: WelcomeRequest) -> AnyPublisher<Welcome, ErrorResponse>
+
 }

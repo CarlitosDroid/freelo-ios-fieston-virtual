@@ -21,6 +21,11 @@ class EventCodeApiImpl: EventCodeApi {
         return requestVerificationCode(with: makeCodeVerificationComponents(), userInvitationCode: userInvitationCode)
     }
     
+    func getWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<WelcomeResponseEntity, ExternalError>{
+        return requestGetWelcome(with: getUrlComponentsToGetWelcome(), welcomeRequest: welcomeRequest)
+        
+    }
+    
     private func requestVerificationCode<T>(
         with components: URLComponents,
         userInvitationCode: Int
@@ -35,10 +40,10 @@ class EventCodeApiImpl: EventCodeApi {
         return session.dataTaskPublisher(for: urlRequest)
             .mapError { (error: Error) -> ExternalError in
                 ExternalError.NetworkError(description: error.localizedDescription)
-            }
-            .flatMap({ (output: URLSession.DataTaskPublisher.Output) in
-                return decode(output.data)
-            })
+        }
+        .flatMap({ (output: URLSession.DataTaskPublisher.Output) in
+            return decode(output.data)
+        })
             .eraseToAnyPublisher()
     }
     
@@ -48,6 +53,38 @@ class EventCodeApiImpl: EventCodeApi {
         urlRequest.httpMethod = "POST"
         let body = [
             "userInvitationCode" : "\(userInvitationCode)"
+        ]
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body)
+        return urlRequest
+    }
+    
+    private func requestGetWelcome<T>(
+        with components: URLComponents,
+        welcomeRequest: WelcomeRequest
+    ) -> AnyPublisher<T, ExternalError> where T: Decodable {
+        guard let url = components.url else {
+            let error = ExternalError.NetworkError(description: "Couldn't create URL")
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+        
+        let urlRequest = getUrlToGetWelcome(url: url, welcomeRequest: welcomeRequest)
+        
+        return session.dataTaskPublisher(for: urlRequest)
+            .mapError { (error: Error) -> ExternalError in
+                ExternalError.NetworkError(description: error.localizedDescription)
+        }
+        .flatMap({ (output: URLSession.DataTaskPublisher.Output) in
+            return decode(output.data)
+        })
+            .eraseToAnyPublisher()
+    }
+    
+    private func getUrlToGetWelcome(url: URL, welcomeRequest: WelcomeRequest) -> URLRequest {
+        // Prepare URL Request Object
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "POST"
+        let body = [
+            "idEvent" : "\(welcomeRequest.idEvent)"
         ]
         urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body)
         return urlRequest
@@ -70,16 +107,24 @@ private extension EventCodeApiImpl {
         urlComponents.path = FiestonVirtualAPI.path + "/consulta_codigo.php"
         
         /** We could use this code in order to make form-data
-        let queryStringParam  =  [
-            "page":"1",
-            "size":"5",
-            "sortBy":"profile_locality"
-        ]
-        
-        let queryItems = queryStringParam.map  { URLQueryItem(name: $0.key, value: $0.value) }
-        */
+         let queryStringParam  =  [
+         "page":"1",
+         "size":"5",
+         "sortBy":"profile_locality"
+         ]
+         
+         let queryItems = queryStringParam.map  { URLQueryItem(name: $0.key, value: $0.value) }
+         */
         
         return urlComponents
     }
-
+    
+    func getUrlComponentsToGetWelcome() -> URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = FiestonVirtualAPI.scheme
+        urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.path = FiestonVirtualAPI.path + "/detalle_evento.php"
+        return urlComponents
+    }
+    
 }

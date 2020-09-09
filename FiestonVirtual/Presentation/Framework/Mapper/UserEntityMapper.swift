@@ -14,9 +14,15 @@ extension UserEntity: DomainModel {
     
     func toDomainModel() -> User {
         return User(
-            name: self.name ?? "CARLITOS",
-            age: self.age ?? "100",
-            isOld: false)
+            id: Int(self.id),
+            name: String(self.firstName ?? ""),
+            lastName: String(self.lastName ?? ""),
+            totalScore:Int(self.totalScore),
+            ranking:Int(self.ranking),
+            idEvent:Int(self.idEvent),
+            avatar:String(self.avatar ?? ""),
+            token:String(self.token ?? "")
+        )
     }
-  
+    
 }

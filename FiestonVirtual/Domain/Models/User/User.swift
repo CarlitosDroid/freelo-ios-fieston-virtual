@@ -9,14 +9,12 @@
 import Foundation
 
 struct User {
+    let id:Int
     let name: String
-    let age: String
-    let isOld: Bool
+    let lastName: String
+    let totalScore: Int
+    let ranking: Int
+    let idEvent: Int
+    let avatar: String
+    let token: String
 }
-
-
-
-
-
-
-

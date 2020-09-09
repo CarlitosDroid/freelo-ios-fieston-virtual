@@ -58,13 +58,10 @@
 		54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */; };
 		8C82C592C931C185D0216CC5 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
 		9A8145672505D1DA001A012A /* WelcomeResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145662505D1DA001A012A /* WelcomeResponseEntity.swift */; };
-		9A8145692505D70B001A012A /* EventDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145682505D70B001A012A /* EventDataSource.swift */; };
 		9A81456C2505D79A001A012A /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81456B2505D79A001A012A /* Welcome.swift */; };
 		9A81456E2505D7B4001A012A /* WelcomeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81456D2505D7B4001A012A /* WelcomeRequest.swift */; };
-		9A8145702505DAF5001A012A /* EventDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81456F2505DAF5001A012A /* EventDataSourceImpl.swift */; };
 		9A8145762505E898001A012A /* WelcomeResponseEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145752505E898001A012A /* WelcomeResponseEntityMapper.swift */; };
 		9A8145782505F0C4001A012A /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145772505F0C4001A012A /* EventRepository.swift */; };
-		9A81457A2505F14D001A012A /* EventRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145792505F14D001A012A /* EventRepositoryImpl.swift */; };
 		9A81457D2505F3B8001A012A /* GetWelcomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81457C2505F3B8001A012A /* GetWelcomeUseCase.swift */; };
 		9A81457F2505F420001A012A /* GetWelcomeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81457E2505F420001A012A /* GetWelcomeUseCaseImpl.swift */; };
 		9A8145822505F8A0001A012A /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145812505F8A0001A012A /* WelcomeViewModel.swift */; };
@@ -150,13 +147,10 @@
 		717F0F31C57CD52FE931E080 /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig"; sourceTree = "<group>"; };
 		71F1E84C6AEBAAFFCDDDBC36 /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A8145662505D1DA001A012A /* WelcomeResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeResponseEntity.swift; sourceTree = "<group>"; };
-		9A8145682505D70B001A012A /* EventDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataSource.swift; sourceTree = "<group>"; };
 		9A81456B2505D79A001A012A /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		9A81456D2505D7B4001A012A /* WelcomeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRequest.swift; sourceTree = "<group>"; };
-		9A81456F2505DAF5001A012A /* EventDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDataSourceImpl.swift; sourceTree = "<group>"; };
 		9A8145752505E898001A012A /* WelcomeResponseEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeResponseEntityMapper.swift; sourceTree = "<group>"; };
 		9A8145772505F0C4001A012A /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
-		9A8145792505F14D001A012A /* EventRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepositoryImpl.swift; sourceTree = "<group>"; };
 		9A81457C2505F3B8001A012A /* GetWelcomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWelcomeUseCase.swift; sourceTree = "<group>"; };
 		9A81457E2505F420001A012A /* GetWelcomeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWelcomeUseCaseImpl.swift; sourceTree = "<group>"; };
 		9A8145812505F8A0001A012A /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
@@ -421,7 +415,6 @@
 			isa = PBXGroup;
 			children = (
 				2BC25718250561B700B433CC /* CodeRemoteDataSourceImpl.swift */,
-				9A81456F2505DAF5001A012A /* EventDataSourceImpl.swift */,
 				2BC2573F2505FF7500B433CC /* UserLocalDataSourceImpl.swift */,
 				2B81FCDC2507349300EC9E10 /* UserRemoteDataSourceImpl.swift */,
 			);
@@ -432,7 +425,6 @@
 			isa = PBXGroup;
 			children = (
 				2BC2571B250561D800B433CC /* EventCodeRemoteDataSource.swift */,
-				9A8145682505D70B001A012A /* EventDataSource.swift */,
 				2BC257412505FF9500B433CC /* UserLocalDataSource.swift */,
 				2B81FCDA2507342400EC9E10 /* UserRemoteDataSource.swift */,
 			);
@@ -483,7 +475,6 @@
 			children = (
 				2BC25728250564A100B433CC /* EventCodeRepositoryImpl.swift */,
 				2BC2573D2505AEF100B433CC /* UsersRepositoryImpl.swift */,
-				9A8145792505F14D001A012A /* EventRepositoryImpl.swift */,
 				2B4823272506A32400AF312D /* CoreDataRepository.swift */,
 			);
 			path = Repository;
@@ -523,7 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				2B81FCE625073D5E00EC9E10 /* Main */,
-				9A8145802505F867001A012A /* welcome */,
+				9A8145802505F867001A012A /* Welcome */,
 				2BC257382505AA8500B433CC /* EventCode */,
 			);
 			path = UI;
@@ -579,13 +570,13 @@
 			path = welcome;
 			sourceTree = "<group>";
 		};
-		9A8145802505F867001A012A /* welcome */ = {
+		9A8145802505F867001A012A /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
 				9A8145812505F8A0001A012A /* WelcomeViewModel.swift */,
 				9A8145832505F90C001A012A /* WelcomeView.swift */,
 			);
-			path = welcome;
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -830,7 +821,6 @@
 				2B48231F25068B4400AF312D /* User.swift in Sources */,
 				2B48232425069FA100AF312D /* TextingData.swift in Sources */,
 				2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */,
-				9A8145702505DAF5001A012A /* EventDataSourceImpl.swift in Sources */,
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
 				2BC2571C250561D800B433CC /* EventCodeRemoteDataSource.swift in Sources */,
 				2BC257312505A38C00B433CC /* LoginUseCase.swift in Sources */,
@@ -850,7 +840,6 @@
 				2B81FCE525073B0A00EC9E10 /* UserApiImpl.swift in Sources */,
 				2B81FCED2507454D00EC9E10 /* ApiAssembly.swift in Sources */,
 				9A8145672505D1DA001A012A /* WelcomeResponseEntity.swift in Sources */,
-				9A81457A2505F14D001A012A /* EventRepositoryImpl.swift in Sources */,
 				2BC2571125055D0500B433CC /* ExternalError.swift in Sources */,
 				9A81457F2505F420001A012A /* GetWelcomeUseCaseImpl.swift in Sources */,
 				2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */,
@@ -875,7 +864,6 @@
 				9A81456C2505D79A001A012A /* Welcome.swift in Sources */,
 				9A8145822505F8A0001A012A /* WelcomeViewModel.swift in Sources */,
 				9A81456E2505D7B4001A012A /* WelcomeRequest.swift in Sources */,
-				9A8145692505D70B001A012A /* EventDataSource.swift in Sources */,
 				2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */,
 				2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */,
 				2B81FCDF250734D500EC9E10 /* UserApi.swift in Sources */,

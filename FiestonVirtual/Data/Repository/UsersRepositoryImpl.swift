@@ -53,8 +53,7 @@ extension UsersRepositoryImpl: UsersRepository {
         let result = repository.create()
         switch result {
         case .success(let userEntity):
-            userEntity.name = user.name
-            userEntity.age = user.age
+            userEntity.firstName = user.name
             
             
             //TODO: - use unit of work pattern instead of calling context here
@@ -88,4 +87,14 @@ extension UsersRepositoryImpl: UsersRepository {
             return .failure(error)
         }
     }
+    
+    @discardableResult func getLocalUser() -> Result<User, Error> {
+            let result = repository.get(predicate: nil, sortDescriptors: nil)
+            switch result {
+            case .success(let userEntities):
+                return .success( userEntities[0].toDomainModel())
+            case .failure(let error):
+                return .failure(error)
+            }
+        }
 }

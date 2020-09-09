@@ -11,4 +11,6 @@ import Combine
 
 protocol EventCodeApi {
     func validateCode(userInvitationCode: Int) -> AnyPublisher<CodeVerificationResponseEntity,ExternalError>
+    func getWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<WelcomeResponseEntity, ExternalError>
+
 }

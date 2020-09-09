@@ -5,13 +5,26 @@ import Combine
 class GetWelcomeUseCaseImpl:GetWelcomeUseCase  {
     
     let eventRepository:EventRepository
+    let usersRepository:UsersRepository
     
-    init(eventRepository:EventRepository){
+    init(eventRepository:EventRepository,
+         usersRepository:UsersRepository){
         self.eventRepository=eventRepository
+        self.usersRepository=usersRepository
     }
     
     func invoke() -> AnyPublisher<Welcome, ErrorResponse> {
-        return self.eventRepository.getWelcome(welcomeRequest: WelcomeRequest(idEvent: 1))
+        
+        let result = self.usersRepository.getLocalUser()
+        switch result {
+        case .success(let user):
+            return eventRepository.getWelcome(welcomeRequest: WelcomeRequest(idEvent: user.idEvent))
+        case .failure(let error):
+            return Just(Welcome(title:"", description: "", subtitle: "", imageUrl: ""))
+                .mapError({ (_) in
+                    ErrorResponse(code: 1, title: "", message: error.localizedDescription)
+                }).eraseToAnyPublisher()
+        }
     }
     
 }
