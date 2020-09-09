@@ -10,7 +10,7 @@ import Foundation
 import Combine
 
 class EventCodeRepositoryImpl: EventCodeRepository {
-    
+
     let eventCodeRemoteDataSource: EventCodeRemoteDataSource
     
     init(eventCodeRemoteDataSource: EventCodeRemoteDataSource) {

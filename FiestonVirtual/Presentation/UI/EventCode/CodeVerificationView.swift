@@ -12,7 +12,7 @@ struct CodeVerificationView: View {
     
     @ObservedObject var viewModel: CodeVerificationViewModel
     
-    @State private var name: String = "Tim"
+    @State private var eventCode: String = "Tim"
     
     @State var showOneLevelIn = false
     
@@ -20,10 +20,11 @@ struct CodeVerificationView: View {
         NavigationView {
             
             VStack {
+            
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                TextField("Enter your name", text: $name)
+                TextField("Enter your name", text: $eventCode)
                 Button(action: {
-                    self.viewModel.verifyCode()
+                    self.viewModel.verifyCode(code: self.eventCode)
                 }) {
                     Text("Entrar")
                 }
