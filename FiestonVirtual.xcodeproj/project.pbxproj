@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B3070EA25089603005198F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3070E925089603005198F7 /* Color.swift */; };
+		2B3070EC25089659005198F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3070EB25089659005198F7 /* Colors.xcassets */; };
 		2B48231C25068AF600AF312D /* UserEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48231B25068AF600AF312D /* UserEntityMapper.swift */; };
 		2B48231F25068B4400AF312D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48231E25068B4400AF312D /* User.swift */; };
 		2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48232125069E2200AF312D /* CoreDataContextProvider.swift */; };
@@ -36,7 +38,6 @@
 		2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256CE250546D100B433CC /* AppDelegate.swift */; };
 		2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256D0250546D100B433CC /* SceneDelegate.swift */; };
 		2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256D2250546D100B433CC /* FiestonVirtual.xcdatamodeld */; };
-		2BC256D6250546D100B433CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256D5250546D100B433CC /* ContentView.swift */; };
 		2BC256D8250546D200B433CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC256D7250546D200B433CC /* Assets.xcassets */; };
 		2BC256DB250546D200B433CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC256DA250546D200B433CC /* Preview Assets.xcassets */; };
 		2BC256DE250546D200B433CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC256DC250546D200B433CC /* LaunchScreen.storyboard */; };
@@ -88,6 +89,8 @@
 		0BF84B5663CE195EAC8CBC96 /* Pods-FiestonVirtualTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.release.xcconfig"; sourceTree = "<group>"; };
 		129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtualTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B3070E925089603005198F7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		2B3070EB25089659005198F7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B48231B25068AF600AF312D /* UserEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntityMapper.swift; sourceTree = "<group>"; };
 		2B48231E25068B4400AF312D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2B48232125069E2200AF312D /* CoreDataContextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContextProvider.swift; sourceTree = "<group>"; };
@@ -118,7 +121,6 @@
 		2BC256CE250546D100B433CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC256D0250546D100B433CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2BC256D3250546D100B433CC /* FiestonVirtual.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FiestonVirtual.xcdatamodel; sourceTree = "<group>"; };
-		2BC256D5250546D100B433CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2BC256D7250546D200B433CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BC256DA250546D200B433CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2BC256DD250546D200B433CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -185,6 +187,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B3070E8250894CC005198F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B3070E925089603005198F7 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2B48231D25068B3700AF312D /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				2BC256DA250546D200B433CC /* Preview Assets.xcassets */,
+				2B3070EB25089659005198F7 /* Colors.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -344,7 +355,6 @@
 				2BC257372505AA7700B433CC /* UI */,
 				2BC2571425055F6800B433CC /* Utilities */,
 				2BC2570B25055C3700B433CC /* Framework */,
-				2BC256D5250546D100B433CC /* ContentView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -414,6 +424,7 @@
 		2BC2571425055F6800B433CC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2B3070E8250894CC005198F7 /* Extensions */,
 				2B83E78D2507F4FD004B1BF2 /* CommonViews */,
 				2BC2571525055F7A00B433CC /* Parsing.swift */,
 			);
@@ -667,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC256DE250546D200B433CC /* LaunchScreen.storyboard in Resources */,
+				2B3070EC25089659005198F7 /* Colors.xcassets in Resources */,
 				2BC256DB250546D200B433CC /* Preview Assets.xcassets in Resources */,
 				2BC256D8250546D200B433CC /* Assets.xcassets in Resources */,
 			);
@@ -834,10 +846,10 @@
 				2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */,
 				2BC2570A25055A3900B433CC /* CodeVerificationResponseEntity.swift in Sources */,
 				2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */,
+				2B3070EA25089603005198F7 /* Color.swift in Sources */,
 				2B83E7912507F584004B1BF2 /* LoadingIndicator.swift in Sources */,
 				2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */,
 				2B81FCE825073DCC00EC9E10 /* MainView.swift in Sources */,
-				2BC256D6250546D100B433CC /* ContentView.swift in Sources */,
 				2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */,
 				2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */,
 				2B81FCDF250734D500EC9E10 /* UserApi.swift in Sources */,

@@ -12,10 +12,8 @@ import Alamofire
 
 class EventCodeApiImpl: EventCodeApi {
     
-    func validateCode(userInvitationCode: Int) -> AnyPublisher<CodeVerificationResponseEntity, ExternalError> {
-        
-        let validateCodeRequest = ValidateCodeRequest(userInvitationCode: userInvitationCode)
-        
+    func validateCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<CodeVerificationResponseEntity, ExternalError> {
+    
         guard let url = makeVerifyCodeComponents().url else {
             let error = ExternalError.NetworkError(description: "Couldn't create URL")
             return Fail(error: error).eraseToAnyPublisher()
@@ -41,8 +39,8 @@ class EventCodeApiImpl: EventCodeApi {
                         promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
                         break
                         
-                    case .success(let userResponseEntity):
-                        promise(.success(userResponseEntity))
+                    case .success(let codeVerificationResponseEntity):
+                        promise(.success(codeVerificationResponseEntity))
                         break
                     }
                     

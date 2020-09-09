@@ -16,12 +16,18 @@ class VerifySessionUseCaseImpl: VerifySessionUseCase {
         self.usersRepository = usersRepository
     }
     
-    func invoke() -> Result<[User], Error> {
-        let filter = "carlitosdroid"
-        let commitPredicate = NSPredicate(format: "name == %@", filter)
+    func invoke() -> Result<Bool, Error> {
         
-        return self.usersRepository.getLocalUsers(predicate: commitPredicate)
+        //TODO - use a predicate if we need to make querys
+        //let filter = "carlitosdroid"
+        //let commitPredicate = NSPredicate(format: "name == %@", filter)
+        
+        let result = self.usersRepository.getLocalUsers(predicate: nil)
+        switch result {
+        case .failure(let error):
+            return .failure(error)
+        case .success(let users):
+            return .success(!users.isEmpty)
+        }
     }
-    
 }
-

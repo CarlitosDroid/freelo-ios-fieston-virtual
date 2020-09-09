@@ -17,8 +17,8 @@ class EventCodeRemoteDataSourceImpl: EventCodeRemoteDataSource {
         self.eventCodeApi = eventCodeApi
     }
 
-    func verificateEventCode(userInvitationCode: Int) -> AnyPublisher<EventCode, ErrorResponse> {
-        return eventCodeApi.validateCode(userInvitationCode: userInvitationCode)
+    func verificateEventCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<EventCode, ErrorResponse> {
+        return eventCodeApi.validateCode(validateCodeRequest: validateCodeRequest)
             .mapError { (externalError: ExternalError) -> ErrorResponse in
                 switch externalError {
                 case .NetworkError(let description):

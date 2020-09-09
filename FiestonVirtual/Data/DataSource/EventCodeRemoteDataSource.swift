@@ -10,5 +10,5 @@ import Foundation
 import Combine
 
 protocol EventCodeRemoteDataSource {
-    func verificateEventCode(userInvitationCode: Int) -> AnyPublisher<EventCode, ErrorResponse>
+    func verificateEventCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<EventCode, ErrorResponse>
 }
