@@ -10,5 +10,5 @@ import Foundation
 import Combine
 
 protocol EventCodeRepository {
-    func verifyCode(userInvitationCode: Int) -> AnyPublisher<EventCode, ErrorResponse>
+    func verifyCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<EventCode, ErrorResponse>
 }

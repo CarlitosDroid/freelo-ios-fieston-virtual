@@ -12,72 +12,58 @@ struct CodeVerificationView: View {
     
     @ObservedObject var viewModel: CodeVerificationViewModel
     
-    @State private var eventCode: String = "Tim"
+    @State private var eventCode: String = ""
     
     @State var showOneLevelIn = false
     
     var body: some View {
         NavigationView {
             
-            VStack {
-            
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                TextField("Enter your name", text: $eventCode)
-                Button(action: {
-                    self.viewModel.verifyCode(code: self.eventCode)
-                }) {
-                    Text("Entrar")
-                }
-                NavigationLink(
-                    destination: MainView(),
-                    isActive: self.$viewModel.isSuccessCode,
-                    label: { Button(action: {
-                        self.showOneLevelIn = !self.showOneLevelIn
-                    }) {
-                        Text("Mostrar")
-                        }
-                })
+            ZStack {
+                Color.deepPurpleIntense
+                    .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    Image("Fieston")
+                    TextField("Coloque su código", text: $eventCode)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .keyboardType(.numberPad)
+                    
+                    NavigationLink(
+                        destination: MainView(),
+                        isActive: self.$viewModel.inSession,
+                        label: { Button(action: {
+                            self.viewModel.verifyCode(code: self.eventCode)
+                        }) {
+                            Text("Entrar")
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 50, alignment: .center)
+                                .background(Color.aqua.cornerRadius(8))
+                                .foregroundColor(Color.white)
+                            }
+                    })
+                }.padding(.all, 15)
             }
             
+        }
+        .onAppear {
+            self.viewModel.verifySession()
+            print("ContentView appeared!")
+        }.onDisappear {
+            print("ContentView disappeared!")
         }
         
     }
     
-    //    func addUser() {
-    //        let userEntity = UserEntity(context: managedObjectContext)
-    //        userEntity.name = "Carlos"
-    //        userEntity.age = "87"
-    //        saveContext()
-    //    }
-    //
-    //    func deleteUser() {
-    //
-    //    }
-    //
-    //    func saveContext() {
-    //        do {
-    //            try managedObjectContext.save()
-    //        } catch {
-    //            print("Error saving managed object context \(error)")
-    //        }
-    //    }
 }
 
-//struct CodeVerificationView_Previews: PreviewProvider {
-//
-//
-//    static var previews: some View {
-//
-//        CodeVerificationView(
-//            viewModel: CodeVerificationViewModel(
-//                loginUseCase: LoginUseCaseImpl(
-//                    eventCodeRepository: EventCodeRepositoryImpl(
-//                        eventCodeRemoteDataSource: EventCodeRemoteDataSourceImpl(
-//                            eventCodeApi: EventCodeApiImpl())
-//                    ),
-//                    usersRepository: UsersRepositoryImpl(userLocalDataSource: UserLocalDataSourceImpl(managedObjectContext: Manager))
-//                )
-//            )
-//        )
-//    }
-//}
+struct CodeVerificationView_Previews: PreviewProvider {
+    
+    @State static var codeVerificationViewModel = CodeVerificationViewModel()
+    
+    static var previews: some View {
+        CodeVerificationView(
+            viewModel: codeVerificationViewModel
+        )
+    }
+}
