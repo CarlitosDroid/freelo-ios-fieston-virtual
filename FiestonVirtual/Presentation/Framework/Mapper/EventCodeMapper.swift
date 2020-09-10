@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension CodeVerificationResponseEntity {
+extension CodeVerificationResponse {
     
     func toEventCode() -> EventCode {
         return EventCode(

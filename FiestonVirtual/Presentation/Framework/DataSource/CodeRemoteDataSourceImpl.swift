@@ -29,7 +29,7 @@ class EventCodeRemoteDataSourceImpl: EventCodeRemoteDataSource {
                     return ErrorResponse(title: "Error Desconocido", message: description)
                 }
             }
-            .map { (codeVerificationResponseEntity: CodeVerificationResponseEntity) -> EventCode in
+            .map { (codeVerificationResponseEntity: CodeVerificationResponse) -> EventCode in
                 return codeVerificationResponseEntity.toEventCode()
             }.eraseToAnyPublisher()
     }

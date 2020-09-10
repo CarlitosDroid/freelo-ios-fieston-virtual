@@ -29,7 +29,7 @@ class UserRemoteDataSourceImpl: UserRemoteDataSource {
                 return ErrorResponse(title: "Error Desconocido", message: description)
             }
         }
-        .map { (userResponseEntity: UserResponseEntity) -> User in
+        .map { (userResponseEntity: UserResponse) -> User in
             return userResponseEntity.toDomainModel()
         }.eraseToAnyPublisher()
     }

@@ -11,5 +11,5 @@ import Combine
 
 protocol RankingApi {
     func getRankingData(idUser: Int, idEvent: Int ) ->
-    AnyPublisher<RankingResponseEntity,ExternalError>
+    AnyPublisher<RankingResponse,ExternalError>
 }

@@ -8,10 +8,10 @@
 
 import Foundation
 
-// MARK: - GetGalleryResponceEntity
-struct GetGalleryResponceEntity: Decodable {
+// MARK: - GetGalleryResponse
+struct GetGalleryResponse: Decodable {
     let message: String
-    let data:   ChildDataGalleryResponse
+    let data:   ChildGetGalleryDataResponse
     
     enum CodingKeys: String, CodingKey {
         case message = "message"
@@ -19,23 +19,24 @@ struct GetGalleryResponceEntity: Decodable {
     }
 }
 
-// MARK: - ChildDataGalleryResponse
-struct ChildDataGalleryResponse: Decodable {
-    let posts: [Post]
-    enum CodingKey: String, CodingKey {
+// MARK: - ChildGetGalleryDataResponse
+struct ChildGetGalleryDataResponse: Decodable {
+    let posts: [ChildGetGalleryPostsResponse]
+    enum CodingKeys: String, CodingKey {
         case posts
     }
 }
 
-// MARK: - Post
-struct Post: Decodable {
+// MARK: - ChildGetGalleryPostsResponse
+struct ChildGetGalleryPostsResponse: Decodable {
     let idPost, postType: Int
     let postFile: String
     let preview: String
     let postStatus: Int
     
-    enum CodingKey: String, CodingKeys {
-        case idPost, postType
+    enum CodingKeys: String, CodingKey {
+        case idPost
+        case postType
         case postFile
         case preview
         case postStatus

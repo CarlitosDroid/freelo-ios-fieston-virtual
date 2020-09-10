@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension UserResponseEntity: DomainModel {
+extension UserResponse: DomainModel {
     
     typealias DomainModelType = User
     

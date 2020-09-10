@@ -8,10 +8,10 @@
 
 import Foundation
 
-// MARK: - RankingResponseEntity
-struct RankingResponseEntity: Decodable {
+// MARK: - RankingResponse
+struct RankingResponse: Decodable {
     let message: String
-    let data: ChildDataRankingResponse
+    let data: ChildRankingDataResponse
     
     enum CodingKeys: String, CodingKey {
         case message = "message"
@@ -19,9 +19,9 @@ struct RankingResponseEntity: Decodable {
     }
 }
 
-//MARK: - ChildDataRankingResponse
-struct ChildDataRankingResponse: Decodable {
-    let raking: [ChildRankingResponce]
+//MARK: - ChildRankingDataResponse
+struct ChildRankingDataResponse: Decodable {
+    let raking: [ChildRankingResponse]
     let userTotalScore: String
     enum CodingKeys: String, CodingKey{
         case raking
@@ -30,7 +30,7 @@ struct ChildDataRankingResponse: Decodable {
 }
 
 //MARK: - ChildRankingResponse
-struct ChildRankingResponce: Decodable {
+struct ChildRankingResponse: Decodable {
     let idUserRanking: Int
     let userRankingName: String
     let userRankingTotalScore: Int

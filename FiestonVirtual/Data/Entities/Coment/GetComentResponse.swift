@@ -9,10 +9,10 @@
 import Foundation
 
 
-// MARK: - GetComentResponseEntity
-struct GetComentResponseEntity: Decodable {
+// MARK: - GetComentResponse
+struct GetComentResponse: Decodable {
     let message: String
-    let data: ChildDataComentResponse
+    let data: ChildGetComentDataResponse
     
     enum CodingKeys: String, CodingKey {
         case message = "message"
@@ -20,16 +20,16 @@ struct GetComentResponseEntity: Decodable {
     }
 }
 
-// MARK: - ChildDataComentResponse
-struct ChildDataComentResponse: Decodable {
-    let comments: [Comment]
+// MARK: - ChildGetComentDataResponse
+struct ChildGetComentDataResponse: Decodable {
+    let comments: [ChildGetCommentsResponse]
     enum CodingKeys: String, CodingKey {
         case comments
     }
 }
 
-// MARK: - Comment
-struct Comment: Decodable {
+// MARK: - ChildGetCommentsResponse
+struct ChildGetCommentsResponse: Decodable {
     let idComment: Int
     let commentRegistrationDate, comment: String
     let avatar: String

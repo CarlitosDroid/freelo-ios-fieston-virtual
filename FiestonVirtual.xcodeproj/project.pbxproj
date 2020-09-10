@@ -16,7 +16,7 @@
 		2B81FCDB2507342400EC9E10 /* UserRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCDA2507342400EC9E10 /* UserRemoteDataSource.swift */; };
 		2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCDC2507349300EC9E10 /* UserRemoteDataSourceImpl.swift */; };
 		2B81FCDF250734D500EC9E10 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCDE250734D500EC9E10 /* UserApi.swift */; };
-		2B81FCE12507352300EC9E10 /* UserResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCE02507352300EC9E10 /* UserResponseEntity.swift */; };
+		2B81FCE12507352300EC9E10 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCE02507352300EC9E10 /* UserResponse.swift */; };
 		2B81FCE3250736C800EC9E10 /* UserResponseEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCE2250736C800EC9E10 /* UserResponseEntityMapper.swift */; };
 		2B81FCE525073B0A00EC9E10 /* UserApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCE425073B0A00EC9E10 /* UserApiImpl.swift */; };
 		2B81FCE825073DCC00EC9E10 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCE725073DCC00EC9E10 /* MainView.swift */; };
@@ -42,7 +42,7 @@
 		2BC256DE250546D200B433CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC256DC250546D200B433CC /* LaunchScreen.storyboard */; };
 		2BC256E9250546D200B433CC /* FiestonVirtualTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256E8250546D200B433CC /* FiestonVirtualTests.swift */; };
 		2BC256F4250546D200B433CC /* FiestonVirtualUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256F3250546D200B433CC /* FiestonVirtualUITests.swift */; };
-		2BC2570A25055A3900B433CC /* CodeVerificationResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2570925055A3900B433CC /* CodeVerificationResponseEntity.swift */; };
+		2BC2570A25055A3900B433CC /* CodeVerificationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2570925055A3900B433CC /* CodeVerificationResponse.swift */; };
 		2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2570D25055CAB00B433CC /* EventCodeApi.swift */; };
 		2BC2571125055D0500B433CC /* ExternalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2571025055D0500B433CC /* ExternalError.swift */; };
 		2BC2571325055D8C00B433CC /* EventCodeApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2571225055D8C00B433CC /* EventCodeApiImpl.swift */; };
@@ -65,7 +65,7 @@
 		54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */; };
 		8C82C592C931C185D0216CC5 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
 		E25AF77D539E83B4A5422C67 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */; };
-		FB1014D025086338002C91ED /* RankingResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014CF25086338002C91ED /* RankingResponseEntity.swift */; };
+		FB1014D025086338002C91ED /* RankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014CF25086338002C91ED /* RankingResponse.swift */; };
 		FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */; };
 		FB1014D525086E0A002C91ED /* RankingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014D425086E0A002C91ED /* RankingApi.swift */; };
 		FB1014D725086F1C002C91ED /* RankingApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014D625086F1C002C91ED /* RankingApiImpl.swift */; };
@@ -73,10 +73,10 @@
 		FB1014E32509B321002C91ED /* AddComentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014E22509B321002C91ED /* AddComentRequest.swift */; };
 		FB1014E52509B35E002C91ED /* GetGalleryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014E42509B35E002C91ED /* GetGalleryRequest.swift */; };
 		FB1014E72509B394002C91ED /* GetGalleryDiteilRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014E62509B394002C91ED /* GetGalleryDiteilRequest.swift */; };
-		FB1014EB2509B8FC002C91ED /* GetGalleryResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EA2509B8FC002C91ED /* GetGalleryResponseEntity.swift */; };
-		FB1014ED2509B974002C91ED /* GetGalleryDitailResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EC2509B974002C91ED /* GetGalleryDitailResponseEntity.swift */; };
-		FB1014EF2509B9A4002C91ED /* GetComentResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EE2509B9A4002C91ED /* GetComentResponseEntity.swift */; };
-		FB1014F12509B9C6002C91ED /* AddComentResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F02509B9C6002C91ED /* AddComentResponseEntity.swift */; };
+		FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EA2509B8FC002C91ED /* GetGalleryResponse.swift */; };
+		FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */; };
+		FB1014EF2509B9A4002C91ED /* GetComentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EE2509B9A4002C91ED /* GetComentResponse.swift */; };
+		FB1014F12509B9C6002C91ED /* AddComentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F02509B9C6002C91ED /* AddComentResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +109,7 @@
 		2B81FCDA2507342400EC9E10 /* UserRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSource.swift; sourceTree = "<group>"; };
 		2B81FCDC2507349300EC9E10 /* UserRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		2B81FCDE250734D500EC9E10 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
-		2B81FCE02507352300EC9E10 /* UserResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseEntity.swift; sourceTree = "<group>"; };
+		2B81FCE02507352300EC9E10 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		2B81FCE2250736C800EC9E10 /* UserResponseEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseEntityMapper.swift; sourceTree = "<group>"; };
 		2B81FCE425073B0A00EC9E10 /* UserApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiImpl.swift; sourceTree = "<group>"; };
 		2B81FCE725073DCC00EC9E10 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		2BC256EF250546D200B433CC /* FiestonVirtualUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiestonVirtualUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC256F3250546D200B433CC /* FiestonVirtualUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiestonVirtualUITests.swift; sourceTree = "<group>"; };
 		2BC256F5250546D200B433CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BC2570925055A3900B433CC /* CodeVerificationResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationResponseEntity.swift; sourceTree = "<group>"; };
+		2BC2570925055A3900B433CC /* CodeVerificationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationResponse.swift; sourceTree = "<group>"; };
 		2BC2570D25055CAB00B433CC /* EventCodeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCodeApi.swift; sourceTree = "<group>"; };
 		2BC2571025055D0500B433CC /* ExternalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalError.swift; sourceTree = "<group>"; };
 		2BC2571225055D8C00B433CC /* EventCodeApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCodeApiImpl.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		A13A0579CBC4D34FA84373F9 /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4E7F3136016DAA75F1C68C8 /* Pods-FiestonVirtual.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.debug.xcconfig"; sourceTree = "<group>"; };
 		C8723C841DAAB5A94BCE0483 /* Pods-FiestonVirtual.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.release.xcconfig"; sourceTree = "<group>"; };
-		FB1014CF25086338002C91ED /* RankingResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingResponseEntity.swift; sourceTree = "<group>"; };
+		FB1014CF25086338002C91ED /* RankingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingResponse.swift; sourceTree = "<group>"; };
 		FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteRankingRequest.swift; sourceTree = "<group>"; };
 		FB1014D425086E0A002C91ED /* RankingApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingApi.swift; sourceTree = "<group>"; };
 		FB1014D625086F1C002C91ED /* RankingApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingApiImpl.swift; sourceTree = "<group>"; };
@@ -175,10 +175,10 @@
 		FB1014E22509B321002C91ED /* AddComentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComentRequest.swift; sourceTree = "<group>"; };
 		FB1014E42509B35E002C91ED /* GetGalleryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryRequest.swift; sourceTree = "<group>"; };
 		FB1014E62509B394002C91ED /* GetGalleryDiteilRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDiteilRequest.swift; sourceTree = "<group>"; };
-		FB1014EA2509B8FC002C91ED /* GetGalleryResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryResponseEntity.swift; sourceTree = "<group>"; };
-		FB1014EC2509B974002C91ED /* GetGalleryDitailResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDitailResponseEntity.swift; sourceTree = "<group>"; };
-		FB1014EE2509B9A4002C91ED /* GetComentResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComentResponseEntity.swift; sourceTree = "<group>"; };
-		FB1014F02509B9C6002C91ED /* AddComentResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComentResponseEntity.swift; sourceTree = "<group>"; };
+		FB1014EA2509B8FC002C91ED /* GetGalleryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryResponse.swift; sourceTree = "<group>"; };
+		FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDitailResponse.swift; sourceTree = "<group>"; };
+		FB1014EE2509B9A4002C91ED /* GetComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComentResponse.swift; sourceTree = "<group>"; };
+		FB1014F02509B9C6002C91ED /* AddComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComentResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,9 +402,9 @@
 		2BC2570825055A0F00B433CC /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				2BC2570925055A3900B433CC /* CodeVerificationResponseEntity.swift */,
-				2B81FCE02507352300EC9E10 /* UserResponseEntity.swift */,
-				FB1014CF25086338002C91ED /* RankingResponseEntity.swift */,
+				2BC2570925055A3900B433CC /* CodeVerificationResponse.swift */,
+				2B81FCE02507352300EC9E10 /* UserResponse.swift */,
+				FB1014CF25086338002C91ED /* RankingResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -618,8 +618,8 @@
 		FB1014E82509B83E002C91ED /* Coment */ = {
 			isa = PBXGroup;
 			children = (
-				FB1014EE2509B9A4002C91ED /* GetComentResponseEntity.swift */,
-				FB1014F02509B9C6002C91ED /* AddComentResponseEntity.swift */,
+				FB1014EE2509B9A4002C91ED /* GetComentResponse.swift */,
+				FB1014F02509B9C6002C91ED /* AddComentResponse.swift */,
 			);
 			path = Coment;
 			sourceTree = "<group>";
@@ -627,8 +627,8 @@
 		FB1014E92509B872002C91ED /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				FB1014EA2509B8FC002C91ED /* GetGalleryResponseEntity.swift */,
-				FB1014EC2509B974002C91ED /* GetGalleryDitailResponseEntity.swift */,
+				FB1014EA2509B8FC002C91ED /* GetGalleryResponse.swift */,
+				FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -883,18 +883,18 @@
 				2BC257312505A38C00B433CC /* LoginUseCase.swift in Sources */,
 				2BC257342505A3B500B433CC /* LoginUseCaseImpl.swift in Sources */,
 				2B4823262506A29600AF312D /* Repository.swift in Sources */,
-				FB1014F12509B9C6002C91ED /* AddComentResponseEntity.swift in Sources */,
+				FB1014F12509B9C6002C91ED /* AddComentResponse.swift in Sources */,
 				2B48231C25068AF600AF312D /* UserEntityMapper.swift in Sources */,
 				2BC2573C2505AAE000B433CC /* CodeVerificationViewModel.swift in Sources */,
 				2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */,
 				2B4823282506A32400AF312D /* CoreDataRepository.swift in Sources */,
-				FB1014EB2509B8FC002C91ED /* GetGalleryResponseEntity.swift in Sources */,
+				FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */,
 				FB1014D525086E0A002C91ED /* RankingApi.swift in Sources */,
 				2BC2572E250564FB00B433CC /* EventCodeRepository.swift in Sources */,
 				FB1014E52509B35E002C91ED /* GetGalleryRequest.swift in Sources */,
 				2BC2571625055F7A00B433CC /* Parsing.swift in Sources */,
 				2BC257202505623000B433CC /* ErrorResponse.swift in Sources */,
-				2B81FCE12507352300EC9E10 /* UserResponseEntity.swift in Sources */,
+				2B81FCE12507352300EC9E10 /* UserResponse.swift in Sources */,
 				2BC257232505627200B433CC /* EventCode.swift in Sources */,
 				2B81FCE525073B0A00EC9E10 /* UserApiImpl.swift in Sources */,
 				2B81FCED2507454D00EC9E10 /* ApiAssembly.swift in Sources */,
@@ -911,18 +911,18 @@
 				2BC2571325055D8C00B433CC /* EventCodeApiImpl.swift in Sources */,
 				2B81FCEF25074CE900EC9E10 /* RepositoriesAssembly.swift in Sources */,
 				2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */,
-				FB1014ED2509B974002C91ED /* GetGalleryDitailResponseEntity.swift in Sources */,
+				FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */,
 				2BC2573E2505AEF100B433CC /* UsersRepositoryImpl.swift in Sources */,
 				2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */,
 				2BC2573A2505AAD200B433CC /* CodeVerificationView.swift in Sources */,
 				FB1014E72509B394002C91ED /* GetGalleryDiteilRequest.swift in Sources */,
 				2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */,
-				2BC2570A25055A3900B433CC /* CodeVerificationResponseEntity.swift in Sources */,
+				2BC2570A25055A3900B433CC /* CodeVerificationResponse.swift in Sources */,
 				2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */,
 				2B83E7912507F584004B1BF2 /* LoadingIndicator.swift in Sources */,
 				2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */,
 				2B81FCE825073DCC00EC9E10 /* MainView.swift in Sources */,
-				FB1014D025086338002C91ED /* RankingResponseEntity.swift in Sources */,
+				FB1014D025086338002C91ED /* RankingResponse.swift in Sources */,
 				2BC256D6250546D100B433CC /* ContentView.swift in Sources */,
 				2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */,
 				2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */,
@@ -931,7 +931,7 @@
 				2B83E79825081540004B1BF2 /* ValidateCodeRequest.swift in Sources */,
 				2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */,
 				2B81FCDB2507342400EC9E10 /* UserRemoteDataSource.swift in Sources */,
-				FB1014EF2509B9A4002C91ED /* GetComentResponseEntity.swift in Sources */,
+				FB1014EF2509B9A4002C91ED /* GetComentResponse.swift in Sources */,
 				2B83E78F2507F519004B1BF2 /* LoadingView.swift in Sources */,
 				FB1014D725086F1C002C91ED /* RankingApiImpl.swift in Sources */,
 			);

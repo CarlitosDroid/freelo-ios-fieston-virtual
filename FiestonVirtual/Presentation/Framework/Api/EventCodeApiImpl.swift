@@ -17,7 +17,7 @@ class EventCodeApiImpl: EventCodeApi {
         self.session = session
     }
     
-    func validateCode(userInvitationCode: Int) -> AnyPublisher<CodeVerificationResponseEntity, ExternalError> {
+    func validateCode(userInvitationCode: Int) -> AnyPublisher<CodeVerificationResponse, ExternalError> {
         return requestVerificationCode(with: makeCodeVerificationComponents(), userInvitationCode: userInvitationCode)
     }
     

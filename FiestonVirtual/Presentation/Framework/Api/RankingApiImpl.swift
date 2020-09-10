@@ -19,7 +19,7 @@ class RankingApiImpl: RankingApi {
         self.session = session
     }
     
-    func getRankingData(idUser: Int, idEvent: Int ) -> AnyPublisher<RankingResponseEntity, ExternalError> {
+    func getRankingData(idUser: Int, idEvent: Int ) -> AnyPublisher<RankingResponse, ExternalError> {
         let getRemoteRankingRequest = GetRemoteRankingRequest(idUser: idUser, idEvent: idEvent)
         
         guard let url = makeRankinglComponents().url else{
@@ -35,12 +35,12 @@ class RankingApiImpl: RankingApi {
                           interceptor: nil,
                           requestModifier: nil)
             .validate()
-            .publishDecodable(type: RankingResponseEntity.self)
+            .publishDecodable(type: RankingResponse.self)
             .mapError({ (never : Never) -> ExternalError in ExternalError.UnknowError(description:
                 never.localizedDescription)
             })
-            .flatMap({(dataResponse: DataResponse<RankingResponseEntity,AFError>)-> AnyPublisher<RankingResponseEntity, ExternalError> in
-                Future<RankingResponseEntity, ExternalError> { promise in
+            .flatMap({(dataResponse: DataResponse<RankingResponse,AFError>)-> AnyPublisher<RankingResponse, ExternalError> in
+                Future<RankingResponse, ExternalError> { promise in
                     switch dataResponse.result {
                         
                     case .failure(let afError):
