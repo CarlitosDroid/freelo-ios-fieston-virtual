@@ -1,16 +1,16 @@
 
 import Foundation
 
-struct WelcomeResponseEntity :Codable {
-    let data: DataResponseEntity
+struct WelcomeResponseEntity : Decodable {
+    let data: WelcomeDataResponseEntity
     let message: String
 }
 
-struct DataResponseEntity : Codable {
-    let event: EventResponseEntity
+struct WelcomeDataResponseEntity : Decodable {
+    let event: WelcomeEventResponseEntity
 }
 
-struct EventResponseEntity : Codable {
+struct WelcomeEventResponseEntity : Decodable {
     let eventHost: String
     let eventImagePrize: String
     let eventLogo: String

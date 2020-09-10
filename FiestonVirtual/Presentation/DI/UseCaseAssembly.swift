@@ -19,5 +19,11 @@ class UseCasesAssembly: Assembly {
         container.register(VerifySessionUseCase.self) { resolver in
             VerifySessionUseCaseImpl(usersRepository: resolver.resolve(UsersRepository.self)!)
         }
+        container.register(GetWelcomeUseCase.self) { resolver in
+            GetWelcomeUseCaseImpl(
+                eventRepository : resolver.resolve(EventCodeRepository.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
     }
 }

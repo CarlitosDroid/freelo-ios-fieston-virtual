@@ -8,6 +8,7 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 class EventCodeApiImpl: EventCodeApi {
     
@@ -22,8 +23,39 @@ class EventCodeApiImpl: EventCodeApi {
     }
     
     func getWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<WelcomeResponseEntity, ExternalError>{
-        return requestGetWelcome(with: getUrlComponentsToGetWelcome(), welcomeRequest: welcomeRequest)
         
+        guard let url = getUrlComponentsToGetWelcome().url else {
+            let error = ExternalError.NetworkError(description: "Couldn't create URL")
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+        
+        return AF.request(url,
+                          method: .post,
+                          parameters: welcomeRequest,
+                          encoder: JSONParameterEncoder.default,
+                          headers: nil,
+                          interceptor: nil,
+                          requestModifier: nil)
+            .validate()
+            .publishDecodable(type: WelcomeResponseEntity.self)
+            .mapError({ (never : Never) -> ExternalError in
+                ExternalError.UnknowError(description: never.localizedDescription)
+            })
+            .flatMap({ (dataResponse: DataResponse<WelcomeResponseEntity, AFError>)-> AnyPublisher<WelcomeResponseEntity, ExternalError> in
+                Future<WelcomeResponseEntity, ExternalError> { promise in
+                    switch dataResponse.result {
+                        
+                    case .failure(let afError):
+                        promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
+                        break
+                        
+                    case .success(let welcomeResponseEntity):
+                        promise(.success(welcomeResponseEntity))
+                        break
+                    }
+                    
+                }.eraseToAnyPublisher()
+            }).eraseToAnyPublisher()
     }
     
     private func requestVerificationCode<T>(
@@ -53,38 +85,6 @@ class EventCodeApiImpl: EventCodeApi {
         urlRequest.httpMethod = "POST"
         let body = [
             "userInvitationCode" : "\(userInvitationCode)"
-        ]
-        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        return urlRequest
-    }
-    
-    private func requestGetWelcome<T>(
-        with components: URLComponents,
-        welcomeRequest: WelcomeRequest
-    ) -> AnyPublisher<T, ExternalError> where T: Decodable {
-        guard let url = components.url else {
-            let error = ExternalError.NetworkError(description: "Couldn't create URL")
-            return Fail(error: error).eraseToAnyPublisher()
-        }
-        
-        let urlRequest = getUrlToGetWelcome(url: url, welcomeRequest: welcomeRequest)
-        
-        return session.dataTaskPublisher(for: urlRequest)
-            .mapError { (error: Error) -> ExternalError in
-                ExternalError.NetworkError(description: error.localizedDescription)
-        }
-        .flatMap({ (output: URLSession.DataTaskPublisher.Output) in
-            return decode(output.data)
-        })
-            .eraseToAnyPublisher()
-    }
-    
-    private func getUrlToGetWelcome(url: URL, welcomeRequest: WelcomeRequest) -> URLRequest {
-        // Prepare URL Request Object
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "POST"
-        let body = [
-            "idEvent" : "\(welcomeRequest.idEvent)"
         ]
         urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body)
         return urlRequest

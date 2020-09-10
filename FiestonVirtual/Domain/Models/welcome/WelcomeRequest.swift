@@ -1,6 +1,6 @@
 
 import Foundation
 
-struct WelcomeRequest {
+struct WelcomeRequest:Encodable {
     let idEvent:Int
 }

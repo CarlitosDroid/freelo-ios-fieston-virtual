@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(WelcomeViewModel.self)!
+    
     var body: some View {
         TabView {
             Text("HOLA1")
@@ -16,11 +19,21 @@ struct MainView: View {
                     Image(systemName: "list.dash")
                     Text("Menu")
             }
-            Text("HOLA2")
-                .tabItem {
-                    Image(systemName: "list.dash")
-                    Text("Menu")
+            Button("gello", action: {
+                self.viewModel.getWelcome()
+            }).tabItem {
+                Image(systemName: "list.dash")
+                Text("Menu")
             }
+            NavigationLink(
+                destination: WelcomeView(welcome : self.viewModel.welcome),
+                isActive: self.$viewModel.isSuccessCode,
+                label: { Button(action: {
+                    
+                }) {
+                    Text("Mostrar")
+                    }
+            })
         }
     }
 }

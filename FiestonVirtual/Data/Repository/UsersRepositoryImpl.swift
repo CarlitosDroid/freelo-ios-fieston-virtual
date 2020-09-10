@@ -47,7 +47,7 @@ extension UsersRepositoryImpl: UsersRepository {
         return self.userRemoteDataSource.getUsers(idUser: idUser)
     }
     
-
+    
     // MARK: - LOCAL DATABASE
     @discardableResult func create(user: User) -> Result<Bool, Error> {
         let result = repository.create()
@@ -70,18 +70,18 @@ extension UsersRepositoryImpl: UsersRepository {
     }
     
     @discardableResult func getLocalUsers(predicate: NSPredicate?) -> Result<[User], Error> {
-    
+        
         // TODO: Use this predicate when you want to filter
-//        let filter = "CarlitosDroid"
-//        let commitPredicate = NSPredicate(format: "name == %@", filter)
-
+        //        let filter = "CarlitosDroid"
+        //        let commitPredicate = NSPredicate(format: "name == %@", filter)
+        
         let result = repository.get(predicate: nil, sortDescriptors: nil)
         switch result {
         case .success(let userEntities):
             let users = userEntities.map { (userEntity: UserEntity) in
                 return userEntity.toDomainModel()
             }
-
+            
             return .success(users)
         case .failure(let error):
             return .failure(error)

@@ -20,7 +20,8 @@ class DependencyProvider {
             DataSourcesAssembly(),
             DataSourcesAssembly(),
             RepositoriesAssembly(),
-            UseCasesAssembly()
+            UseCasesAssembly(),
+            ViewModelAssembly()
         ], container: container)
     }
 }

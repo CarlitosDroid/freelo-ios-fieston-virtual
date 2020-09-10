@@ -6,9 +6,10 @@ class WelcomeViewModel: ObservableObject {
     
     let getWelcomeUseCase: GetWelcomeUseCase
     
-    @Published var eventCode: EventCode?
+    @Published var welcome = Welcome(title: "", description: "", subtitle: "", imageUrl: "")
     @Published var isLoading = false
     @Published var errorMessage = ""
+    @Published var isSuccessCode = false
     
     private var disposables = Set<AnyCancellable>()
     
@@ -16,7 +17,7 @@ class WelcomeViewModel: ObservableObject {
         self.getWelcomeUseCase = getWelcomeUseCase
     }
     
-    func verifyCode() {
+    func getWelcome() {
         self.isLoading = true
         getWelcomeUseCase.invoke()
             .receive(on: DispatchQueue.main)
@@ -32,7 +33,8 @@ class WelcomeViewModel: ObservableObject {
                 }
             }, receiveValue: { (welcome: Welcome) in
                 self.isLoading = false
-                print("\(welcome.description)")
+                self.isSuccessCode=true
+                self.welcome=welcome
             })
             .store(in: &disposables)
     }

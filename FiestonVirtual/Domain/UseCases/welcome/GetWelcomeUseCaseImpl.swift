@@ -4,10 +4,10 @@ import Combine
 
 class GetWelcomeUseCaseImpl:GetWelcomeUseCase  {
     
-    let eventRepository:EventRepository
+    let eventRepository:EventCodeRepository
     let usersRepository:UsersRepository
     
-    init(eventRepository:EventRepository,
+    init(eventRepository:EventCodeRepository,
          usersRepository:UsersRepository){
         self.eventRepository=eventRepository
         self.usersRepository=usersRepository
@@ -18,7 +18,7 @@ class GetWelcomeUseCaseImpl:GetWelcomeUseCase  {
         let result = self.usersRepository.getLocalUser()
         switch result {
         case .success(let user):
-            return eventRepository.getWelcome(welcomeRequest: WelcomeRequest(idEvent: user.idEvent))
+            return eventRepository.getWelcome(welcomeRequest: WelcomeRequest(idEvent: 3))
         case .failure(let error):
             return Just(Welcome(title:"", description: "", subtitle: "", imageUrl: ""))
                 .mapError({ (_) in
