@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FCEF28F1C8BB118079B5E27 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555C9B680CB30D5657007532 /* Pods_FiestonVirtual.framework */; };
 		2B0981E6250925D500C78FFF /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981E5250925D500C78FFF /* AppDelegateExt.swift */; };
 		2B0981E82509274100C78FFF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981E72509274000C78FFF /* Log.swift */; };
 		2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981EC25092F1D00C78FFF /* ContentView.swift */; };
@@ -68,11 +67,9 @@
 		2BC2573E2505AEF100B433CC /* UsersRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2573D2505AEF100B433CC /* UsersRepositoryImpl.swift */; };
 		2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2573F2505FF7500B433CC /* UserLocalDataSourceImpl.swift */; };
 		2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC257412505FF9500B433CC /* UserLocalDataSource.swift */; };
-		2BD74DF32509E89C00B0820D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF22509E89C00B0820D /* Kingfisher */; };
-		2BD74DF52509E89C00B0820D /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */; };
-		54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */; };
-		8C82C592C931C185D0216CC5 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
-		E25AF77D539E83B4A5422C67 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */; };
+		2BD74DF32509E89C00B0820D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF22509E89C00B0820D /* SwiftPackageProductDependency */; };
+		2BD74DF52509E89C00B0820D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF42509E89C00B0820D /* SwiftPackageProductDependency */; };
+		54CD0F8E25FAE3BF3FC82753 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		9A73CC892508910900D9C310 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73CC882508910900D9C310 /* ViewModelAssembly.swift */; };
 		9A8145672505D1DA001A012A /* WelcomeResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145662505D1DA001A012A /* WelcomeResponseEntity.swift */; };
 		9A81456C2505D79A001A012A /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81456B2505D79A001A012A /* Welcome.swift */; };
@@ -83,6 +80,7 @@
 		9A8145822505F8A0001A012A /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145812505F8A0001A012A /* WelcomeViewModel.swift */; };
 		9A8145842505F90C001A012A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145832505F90C001A012A /* WelcomeView.swift */; };
 		9C47CD2FB1B46B98065A8A55 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E933FC39AD615968465B99F /* Pods_FiestonVirtualTests.framework */; };
+		A16FBA5D98964B10D4D1A8A1 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555C9B680CB30D5657007532 /* Pods_FiestonVirtual.framework */; };
 		B616DAB77583261B480DCBA8 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F2A78CA9C784BD990D182A /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -195,9 +193,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BD74DF52509E89C00B0820D /* KingfisherSwiftUI in Frameworks */,
-				2BD74DF32509E89C00B0820D /* Kingfisher in Frameworks */,
-				54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */,
+				2BD74DF52509E89C00B0820D /* BuildFile in Frameworks */,
+				2BD74DF32509E89C00B0820D /* BuildFile in Frameworks */,
+				54CD0F8E25FAE3BF3FC82753 /* BuildFile in Frameworks */,
+				A16FBA5D98964B10D4D1A8A1 /* Pods_FiestonVirtual.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,8 +664,8 @@
 			);
 			name = FiestonVirtual;
 			packageProductDependencies = (
-				2BD74DF22509E89C00B0820D /* Kingfisher */,
-				2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */,
+				2BD74DF22509E89C00B0820D /* SwiftPackageProductDependency */,
+				2BD74DF42509E89C00B0820D /* SwiftPackageProductDependency */,
 			);
 			productName = FiestonVirtual;
 			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
@@ -744,7 +743,7 @@
 			);
 			mainGroup = 2BC256C2250546D100B433CC;
 			packageReferences = (
-				2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2BD74DF12509E89C00B0820D /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
 			projectDirPath = "";
@@ -1284,7 +1283,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		2BD74DF12509E89C00B0820D /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1295,14 +1294,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2BD74DF22509E89C00B0820D /* Kingfisher */ = {
+		2BD74DF22509E89C00B0820D /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 2BD74DF12509E89C00B0820D /* RemoteSwiftPackageReference */;
 			productName = Kingfisher;
 		};
-		2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */ = {
+		2BD74DF42509E89C00B0820D /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 2BD74DF12509E89C00B0820D /* RemoteSwiftPackageReference */;
 			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
