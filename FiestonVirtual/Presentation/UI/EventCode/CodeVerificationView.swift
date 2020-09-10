@@ -19,7 +19,7 @@ struct CodeVerificationView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.deepPurpleIntense.edgesIgnoringSafeArea(.all)
+                Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
                 LoadingView(isShowing: .constant(viewModel.isLoading)) {
                     ZStack {
                         VStack {
