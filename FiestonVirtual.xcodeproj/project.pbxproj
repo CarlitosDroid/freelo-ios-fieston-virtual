@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -67,6 +67,8 @@
 		2BC2573E2505AEF100B433CC /* UsersRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2573D2505AEF100B433CC /* UsersRepositoryImpl.swift */; };
 		2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2573F2505FF7500B433CC /* UserLocalDataSourceImpl.swift */; };
 		2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC257412505FF9500B433CC /* UserLocalDataSource.swift */; };
+		2BD74DF32509E89C00B0820D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF22509E89C00B0820D /* Kingfisher */; };
+		2BD74DF52509E89C00B0820D /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */; };
 		54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */; };
 		8C82C592C931C185D0216CC5 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
 		E25AF77D539E83B4A5422C67 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */; };
@@ -172,6 +174,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD74DF52509E89C00B0820D /* KingfisherSwiftUI in Frameworks */,
+				2BD74DF32509E89C00B0820D /* Kingfisher in Frameworks */,
 				54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,6 +610,10 @@
 			dependencies = (
 			);
 			name = FiestonVirtual;
+			packageProductDependencies = (
+				2BD74DF22509E89C00B0820D /* Kingfisher */,
+				2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */,
+			);
 			productName = FiestonVirtual;
 			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
 			productType = "com.apple.product-type.application";
@@ -681,6 +689,9 @@
 				Base,
 			);
 			mainGroup = 2BC256C2250546D100B433CC;
+			packageReferences = (
+				2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1206,6 +1217,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2BD74DF22509E89C00B0820D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2BC256D2250546D100B433CC /* FiestonVirtual.xcdatamodeld */ = {
