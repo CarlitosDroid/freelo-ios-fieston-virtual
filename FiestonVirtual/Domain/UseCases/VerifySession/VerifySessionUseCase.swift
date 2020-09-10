@@ -10,5 +10,5 @@ import Foundation
 import Combine
 
 protocol VerifySessionUseCase {
-    func invoke() -> Result<[User], Error>
+    func invoke() -> Result<Bool, Error>
 }

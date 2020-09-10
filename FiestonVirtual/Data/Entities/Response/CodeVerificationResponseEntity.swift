@@ -9,23 +9,38 @@
 import Foundation
 
 // MARK: - Welcome
-struct CodeVerificationResponseEntity: Codable {
+struct CodeVerificationResponseEntity: Decodable {
     let message: String
     let data: DataClass?
+    
+    enum CodingKeys: String, CodingKey {
+        case message = "message"
+        case data = "data"
+    }
 }
 
 // MARK: - DataClass
-struct DataClass: Codable {
-    let user: UserResponse?
-    let event: EventResponse?
+struct DataClass: Decodable {
+    let user: UserResponse
+    let event: EventResponse
+    enum CodingKeys: String, CodingKey {
+        case user = "user"
+        case event = "event"
+    }
 }
 
-// MARK: - Event
-struct EventResponse: Codable {
+// MARK: - EventResponse
+struct EventResponse: Decodable {
     let idEvent: Int
+    enum CodingKeys: String, CodingKey {
+        case idEvent = "idEvent"
+    }
 }
 
-// MARK: - User
-struct UserResponse: Codable {
+// MARK: - UserResponse
+struct UserResponse: Decodable {
     let idUser: Int
+    enum CodingKeys: String, CodingKey {
+        case idUser = "idUser"
+    }
 }
