@@ -11,6 +11,7 @@ import SwiftUI
 struct MainView: View {
     
     @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(WelcomeViewModel.self)!
+    @State var isPresented=false
     
     var body: some View {
         TabView {
@@ -19,18 +20,19 @@ struct MainView: View {
                     Image(systemName: "list.dash")
                     Text("Menu")
             }
-            Button("gello", action: {
-                self.viewModel.getWelcome()
-            }).tabItem {
-                Image(systemName: "list.dash")
-                Text("Menu")
-            }
             PhotosView()
                 .tabItem {
                     Image(systemName: "list.dash")
                     Text("Menu")
             }
         }.navigationBarBackButtonHidden(true)
+            .sheet(isPresented: self.$viewModel.isSuccessCode,content:{
+                WelcomeView(
+                    welcome:self.viewModel.welcome
+                )
+            }).onAppear{
+                self.viewModel.getWelcome()
+        }
     }
 }
 

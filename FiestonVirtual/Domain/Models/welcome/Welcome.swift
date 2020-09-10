@@ -2,7 +2,7 @@
 import Foundation
 
 struct Welcome {
-    let title: String
+    var title: String
     let description: String
     let subtitle: String
     let imageUrl: String
