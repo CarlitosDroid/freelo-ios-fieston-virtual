@@ -21,10 +21,10 @@ struct RankingResponseEntity: Decodable {
 
 //MARK: - ChildDataRankingResponse
 struct ChildDataRankingResponse: Decodable {
-    let ranking: [ChildRankingResponce]
+    let raking: [ChildRankingResponce]
     let userTotalScore: String
     enum CodingKeys: String, CodingKey{
-        case ranking
+        case raking
         case userTotalScore
     }
 }

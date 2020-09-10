@@ -69,8 +69,8 @@ private extension RankingApiImpl {
     func makeRankinglComponents() -> URLComponents {
     var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
-        urlComponents.scheme = FiestonVirtualAPI.host
-        urlComponents.scheme = FiestonVirtualAPI.path + "/ranking.php"
+        urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.path = FiestonVirtualAPI.path + "/ranking.php"
         return urlComponents
 
     }
