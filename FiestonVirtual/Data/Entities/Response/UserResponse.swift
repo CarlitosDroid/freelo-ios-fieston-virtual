@@ -8,10 +8,10 @@
 
 import Foundation
 
-// MARK: - UserResponseEntity
-struct UserResponseEntity: Decodable {
+// MARK: - UserResponse
+struct UserResponse: Decodable {
     let message: String
-    let data: ChildDataUserResponse
+    let data: ChildUserDataResponse
     
     enum CodingKeys: String, CodingKey {
         case message = "message"
@@ -19,8 +19,8 @@ struct UserResponseEntity: Decodable {
     }
 }
 
-// MARK: - ChildDataUserResponse
-struct ChildDataUserResponse: Decodable {
+// MARK: - ChildUserDataResponse
+struct ChildUserDataResponse: Decodable {
     let user: ChildUserResponse
     enum CodingKeys: String, CodingKey {
         case user

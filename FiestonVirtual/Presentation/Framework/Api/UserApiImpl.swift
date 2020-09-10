@@ -18,7 +18,7 @@ class UserApiImpl: UserApi {
         self.session = session
     }
     
-    func getUserData(idUser: Int) -> AnyPublisher<UserResponseEntity, ExternalError> {
+    func getUserData(idUser: Int) -> AnyPublisher<UserResponse, ExternalError> {
       
         let getRemoteUserRequest = GetRemoteUserRequest(idUser: idUser)
         
@@ -42,20 +42,20 @@ class UserApiImpl: UserApi {
                           interceptor: nil,
                           requestModifier: nil)
             .validate()
-            .publishDecodable(type: UserResponseEntity.self)
+            .publishDecodable(type: UserResponse.self)
             .mapError({ (never : Never) -> ExternalError in
                 ExternalError.UnknowError(description: never.localizedDescription)
             })
-            .flatMap({ (dataResponse: DataResponse<UserResponseEntity, AFError>)-> AnyPublisher<UserResponseEntity, ExternalError> in
-                Future<UserResponseEntity, ExternalError> { promise in
+            .flatMap({ (dataResponse: DataResponse<UserResponse, AFError>)-> AnyPublisher<UserResponse, ExternalError> in
+                Future<UserResponse, ExternalError> { promise in
                     switch dataResponse.result {
                         
                     case .failure(let afError):
                         promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
                         break
                         
-                    case .success(let userResponseEntity):
-                        promise(.success(userResponseEntity))
+                    case .success(let userResponse):
+                        promise(.success(userResponse))
                         break
                     }
                     

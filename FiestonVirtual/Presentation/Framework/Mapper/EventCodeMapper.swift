@@ -8,12 +8,12 @@
 
 import Foundation
 
-extension CodeVerificationResponseEntity {
+extension CodeVerificationResponse {
     
     func toEventCode() -> EventCode {
         return EventCode(
-            idEvent: self.data?.event.idEvent ?? 0,
-            idUser: self.data?.user.idUser ?? 0)
+            idEvent: self.data.event.idEvent,
+            idUser: self.data.user.idUser)
     }
     
 }
