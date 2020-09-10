@@ -23,7 +23,11 @@ extension Color {
         
     }
     
-    static let deepPurpleIntense = Color("DeepPurpleIntense")
-    static let aqua = Color("Aqua")
+    static let deep_purple_intense = Color("deep_purple_intense")
+    static let aqua = Color("aqua")
+    static let orange_500 = Color("orange_500")
+    static let amber_600 = Color("amber_600")
+    static let deep_purple_500 = Color("deep_purple_500")
+    static let deep_purple_700 = Color("deep_purple_700")
 
 }

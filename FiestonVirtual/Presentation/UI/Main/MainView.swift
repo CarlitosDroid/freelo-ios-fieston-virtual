@@ -21,7 +21,12 @@ struct MainView: View {
                     Image(systemName: "list.dash")
                     Text("Menu")
             }
-        }
+            PhotosView()
+                .tabItem {
+                    Image(systemName: "list.dash")
+                    Text("Menu")
+            }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 
