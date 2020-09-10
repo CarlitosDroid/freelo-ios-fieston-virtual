@@ -17,8 +17,8 @@ class EventCodeRepositoryImpl: EventCodeRepository {
         self.eventCodeRemoteDataSource = eventCodeRemoteDataSource
     }
     
-    func verifyCode(userInvitationCode: Int) -> AnyPublisher<EventCode, ErrorResponse> {
-        return eventCodeRemoteDataSource.verificateEventCode(userInvitationCode: userInvitationCode)
+    func verifyCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<EventCode, ErrorResponse> {
+        return eventCodeRemoteDataSource.verificateEventCode(validateCodeRequest: validateCodeRequest)
     }
     
     func getWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<Welcome, ErrorResponse> {

@@ -25,16 +25,12 @@ struct MainView: View {
                 Image(systemName: "list.dash")
                 Text("Menu")
             }
-            NavigationLink(
-                destination: WelcomeView(welcome : self.viewModel.welcome),
-                isActive: self.$viewModel.isSuccessCode,
-                label: { Button(action: {
-                    
-                }) {
-                    Text("Mostrar")
-                    }
-            })
-        }
+            PhotosView()
+                .tabItem {
+                    Image(systemName: "list.dash")
+                    Text("Menu")
+            }
+        }.navigationBarBackButtonHidden(true)
     }
 }
 
