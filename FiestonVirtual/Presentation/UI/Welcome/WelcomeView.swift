@@ -11,6 +11,7 @@ struct WelcomeView: View {
             Text(welcome.description).fixedSize(horizontal: true, vertical:true)
             Text(welcome.subtitle).fixedSize(horizontal: true, vertical:true)
             Text(welcome.imageUrl).bold()
+            
         }
     }
     

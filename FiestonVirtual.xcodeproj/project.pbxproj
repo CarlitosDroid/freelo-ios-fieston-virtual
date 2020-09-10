@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FCEF28F1C8BB118079B5E27 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555C9B680CB30D5657007532 /* Pods_FiestonVirtual.framework */; };
 		2B0981E6250925D500C78FFF /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981E5250925D500C78FFF /* AppDelegateExt.swift */; };
 		2B0981E82509274100C78FFF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981E72509274000C78FFF /* Log.swift */; };
 		2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981EC25092F1D00C78FFF /* ContentView.swift */; };
 		2B3070EA25089603005198F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3070E925089603005198F7 /* Color.swift */; };
 		2B3070EC25089659005198F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3070EB25089659005198F7 /* Colors.xcassets */; };
-		0FCEF28F1C8BB118079B5E27 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555C9B680CB30D5657007532 /* Pods_FiestonVirtual.framework */; };
 		2B48231C25068AF600AF312D /* UserEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48231B25068AF600AF312D /* UserEntityMapper.swift */; };
 		2B48231F25068B4400AF312D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48231E25068B4400AF312D /* User.swift */; };
 		2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48232125069E2200AF312D /* CoreDataContextProvider.swift */; };
@@ -99,9 +99,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BF84B5663CE195EAC8CBC96 /* Pods-FiestonVirtualTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.release.xcconfig"; sourceTree = "<group>"; };
-		129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtualTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24C1D1A72B0920D76C09E23C /* Pods-FiestonVirtual.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.release.xcconfig"; sourceTree = "<group>"; };
 		2B0981E5250925D500C78FFF /* AppDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateExt.swift; sourceTree = "<group>"; };
 		2B0981E72509274000C78FFF /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		2B0981EC25092F1D00C78FFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -595,11 +593,11 @@
 			isa = PBXGroup;
 			children = (
 				363F8F57CA185AD7560D69F9 /* Pods-FiestonVirtual.debug.xcconfig */,
-				0B4ABF452558AE3549CA401E /* Pods-FiestonVirtual.release.xcconfig */,
 				EA43D54E4BE0CAD9DBF55872 /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */,
 				54E216AFBE9DAE85D60D389D /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */,
 				74E6AB931D6609C6032FB9ED /* Pods-FiestonVirtualTests.debug.xcconfig */,
 				8B722D99C8EF2CDC690350C0 /* Pods-FiestonVirtualTests.release.xcconfig */,
+				24C1D1A72B0920D76C09E23C /* Pods-FiestonVirtual.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -933,7 +931,6 @@
 				2B83E7912507F584004B1BF2 /* LoadingIndicator.swift in Sources */,
 				2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */,
 				2B81FCE825073DCC00EC9E10 /* MainView.swift in Sources */,
-				2BC256D6250546D100B433CC /* ContentView.swift in Sources */,
 				9A81456C2505D79A001A012A /* Welcome.swift in Sources */,
 				9A8145822505F8A0001A012A /* WelcomeViewModel.swift in Sources */,
 				9A81456E2505D7B4001A012A /* WelcomeRequest.swift in Sources */,
@@ -1129,7 +1126,7 @@
 		};
 		2BC256FA250546D200B433CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B4ABF452558AE3549CA401E /* Pods-FiestonVirtual.release.xcconfig */;
+			baseConfigurationReference = 24C1D1A72B0920D76C09E23C /* Pods-FiestonVirtual.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

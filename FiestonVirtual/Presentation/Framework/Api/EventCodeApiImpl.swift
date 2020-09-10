@@ -14,55 +14,6 @@ class EventCodeApiImpl: EventCodeApi {
     
     func validateCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<CodeVerificationResponseEntity, ExternalError> {
     
-    init(session: URLSession = .shared) {
-        self.session = session
-    }
-    
-    func validateCode(userInvitationCode: Int) -> AnyPublisher<CodeVerificationResponseEntity, ExternalError> {
-        return requestVerificationCode(with: makeCodeVerificationComponents(), userInvitationCode: userInvitationCode)
-    }
-    
-    func getWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<WelcomeResponseEntity, ExternalError>{
-        
-        guard let url = getUrlComponentsToGetWelcome().url else {
-            let error = ExternalError.NetworkError(description: "Couldn't create URL")
-            return Fail(error: error).eraseToAnyPublisher()
-        }
-        
-        return AF.request(url,
-                          method: .post,
-                          parameters: welcomeRequest,
-                          encoder: JSONParameterEncoder.default,
-                          headers: nil,
-                          interceptor: nil,
-                          requestModifier: nil)
-            .validate()
-            .publishDecodable(type: WelcomeResponseEntity.self)
-            .mapError({ (never : Never) -> ExternalError in
-                ExternalError.UnknowError(description: never.localizedDescription)
-            })
-            .flatMap({ (dataResponse: DataResponse<WelcomeResponseEntity, AFError>)-> AnyPublisher<WelcomeResponseEntity, ExternalError> in
-                Future<WelcomeResponseEntity, ExternalError> { promise in
-                    switch dataResponse.result {
-                        
-                    case .failure(let afError):
-                        promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
-                        break
-                        
-                    case .success(let welcomeResponseEntity):
-                        promise(.success(welcomeResponseEntity))
-                        break
-                    }
-                    
-                }.eraseToAnyPublisher()
-            }).eraseToAnyPublisher()
-    }
-    
-    private func requestVerificationCode<T>(
-        with components: URLComponents,
-        userInvitationCode: Int
-    ) -> AnyPublisher<T, ExternalError> where T: Decodable {
-        guard let url = components.url else {
         guard let url = makeVerifyCodeComponents().url else {
             let error = ExternalError.NetworkError(description: "Couldn't create URL")
             return Fail(error: error).eraseToAnyPublisher()
@@ -98,6 +49,44 @@ class EventCodeApiImpl: EventCodeApi {
         
     }
     
+    func getWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<WelcomeResponseEntity, ExternalError> {
+        
+        
+        guard let url = getUrlComponentsToGetWelcome().url else {
+            let error = ExternalError.NetworkError(description: "Couldn't create URL")
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+          
+            return AF.request(url,
+                                method: .post,
+                                parameters: welcomeRequest,
+                                encoder: JSONParameterEncoder.default,
+                                headers: nil,
+                                interceptor: nil,
+                                requestModifier: nil)
+                  .validate()
+                  .publishDecodable(type: WelcomeResponseEntity.self)
+                  .mapError({ (never : Never) -> ExternalError in
+                      ExternalError.UnknowError(description: never.localizedDescription)
+                  })
+                  .flatMap({ (dataResponse: DataResponse<WelcomeResponseEntity, AFError>)-> AnyPublisher<WelcomeResponseEntity, ExternalError> in
+                      Future<WelcomeResponseEntity, ExternalError> { promise in
+                          switch dataResponse.result {
+                              
+                          case .failure(let afError):
+                              promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
+                              break
+                              
+                          case .success(let welcomeResponseEntity):
+                              promise(.success(welcomeResponseEntity))
+                              break
+                          }
+                          
+                      }.eraseToAnyPublisher()
+                  }).eraseToAnyPublisher()
+          }
+          
+      
    
     
 }
@@ -117,12 +106,13 @@ private extension EventCodeApiImpl {
         urlComponents.path = FiestonVirtualAPI.path + "/consulta_codigo.php"
         return urlComponents
     }
-    func getUrlComponentsToGetWelcome() -> URLComponents {
-        var urlComponents = URLComponents()
-        urlComponents.scheme = FiestonVirtualAPI.scheme
-        urlComponents.host = FiestonVirtualAPI.host
-        urlComponents.path = FiestonVirtualAPI.path + "/detalle_evento.php"
-        return urlComponents
-    }
     
+    func getUrlComponentsToGetWelcome() -> URLComponents {
+          var urlComponents = URLComponents()
+          urlComponents.scheme = FiestonVirtualAPI.scheme
+          urlComponents.host = FiestonVirtualAPI.host
+          urlComponents.path = FiestonVirtualAPI.path + "/detalle_evento.php"
+          return urlComponents
+      }
+
 }
