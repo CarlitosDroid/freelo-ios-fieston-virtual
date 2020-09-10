@@ -11,13 +11,13 @@ import Foundation
 // MARK: - Welcome
 struct CodeVerificationResponse: Codable {
     let message: String
-    let data: CodeVerificationDataResponse?
+    let data: CodeVerificationDataResponse
 }
 
 // MARK: - CodeVerificationDataResponse
 struct CodeVerificationDataResponse: Codable {
-    let user: CodeVerificationUserResponse?
-    let event: CodeVerificationEventResponse?
+    let user: CodeVerificationUserResponse
+    let event: CodeVerificationEventResponse
 }
 
 // MARK: - CodeVerificationEventResponse

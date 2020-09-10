@@ -48,8 +48,8 @@ class RankingApiImpl: RankingApi {
                             "\(afError.localizedDescription)")))
                         break
                         
-                    case .success(let rankingResponseEntity):
-                        promise(.success(rankingResponseEntity))
+                    case .success(let rankingResponse):
+                        promise(.success(rankingResponse))
                         break
                     }
                 }.eraseToAnyPublisher()

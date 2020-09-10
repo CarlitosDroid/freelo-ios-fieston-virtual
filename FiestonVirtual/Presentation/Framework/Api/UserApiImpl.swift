@@ -54,8 +54,8 @@ class UserApiImpl: UserApi {
                         promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
                         break
                         
-                    case .success(let userResponseEntity):
-                        promise(.success(userResponseEntity))
+                    case .success(let userResponse):
+                        promise(.success(userResponse))
                         break
                     }
                     

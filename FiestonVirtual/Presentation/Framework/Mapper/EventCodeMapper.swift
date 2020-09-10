@@ -12,9 +12,8 @@ extension CodeVerificationResponse {
     
     func toEventCode() -> EventCode {
         return EventCode(
-            mensajito: self.message,
-            idEvent: self.data?.event?.idEvent ?? 100,
-            idUser: self.data?.user?.idUser ?? 200)
+            idEvent: self.data.event.idEvent,
+            idUser: self.data.user.idUser)
     }
     
 }

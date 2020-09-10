@@ -20,10 +20,12 @@ class LoginUseCaseImpl: LoginUseCase {
         self.usersRepository = usersRepository
     }
     
-    func invoke() -> AnyPublisher<Bool, ErrorResponse> {
+    func invoke(userInvitationCode: Int) -> AnyPublisher<Bool, ErrorResponse> {
         
         // request verify code
-        return self.eventCodeRepository.verifyCode(userInvitationCode: 100510)
+        let validateCodeRequest = ValidateCodeRequest(userInvitationCode: userInvitationCode)
+        
+        return self.eventCodeRepository.verifyCode(validateCodeRequest: validateCodeRequest)
             .flatMap { (eventCode: EventCode) -> AnyPublisher<Bool, ErrorResponse> in
                 
                 // request romte user

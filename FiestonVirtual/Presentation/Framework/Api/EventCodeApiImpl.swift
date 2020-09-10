@@ -8,50 +8,48 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 class EventCodeApiImpl: EventCodeApi {
     
-    private let session: URLSession
+    func validateCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<CodeVerificationResponse, ExternalError> {
     
-    init(session: URLSession = .shared) {
-        self.session = session
-    }
-    
-    func validateCode(userInvitationCode: Int) -> AnyPublisher<CodeVerificationResponse, ExternalError> {
-        return requestVerificationCode(with: makeCodeVerificationComponents(), userInvitationCode: userInvitationCode)
-    }
-    
-    private func requestVerificationCode<T>(
-        with components: URLComponents,
-        userInvitationCode: Int
-    ) -> AnyPublisher<T, ExternalError> where T: Decodable {
-        guard let url = components.url else {
+        guard let url = makeVerifyCodeComponents().url else {
             let error = ExternalError.NetworkError(description: "Couldn't create URL")
             return Fail(error: error).eraseToAnyPublisher()
         }
         
-        let urlRequest = makeVerificationPostUrlRequest(url: url, userInvitationCode: userInvitationCode)
-        
-        return session.dataTaskPublisher(for: urlRequest)
-            .mapError { (error: Error) -> ExternalError in
-                ExternalError.NetworkError(description: error.localizedDescription)
-            }
-            .flatMap({ (output: URLSession.DataTaskPublisher.Output) in
-                return decode(output.data)
+        return AF.request(url,
+                          method: .post,
+                          parameters: validateCodeRequest,
+                          encoder: JSONParameterEncoder.default,
+                          headers: nil,
+                          interceptor: nil,
+                          requestModifier: nil)
+            .validate()
+            .publishDecodable(type: CodeVerificationResponse.self)
+            .mapError({ (never : Never) -> ExternalError in
+                ExternalError.UnknowError(description: never.localizedDescription)
             })
-            .eraseToAnyPublisher()
+            .flatMap({ (dataResponse: DataResponse<CodeVerificationResponse, AFError>)-> AnyPublisher<CodeVerificationResponse, ExternalError> in
+                Future<CodeVerificationResponse, ExternalError> { promise in
+                    switch dataResponse.result {
+
+                    case .failure(let afError):
+                        promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
+                        break
+
+                    case .success(let codeVerificationResponse):
+                        promise(.success(codeVerificationResponse))
+                        break
+                    }
+
+                }.eraseToAnyPublisher()
+            }).eraseToAnyPublisher()
+
     }
     
-    private func makeVerificationPostUrlRequest(url: URL, userInvitationCode: Int) -> URLRequest {
-        // Prepare URL Request Object
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "POST"
-        let body = [
-            "userInvitationCode" : "\(userInvitationCode)"
-        ]
-        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        return urlRequest
-    }
+
     
 }
 
@@ -63,22 +61,11 @@ private extension EventCodeApiImpl {
         static let key = "<your key>"
     }
     
-    func makeCodeVerificationComponents() -> URLComponents {
+    func makeVerifyCodeComponents() -> URLComponents {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
         urlComponents.path = FiestonVirtualAPI.path + "/consulta_codigo.php"
-        
-        /** We could use this code in order to make form-data
-        let queryStringParam  =  [
-            "page":"1",
-            "size":"5",
-            "sortBy":"profile_locality"
-        ]
-        
-        let queryItems = queryStringParam.map  { URLQueryItem(name: $0.key, value: $0.value) }
-        */
-        
         return urlComponents
     }
 

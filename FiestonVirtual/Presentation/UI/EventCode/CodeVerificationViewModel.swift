@@ -18,16 +18,14 @@ class CodeVerificationViewModel: ObservableObject {
     @Published var eventCode: EventCode?
     @Published var isLoading = false
     @Published var errorMessage = ""
-    @Published var isSuccessCode = false
+    @Published var inSession = false
     
     private var disposables = Set<AnyCancellable>()
     
-    init() {
-    }
-    
     func verifyCode(code: String) {
         self.isLoading = true
-        loginUseCase.invoke()
+        if (!code.isEmpty) {
+            loginUseCase.invoke(userInvitationCode: Int(code)!)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
                 switch completion {
@@ -42,16 +40,17 @@ class CodeVerificationViewModel: ObservableObject {
                 }
             }, receiveValue: { (eventCode: Bool) in
                 self.isLoading = false
-                self.isSuccessCode = true
+                self.inSession = true
             })
             .store(in: &disposables)
+        }
     }
     
     func verifySession() {
         let result = self.verifySessionUseCase.invoke()
         switch result {
-        case .success(let users):
-            print(users)
+        case .success(let inSession):
+            self.inSession = inSession
             break
         case .failure(let error):
             print(error)
