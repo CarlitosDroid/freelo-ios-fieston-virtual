@@ -9,7 +9,7 @@ class WelcomeViewModel: ObservableObject {
     @Published var welcome = Welcome(title: "", description: "", subtitle: "", imageUrl: "")
     @Published var isLoading = false
     @Published var errorMessage = ""
-    @Published var isSuccessCode = false
+    @Published var hasWelcome = false
     
     private var disposables = Set<AnyCancellable>()
     
@@ -32,8 +32,7 @@ class WelcomeViewModel: ObservableObject {
                     break
                 }
             }, receiveValue: { (welcome: Welcome) in
-                self.isLoading = false
-                self.isSuccessCode=true
+                self.hasWelcome=true
                 self.welcome=welcome
             })
             .store(in: &disposables)
