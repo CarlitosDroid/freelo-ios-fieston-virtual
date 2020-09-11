@@ -14,20 +14,15 @@ extension UserResponse: DomainModel {
     
     func toDomainModel() -> User {
         return User(
+            id:self.data.user.idUser,
             name: self.data.user.userName,
-            age: self.data.user.userLastName,
-            isOld: false)
+            lastName: self.data.user.userLastName,
+            totalScore: self.data.user.userTotalScore,
+            ranking: self.data.user.userRanking,
+            idEvent: self.data.user.idEvent,
+            avatar: self.data.user.avatar,
+            token: ""
+        )
     }
-    
 
-    
-//    return User(
-//        id = i.idUser,
-//        name = i.userName,
-//        lastName = i.userLastName,
-//        totalScore = i.userTotalScore,
-//        ranking = i.userRanking,
-//        idEvent = i.idEvent,
-//        avatar = i.avatar
-//    )
 }

@@ -14,4 +14,6 @@ protocol UsersRepository {
     func create(user: User) -> Result<Bool, Error>
     
     func getRemoteUser(idUser: Int) -> AnyPublisher<User, ErrorResponse>
+    
+    func getLocalUser() -> Result<User, Error>
 }

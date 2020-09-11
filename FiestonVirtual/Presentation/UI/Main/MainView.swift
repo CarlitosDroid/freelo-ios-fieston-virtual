@@ -9,29 +9,43 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(WelcomeViewModel.self)!
+    
     var body: some View {
-        TabView {
-            Text("HOLA1")
-                .tabItem {
-                    Image(systemName: "list.dash")
-                    Text("Menu")
+        ZStack {
+            LoadingView(isShowing: .constant(viewModel.isLoading)){
+                ZStack {
+                    TabView {
+                        Text("HOLA1")
+                            .tabItem {
+                                Image(systemName: "list.dash")
+                                Text("Menu")
+                        }
+                        PhotosView()
+                            .tabItem {
+                                Image(systemName: "list.dash")
+                                Text("Menu")
+                        }
+                    }.navigationBarBackButtonHidden(true)
+                    
+                    WelcomeView(
+                        welcome:self.viewModel.welcome,
+                        showSheet: self.viewModel.hasWelcome
+                    )
+                }
+                
             }
-            Text("HOLA2")
-                .tabItem {
-                    Image(systemName: "list.dash")
-                    Text("Menu")
-            }
-            PhotosView()
-                .tabItem {
-                    Image(systemName: "list.dash")
-                    Text("Menu")
-            }
-        }.navigationBarBackButtonHidden(true)
+        } .onAppear{
+            self.viewModel.getWelcome()
+        }
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+/*
+ struct MainView_Previews: PreviewProvider {
+ static var previews: some View {
+ //MainView()
+ }
+ }
+ */

@@ -10,8 +10,7 @@ import Foundation
 import Combine
 
 class EventCodeRepositoryImpl: EventCodeRepository {
-   
-    let loginUseCase = DependencyProvider().assembler.resolver.resolve(EventCodeRemoteDataSource.self)!
+
     let eventCodeRemoteDataSource: EventCodeRemoteDataSource
     
     init(eventCodeRemoteDataSource: EventCodeRemoteDataSource) {
@@ -21,5 +20,9 @@ class EventCodeRepositoryImpl: EventCodeRepository {
     func verifyCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<EventCode, ErrorResponse> {
         return eventCodeRemoteDataSource.verificateEventCode(validateCodeRequest: validateCodeRequest)
     }
-
+    
+    func getWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<Welcome, ErrorResponse> {
+        return self.eventCodeRemoteDataSource.getWelcome(welcomeRequest: welcomeRequest)
+    }
+    
 }
