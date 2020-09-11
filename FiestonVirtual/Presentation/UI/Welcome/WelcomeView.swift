@@ -22,24 +22,20 @@ struct WelcomeView: View {
             
             Image("Fieston")
             
-            Text("!Bienvenido a la fiesta de Luis!").font(.title).bold().foregroundColor(Color(.yellow)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+            Text(welcome.title).font(.title).bold().foregroundColor(Color(.yellow)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             
-            Text( "Bienvenido a la celebracion por el cumpleaños de Luis Ubillus").font(.body).bold().foregroundColor(Color(.green)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+            Text( welcome.description).font(.body).bold().foregroundColor(Color(.green)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             
-            Text("No olvides que puede subir tus fotos y jugar trivias para hacer la celebracion más interactiva. Divierte!").font(.body).bold().foregroundColor(Color(.green)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+            Text(welcome.subtitle).font(.body).bold().foregroundColor(Color(.yellow)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
             
-            Text("Acumula puntos y te ganas un vox sorpresa").font(.body).bold().foregroundColor(Color(.yellow)).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
-            
-            KFImage(URL(string: "https://img.itdg.com.br/tdg/images/blog/uploads/2020/05/shutterstock_1710468256.jpg")!)
+            KFImage(URL(string: welcome.imageUrl)!)
                 .resizable()
                 .renderingMode(.original)
                 .shadow(radius: 0)
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 150, height: 150)
             
-            
             Spacer()
-            
             
             
         }.padding(20).background(Color(.purple))
