@@ -15,6 +15,8 @@ struct PhotosView: View {
     @State private var eventCode: String = ""
     @State private var isImageSelected = false
     
+    let viewmodel = PhotosViewModel()
+    
     var body: some View {
         ZStack {
             
@@ -65,8 +67,10 @@ struct PhotosView: View {
                         }.sheet(isPresented: $isShowingImagePicker) {
                             ImagePickerView(
                                 isPresented: self.$isShowingImagePicker,
-                                selectedImage: self.$imageInBlackBox) { isImageSelected in
+                                selectedImage: self.$imageInBlackBox) { isImageSelected, fileURL in
                                     self.isImageSelected = isImageSelected
+                                    self.viewmodel.uploadFile(data: fileURL.jpegData(compressionQuality: 0.8)!)
+                                    
                             }
                         }
                     }
@@ -95,37 +99,52 @@ struct ImagePickerView: UIViewControllerRepresentable {
     @Binding var isPresented: Bool
     @Binding var selectedImage: UIImage
     
-    var onImageFromPickerSelected: (_ isImageSelected: Bool) -> Void
+    var onImageFromPickerSelected: (_ isImageSelected: Bool, _ fileURL: UIImage) -> Void
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerView>) -> UIViewController {
-        let controller = UIImagePickerController()
-        controller.delegate = context.coordinator
-        return controller
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = context.coordinator
+        pickerController.allowsEditing = false
+        pickerController.mediaTypes = ["public.image", "public.movie"]
+        pickerController.sourceType = .photoLibrary
+        return pickerController
     }
     
     func makeCoordinator() -> ImagePickerView.Coordinator {
-        return Coordinator(parent: self) { isImageSelected in
-            self.onImageFromPickerSelected(isImageSelected)
+        return Coordinator(parent: self) { isImageSelected, fileURL in
+            self.onImageFromPickerSelected(isImageSelected, fileURL)
         }
     }
     
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         
         let parent: ImagePickerView
-        var onImageSelected: (_ isImageSelected: Bool) -> Void
+        var onImageSelected: (_ isImageSelected: Bool, _ fileUrl: UIImage) -> Void
         
-        init(parent: ImagePickerView, onImageSelected: @escaping (_ isImageSelected: Bool) -> Void) {
+        
+        
+        init(parent: ImagePickerView, onImageSelected: @escaping (_ isImageSelected: Bool, _ fileURL: UIImage) -> Void) {
             self.parent = parent
             self.onImageSelected = onImageSelected
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let selectedImageFromPicker = info[.originalImage] as? UIImage {
-                print(selectedImageFromPicker)
-                self.parent.selectedImage = selectedImageFromPicker
-                onImageSelected(true)
+            
+            if let mediaUrl = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
+                print(mediaUrl)
+                // TODO working on video
+//                self.viewmodel.uploadVideo(
+//                    fileName: mediaUrl.lastPathComponent,
+//                    data: mediaUrl
+//                )
+                
             }
-        
+            
+            if let selectedImageFromPicker = info[.originalImage] as? UIImage {
+                self.parent.selectedImage = selectedImageFromPicker
+                onImageSelected(true, selectedImageFromPicker)
+            }
+            
             self.parent.isPresented = false
         }
     }

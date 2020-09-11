@@ -39,6 +39,8 @@
 		2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339D250714C4007C3FFC /* VerifySessionUseCase.swift */; };
 		2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339F250714D1007C3FFC /* VerifySessionUseCaseImpl.swift */; };
 		2BA2AFBA250990E000236FDD /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AFB9250990E000236FDD /* PhotosView.swift */; };
+		2BB6E7EA250AD3990074B6DB /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB6E7E9250AD3990074B6DB /* PhotosViewModel.swift */; };
+		2BB6E7EC250AE25A0074B6DB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB6E7EB250AE25A0074B6DB /* Data.swift */; };
 		2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256CE250546D100B433CC /* AppDelegate.swift */; };
 		2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256D0250546D100B433CC /* SceneDelegate.swift */; };
 		2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BC256D2250546D100B433CC /* FiestonVirtual.xcdatamodeld */; };
@@ -69,6 +71,10 @@
 		2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC257412505FF9500B433CC /* UserLocalDataSource.swift */; };
 		2BD74DF32509E89C00B0820D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF22509E89C00B0820D /* Kingfisher */; };
 		2BD74DF52509E89C00B0820D /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */; };
+		2BDAC593250AC52200DA6A74 /* GalleryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC592250AC52200DA6A74 /* GalleryApi.swift */; };
+		2BDAC595250AC55700DA6A74 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC594250AC55700DA6A74 /* Photo.swift */; };
+		2BDAC599250AC66300DA6A74 /* GalleryApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC598250AC66300DA6A74 /* GalleryApiImpl.swift */; };
+		2BDAC59B250ACFB500DA6A74 /* UploadFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */; };
 		54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */; };
 		8C82C592C931C185D0216CC5 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
 		E25AF77D539E83B4A5422C67 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */; };
@@ -145,6 +151,8 @@
 		2B8B339D250714C4007C3FFC /* VerifySessionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifySessionUseCase.swift; sourceTree = "<group>"; };
 		2B8B339F250714D1007C3FFC /* VerifySessionUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifySessionUseCaseImpl.swift; sourceTree = "<group>"; };
 		2BA2AFB9250990E000236FDD /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		2BB6E7E9250AD3990074B6DB /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		2BB6E7EB250AE25A0074B6DB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		2BC256CB250546D100B433CC /* FiestonVirtual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FiestonVirtual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC256CE250546D100B433CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC256D0250546D100B433CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +187,10 @@
 		2BC2573D2505AEF100B433CC /* UsersRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepositoryImpl.swift; sourceTree = "<group>"; };
 		2BC2573F2505FF7500B433CC /* UserLocalDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataSourceImpl.swift; sourceTree = "<group>"; };
 		2BC257412505FF9500B433CC /* UserLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataSource.swift; sourceTree = "<group>"; };
+		2BDAC592250AC52200DA6A74 /* GalleryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryApi.swift; sourceTree = "<group>"; };
+		2BDAC594250AC55700DA6A74 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		2BDAC598250AC66300DA6A74 /* GalleryApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryApiImpl.swift; sourceTree = "<group>"; };
+		2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileResponse.swift; sourceTree = "<group>"; };
 		717F0F31C57CD52FE931E080 /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig"; sourceTree = "<group>"; };
 		71F1E84C6AEBAAFFCDDDBC36 /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual_FiestonVirtualUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +252,7 @@
 			children = (
 				2B3070E925089603005198F7 /* Color.swift */,
 				2B0981E5250925D500C78FFF /* AppDelegateExt.swift */,
+				2BB6E7EB250AE25A0074B6DB /* Data.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -249,6 +262,7 @@
 			children = (
 				2B48231E25068B4400AF312D /* User.swift */,
 				2B83E79925081594004B1BF2 /* GetRemoteUserRequest.swift */,
+				2BDAC594250AC55700DA6A74 /* Photo.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -306,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				2BA2AFB9250990E000236FDD /* PhotosView.swift */,
+				2BB6E7E9250AD3990074B6DB /* PhotosViewModel.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -453,6 +468,7 @@
 				2BC2570925055A3900B433CC /* CodeVerificationResponse.swift */,
 				2B81FCE02507352300EC9E10 /* UserResponse.swift */,
 				FB1014CF25086338002C91ED /* RankingResponse.swift */,
+				2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -476,6 +492,8 @@
 				2B81FCE425073B0A00EC9E10 /* UserApiImpl.swift */,
 				FB1014D425086E0A002C91ED /* RankingApi.swift */,
 				FB1014D625086F1C002C91ED /* RankingApiImpl.swift */,
+				2BDAC592250AC52200DA6A74 /* GalleryApi.swift */,
+				2BDAC598250AC66300DA6A74 /* GalleryApiImpl.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -989,6 +1007,7 @@
 				2B48232425069FA100AF312D /* TextingData.swift in Sources */,
 				2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */,
 				FB1014FF250B2B24002C91ED /* LikesResponse.swift in Sources */,
+				2BB6E7EC250AE25A0074B6DB /* Data.swift in Sources */,
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
 				2B83E79A25081594004B1BF2 /* GetRemoteUserRequest.swift in Sources */,
 				2BC2571C250561D800B433CC /* EventCodeRemoteDataSource.swift in Sources */,
@@ -1011,6 +1030,7 @@
 				2BC257232505627200B433CC /* EventCode.swift in Sources */,
 				2B81FCE525073B0A00EC9E10 /* UserApiImpl.swift in Sources */,
 				2B81FCED2507454D00EC9E10 /* ApiAssembly.swift in Sources */,
+				2BB6E7EA250AD3990074B6DB /* PhotosViewModel.swift in Sources */,
 				2BC2571125055D0500B433CC /* ExternalError.swift in Sources */,
 				2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */,
 				FB1014E32509B321002C91ED /* AddComentRequest.swift in Sources */,
@@ -1024,13 +1044,16 @@
 				2B81FCE3250736C800EC9E10 /* UserResponseMapper.swift in Sources */,
 				2BC25719250561B700B433CC /* CodeRemoteDataSourceImpl.swift in Sources */,
 				FB1014E12509B2E9002C91ED /* GetComentRequest.swift in Sources */,
+				2BDAC593250AC52200DA6A74 /* GalleryApi.swift in Sources */,
 				2BC2571325055D8C00B433CC /* EventCodeApiImpl.swift in Sources */,
 				2B81FCEF25074CE900EC9E10 /* RepositoriesAssembly.swift in Sources */,
 				2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */,
 				FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */,
+				2BDAC595250AC55700DA6A74 /* Photo.swift in Sources */,
 				2BC2573E2505AEF100B433CC /* UsersRepositoryImpl.swift in Sources */,
 				2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */,
 				2BC2573A2505AAD200B433CC /* CodeVerificationView.swift in Sources */,
+				2BDAC599250AC66300DA6A74 /* GalleryApiImpl.swift in Sources */,
 				2BA2AFBA250990E000236FDD /* PhotosView.swift in Sources */,
 				FB1014E72509B394002C91ED /* GetGalleryDiteilRequest.swift in Sources */,
 				2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */,
@@ -1039,6 +1062,7 @@
 				2B3070EA25089603005198F7 /* Color.swift in Sources */,
 				2B83E7912507F584004B1BF2 /* LoadingIndicator.swift in Sources */,
 				2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */,
+				2BDAC59B250ACFB500DA6A74 /* UploadFileResponse.swift in Sources */,
 				2B81FCE825073DCC00EC9E10 /* MainView.swift in Sources */,
 				FB1014D025086338002C91ED /* RankingResponse.swift in Sources */,
 				2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */,
