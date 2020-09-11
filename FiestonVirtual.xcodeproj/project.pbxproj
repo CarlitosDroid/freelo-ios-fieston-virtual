@@ -90,6 +90,12 @@
 		FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */; };
 		FB1014EF2509B9A4002C91ED /* GetComentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EE2509B9A4002C91ED /* GetComentResponse.swift */; };
 		FB1014F12509B9C6002C91ED /* AddComentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F02509B9C6002C91ED /* AddComentResponse.swift */; };
+		FB1014F4250B27A7002C91ED /* GetRemoteLikesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F3250B27A7002C91ED /* GetRemoteLikesRequest.swift */; };
+		FB1014F8250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */; };
+		FB1014FA250B2A08002C91ED /* GetRemotePedirCancionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F9250B2A08002C91ED /* GetRemotePedirCancionRequest.swift */; };
+		FB1014FF250B2B24002C91ED /* LikesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014FE250B2B24002C91ED /* LikesResponse.swift */; };
+		FB101501250B2B5A002C91ED /* RespuestaTriviaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */; };
+		FB101503250B2B81002C91ED /* PedirCancionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101502250B2B81002C91ED /* PedirCancionResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +209,12 @@
 		FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDitailResponse.swift; sourceTree = "<group>"; };
 		FB1014EE2509B9A4002C91ED /* GetComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComentResponse.swift; sourceTree = "<group>"; };
 		FB1014F02509B9C6002C91ED /* AddComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComentResponse.swift; sourceTree = "<group>"; };
+		FB1014F3250B27A7002C91ED /* GetRemoteLikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteLikesRequest.swift; sourceTree = "<group>"; };
+		FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteRespuestaTriviaRequest.swift; sourceTree = "<group>"; };
+		FB1014F9250B2A08002C91ED /* GetRemotePedirCancionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemotePedirCancionRequest.swift; sourceTree = "<group>"; };
+		FB1014FE250B2B24002C91ED /* LikesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesResponse.swift; sourceTree = "<group>"; };
+		FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespuestaTriviaResponse.swift; sourceTree = "<group>"; };
+		FB101502250B2B81002C91ED /* PedirCancionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedirCancionResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,6 +452,9 @@
 		2BC2570725055A0A00B433CC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				FB1014FD250B2AD9002C91ED /* PedirCancion */,
+				FB1014FC250B2AD6002C91ED /* RespuestaTrivia */,
+				FB1014FB250B2AD3002C91ED /* Likes */,
 				FB1014E92509B872002C91ED /* Gallery */,
 				FB1014E82509B83E002C91ED /* Coment */,
 				2BC2570825055A0F00B433CC /* Response */,
@@ -525,6 +540,9 @@
 		2BC2571D2505621700B433CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FB1014F6250B281A002C91ED /* PedirCancion */,
+				FB1014F5250B27E8002C91ED /* RespuestaTrivia */,
+				FB1014F2250B274E002C91ED /* Likes */,
 				FB1014DF2509B232002C91ED /* Gallery */,
 				FB1014DE2509B02D002C91ED /* Coment */,
 				FB1014D125086D3B002C91ED /* Ranking */,
@@ -684,6 +702,54 @@
 				FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */,
 			);
 			path = Gallery;
+			sourceTree = "<group>";
+		};
+		FB1014F2250B274E002C91ED /* Likes */ = {
+			isa = PBXGroup;
+			children = (
+				FB1014F3250B27A7002C91ED /* GetRemoteLikesRequest.swift */,
+			);
+			path = Likes;
+			sourceTree = "<group>";
+		};
+		FB1014F5250B27E8002C91ED /* RespuestaTrivia */ = {
+			isa = PBXGroup;
+			children = (
+				FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */,
+			);
+			path = RespuestaTrivia;
+			sourceTree = "<group>";
+		};
+		FB1014F6250B281A002C91ED /* PedirCancion */ = {
+			isa = PBXGroup;
+			children = (
+				FB1014F9250B2A08002C91ED /* GetRemotePedirCancionRequest.swift */,
+			);
+			path = PedirCancion;
+			sourceTree = "<group>";
+		};
+		FB1014FB250B2AD3002C91ED /* Likes */ = {
+			isa = PBXGroup;
+			children = (
+				FB1014FE250B2B24002C91ED /* LikesResponse.swift */,
+			);
+			path = Likes;
+			sourceTree = "<group>";
+		};
+		FB1014FC250B2AD6002C91ED /* RespuestaTrivia */ = {
+			isa = PBXGroup;
+			children = (
+				FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */,
+			);
+			path = RespuestaTrivia;
+			sourceTree = "<group>";
+		};
+		FB1014FD250B2AD9002C91ED /* PedirCancion */ = {
+			isa = PBXGroup;
+			children = (
+				FB101502250B2B81002C91ED /* PedirCancionResponse.swift */,
+			);
+			path = PedirCancion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -940,6 +1006,7 @@
 				2B81FCF52507567800EC9E10 /* DependecyProvider.swift in Sources */,
 				2B48232425069FA100AF312D /* TextingData.swift in Sources */,
 				2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */,
+				FB1014FF250B2B24002C91ED /* LikesResponse.swift in Sources */,
 				2BB6E7EC250AE25A0074B6DB /* Data.swift in Sources */,
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
 				2B83E79A25081594004B1BF2 /* GetRemoteUserRequest.swift in Sources */,
@@ -967,8 +1034,11 @@
 				2BC2571125055D0500B433CC /* ExternalError.swift in Sources */,
 				2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */,
 				FB1014E32509B321002C91ED /* AddComentRequest.swift in Sources */,
+				FB1014FA250B2A08002C91ED /* GetRemotePedirCancionRequest.swift in Sources */,
+				FB1014F8250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift in Sources */,
 				2B83E7932507F6E4004B1BF2 /* TextFields.swift in Sources */,
 				2BC25726250563FB00B433CC /* EventCodeMapper.swift in Sources */,
+				FB1014F4250B27A7002C91ED /* GetRemoteLikesRequest.swift in Sources */,
 				FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */,
 				2BC25729250564A100B433CC /* EventCodeRepositoryImpl.swift in Sources */,
 				2B81FCE3250736C800EC9E10 /* UserResponseMapper.swift in Sources */,
@@ -996,11 +1066,13 @@
 				2B81FCE825073DCC00EC9E10 /* MainView.swift in Sources */,
 				FB1014D025086338002C91ED /* RankingResponse.swift in Sources */,
 				2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */,
+				FB101501250B2B5A002C91ED /* RespuestaTriviaResponse.swift in Sources */,
 				2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */,
 				2B81FCDF250734D500EC9E10 /* UserApi.swift in Sources */,
 				2B81FCEB2507443F00EC9E10 /* DataSourcesAssembly.swift in Sources */,
 				2B83E79825081540004B1BF2 /* ValidateCodeRequest.swift in Sources */,
 				2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */,
+				FB101503250B2B81002C91ED /* PedirCancionResponse.swift in Sources */,
 				2B81FCDB2507342400EC9E10 /* UserRemoteDataSource.swift in Sources */,
 				FB1014EF2509B9A4002C91ED /* GetComentResponse.swift in Sources */,
 				2B83E78F2507F519004B1BF2 /* LoadingView.swift in Sources */,
