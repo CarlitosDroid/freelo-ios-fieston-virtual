@@ -23,7 +23,7 @@ class UserApiImpl: UserApi {
         let getRemoteUserRequest = GetRemoteUserRequest(idUser: idUser)
         
         // TODO: - use headers if necessary or create a function for this snippet
-        //        let headers = [
+        //        let headers: HTTPHeaders = [
         //                "Authorization": "Basic \(getBase64Credentials())",
         //                "Content-Type": "application/x-www-form-urlencoded"
         //        ]

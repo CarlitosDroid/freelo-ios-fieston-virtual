@@ -13,10 +13,3 @@ struct User {
     let age: String
     let isOld: Bool
 }
-
-
-
-
-
-
-
