@@ -10,5 +10,5 @@ import Foundation
 import Combine
 
 protocol UserApi {
-    func getUserData(idUser: Int) -> AnyPublisher<UserResponseEntity, ExternalError>
+    func getUserData(idUser: Int) -> AnyPublisher<UserResponse, ExternalError>
 }

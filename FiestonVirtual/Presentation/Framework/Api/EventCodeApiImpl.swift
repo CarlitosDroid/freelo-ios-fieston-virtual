@@ -12,7 +12,7 @@ import Alamofire
 
 class EventCodeApiImpl: EventCodeApi {
     
-    func validateCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<CodeVerificationResponseEntity, ExternalError> {
+    func validateCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<CodeVerificationResponse, ExternalError> {
     
         guard let url = makeVerifyCodeComponents().url else {
             let error = ExternalError.NetworkError(description: "Couldn't create URL")
@@ -27,26 +27,26 @@ class EventCodeApiImpl: EventCodeApi {
                           interceptor: nil,
                           requestModifier: nil)
             .validate()
-            .publishDecodable(type: CodeVerificationResponseEntity.self)
+            .publishDecodable(type: CodeVerificationResponse.self)
             .mapError({ (never : Never) -> ExternalError in
                 ExternalError.UnknowError(description: never.localizedDescription)
             })
-            .flatMap({ (dataResponse: DataResponse<CodeVerificationResponseEntity, AFError>)-> AnyPublisher<CodeVerificationResponseEntity, ExternalError> in
-                Future<CodeVerificationResponseEntity, ExternalError> { promise in
+            .flatMap({ (dataResponse: DataResponse<CodeVerificationResponse, AFError>)-> AnyPublisher<CodeVerificationResponse, ExternalError> in
+                Future<CodeVerificationResponse, ExternalError> { promise in
                     switch dataResponse.result {
-                        
+
                     case .failure(let afError):
                         promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
                         break
-                        
-                    case .success(let codeVerificationResponseEntity):
-                        promise(.success(codeVerificationResponseEntity))
+
+                    case .success(let codeVerificationResponse):
+                        promise(.success(codeVerificationResponse))
                         break
                     }
-                    
+
                 }.eraseToAnyPublisher()
             }).eraseToAnyPublisher()
-        
+
     }
     
     func getWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<WelcomeResponseEntity, ExternalError> {

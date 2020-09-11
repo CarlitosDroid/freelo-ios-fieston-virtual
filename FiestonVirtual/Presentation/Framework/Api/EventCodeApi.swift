@@ -10,6 +10,6 @@ import Foundation
 import Combine
 
 protocol EventCodeApi {
-    func validateCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<CodeVerificationResponseEntity,ExternalError>
+    func validateCode(validateCodeRequest: ValidateCodeRequest) -> AnyPublisher<CodeVerificationResponse,ExternalError>
     func getWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<WelcomeResponseEntity, ExternalError>
 }

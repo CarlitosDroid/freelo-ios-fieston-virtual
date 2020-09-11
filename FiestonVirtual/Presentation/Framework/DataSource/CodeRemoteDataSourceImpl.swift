@@ -28,10 +28,10 @@ class EventCodeRemoteDataSourceImpl: EventCodeRemoteDataSource {
                 case .UnknowError(let description):
                     return ErrorResponse(title: "Error Desconocido", message: description)
                 }
-        }
-        .map { (codeVerificationResponseEntity: CodeVerificationResponseEntity) -> EventCode in
-            return codeVerificationResponseEntity.toEventCode()
-        }.eraseToAnyPublisher()
+            }
+            .map { (codeVerificationResponse: CodeVerificationResponse) -> EventCode in
+                return codeVerificationResponse.toEventCode()
+            }.eraseToAnyPublisher()
     }
     
     func getWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<Welcome, ErrorResponse> {
