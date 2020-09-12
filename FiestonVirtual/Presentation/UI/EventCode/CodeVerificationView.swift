@@ -21,39 +21,33 @@ struct CodeVerificationView: View {
             ZStack {
                 Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
                 LoadingView(isShowing: .constant(viewModel.isLoading)) {
-                    ZStack {
-                        VStack {
-                            Image("Fieston")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .padding(.all, 60)
-                            Spacer()
-                        }
-                        
-                        VStack {
-                            TextField("Coloque su código", text: self.$eventCode)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .keyboardType(.numberPad)
-                            
-                            NavigationLink(
-                                destination: MainView(),
-                                isActive: self.$viewModel.inSession,
-                                label: { Button(action: {
-                                    self.viewModel.verifyCode(code: self.eventCode)
-                                }) {
-                                    Text("Entrar")
-                                        .frame(maxWidth: .infinity)
-                                        .frame(height: 50, alignment: .center)
-                                        .background(Color.aqua.cornerRadius(8))
-                                        .foregroundColor(Color.white)
-                                    }
-                            })
-                        }.padding(.all, 15)
+                    VStack {
+                        Image("Fieston")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.all, 60)
+                        TextField("Coloque su código", text: self.$eventCode)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.numberPad)
+                            .padding(.all, 15)
+                        Spacer()
                     }
                 }
+                NavigationLink(
+                    destination: MainView(),
+                    isActive: self.$viewModel.inSession,
+                    label: { Button(action: {
+                        self.viewModel.verifyCode(code: self.eventCode)
+                    }) {
+                        Text("Entrar")
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 50, alignment: .center)
+                            .background(Color.aqua.cornerRadius(8))
+                            .foregroundColor(Color.white)
+                        }
+                }).padding(.all, 15)
             }
-        }
-        .onAppear {
+        }.onAppear {
             self.viewModel.verifySession()
             print("ContentView appeared!")
         }.onDisappear {
