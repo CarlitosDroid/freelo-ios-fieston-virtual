@@ -4,8 +4,8 @@ import KingfisherSwiftUI
 
 struct WelcomeView: View {
     
-    @State var welcome: Welcome
-    @State var showSheet: Bool
+    @Binding var welcome: Welcome
+    @Binding var showSheet: Bool
     
     var body: some View {
         VStack {
@@ -19,7 +19,7 @@ struct WelcomeView: View {
                         self.showSheet.toggle()
                     }){
                         Text("X").font(.title).bold().foregroundColor(Color(.white))
-                        }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
+                    }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
                 }.hidden()
                 
                 Image("Fieston").resizable().frame(width: 200, height:60)
@@ -48,8 +48,9 @@ struct WelcomeView: View {
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
         WelcomeView(
-            welcome: Welcome(title: "", description: "", subtitle: "", imageUrl: ""),
-            showSheet: true
+            welcome: .constant(Welcome(title: "", description: "", subtitle: "", imageUrl: "")),
+            showSheet: .constant(true)
         )
+        
     }
 }
