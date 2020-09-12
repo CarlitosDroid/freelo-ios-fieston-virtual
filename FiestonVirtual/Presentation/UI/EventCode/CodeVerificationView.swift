@@ -20,32 +20,43 @@ struct CodeVerificationView: View {
         NavigationView {
             ZStack {
                 Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
-                LoadingView(isShowing: .constant(viewModel.isLoading)) {
-                    VStack {
-                        Image("Fieston")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding(.all, 60)
-                        TextField("Coloque su código", text: self.$eventCode)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.numberPad)
-                            .padding(.all, 15)
-                        Spacer()
-                    }
-                }
+                
                 NavigationLink(
                     destination: MainView(),
                     isActive: self.$viewModel.inSession,
                     label: { Button(action: {
                         self.viewModel.verifyCode(code: self.eventCode)
                     }) {
-                        Text("Entrar")
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50, alignment: .center)
-                            .background(Color.aqua.cornerRadius(8))
-                            .foregroundColor(Color.white)
+                        VStack {
+                            Text("Entrar")
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 50, alignment: .center)
+                                .background(Color.aqua.cornerRadius(8))
+                                .foregroundColor(Color.white)
+                        }.padding(.all, 20)
+                    }
+                })
+                
+                LoadingView(isShowing: .constant(self.viewModel.isLoading)) {
+                    ZStack{
+                        VStack {
+                            Image("Fieston")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .padding(.all, 40)
+                            Spacer()
                         }
-                }).padding(.all, 15)
+                        
+                        VStack {
+                            TextField("Coloque su código", text: self.$eventCode)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .keyboardType(.numberPad)
+                            Spacer()
+                                .frame(height: 100)
+                        }
+                    }.padding(.all, 20)
+                }
+                
             }
         }.onAppear {
             self.viewModel.verifySession()
