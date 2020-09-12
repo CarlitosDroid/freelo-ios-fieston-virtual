@@ -12,7 +12,6 @@ struct WelcomeView: View {
             EmptyView()
         }.sheet(isPresented: $showSheet) {
             VStack(alignment: .center, spacing: 10) {
-                
                 HStack {
                     Spacer()
                     Button(action: {
@@ -22,11 +21,15 @@ struct WelcomeView: View {
                     }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
                 }.hidden()
                 
-                Image("Fieston").resizable().frame(width: 200, height:60)
+                Image("Fieston").resizable().frame(width: 230, height:60)
+                
+                Spacer()
                 
                 Text(self.welcome.title).font(.title).bold().foregroundColor(Color.amber_600).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
                 
                 Text( self.welcome.description).font(.body).bold().foregroundColor(Color.aqua).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+                
+                Spacer()
                 
                 Text(self.welcome.subtitle).font(.body).bold().foregroundColor(Color.amber_600).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
                 
