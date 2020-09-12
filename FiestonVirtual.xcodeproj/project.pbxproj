@@ -84,6 +84,8 @@
 		FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */; };
 		FB1014EF2509B9A4002C91ED /* GetComentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EE2509B9A4002C91ED /* GetComentResponse.swift */; };
 		FB1014F12509B9C6002C91ED /* AddComentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F02509B9C6002C91ED /* AddComentResponse.swift */; };
+		FB101518250C70E0002C91ED /* ComentApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101517250C70E0002C91ED /* ComentApi.swift */; };
+		FB10151A250C730E002C91ED /* ComentApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101519250C730E002C91ED /* ComentApiImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +193,8 @@
 		FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDitailResponse.swift; sourceTree = "<group>"; };
 		FB1014EE2509B9A4002C91ED /* GetComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComentResponse.swift; sourceTree = "<group>"; };
 		FB1014F02509B9C6002C91ED /* AddComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComentResponse.swift; sourceTree = "<group>"; };
+		FB101517250C70E0002C91ED /* ComentApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentApi.swift; sourceTree = "<group>"; };
+		FB101519250C730E002C91ED /* ComentApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentApiImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -461,6 +465,8 @@
 				2B81FCE425073B0A00EC9E10 /* UserApiImpl.swift */,
 				FB1014D425086E0A002C91ED /* RankingApi.swift */,
 				FB1014D625086F1C002C91ED /* RankingApiImpl.swift */,
+				FB101517250C70E0002C91ED /* ComentApi.swift */,
+				FB101519250C730E002C91ED /* ComentApiImpl.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -932,6 +938,7 @@
 				2B48231C25068AF600AF312D /* UserEntityMapper.swift in Sources */,
 				2BC2573C2505AAE000B433CC /* CodeVerificationViewModel.swift in Sources */,
 				2B0981E6250925D500C78FFF /* AppDelegateExt.swift in Sources */,
+				FB101518250C70E0002C91ED /* ComentApi.swift in Sources */,
 				2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */,
 				2B4823282506A32400AF312D /* CoreDataRepository.swift in Sources */,
 				FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */,
@@ -962,6 +969,7 @@
 				2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */,
 				2BC2573A2505AAD200B433CC /* CodeVerificationView.swift in Sources */,
 				2BA2AFBA250990E000236FDD /* PhotosView.swift in Sources */,
+				FB10151A250C730E002C91ED /* ComentApiImpl.swift in Sources */,
 				FB1014E72509B394002C91ED /* GetGalleryDiteilRequest.swift in Sources */,
 				2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */,
 				2BC2570A25055A3900B433CC /* CodeVerificationResponse.swift in Sources */,

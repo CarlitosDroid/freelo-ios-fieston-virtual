@@ -12,12 +12,6 @@ import Alamofire
 
 class UserApiImpl: UserApi {
     
-    private let session: URLSession
-    
-    init(session: URLSession = .shared) {
-        self.session = session
-    }
-    
     func getUserData(idUser: Int) -> AnyPublisher<UserResponse, ExternalError> {
       
         let getRemoteUserRequest = GetRemoteUserRequest(idUser: idUser)
