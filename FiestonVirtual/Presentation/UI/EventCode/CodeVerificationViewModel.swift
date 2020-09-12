@@ -12,8 +12,8 @@ import CoreData
 
 class CodeVerificationViewModel: ObservableObject {
     
-    let loginUseCase = DependencyProvider().assembler.resolver.resolve(LoginUseCase.self)!
-    let verifySessionUseCase = DependencyProvider().assembler.resolver.resolve(VerifySessionUseCase.self)!
+    let loginUseCase: LoginUseCase
+    let verifySessionUseCase: VerifySessionUseCase
     
     @Published var eventCode: EventCode?
     @Published var isLoading = false
@@ -21,6 +21,12 @@ class CodeVerificationViewModel: ObservableObject {
     @Published var inSession = false
     
     private var disposables = Set<AnyCancellable>()
+    
+    init(loginUseCase: LoginUseCase, verifySessionUseCase: VerifySessionUseCase) {
+        self.loginUseCase = loginUseCase
+        self.verifySessionUseCase = verifySessionUseCase
+    }
+    
     
     func verifyCode(code: String) {
         self.isLoading = true

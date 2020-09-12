@@ -10,5 +10,12 @@ class ViewModelAssembly: Assembly {
             WelcomeViewModel(getWelcomeUseCase: resolver.resolve(GetWelcomeUseCase.self)!)
         }
         
+        container.register(CodeVerificationViewModel.self) { resolver in
+            CodeVerificationViewModel(
+                loginUseCase: resolver.resolve(LoginUseCase.self)!,
+                verifySessionUseCase: resolver.resolve(VerifySessionUseCase.self)!
+            )
+        }
+        
     }
 }

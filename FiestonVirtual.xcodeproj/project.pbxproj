@@ -12,6 +12,7 @@
 		2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981EC25092F1D00C78FFF /* ContentView.swift */; };
 		2B3070EA25089603005198F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3070E925089603005198F7 /* Color.swift */; };
 		2B3070EC25089659005198F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3070EB25089659005198F7 /* Colors.xcassets */; };
+		2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3747F9250C55E200BE13B4 /* VideoView.swift */; };
 		2B48231C25068AF600AF312D /* UserEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48231B25068AF600AF312D /* UserEntityMapper.swift */; };
 		2B48231F25068B4400AF312D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48231E25068B4400AF312D /* User.swift */; };
 		2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48232125069E2200AF312D /* CoreDataContextProvider.swift */; };
@@ -75,12 +76,7 @@
 		2BDAC595250AC55700DA6A74 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC594250AC55700DA6A74 /* Photo.swift */; };
 		2BDAC599250AC66300DA6A74 /* GalleryApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC598250AC66300DA6A74 /* GalleryApiImpl.swift */; };
 		2BDAC59B250ACFB500DA6A74 /* UploadFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */; };
-		54CD0F8E25FAE3BF3FC82753 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129E57177784F9901DB47027 /* Pods_FiestonVirtual.framework */; };
-		8C82C592C931C185D0216CC5 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
-		E25AF77D539E83B4A5422C67 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F486E1B64293B0D4CA8306 /* Pods_FiestonVirtualTests.framework */; };
-		2BD74DF32509E89C00B0820D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF22509E89C00B0820D /* SwiftPackageProductDependency */; };
-		2BD74DF52509E89C00B0820D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF42509E89C00B0820D /* SwiftPackageProductDependency */; };
-		54CD0F8E25FAE3BF3FC82753 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */; };
 		9A73CC892508910900D9C310 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73CC882508910900D9C310 /* ViewModelAssembly.swift */; };
 		9A8145672505D1DA001A012A /* WelcomeResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145662505D1DA001A012A /* WelcomeResponseEntity.swift */; };
@@ -91,10 +87,10 @@
 		9A81457F2505F420001A012A /* GetWelcomeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81457E2505F420001A012A /* GetWelcomeUseCaseImpl.swift */; };
 		9A8145822505F8A0001A012A /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145812505F8A0001A012A /* WelcomeViewModel.swift */; };
 		9A8145842505F90C001A012A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145832505F90C001A012A /* WelcomeView.swift */; };
-		9C47CD2FB1B46B98065A8A55 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
-		A16FBA5D98964B10D4D1A8A1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0800F8BF50576030F8ED8A5E /* Pods_FiestonVirtual.framework */; };
-		B616DAB77583261B480DCBA8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		B616DAB77583261B480DCBA8 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		F81E71D303838636895DE080 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D1C4045236C783848B4F61 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
 		FB1014D025086338002C91ED /* RankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014CF25086338002C91ED /* RankingResponse.swift */; };
 		FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */; };
@@ -142,6 +138,7 @@
 		2B0981EC25092F1D00C78FFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B3070E925089603005198F7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2B3070EB25089659005198F7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2B3747F9250C55E200BE13B4 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		2B48231B25068AF600AF312D /* UserEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntityMapper.swift; sourceTree = "<group>"; };
 		2B48231E25068B4400AF312D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2B48232125069E2200AF312D /* CoreDataContextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContextProvider.swift; sourceTree = "<group>"; };
@@ -209,12 +206,6 @@
 		2BDAC594250AC55700DA6A74 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		2BDAC598250AC66300DA6A74 /* GalleryApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryApiImpl.swift; sourceTree = "<group>"; };
 		2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileResponse.swift; sourceTree = "<group>"; };
-		717F0F31C57CD52FE931E080 /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig"; sourceTree = "<group>"; };
-		71F1E84C6AEBAAFFCDDDBC36 /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9BF216D171B95EE14811331D /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual_FiestonVirtualUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A13A0579CBC4D34FA84373F9 /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C4E7F3136016DAA75F1C68C8 /* Pods-FiestonVirtual.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.debug.xcconfig"; sourceTree = "<group>"; };
-		C8723C841DAAB5A94BCE0483 /* Pods-FiestonVirtual.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.release.xcconfig"; sourceTree = "<group>"; };
 		5E00F9A42143DA0A2E88BEBD /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81DC065DED1DF8D5FC710C7D /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86D1C4045236C783848B4F61 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual_FiestonVirtualUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,10 +246,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BD74DF52509E89C00B0820D /* BuildFile in Frameworks */,
-				2BD74DF32509E89C00B0820D /* BuildFile in Frameworks */,
-				54CD0F8E25FAE3BF3FC82753 /* BuildFile in Frameworks */,
-				A16FBA5D98964B10D4D1A8A1 /* BuildFile in Frameworks */,
+				2BD74DF52509E89C00B0820D /* KingfisherSwiftUI in Frameworks */,
+				2BD74DF32509E89C00B0820D /* Kingfisher in Frameworks */,
+				54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */,
+				A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */,
 				B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +258,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C47CD2FB1B46B98065A8A55 /* BuildFile in Frameworks */,
+				9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */,
 				73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +267,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B616DAB77583261B480DCBA8 /* BuildFile in Frameworks */,
+				B616DAB77583261B480DCBA8 /* (null) in Frameworks */,
 				F81E71D303838636895DE080 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +283,14 @@
 				2BB6E7EB250AE25A0074B6DB /* Data.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2B3747F8250C55CD00BE13B4 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				2B3747F9250C55E200BE13B4 /* VideoView.swift */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		2B48231D25068B3700AF312D /* User */ = {
@@ -316,6 +315,7 @@
 		2B81FCE625073D5E00EC9E10 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2B3747F8250C55CD00BE13B4 /* Video */,
 				2BA2AFB82509908D00236FDD /* Photo */,
 				2B81FCE725073DCC00EC9E10 /* MainView.swift */,
 			);
@@ -503,8 +503,6 @@
 		2BC2570825055A0F00B433CC /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				2BC2570925055A3900B433CC /* CodeVerificationResponse.swift */,
-				2B81FCE02507352300EC9E10 /* UserResponse.swift */,
 				FB1014CF25086338002C91ED /* RankingResponse.swift */,
 				2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */,
 				2B81FCE02507352300EC9E10 /* UserResponse.swift */,
@@ -843,8 +841,8 @@
 			);
 			name = FiestonVirtual;
 			packageProductDependencies = (
-				2BD74DF22509E89C00B0820D /* SwiftPackageProductDependency */,
-				2BD74DF42509E89C00B0820D /* SwiftPackageProductDependency */,
+				2BD74DF22509E89C00B0820D /* Kingfisher */,
+				2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */,
 			);
 			productName = FiestonVirtual;
 			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
@@ -922,7 +920,7 @@
 			);
 			mainGroup = 2BC256C2250546D100B433CC;
 			packageReferences = (
-				2BD74DF12509E89C00B0820D /* RemoteSwiftPackageReference */,
+				2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
 			projectDirPath = "";
@@ -1091,6 +1089,7 @@
 				2B48231C25068AF600AF312D /* UserEntityMapper.swift in Sources */,
 				2BC2573C2505AAE000B433CC /* CodeVerificationViewModel.swift in Sources */,
 				2B0981E6250925D500C78FFF /* AppDelegateExt.swift in Sources */,
+				2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */,
 				2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */,
 				2B4823282506A32400AF312D /* CoreDataRepository.swift in Sources */,
 				FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */,
@@ -1486,7 +1485,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2BD74DF12509E89C00B0820D /* RemoteSwiftPackageReference */ = {
+		2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1497,14 +1496,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2BD74DF22509E89C00B0820D /* SwiftPackageProductDependency */ = {
+		2BD74DF22509E89C00B0820D /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2BD74DF12509E89C00B0820D /* RemoteSwiftPackageReference */;
+			package = 2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		2BD74DF42509E89C00B0820D /* SwiftPackageProductDependency */ = {
+		2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2BD74DF12509E89C00B0820D /* RemoteSwiftPackageReference */;
+			package = 2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -9,9 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(CodeVerificationViewModel.self)!
+    
     var body: some View {
-        Text("TODO UPDATE THIS FILE UNTIL VIEWMODELS ARE INJECTED")
-        //CodeVerificationView(viewModel: viewModel).environment(\.managedObjectContext, CodeVerificationViewModel())
+        CodeVerificationView(viewModel: viewModel)
     }
 }
 
