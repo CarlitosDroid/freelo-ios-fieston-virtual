@@ -13,12 +13,49 @@ import Alamofire
 class GalleryApiImpl: GalleryApi {
     
     func uploadImage(
-        data: Data,
+        data: URL,
         idUser: Int,
         idEvent: Int,
-        postType: Int,
+        
         postTitle: String
     ) -> AnyPublisher<UploadImageResponse, ExternalError> {
+        
+        print(data.pathExtension)
+        
+        let mimeType: String
+        let postType: Int
+        
+        switch data.pathExtension {
+        case "jpeg":
+            postType = 1
+            mimeType = "image/jpeg"
+            break
+        case "jpg":
+            postType = 1
+            mimeType = "image/jpg"
+            break
+        case "png":
+            postType = 1
+            mimeType = "image/png"
+            break
+        case "MOV":
+            postType = 2
+            mimeType = "video/quicktime"
+            break
+        case "mov":
+            postType = 2
+            mimeType = "video/quicktime"
+            break
+        case "mp4":
+            postType = 2
+            mimeType = "video/mp4"
+            break
+        default:
+            postType = 0
+            mimeType = "image/jpeg"
+            break
+        }
+        
         
         return AF.upload(multipartFormData: { (multipartFormData: MultipartFormData) in
             multipartFormData.append(String(idUser).data(using: .utf8)!, withName: "idUser")
@@ -27,8 +64,8 @@ class GalleryApiImpl: GalleryApi {
             multipartFormData.append(String(postTitle).data(using: .utf8)!, withName: "postTitle")
             multipartFormData.append(data,
                                      withName: "file",
-                                     fileName: "\(self.getCurrentTimeStamp()).jpg",
-                                     mimeType: "image/jpeg")
+                                     fileName: "\(self.getCurrentTimeStamp()).\(data.pathExtension)",
+                                     mimeType: mimeType)
         },
                          to: "http://fiestonvirtual.com/app/api/publicaciones.php",
                          method: .post,
@@ -57,47 +94,6 @@ class GalleryApiImpl: GalleryApi {
         
     }
     
-    
-//
-//    func uploadVideo(data: URL, idUser: Int, idEvent: Int, postType: Int) -> AnyPublisher<UploadImageResponse, ExternalError> {
-//        let timestamp = NSDate().timeIntervalSince1970 // just for some random name.
-//
-//            return AF.upload(multipartFormData: { (multipartFormData: MultipartFormData) in
-//                multipartFormData.append(String(idUser).data(using: .utf8)!, withName: "idUser")
-//                multipartFormData.append(String(idEvent).data(using: .utf8)!, withName: "idEvent")
-//                multipartFormData.append(String(postType).data(using: .utf8)!, withName: "postType")
-//                multipartFormData.append(data,
-//                                         withName: "file",
-//                                         fileName: "\(timestamp).mov",
-//                                         mimeType: "video/quicktime")
-//            },
-//                             to: URL(string: "http://fiestonvirtual.com/app/api/publicaciones.php")!,
-//                             method: .post,
-//                             interceptor: nil,
-//                             requestModifier: nil)
-//                .validate()
-//                .publishDecodable(type: UploadImageResponse.self)
-//                .mapError({ (never : Never) -> ExternalError in
-//                    ExternalError.UnknowError(description: never.localizedDescription)
-//                })
-//                .flatMap({ (dataResponse: DataResponse<UploadImageResponse, AFError>)-> AnyPublisher<UploadImageResponse, ExternalError> in
-//                    Future<UploadImageResponse, ExternalError> { promise in
-//                        switch dataResponse.result {
-//
-//                        case .failure(let afError):
-//                            promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
-//                            break
-//
-//                        case .success(let uploadImageResponse):
-//                            promise(.success(uploadImageResponse))
-//                            break
-//                        }
-//
-//                    }.eraseToAnyPublisher()
-//                }).eraseToAnyPublisher()
-//
-//    }
-  
     private func getCurrentTimeStamp() -> String {
         let now = Date()
         let formatter = DateFormatter()

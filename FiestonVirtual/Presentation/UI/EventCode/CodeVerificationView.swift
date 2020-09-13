@@ -20,13 +20,30 @@ struct CodeVerificationView: View {
         NavigationView {
             ZStack {
                 Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
-                LoadingView(isShowing: .constant(viewModel.isLoading)) {
-                    ZStack {
+                
+                NavigationLink(
+                    destination: MainView(),
+                    isActive: self.$viewModel.inSession,
+                    label: { Button(action: {
+                        self.viewModel.verifyCode(code: self.eventCode)
+                    }) {
+                        VStack {
+                            Text("Entrar")
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 50, alignment: .center)
+                                .background(Color.aqua.cornerRadius(8))
+                                .foregroundColor(Color.white)
+                        }.padding(.all, 20)
+                    }
+                })
+                
+                LoadingView(isShowing: .constant(self.viewModel.isLoading)) {
+                    ZStack{
                         VStack {
                             Image("Fieston")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .padding(.all, 60)
+                                .padding(.all, 40)
                             Spacer()
                         }
                         
@@ -34,26 +51,14 @@ struct CodeVerificationView: View {
                             TextField("Coloque su código", text: self.$eventCode)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .keyboardType(.numberPad)
-                            
-                            NavigationLink(
-                                destination: MainView(),
-                                isActive: self.$viewModel.inSession,
-                                label: { Button(action: {
-                                    self.viewModel.verifyCode(code: self.eventCode)
-                                }) {
-                                    Text("Entrar")
-                                        .frame(maxWidth: .infinity)
-                                        .frame(height: 50, alignment: .center)
-                                        .background(Color.aqua.cornerRadius(8))
-                                        .foregroundColor(Color.white)
-                                    }
-                            })
-                        }.padding(.all, 15)
-                    }
+                            Spacer()
+                                .frame(height: 100)
+                        }
+                    }.padding(.all, 20)
                 }
+                
             }
-        }
-        .onAppear {
+        }.onAppear {
             self.viewModel.verifySession()
             print("ContentView appeared!")
         }.onDisappear {
