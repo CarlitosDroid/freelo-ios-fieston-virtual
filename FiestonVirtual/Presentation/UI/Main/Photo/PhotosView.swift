@@ -69,8 +69,7 @@ struct PhotosView: View {
                                 isPresented: self.$isShowingImagePicker,
                                 selectedImage: self.$imageInBlackBox) { isImageSelected, fileURL in
                                     self.isImageSelected = isImageSelected
-                                    self.viewmodel.uploadFile(data: fileURL.jpegData(compressionQuality: 0.8)!)
-                                    
+                                    self.viewmodel.uploadFile(data: fileURL)
                             }
                         }
                     }
@@ -99,7 +98,7 @@ struct ImagePickerView: UIViewControllerRepresentable {
     @Binding var isPresented: Bool
     @Binding var selectedImage: UIImage
     
-    var onImageFromPickerSelected: (_ isImageSelected: Bool, _ fileURL: UIImage) -> Void
+    var onImageFromPickerSelected: (_ isImageSelected: Bool, _ fileURL: URL) -> Void
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerView>) -> UIViewController {
         let pickerController = UIImagePickerController()
@@ -119,30 +118,22 @@ struct ImagePickerView: UIViewControllerRepresentable {
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         
         let parent: ImagePickerView
-        var onImageSelected: (_ isImageSelected: Bool, _ fileUrl: UIImage) -> Void
+        var onImageFileSelected: (_ isImageSelected: Bool, _ fileUrl: URL) -> Void
         
-        
-        
-        init(parent: ImagePickerView, onImageSelected: @escaping (_ isImageSelected: Bool, _ fileURL: UIImage) -> Void) {
+
+        init(parent: ImagePickerView, onImageSelected: @escaping (_ isImageSelected: Bool, _ fileURL: URL) -> Void) {
             self.parent = parent
-            self.onImageSelected = onImageSelected
+            self.onImageFileSelected = onImageSelected
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             
             if let mediaUrl = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
-                print(mediaUrl)
-                // TODO working on video
-//                self.viewmodel.uploadVideo(
-//                    fileName: mediaUrl.lastPathComponent,
-//                    data: mediaUrl
-//                )
-                
+                onImageFileSelected(true, mediaUrl)
             }
             
-            if let selectedImageFromPicker = info[.originalImage] as? UIImage {
-                self.parent.selectedImage = selectedImageFromPicker
-                onImageSelected(true, selectedImageFromPicker)
+            if let selectedImageFromPicker = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+                onImageFileSelected(true, selectedImageFromPicker)
             }
             
             self.parent.isPresented = false
