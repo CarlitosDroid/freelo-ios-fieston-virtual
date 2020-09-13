@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CodeVerificationView: View {
     
-    @ObservedObject var viewModel: CodeVerificationViewModel
+    @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(CodeVerificationViewModel.self)!
     
     @State private var eventCode: String = ""
     
@@ -71,11 +71,7 @@ struct CodeVerificationView: View {
 
 struct CodeVerificationView_Previews: PreviewProvider {
     
-    @State static var codeVerificationViewModel = CodeVerificationViewModel()
-    
     static var previews: some View {
-        CodeVerificationView(
-            viewModel: codeVerificationViewModel
-        )
+        CodeVerificationView()
     }
 }
