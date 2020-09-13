@@ -12,10 +12,10 @@ import Combine
 protocol GalleryApi {
     
     func uploadImage(
-        data: Data,
+        data: URL,
         idUser: Int,
         idEvent: Int,
-        postType: Int,
+ 
         postTitle: String
     ) -> AnyPublisher<UploadImageResponse, ExternalError>
 
