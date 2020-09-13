@@ -14,38 +14,32 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            LoadingView(isShowing: .constant(viewModel.isLoading)){
-                ZStack {
-                    TabView {
-                        Text("HOLA1")
-                            .tabItem {
-                                Image(systemName: "list.dash")
-                                Text("Menu")
-                        }
-                        PhotosView()
-                            .tabItem {
-                                Image(systemName: "list.dash")
-                                Text("Menu")
-                        }
-                    }.navigationBarBackButtonHidden(true)
-                    
-                    WelcomeView(
-                        welcome:self.viewModel.welcome,
-                        showSheet: self.viewModel.hasWelcome
-                    )
+            TabView {
+                Text("HOLA1")
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("Menu")
                 }
-                
-            }
+                PhotosView()
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("Menu")
+                }
+            }.navigationBarBackButtonHidden(true)
+            
+            WelcomeView(
+                welcome:.constant(self.viewModel.welcome),
+                showSheet: .constant( self.viewModel.hasWelcome)
+            )
         } .onAppear{
             self.viewModel.getWelcome()
         }
     }
 }
 
-/*
- struct MainView_Previews: PreviewProvider {
- static var previews: some View {
- //MainView()
- }
- }
- */
+
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
+}
