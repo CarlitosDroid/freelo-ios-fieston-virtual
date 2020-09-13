@@ -87,22 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "195822D5-814D-40D4-82B9-57F631EDCC63"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/MainView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8F02BC04-12EB-480E-8607-756BD81085D8"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -130,54 +114,6 @@
             endingLineNumber = "31"
             landmarkName = "getWelcome()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E0FFF604-7576-476B-BC8A-EFDFD489A46F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/MainView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "E0FFF604-7576-476B-BC8A-EFDFD489A46F - 40535c2a348f9e62"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; FiestonVirtual.LoadingView&lt;SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarBackButtonHidden(Swift.Bool) -&gt; some&gt;&gt;.0, FiestonVirtual.WelcomeView)&gt;&gt;&gt; in FiestonVirtual.MainView.body.getter : some"
-                  moduleName = "FiestonVirtual"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/Main/MainView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "E0FFF604-7576-476B-BC8A-EFDFD489A46F - a906326b409ead6e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarBackButtonHidden(Swift.Bool) -&gt; some&gt;&gt;.0, FiestonVirtual.WelcomeView)&gt;&gt; in closure #1 () -&gt; FiestonVirtual.LoadingView&lt;SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarBackButtonHidden(Swift.Bool) -&gt; some&gt;&gt;.0, FiestonVirtual.WelcomeView)&gt;&gt;&gt; in FiestonVirtual.MainView.body.getter : some"
-                  moduleName = "FiestonVirtual"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/Main/MainView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "27">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -422,102 +358,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9CC3087B-1FBC-42BF-A816-BB43EE604CA1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/EventCode/CodeVerificationView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "9CC3087B-1FBC-42BF-A816-BB43EE604CA1 - 383cfe775d2661e1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, FiestonVirtual.LoadingView&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;, SwiftUI.NavigationLink&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;, FiestonVirtual.MainView&gt;)&gt; in closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, FiestonVirtual.LoadingView&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;, SwiftUI.NavigationLink&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;, FiestonVirtual.MainView&gt;)&gt;&gt; in FiestonVirtual.CodeVerificationView.body.getter : some"
-                  moduleName = "FiestonVirtual"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/EventCode/CodeVerificationView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "9CC3087B-1FBC-42BF-A816-BB43EE604CA1 - 73eac93325ee9fae"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, FiestonVirtual.LoadingView&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;, SwiftUI.NavigationLink&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;, FiestonVirtual.MainView&gt;)&gt; in closure #1 () -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, FiestonVirtual.LoadingView&lt;SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt;&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;&gt;, SwiftUI.NavigationLink&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.foregroundColor(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0&gt;, FiestonVirtual.MainView&gt;)&gt;&gt; in FiestonVirtual.CodeVerificationView.body.getter : some"
-                  moduleName = "FiestonVirtual"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/EventCode/CodeVerificationView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "375">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "45587104-9822-407B-934A-0DF963B16EB1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/MainView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "45587104-9822-407B-934A-0DF963B16EB1 - b06fd69553bb619f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FiestonVirtual.MainView.body.getter : some"
-                  moduleName = "FiestonVirtual"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/Main/MainView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  uuid = "45587104-9822-407B-934A-0DF963B16EB1 - 40535c2a348f9e62"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; FiestonVirtual.LoadingView&lt;SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarBackButtonHidden(Swift.Bool) -&gt; some&gt;&gt;.0, FiestonVirtual.WelcomeView)&gt;&gt;&gt; in FiestonVirtual.MainView.body.getter : some"
-                  moduleName = "FiestonVirtual"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/Main/MainView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "53E04FA7-E959-4750-A657-30F3927FA397"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -561,70 +401,6 @@
             endingLineNumber = "53"
             landmarkName = "verifySession()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "26DD57E3-1082-433A-9469-5DB08ECB6891"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/EventCode/CodeVerificationView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4049BBE5-7367-4452-8279-CF3E324BB74F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/MainView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A89D8503-1F9C-4277-B5BC-0C7427284D36"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/MainView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CBC0F767-169D-4FA5-BB02-715A8080E1EB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/MainView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "body"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
