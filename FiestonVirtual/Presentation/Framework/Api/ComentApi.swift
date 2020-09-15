@@ -12,7 +12,7 @@ import Combine
 protocol ComentApi {
     
     func getComentApi(idUser: Int) ->
-    AnyPublisher<GetComentResponse,ExternalError>
+    AnyPublisher<GetCommentResponse,ExternalError>
     
     func addComent()->
     AnyPublisher<AddComentResponse,ExternalError>

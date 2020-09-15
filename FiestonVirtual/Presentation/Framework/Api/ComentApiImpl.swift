@@ -12,7 +12,7 @@ import Alamofire
 
 class ComentApiImpl: ComentApi {
     
-    func getComentApi(idUser: Int) -> AnyPublisher<GetComentResponse, ExternalError> {
+    func getComentApi(idUser: Int) -> AnyPublisher<GetCommentResponse, ExternalError> {
         
         let getComentRequest = GetComentRequest(idPost: 0)
             
@@ -29,12 +29,12 @@ class ComentApiImpl: ComentApi {
                               interceptor: nil,
                               requestModifier: nil)
                 .validate()
-                .publishDecodable(type: GetComentResponse.self)
+                .publishDecodable(type: GetCommentResponse.self)
                 .mapError({ (never : Never) -> ExternalError in
                     ExternalError.UnknowError(description: never.localizedDescription)
                 })
-                .flatMap({ (dataResponse: DataResponse<GetComentResponse, AFError>)-> AnyPublisher<GetComentResponse, ExternalError> in
-                    Future<GetComentResponse, ExternalError> { promise in
+                .flatMap({ (dataResponse: DataResponse<GetCommentResponse, AFError>)-> AnyPublisher<GetCommentResponse, ExternalError> in
+                    Future<GetCommentResponse, ExternalError> { promise in
                         switch dataResponse.result {
                             
                         case .failure(let afError):
