@@ -34,7 +34,7 @@ struct CodeVerificationView: View {
                                 .background(Color.aqua.cornerRadius(8))
                                 .foregroundColor(Color.white)
                         }.padding(.all, 20)
-                    }
+                        }
                 })
                 
                 LoadingView(isShowing: .constant(self.viewModel.isLoading)) {
@@ -58,7 +58,12 @@ struct CodeVerificationView: View {
                 }
                 
             }
-        }.onAppear {
+        }.alert(isPresented: .constant(self.viewModel.isError), content:{
+            Alert(
+                title: Text(self.viewModel.errorMessage),
+                dismissButton: .default(Text("Aceptar"))
+            )
+        }).onAppear {
             self.viewModel.verifySession()
             print("ContentView appeared!")
         }.onDisappear {
