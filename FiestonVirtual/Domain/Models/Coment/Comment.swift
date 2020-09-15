@@ -8,8 +8,11 @@
 
 import Foundation
 
-struct Coment {
+struct Comment {
     
-    
+    let id: Int
+    let text: String
+    let avatar: String
+    let userName: String
     
 }
