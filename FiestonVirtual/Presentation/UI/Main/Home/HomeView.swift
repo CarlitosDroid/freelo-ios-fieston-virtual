@@ -11,38 +11,11 @@ import Grid
 
 struct HomeView: View {
     
+    @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(HomeViewModel.self)!
     
-    let colors = [
-        Color1(name: Color.green),
-        Color1(name: Color.red),
-        Color1(name: Color.orange),
-        Color1(name: Color.black),
-        Color1(name: Color.purple)
-    ]
+    var onCategorySelected: (_ categoryIndex: Int) -> Void
     
-    let categories = [
-        Category(
-            name: "FOTOS",
-            image: "home_fotos",
-            description: "nose",
-            subDescription: "subde"),
-        Category(
-            name: "FOTOS",
-            image: "home_chat",
-            description: "nose",
-            subDescription: "subde"),
-        Category(
-            name: "FOTOS",
-            image: "home_playlist",
-            description: "nose",
-            subDescription: "subde"),
-        Category(
-            name: "FOTOS",
-            image: "home_trivia",
-            description: "nose",
-            subDescription: "subde")
-    ]
-    
+    @State var isActive: Bool = false
     
     var body: some View {
         ZStack {
@@ -52,35 +25,55 @@ struct HomeView: View {
             ScrollView {
                 UserProfileView()
                 
-                Grid(categories) { category in
+                Grid(viewModel.categories) { category in
                     self.categoryView(category: category)
                 }.gridStyle(
-                    StaggeredGridStyle(.vertical,
-                                       tracks:2,
-                                       spacing: 10)
+                    StaggeredGridStyle(.vertical, tracks:2, spacing: 10)
                 )
                 
-            }.padding(.all, 10)
+            }
+            .padding(.all, 10)
         }
         
     }
     
     func categoryView(category: Category) -> some View {
-        VStack {
-            Image(category.image)
-                .resizable()
-                .scaledToFit()
-                .background(Color.red)
+        
+        NavigationLink(destination: PlayListView(), isActive: $isActive) {
             VStack {
-                
-                Text("Hola")
-                Text("Hola")
-                Text("Hola")
-                
-            }.padding(.all, 20)
-        }.background(Color.white)
+                Image(category.image)
+                    .resizable()
+                    .scaledToFit()
+                    .background(Color.red)
+                VStack {
+                    Text(category.name)
+                    Text(category.description)
+                    Text(category.subDescription)
+                }
+                .padding(.all, 20)
+            }
+            .background(Color.white)
             .cornerRadius(10)
             .shadow(radius: 3)
+            .onTapGesture {
+                switch (category.name) {
+                case CATEGORY_NAME_PHOTO:
+                    self.onCategorySelected(1)
+                    break
+                case CATEGORY_NAME_CHAT:
+                    self.onCategorySelected(3)
+                    break
+                case CATEGORY_NAME_PLAY_LIST:
+                    //self.onCategorySelected(3)
+                    break
+                case CATEGORY_NAME_TRIVIA:
+                    self.onCategorySelected(4)
+                    break
+                default:
+                    print("Not supported")
+                }
+            }
+        }.buttonStyle(PlainButtonStyle())
     }
 }
 
@@ -100,6 +93,8 @@ struct Color1 : Identifiable {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView { (categorIndex: Int) in
+            
+        }
     }
 }

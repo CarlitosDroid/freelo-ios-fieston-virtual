@@ -12,6 +12,10 @@ struct MainView: View {
     
     @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(WelcomeViewModel.self)!
     
+    @State private var selectedTab = 0
+    
+    @State var isNextActive: Bool = false
+    
     var body: some View {
         VStack(spacing:0){
             ZStack{
@@ -33,17 +37,38 @@ struct MainView: View {
                 }
             }.padding(10).background(Color.deep_purple_500)
             
-            TabView {
-                Text("HOLA1")
+            TabView(selection: $selectedTab) {
+                HomeView(onCategorySelected: { (index: Int) in
+                    self.selectedTab = index
+                })
                     .tabItem {
                         Image(systemName: "list.dash")
                         Text("Menu")
-                }
+                }.tag(0)
+                    
+                Text("GALERIA")
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("Menu")
+                }.tag(1)
+                
                 PhotosView()
                     .tabItem {
                         Image(systemName: "list.dash")
                         Text("Menu")
-                }
+                }.tag(2)
+                
+                Text("CHAT")
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("Menu")
+                }.tag(3)
+                
+                Text("TRIVIA")
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("Menu")
+                }.tag(4)
                 
             }
             
@@ -51,6 +76,7 @@ struct MainView: View {
                 welcome:.constant(self.viewModel.welcome),
                 showSheet: .constant( self.viewModel.hasWelcome)
             )
+            
         }.onAppear{
             self.viewModel.getWelcome()
         }.navigationBarBackButtonHidden(true)

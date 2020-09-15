@@ -17,5 +17,8 @@ class ViewModelAssembly: Assembly {
             )
         }
         
+        container.register(HomeViewModel.self) { resolver in
+            HomeViewModel()
+        }
     }
 }
