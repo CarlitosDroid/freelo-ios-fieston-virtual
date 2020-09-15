@@ -43,6 +43,7 @@ class UsersRepositoryImpl {
 }
 
 extension UsersRepositoryImpl: UsersRepository {
+    
     func getRemoteUser(idUser: Int) -> AnyPublisher<User, ErrorResponse> {
         return self.userRemoteDataSource.getUsers(idUser: idUser)
     }
@@ -97,4 +98,9 @@ extension UsersRepositoryImpl: UsersRepository {
                 return .failure(error)
             }
         }
+    
+    func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse> {
+        return self.userRemoteDataSource.signOut(signOutRequest: signOutRequest)
+     }
+    
 }
