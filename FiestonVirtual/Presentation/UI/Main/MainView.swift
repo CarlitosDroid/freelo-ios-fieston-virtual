@@ -12,6 +12,8 @@ struct MainView: View {
     
     @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(WelcomeViewModel.self)!
     
+    @State var showAlert = false
+    
     var body: some View {
         VStack(spacing:0){
             ZStack{
@@ -27,9 +29,20 @@ struct MainView: View {
                         Image(systemName: "star").accentColor(Color.white)
                     })
                     Button(action: {
+                        self.showAlert.toggle()
                     }, label: {
                         Image(systemName: "star").accentColor(Color.white)
-                    })
+                    }).alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("¿Cerrar sesión?"),
+                            primaryButton: .cancel(Text("No"), action: {}),
+                            secondaryButton: .destructive(Text("Yes"), action: {
+                                
+                                
+                                
+                            })
+                        )
+                    }
                 }
             }.padding(10).background(Color.deep_purple_500)
             
