@@ -110,10 +110,10 @@
 		FB1014FF250B2B24002C91ED /* LikesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014FE250B2B24002C91ED /* LikesResponse.swift */; };
 		FB101501250B2B5A002C91ED /* RespuestaTriviaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */; };
 		FB101503250B2B81002C91ED /* PedirCancionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101502250B2B81002C91ED /* PedirCancionResponse.swift */; };
-		FBBA41F7250F391B0016ACC6 /* LikesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41F6250F391B0016ACC6 /* LikesApi.swift */; };
-		FBBA41F9250F3A320016ACC6 /* LikesApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41F8250F3A320016ACC6 /* LikesApiImpl.swift */; };
 		FB101518250C70E0002C91ED /* ComentApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101517250C70E0002C91ED /* ComentApi.swift */; };
 		FB10151A250C730E002C91ED /* ComentApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101519250C730E002C91ED /* ComentApiImpl.swift */; };
+		FBBA41F7250F391B0016ACC6 /* LikesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41F6250F391B0016ACC6 /* LikesApi.swift */; };
+		FBBA41F9250F3A320016ACC6 /* LikesApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41F8250F3A320016ACC6 /* LikesApiImpl.swift */; };
 		FBBA41FB25105A4E0016ACC6 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41FA25105A4E0016ACC6 /* Ranking.swift */; };
 		FBBA41FD25105F3F0016ACC6 /* RankingRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41FC25105F3F0016ACC6 /* RankingRemoteDataSource.swift */; };
 		FBBA41FF251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41FE251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift */; };
@@ -244,14 +244,14 @@
 		FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDitailResponse.swift; sourceTree = "<group>"; };
 		FB1014EE2509B9A4002C91ED /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
 		FB1014F02509B9C6002C91ED /* AddComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComentResponse.swift; sourceTree = "<group>"; };
-		FB101517250C70E0002C91ED /* ComentApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentApi.swift; sourceTree = "<group>"; };
-		FB101519250C730E002C91ED /* ComentApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentApiImpl.swift; sourceTree = "<group>"; };
 		FB1014F3250B27A7002C91ED /* GetRemoteLikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteLikesRequest.swift; sourceTree = "<group>"; };
 		FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteRespuestaTriviaRequest.swift; sourceTree = "<group>"; };
 		FB1014F9250B2A08002C91ED /* GetRemotePedirCancionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemotePedirCancionRequest.swift; sourceTree = "<group>"; };
 		FB1014FE250B2B24002C91ED /* LikesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesResponse.swift; sourceTree = "<group>"; };
 		FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespuestaTriviaResponse.swift; sourceTree = "<group>"; };
 		FB101502250B2B81002C91ED /* PedirCancionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedirCancionResponse.swift; sourceTree = "<group>"; };
+		FB101517250C70E0002C91ED /* ComentApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentApi.swift; sourceTree = "<group>"; };
+		FB101519250C730E002C91ED /* ComentApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentApiImpl.swift; sourceTree = "<group>"; };
 		FBBA41F6250F391B0016ACC6 /* LikesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesApi.swift; sourceTree = "<group>"; };
 		FBBA41F8250F3A320016ACC6 /* LikesApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesApiImpl.swift; sourceTree = "<group>"; };
 		FBBA41FA25105A4E0016ACC6 /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
@@ -1300,7 +1300,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
