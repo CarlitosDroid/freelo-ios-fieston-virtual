@@ -11,4 +11,5 @@ import Combine
 
 protocol UserApi {
     func getUserData(idUser: Int) -> AnyPublisher<UserResponse, ExternalError>
+    func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<SignOutResponse, ExternalError>
 }

@@ -63,7 +63,44 @@ class UserApiImpl: UserApi {
             }).eraseToAnyPublisher()
         
     }
-
+    
+    func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<SignOutResponse, ExternalError> {
+        
+        guard let url = signOutUrlComponents().url else {
+            let error = ExternalError.NetworkError(description: "Couldn't create URL")
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+        
+        return AF.request(url,
+                          method: .post,
+                          parameters: signOutRequest,
+                          encoder: JSONParameterEncoder.default,
+                          headers: nil,
+                          interceptor: nil,
+                          requestModifier: nil)
+            .validate()
+            .publishDecodable(type: SignOutResponse.self)
+            .mapError({ (never : Never) -> ExternalError in
+                ExternalError.UnknowError(description: never.localizedDescription)
+            })
+            .flatMap({ (dataResponse: DataResponse<SignOutResponse, AFError>)-> AnyPublisher<SignOutResponse, ExternalError> in
+                Future<SignOutResponse, ExternalError> { promise in
+                    switch dataResponse.result {
+                        
+                    case .failure(let afError):
+                        promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
+                        break
+                        
+                    case .success(let signOutResponse):
+                        promise(.success(signOutResponse))
+                        break
+                    }
+                    
+                }.eraseToAnyPublisher()
+            }).eraseToAnyPublisher()
+        
+    }
+    
 }
 
 private extension UserApiImpl {
@@ -79,6 +116,14 @@ private extension UserApiImpl {
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
         urlComponents.path = FiestonVirtualAPI.path + "/detalle_usuario.php"
+        return urlComponents
+    }
+    
+    func signOutUrlComponents() -> URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = FiestonVirtualAPI.scheme
+        urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.path = FiestonVirtualAPI.path + "/logout.php"
         return urlComponents
     }
     
