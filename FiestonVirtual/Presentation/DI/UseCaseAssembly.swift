@@ -25,5 +25,10 @@ class UseCasesAssembly: Assembly {
                 usersRepository: resolver.resolve(UsersRepository.self)!
             )
         }
+        container.register(SignOutUseCase.self) { resolver in
+            SignOutUseCaseImpl(
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
     }
 }

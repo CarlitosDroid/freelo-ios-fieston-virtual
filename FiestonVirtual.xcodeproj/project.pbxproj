@@ -79,6 +79,11 @@
 		54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */; };
 		9A73CC892508910900D9C310 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73CC882508910900D9C310 /* ViewModelAssembly.swift */; };
+		9A7AAFCE251054DD00D20A6D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFCD251054DD00D20A6D /* MainViewModel.swift */; };
+		9A7AAFD12510568B00D20A6D /* SignOutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD02510568B00D20A6D /* SignOutUseCase.swift */; };
+		9A7AAFD32510571F00D20A6D /* SignOutUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD22510571F00D20A6D /* SignOutUseCaseImpl.swift */; };
+		9A7AAFD525105F6C00D20A6D /* SignOutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD425105F6C00D20A6D /* SignOutRequest.swift */; };
+		9A7AAFD7251062A100D20A6D /* SignOutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD6251062A100D20A6D /* SignOutResponse.swift */; };
 		9A8145672505D1DA001A012A /* WelcomeResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145662505D1DA001A012A /* WelcomeResponseEntity.swift */; };
 		9A81456C2505D79A001A012A /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81456B2505D79A001A012A /* Welcome.swift */; };
 		9A81456E2505D7B4001A012A /* WelcomeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81456D2505D7B4001A012A /* WelcomeRequest.swift */; };
@@ -210,6 +215,11 @@
 		81DC065DED1DF8D5FC710C7D /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86D1C4045236C783848B4F61 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual_FiestonVirtualUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A73CC882508910900D9C310 /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
+		9A7AAFCD251054DD00D20A6D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		9A7AAFD02510568B00D20A6D /* SignOutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutUseCase.swift; sourceTree = "<group>"; };
+		9A7AAFD22510571F00D20A6D /* SignOutUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutUseCaseImpl.swift; sourceTree = "<group>"; };
+		9A7AAFD425105F6C00D20A6D /* SignOutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutRequest.swift; sourceTree = "<group>"; };
+		9A7AAFD6251062A100D20A6D /* SignOutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutResponse.swift; sourceTree = "<group>"; };
 		9A8145662505D1DA001A012A /* WelcomeResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeResponseEntity.swift; sourceTree = "<group>"; };
 		9A81456B2505D79A001A012A /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		9A81456D2505D7B4001A012A /* WelcomeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRequest.swift; sourceTree = "<group>"; };
@@ -299,6 +309,7 @@
 				2B48231E25068B4400AF312D /* User.swift */,
 				2B83E79925081594004B1BF2 /* GetRemoteUserRequest.swift */,
 				2BDAC594250AC55700DA6A74 /* Photo.swift */,
+				9A7AAFD425105F6C00D20A6D /* SignOutRequest.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -318,6 +329,7 @@
 				2B3747F8250C55CD00BE13B4 /* Video */,
 				2BA2AFB82509908D00236FDD /* Photo */,
 				2B81FCE725073DCC00EC9E10 /* MainView.swift */,
+				9A7AAFCD251054DD00D20A6D /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -508,6 +520,7 @@
 				2B81FCE02507352300EC9E10 /* UserResponse.swift */,
 				9A8145662505D1DA001A012A /* WelcomeResponseEntity.swift */,
 				2BC2570925055A3900B433CC /* CodeVerificationResponse.swift */,
+				9A7AAFD6251062A100D20A6D /* SignOutResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -645,6 +658,7 @@
 		2BC2572F2505A37400B433CC /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				9A7AAFCF2510565900D20A6D /* SignOut */,
 				9A81457B2505F3A2001A012A /* welcome */,
 				2B8B339C250714B4007C3FFC /* VerifySession */,
 				2BC257322505A3A400B433CC /* Login */,
@@ -691,6 +705,15 @@
 				AC9F56DA6C3EAA9D0D05ECA3 /* Pods-FiestonVirtualTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A7AAFCF2510565900D20A6D /* SignOut */ = {
+			isa = PBXGroup;
+			children = (
+				9A7AAFD02510568B00D20A6D /* SignOutUseCase.swift */,
+				9A7AAFD22510571F00D20A6D /* SignOutUseCaseImpl.swift */,
+			);
+			path = SignOut;
 			sourceTree = "<group>";
 		};
 		9A81456A2505D780001A012A /* welcome */ = {
@@ -1076,7 +1099,9 @@
 				2B81FCF52507567800EC9E10 /* DependecyProvider.swift in Sources */,
 				2B48232425069FA100AF312D /* TextingData.swift in Sources */,
 				2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */,
+				9A7AAFD12510568B00D20A6D /* SignOutUseCase.swift in Sources */,
 				FB1014FF250B2B24002C91ED /* LikesResponse.swift in Sources */,
+				9A7AAFD525105F6C00D20A6D /* SignOutRequest.swift in Sources */,
 				2BB6E7EC250AE25A0074B6DB /* Data.swift in Sources */,
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
 				2B83E79A25081594004B1BF2 /* GetRemoteUserRequest.swift in Sources */,
@@ -1091,6 +1116,7 @@
 				2B0981E6250925D500C78FFF /* AppDelegateExt.swift in Sources */,
 				2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */,
 				2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */,
+				9A7AAFCE251054DD00D20A6D /* MainViewModel.swift in Sources */,
 				2B4823282506A32400AF312D /* CoreDataRepository.swift in Sources */,
 				FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */,
 				FB1014D525086E0A002C91ED /* RankingApi.swift in Sources */,
@@ -1104,6 +1130,7 @@
 				2B81FCED2507454D00EC9E10 /* ApiAssembly.swift in Sources */,
 				2BB6E7EA250AD3990074B6DB /* PhotosViewModel.swift in Sources */,
 				9A8145672505D1DA001A012A /* WelcomeResponseEntity.swift in Sources */,
+				9A7AAFD7251062A100D20A6D /* SignOutResponse.swift in Sources */,
 				2BC2571125055D0500B433CC /* ExternalError.swift in Sources */,
 				9A81457F2505F420001A012A /* GetWelcomeUseCaseImpl.swift in Sources */,
 				2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */,
@@ -1143,6 +1170,7 @@
 				2B81FCE825073DCC00EC9E10 /* MainView.swift in Sources */,
 				FB1014D025086338002C91ED /* RankingResponse.swift in Sources */,
 				9A81456C2505D79A001A012A /* Welcome.swift in Sources */,
+				9A7AAFD32510571F00D20A6D /* SignOutUseCaseImpl.swift in Sources */,
 				9A8145822505F8A0001A012A /* WelcomeViewModel.swift in Sources */,
 				9A81456E2505D7B4001A012A /* WelcomeRequest.swift in Sources */,
 				2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */,

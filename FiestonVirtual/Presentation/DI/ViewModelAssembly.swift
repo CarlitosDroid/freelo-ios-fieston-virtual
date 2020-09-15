@@ -17,5 +17,9 @@ class ViewModelAssembly: Assembly {
             )
         }
         
+        container.register(MainViewModel.self) { resolver in
+            MainViewModel(signOutUseCase: resolver.resolve(SignOutUseCase.self)!)
+        }
+        
     }
 }
