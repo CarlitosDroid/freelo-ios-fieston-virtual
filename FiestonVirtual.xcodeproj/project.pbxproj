@@ -10,6 +10,9 @@
 		2B0981E6250925D500C78FFF /* AppDelegateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981E5250925D500C78FFF /* AppDelegateExt.swift */; };
 		2B0981E82509274100C78FFF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981E72509274000C78FFF /* Log.swift */; };
 		2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981EC25092F1D00C78FFF /* ContentView.swift */; };
+		2B1D05722510342B00EA4B56 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D05712510342B00EA4B56 /* HomeView.swift */; };
+		2B1D0575251034C000EA4B56 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B1D0574251034C000EA4B56 /* Grid */; };
+		2B1D057A25103F4100EA4B56 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D057925103F4100EA4B56 /* UserProfileView.swift */; };
 		2B3070EA25089603005198F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3070E925089603005198F7 /* Color.swift */; };
 		2B3070EC25089659005198F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3070EB25089659005198F7 /* Colors.xcassets */; };
 		2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3747F9250C55E200BE13B4 /* VideoView.swift */; };
@@ -136,6 +139,8 @@
 		2B0981E5250925D500C78FFF /* AppDelegateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateExt.swift; sourceTree = "<group>"; };
 		2B0981E72509274000C78FFF /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		2B0981EC25092F1D00C78FFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B1D05712510342B00EA4B56 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2B1D057925103F4100EA4B56 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		2B3070E925089603005198F7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2B3070EB25089659005198F7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B3747F9250C55E200BE13B4 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
@@ -250,6 +255,7 @@
 				2BD74DF32509E89C00B0820D /* Kingfisher in Frameworks */,
 				54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */,
 				A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */,
+				2B1D0575251034C000EA4B56 /* Grid in Frameworks */,
 				B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +281,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B1D05702510341A00EA4B56 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2B1D05712510342B00EA4B56 /* HomeView.swift */,
+				2B1D057925103F4100EA4B56 /* UserProfileView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		2B3070E8250894CC005198F7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +330,7 @@
 		2B81FCE625073D5E00EC9E10 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2B1D05702510341A00EA4B56 /* Home */,
 				2B3747F8250C55CD00BE13B4 /* Video */,
 				2BA2AFB82509908D00236FDD /* Photo */,
 				2B81FCE725073DCC00EC9E10 /* MainView.swift */,
@@ -843,6 +859,7 @@
 			packageProductDependencies = (
 				2BD74DF22509E89C00B0820D /* Kingfisher */,
 				2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */,
+				2B1D0574251034C000EA4B56 /* Grid */,
 			);
 			productName = FiestonVirtual;
 			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
@@ -921,6 +938,7 @@
 			mainGroup = 2BC256C2250546D100B433CC;
 			packageReferences = (
 				2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2B1D0573251034C000EA4B56 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
 			);
 			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
 			projectDirPath = "";
@@ -1097,6 +1115,7 @@
 				2BC2572E250564FB00B433CC /* EventCodeRepository.swift in Sources */,
 				FB1014E52509B35E002C91ED /* GetGalleryRequest.swift in Sources */,
 				2BC2571625055F7A00B433CC /* Parsing.swift in Sources */,
+				2B1D05722510342B00EA4B56 /* HomeView.swift in Sources */,
 				2BC257202505623000B433CC /* ErrorResponse.swift in Sources */,
 				2B81FCE12507352300EC9E10 /* UserResponse.swift in Sources */,
 				2BC257232505627200B433CC /* EventCode.swift in Sources */,
@@ -1123,6 +1142,7 @@
 				2B81FCEF25074CE900EC9E10 /* RepositoriesAssembly.swift in Sources */,
 				2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */,
 				FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */,
+				2B1D057A25103F4100EA4B56 /* UserProfileView.swift in Sources */,
 				2BDAC595250AC55700DA6A74 /* Photo.swift in Sources */,
 				9A81457D2505F3B8001A012A /* GetWelcomeUseCase.swift in Sources */,
 				9A73CC892508910900D9C310 /* ViewModelAssembly.swift in Sources */,
@@ -1485,6 +1505,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2B1D0573251034C000EA4B56 /* XCRemoteSwiftPackageReference "swiftui-grid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-extensions/swiftui-grid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
 		2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -1496,6 +1524,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2B1D0574251034C000EA4B56 /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B1D0573251034C000EA4B56 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
+			productName = Grid;
+		};
 		2BD74DF22509E89C00B0820D /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */;
