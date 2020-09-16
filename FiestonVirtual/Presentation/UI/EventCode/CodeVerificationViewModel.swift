@@ -15,7 +15,6 @@ class CodeVerificationViewModel: ObservableObject {
     let loginUseCase: LoginUseCase
     let verifySessionUseCase: VerifySessionUseCase
     
-    @Published var eventCode: EventCode?
     @Published var isLoading = false
     @Published var errorMessage = ""
     @Published var isError = false
@@ -38,12 +37,12 @@ class CodeVerificationViewModel: ObservableObject {
                 .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
                     switch completion {
                     case .finished:
-                        self.isLoading = false
+                        print("finished")
                         break
                     case .failure(let errorResponse):
-                        self.isError=true
-                        self.errorMessage = errorResponse.message
                         self.isLoading = false
+                        self.isError=true
+                        self.errorMessage = errorResponse.localizedDescription
                         break
                     }
                 }, receiveValue: { (eventCode: Bool) in

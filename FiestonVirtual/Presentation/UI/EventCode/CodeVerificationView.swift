@@ -17,47 +17,45 @@ struct CodeVerificationView: View {
     @State var showOneLevelIn = false
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
-                
-                NavigationLink(
-                    destination: MainView(),
-                    isActive: self.$viewModel.inSession,
-                    label: { Button(action: {
-                        self.viewModel.verifyCode(code: self.eventCode)
-                    }) {
-                        VStack {
-                            Text("Entrar")
-                                .frame(maxWidth: .infinity)
-                                .frame(height: 50, alignment: .center)
-                                .background(Color.aqua.cornerRadius(8))
-                                .foregroundColor(Color.white)
-                        }.padding(.all, 20)
-                        }
-                })
-                
-                LoadingView(isShowing: .constant(self.viewModel.isLoading)) {
-                    ZStack{
-                        VStack {
-                            Image("Fieston")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .padding(.all, 40)
-                            Spacer()
-                        }
-                        
-                        VStack {
-                            TextField("Coloque su código", text: self.$eventCode)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .keyboardType(.numberPad)
-                            Spacer()
-                                .frame(height: 100)
-                        }
-                    }.padding(.all, 20)
-                }
-                
+        
+        ZStack {
+            Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
+            
+            Button(action: {
+                self.viewModel.verifyCode(code: self.eventCode)
+            }) {
+                Text("Entrar")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50, alignment: .center)
+                    .background(Color.aqua.cornerRadius(8))
+                    .foregroundColor(Color.white)
+            }.padding(.all, 20)
+            
+            LoadingView(isShowing: self.$viewModel.isLoading) {
+                ZStack{
+                    VStack {
+                        Image("Fieston")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.all, 40)
+                        Spacer()
+                    }
+                    
+                    VStack {
+                        TextField("Coloque su código", text: self.$eventCode)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.numberPad)
+                        Spacer()
+                            .frame(height: 100)
+                    }
+                }.padding(.all, 20)
             }
+            
+        }.onReceive(self.viewModel.$inSession) { inSession in
+            if(inSession) {
+                NotificationCenter.default.post(name: NSNotification.Name("loginRootViewNotification"), object: nil)
+            }
+            
         }.alert(isPresented: .constant(self.viewModel.isError), content:{
             Alert(
                 title: Text(self.viewModel.errorMessage),
@@ -75,7 +73,7 @@ struct CodeVerificationView: View {
 }
 
 struct CodeVerificationView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         CodeVerificationView()
     }

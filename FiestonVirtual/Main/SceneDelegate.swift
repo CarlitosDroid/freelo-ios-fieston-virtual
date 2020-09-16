@@ -14,6 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
+    let loginRootViewNotification = NSNotification.Name("loginRootViewNotification")
+    let codeVerificationRootViewNotification = NSNotification.Name("codeVerificationRootViewNotification")
+    private var loginObserver: Any?
+    private var codeVerificationObserver: Any?
+    
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -32,6 +37,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             window.rootViewController = UIHostingController(rootView: contentView)
+            
+            loginObserver = NotificationCenter.default.addObserver(forName: loginRootViewNotification, object: nil, queue: nil, using: { _ in
+                let anotherRootView = MainView()
+                // create another view on notification and replace
+                window.rootViewController = UIHostingController(rootView: anotherRootView)
+            })
+            
+            codeVerificationObserver = NotificationCenter.default.addObserver(forName: codeVerificationRootViewNotification, object: nil, queue: nil, using: { _ in
+                let anotherRootView = CodeVerificationView()
+                // create another view on notification and replace
+                window.rootViewController = UIHostingController(rootView: anotherRootView)
+            })
+            
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -65,38 +83,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
         
         // Save changes in the application's managed object context when the application transitions to the background.
-        //(UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-//        saveContext()
     }
     
-    
-//    // MARK: - Core Data stack
-//    lazy var persistenceContainer: NSPersistentContainer = {
-//        let container = NSPersistentContainer(name: "FiestonVirtual")
-//        container.loadPersistentStores { (_, error) in
-//            if let error = error as NSError? {
-//                fatalError("Unresolved error \(error), \(error.userInfo)")
-//            }
-//        }
-//        return container
-//    }()
-    
-    
-//    // MARK: - Core Data Saving support
-//
-//    func saveContext() {
-//        let viewContextManagedObject = persistenceContainer.viewContext
-//        if viewContextManagedObject.hasChanges {
-//            do {
-//                try viewContextManagedObject.save()
-//            } catch {
-//                // The context couldn't be saved.
-//                // You should add your own error handling here.
-//                let nserror = error as NSError
-//                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-//            }
-//        }
-//    }
     
 }
 
