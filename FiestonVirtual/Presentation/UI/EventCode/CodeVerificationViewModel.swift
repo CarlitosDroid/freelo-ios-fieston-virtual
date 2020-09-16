@@ -15,7 +15,6 @@ class CodeVerificationViewModel: ObservableObject {
     let loginUseCase: LoginUseCase
     let verifySessionUseCase: VerifySessionUseCase
     
-    @Published var eventCode: EventCode?
     @Published var isLoading = false
     @Published var errorMessage = ""
     @Published var inSession = false

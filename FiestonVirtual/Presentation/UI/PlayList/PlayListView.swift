@@ -11,6 +11,7 @@ import SwiftUI
 struct PlayListView: View {
     var body: some View {
         Text("Play List")
+            .navigationBarTitle("Play List")
     }
 }
 
