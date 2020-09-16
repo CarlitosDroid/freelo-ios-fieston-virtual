@@ -30,9 +30,9 @@ class CodeVerificationViewModel: ObservableObject {
     
     
     func verifyCode(code: String) {
-        self.isLoading = true
-        self.isError=false
         if (!code.isEmpty) {
+            self.isLoading = true
+            self.isError=false
             loginUseCase.invoke(userInvitationCode: Int(code)!)
                 .receive(on: DispatchQueue.main)
                 .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
