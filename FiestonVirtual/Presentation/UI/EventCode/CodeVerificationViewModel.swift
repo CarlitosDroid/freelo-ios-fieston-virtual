@@ -17,6 +17,7 @@ class CodeVerificationViewModel: ObservableObject {
     
     @Published var isLoading = false
     @Published var errorMessage = ""
+    @Published var isError = false
     @Published var inSession = false
     
     private var disposables = Set<AnyCancellable>()
@@ -29,19 +30,19 @@ class CodeVerificationViewModel: ObservableObject {
     
     func verifyCode(code: String) {
         self.isLoading = true
+        self.isError=false
         if (!code.isEmpty) {
             loginUseCase.invoke(userInvitationCode: Int(code)!)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
                 switch completion {
                 case .finished:
-                    print("finisheddd")
+                    print("finished")
                     break
                 case .failure(let errorResponse):
                     self.isLoading = false
+                    self.isError=true
                     self.errorMessage = errorResponse.localizedDescription
-                    print("\(self.errorMessage)")
-                 
                     break
                 }
             }, receiveValue: { (eventCode: Bool) in
@@ -49,7 +50,6 @@ class CodeVerificationViewModel: ObservableObject {
                 self.inSession = true
             })
             .store(in: &disposables)
-        }
     }
     
     func verifySession() {

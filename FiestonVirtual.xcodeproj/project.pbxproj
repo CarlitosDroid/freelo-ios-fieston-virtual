@@ -107,7 +107,7 @@
 		FB1014E72509B394002C91ED /* GetGalleryDiteilRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014E62509B394002C91ED /* GetGalleryDiteilRequest.swift */; };
 		FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EA2509B8FC002C91ED /* GetGalleryResponse.swift */; };
 		FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */; };
-		FB1014EF2509B9A4002C91ED /* GetComentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EE2509B9A4002C91ED /* GetComentResponse.swift */; };
+		FB1014EF2509B9A4002C91ED /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EE2509B9A4002C91ED /* GetCommentResponse.swift */; };
 		FB1014F12509B9C6002C91ED /* AddComentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F02509B9C6002C91ED /* AddComentResponse.swift */; };
 		FB1014F4250B27A7002C91ED /* GetRemoteLikesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F3250B27A7002C91ED /* GetRemoteLikesRequest.swift */; };
 		FB1014F8250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */; };
@@ -115,6 +115,17 @@
 		FB1014FF250B2B24002C91ED /* LikesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014FE250B2B24002C91ED /* LikesResponse.swift */; };
 		FB101501250B2B5A002C91ED /* RespuestaTriviaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */; };
 		FB101503250B2B81002C91ED /* PedirCancionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101502250B2B81002C91ED /* PedirCancionResponse.swift */; };
+		FB101518250C70E0002C91ED /* ComentApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101517250C70E0002C91ED /* ComentApi.swift */; };
+		FB10151A250C730E002C91ED /* ComentApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101519250C730E002C91ED /* ComentApiImpl.swift */; };
+		FBBA41F7250F391B0016ACC6 /* LikesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41F6250F391B0016ACC6 /* LikesApi.swift */; };
+		FBBA41F9250F3A320016ACC6 /* LikesApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41F8250F3A320016ACC6 /* LikesApiImpl.swift */; };
+		FBBA41FB25105A4E0016ACC6 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41FA25105A4E0016ACC6 /* Ranking.swift */; };
+		FBBA41FD25105F3F0016ACC6 /* RankingRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41FC25105F3F0016ACC6 /* RankingRemoteDataSource.swift */; };
+		FBBA41FF251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA41FE251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift */; };
+		FBBA4201251068270016ACC6 /* RankingResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA4200251068270016ACC6 /* RankingResponseMapper.swift */; };
+		FBBA420325106E400016ACC6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA420225106E400016ACC6 /* Comment.swift */; };
+		FBBA420525106FB90016ACC6 /* ComentRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA420425106FB90016ACC6 /* ComentRemoteDataSource.swift */; };
+		FBBA4207251070820016ACC6 /* ComentResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBA4206251070820016ACC6 /* ComentResponseMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,7 +251,7 @@
 		FB1014E62509B394002C91ED /* GetGalleryDiteilRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDiteilRequest.swift; sourceTree = "<group>"; };
 		FB1014EA2509B8FC002C91ED /* GetGalleryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryResponse.swift; sourceTree = "<group>"; };
 		FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDitailResponse.swift; sourceTree = "<group>"; };
-		FB1014EE2509B9A4002C91ED /* GetComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComentResponse.swift; sourceTree = "<group>"; };
+		FB1014EE2509B9A4002C91ED /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
 		FB1014F02509B9C6002C91ED /* AddComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComentResponse.swift; sourceTree = "<group>"; };
 		FB1014F3250B27A7002C91ED /* GetRemoteLikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteLikesRequest.swift; sourceTree = "<group>"; };
 		FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteRespuestaTriviaRequest.swift; sourceTree = "<group>"; };
@@ -248,6 +259,17 @@
 		FB1014FE250B2B24002C91ED /* LikesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesResponse.swift; sourceTree = "<group>"; };
 		FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespuestaTriviaResponse.swift; sourceTree = "<group>"; };
 		FB101502250B2B81002C91ED /* PedirCancionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedirCancionResponse.swift; sourceTree = "<group>"; };
+		FB101517250C70E0002C91ED /* ComentApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentApi.swift; sourceTree = "<group>"; };
+		FB101519250C730E002C91ED /* ComentApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentApiImpl.swift; sourceTree = "<group>"; };
+		FBBA41F6250F391B0016ACC6 /* LikesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesApi.swift; sourceTree = "<group>"; };
+		FBBA41F8250F3A320016ACC6 /* LikesApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesApiImpl.swift; sourceTree = "<group>"; };
+		FBBA41FA25105A4E0016ACC6 /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
+		FBBA41FC25105F3F0016ACC6 /* RankingRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRemoteDataSource.swift; sourceTree = "<group>"; };
+		FBBA41FE251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
+		FBBA4200251068270016ACC6 /* RankingResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingResponseMapper.swift; sourceTree = "<group>"; };
+		FBBA420225106E400016ACC6 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		FBBA420425106FB90016ACC6 /* ComentRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentRemoteDataSource.swift; sourceTree = "<group>"; };
+		FBBA4206251070820016ACC6 /* ComentResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentResponseMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -560,8 +582,12 @@
 				2B81FCE425073B0A00EC9E10 /* UserApiImpl.swift */,
 				FB1014D425086E0A002C91ED /* RankingApi.swift */,
 				FB1014D625086F1C002C91ED /* RankingApiImpl.swift */,
+				FB101517250C70E0002C91ED /* ComentApi.swift */,
+				FB101519250C730E002C91ED /* ComentApiImpl.swift */,
 				2BDAC592250AC52200DA6A74 /* GalleryApi.swift */,
 				2BDAC598250AC66300DA6A74 /* GalleryApiImpl.swift */,
+				FBBA41F6250F391B0016ACC6 /* LikesApi.swift */,
+				FBBA41F8250F3A320016ACC6 /* LikesApiImpl.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -591,6 +617,7 @@
 				2BC25718250561B700B433CC /* CodeRemoteDataSourceImpl.swift */,
 				2BC2573F2505FF7500B433CC /* UserLocalDataSourceImpl.swift */,
 				2B81FCDC2507349300EC9E10 /* UserRemoteDataSourceImpl.swift */,
+				FBBA41FE251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -601,6 +628,8 @@
 				2BC2571B250561D800B433CC /* EventCodeRemoteDataSource.swift */,
 				2BC257412505FF9500B433CC /* UserLocalDataSource.swift */,
 				2B81FCDA2507342400EC9E10 /* UserRemoteDataSource.swift */,
+				FBBA41FC25105F3F0016ACC6 /* RankingRemoteDataSource.swift */,
+				FBBA420425106FB90016ACC6 /* ComentRemoteDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -647,6 +676,8 @@
 				2B48231B25068AF600AF312D /* UserEntityMapper.swift */,
 				2B8B339A2507093B007C3FFC /* DomainModel.swift */,
 				2B81FCE2250736C800EC9E10 /* UserResponseMapper.swift */,
+				FBBA4200251068270016ACC6 /* RankingResponseMapper.swift */,
+				FBBA4206251070820016ACC6 /* ComentResponseMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -764,6 +795,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */,
+				FBBA41FA25105A4E0016ACC6 /* Ranking.swift */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -773,6 +805,7 @@
 			children = (
 				FB1014E02509B2E9002C91ED /* GetComentRequest.swift */,
 				FB1014E22509B321002C91ED /* AddComentRequest.swift */,
+				FBBA420225106E400016ACC6 /* Comment.swift */,
 			);
 			path = Coment;
 			sourceTree = "<group>";
@@ -789,7 +822,7 @@
 		FB1014E82509B83E002C91ED /* Coment */ = {
 			isa = PBXGroup;
 			children = (
-				FB1014EE2509B9A4002C91ED /* GetComentResponse.swift */,
+				FB1014EE2509B9A4002C91ED /* GetCommentResponse.swift */,
 				FB1014F02509B9C6002C91ED /* AddComentResponse.swift */,
 			);
 			path = Coment;
@@ -1101,14 +1134,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBBA4207251070820016ACC6 /* ComentResponseMapper.swift in Sources */,
 				2B48231F25068B4400AF312D /* User.swift in Sources */,
 				2B81FCF12507553100EC9E10 /* UseCaseAssembly.swift in Sources */,
 				2B0981E82509274100C78FFF /* Log.swift in Sources */,
 				2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */,
+				FBBA41F7250F391B0016ACC6 /* LikesApi.swift in Sources */,
 				2B81FCF52507567800EC9E10 /* DependecyProvider.swift in Sources */,
 				2B48232425069FA100AF312D /* TextingData.swift in Sources */,
 				2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */,
+				FBBA420325106E400016ACC6 /* Comment.swift in Sources */,
 				FB1014FF250B2B24002C91ED /* LikesResponse.swift in Sources */,
+				FBBA41FF251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift in Sources */,
+				FBBA41FB25105A4E0016ACC6 /* Ranking.swift in Sources */,
 				2BB6E7EC250AE25A0074B6DB /* Data.swift in Sources */,
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
 				2B83E79A25081594004B1BF2 /* GetRemoteUserRequest.swift in Sources */,
@@ -1119,10 +1157,13 @@
 				2B4823262506A29600AF312D /* Repository.swift in Sources */,
 				FB1014F12509B9C6002C91ED /* AddComentResponse.swift in Sources */,
 				2B48231C25068AF600AF312D /* UserEntityMapper.swift in Sources */,
+				FBBA41FD25105F3F0016ACC6 /* RankingRemoteDataSource.swift in Sources */,
 				2BC2573C2505AAE000B433CC /* CodeVerificationViewModel.swift in Sources */,
 				2B0981E6250925D500C78FFF /* AppDelegateExt.swift in Sources */,
+				FB101518250C70E0002C91ED /* ComentApi.swift in Sources */,
 				2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */,
 				2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */,
+				FBBA420525106FB90016ACC6 /* ComentRemoteDataSource.swift in Sources */,
 				2B4823282506A32400AF312D /* CoreDataRepository.swift in Sources */,
 				FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */,
 				FB1014D525086E0A002C91ED /* RankingApi.swift in Sources */,
@@ -1166,8 +1207,10 @@
 				2BC2573A2505AAD200B433CC /* CodeVerificationView.swift in Sources */,
 				2BDAC599250AC66300DA6A74 /* GalleryApiImpl.swift in Sources */,
 				2BA2AFBA250990E000236FDD /* PhotosView.swift in Sources */,
+				FB10151A250C730E002C91ED /* ComentApiImpl.swift in Sources */,
 				9A8145762505E898001A012A /* WelcomeResponseEntityMapper.swift in Sources */,
 				FB1014E72509B394002C91ED /* GetGalleryDiteilRequest.swift in Sources */,
+				FBBA41F9250F3A320016ACC6 /* LikesApiImpl.swift in Sources */,
 				2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */,
 				2BC2570A25055A3900B433CC /* CodeVerificationResponse.swift in Sources */,
 				2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */,
@@ -1190,7 +1233,8 @@
 				FB101503250B2B81002C91ED /* PedirCancionResponse.swift in Sources */,
 				2BB278E225115AF9002A234E /* HomeViewModel.swift in Sources */,
 				2B81FCDB2507342400EC9E10 /* UserRemoteDataSource.swift in Sources */,
-				FB1014EF2509B9A4002C91ED /* GetComentResponse.swift in Sources */,
+				FBBA4201251068270016ACC6 /* RankingResponseMapper.swift in Sources */,
+				FB1014EF2509B9A4002C91ED /* GetCommentResponse.swift in Sources */,
 				2B83E78F2507F519004B1BF2 /* LoadingView.swift in Sources */,
 				FB1014D725086F1C002C91ED /* RankingApiImpl.swift in Sources */,
 			);
@@ -1292,7 +1336,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

@@ -118,22 +118,28 @@ struct ImagePickerView: UIViewControllerRepresentable {
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         
         let parent: ImagePickerView
-        var onImageFileSelected: (_ isImageSelected: Bool, _ fileUrl: URL) -> Void
+        var onFileSelected: (_ isImageSelected: Bool, _ fileUrl: URL) -> Void
         
-
-        init(parent: ImagePickerView, onImageSelected: @escaping (_ isImageSelected: Bool, _ fileURL: URL) -> Void) {
+        
+        init(parent: ImagePickerView, onFileSelected: @escaping (_ isImageSelected: Bool, _ fileURL: URL) -> Void) {
             self.parent = parent
-            self.onImageFileSelected = onImageSelected
+            self.onFileSelected = onFileSelected
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             
+            //VIDEO
             if let mediaUrl = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
-                onImageFileSelected(true, mediaUrl)
+                onFileSelected(true, mediaUrl)
             }
             
+            //IMAGE
             if let selectedImageFromPicker = info[UIImagePickerController.InfoKey.imageURL] as? URL {
-                onImageFileSelected(true, selectedImageFromPicker)
+                onFileSelected(true, selectedImageFromPicker)
+                
+                if let selectedImageFromPicker = info[.originalImage] as? UIImage {
+                    self.parent.selectedImage = selectedImageFromPicker
+                }
             }
             
             self.parent.isPresented = false

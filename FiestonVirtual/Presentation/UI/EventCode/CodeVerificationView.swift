@@ -56,7 +56,12 @@ struct CodeVerificationView: View {
                 NotificationCenter.default.post(name: NSNotification.Name("loginRootViewNotification"), object: nil)
             }
             
-        }.onAppear {
+        }.alert(isPresented: .constant(self.viewModel.isError), content:{
+            Alert(
+                title: Text(self.viewModel.errorMessage),
+                dismissButton: .default(Text("Aceptar"))
+            )
+        }).onAppear {
             self.viewModel.verifySession()
             print("ContentView appeared!")
         }.onDisappear {
