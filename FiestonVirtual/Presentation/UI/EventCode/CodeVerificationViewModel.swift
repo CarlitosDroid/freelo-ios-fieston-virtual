@@ -36,12 +36,13 @@ class CodeVerificationViewModel: ObservableObject {
             .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
                 switch completion {
                 case .finished:
-                    self.isLoading = false
+                    print("finisheddd")
                     break
                 case .failure(let errorResponse):
+                    self.isLoading = false
                     self.errorMessage = errorResponse.localizedDescription
                     print("\(self.errorMessage)")
-                    self.isLoading = false
+                 
                     break
                 }
             }, receiveValue: { (eventCode: Bool) in

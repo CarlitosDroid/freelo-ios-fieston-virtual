@@ -17,72 +17,88 @@ struct MainView: View {
     @State var isNextActive: Bool = false
     
     var body: some View {
-        VStack(spacing:0){
-            ZStack{
-                Image("Fieston")
-                HStack{
-                    Button(action: {
-                    }, label: {
-                        Image(systemName: "camera").accentColor(Color.white)
-                    })
-                    Spacer()
-                    Button(action: {
-                    }, label: {
-                        Image(systemName: "star").accentColor(Color.white)
-                    })
-                    Button(action: {
-                    }, label: {
-                        Image(systemName: "star").accentColor(Color.white)
-                    })
-                }
-            }.padding(10).background(Color.deep_purple_500)
+        
+        ZStack {
             
-            TabView(selection: $selectedTab) {
-                HomeView(onCategorySelected: { (index: Int) in
-                    self.selectedTab = index
-                })
+            VStack(spacing:0){
+                ZStack{
+                    Image("Fieston")
+                    HStack{
+                        Button(action: {
+                        }, label: {
+                            Image(systemName: "camera").accentColor(Color.white)
+                        })
+                        Spacer()
+                        Button(action: {
+                        }, label: {
+                            Image(systemName: "star").accentColor(Color.white)
+                        })
+                        Button(action: {
+                        }, label: {
+                            Image(systemName: "star").accentColor(Color.white)
+                        })
+                    }
+                }.padding(10).background(Color.deep_purple_500)
+                
+                TabView(selection: $selectedTab) {
+                    HomeView { (index: Int) in
+                        if(index == 8) {
+                            self.isNextActive = true
+                        } else {
+                            self.selectedTab = index
+                        }
+                        
+                    }
                     .tabItem {
                         Image(systemName: "list.dash")
                         Text("Menu")
-                }.tag(0)
+                    }.tag(0)
                     
-                Text("GALERIA")
-                    .tabItem {
-                        Image(systemName: "list.dash")
-                        Text("Menu")
-                }.tag(1)
+                    Text("GALERIA")
+                        .tabItem {
+                            Image(systemName: "list.dash")
+                            Text("Menu")
+                    }.tag(1)
+                    
+                    PhotosView()
+                        .tabItem {
+                            Image(systemName: "list.dash")
+                            Text("Menu")
+                    }.tag(2)
+                    
+                    Text("CHAT")
+                        .tabItem {
+                            Image(systemName: "list.dash")
+                            Text("Menu")
+                    }.tag(3)
+                    
+                    Text("TRIVIA")
+                        .tabItem {
+                            Image(systemName: "list.dash")
+                            Text("Menu")
+                    }.tag(4)
+                    
+                }
                 
-                PhotosView()
-                    .tabItem {
-                        Image(systemName: "list.dash")
-                        Text("Menu")
-                }.tag(2)
+                WelcomeView(
+                    welcome:.constant(self.viewModel.welcome),
+                    showSheet: self.$viewModel.hasWelcome
+                )
                 
-                Text("CHAT")
-                    .tabItem {
-                        Image(systemName: "list.dash")
-                        Text("Menu")
-                }.tag(3)
-                
-                Text("TRIVIA")
-                    .tabItem {
-                        Image(systemName: "list.dash")
-                        Text("Menu")
-                }.tag(4)
-                
+            }.onAppear{
+                if(!self.isNextActive) {
+                    self.viewModel.getWelcome()
+                }
             }
             
-            WelcomeView(
-                welcome:.constant(self.viewModel.welcome),
-                showSheet: .constant( self.viewModel.hasWelcome)
-            )
+            NavigationLink(destination: PlayListView(), isActive: $isNextActive){
+                EmptyView()
+            }
             
-        }.onAppear{
-            self.viewModel.getWelcome()
-        }.navigationBarBackButtonHidden(true)
+        }
+        .navigationBarBackButtonHidden(true)
             .navigationBarTitle("")
             .navigationBarHidden(true)
-        
     }
 }
 

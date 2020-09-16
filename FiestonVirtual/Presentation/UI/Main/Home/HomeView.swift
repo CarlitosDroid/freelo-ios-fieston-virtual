@@ -15,8 +15,6 @@ struct HomeView: View {
     
     var onCategorySelected: (_ categoryIndex: Int) -> Void
     
-    @State var isActive: Bool = false
-    
     var body: some View {
         ZStack {
             
@@ -38,42 +36,39 @@ struct HomeView: View {
     }
     
     func categoryView(category: Category) -> some View {
-        
-        NavigationLink(destination: PlayListView(), isActive: $isActive) {
+        VStack {
+            Image(category.image)
+                .resizable()
+                .scaledToFit()
+                .background(Color.red)
             VStack {
-                Image(category.image)
-                    .resizable()
-                    .scaledToFit()
-                    .background(Color.red)
-                VStack {
-                    Text(category.name)
-                    Text(category.description)
-                    Text(category.subDescription)
-                }
-                .padding(.all, 20)
+                Text(category.name)
+                Text(category.description)
+                Text(category.subDescription)
             }
-            .background(Color.white)
-            .cornerRadius(10)
-            .shadow(radius: 3)
-            .onTapGesture {
-                switch (category.name) {
-                case CATEGORY_NAME_PHOTO:
-                    self.onCategorySelected(1)
-                    break
-                case CATEGORY_NAME_CHAT:
-                    self.onCategorySelected(3)
-                    break
-                case CATEGORY_NAME_PLAY_LIST:
-                    //self.onCategorySelected(3)
-                    break
-                case CATEGORY_NAME_TRIVIA:
-                    self.onCategorySelected(4)
-                    break
-                default:
-                    print("Not supported")
-                }
+            .padding(.all, 20)
+        }
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 3)
+        .onTapGesture {
+            switch (category.name) {
+            case CATEGORY_NAME_PHOTO:
+                self.onCategorySelected(1)
+                break
+            case CATEGORY_NAME_CHAT:
+                self.onCategorySelected(3)
+                break
+            case CATEGORY_NAME_PLAY_LIST:
+                self.onCategorySelected(8)
+                break
+            case CATEGORY_NAME_TRIVIA:
+                self.onCategorySelected(4)
+                break
+            default:
+                print("Not supported")
             }
-        }.buttonStyle(PlainButtonStyle())
+        }
     }
 }
 
