@@ -33,23 +33,24 @@ class CodeVerificationViewModel: ObservableObject {
         self.isError=false
         if (!code.isEmpty) {
             loginUseCase.invoke(userInvitationCode: Int(code)!)
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
-                switch completion {
-                case .finished:
-                    print("finished")
-                    break
-                case .failure(let errorResponse):
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
+                    switch completion {
+                    case .finished:
+                        print("finished")
+                        break
+                    case .failure(let errorResponse):
+                        self.isLoading = false
+                        self.isError=true
+                        self.errorMessage = errorResponse.localizedDescription
+                        break
+                    }
+                }, receiveValue: { (eventCode: Bool) in
                     self.isLoading = false
-                    self.isError=true
-                    self.errorMessage = errorResponse.localizedDescription
-                    break
-                }
-            }, receiveValue: { (eventCode: Bool) in
-                self.isLoading = false
-                self.inSession = true
-            })
-            .store(in: &disposables)
+                    self.inSession = true
+                })
+                .store(in: &disposables)
+        }
     }
     
     func verifySession() {
