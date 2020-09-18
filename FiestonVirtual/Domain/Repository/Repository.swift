@@ -25,5 +25,5 @@ protocol Repository {
     /// - Parameter entity: The entity to be deleted.
     func delete(entity: Entity) -> Result<Bool, Error>
     
-    func deleteAllData(entity:Entity) -> Result<Bool, Error>
+    func deleteAllData(entityName: String) -> Result<Bool, Error>
 }

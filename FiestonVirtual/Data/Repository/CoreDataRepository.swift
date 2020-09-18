@@ -17,16 +17,16 @@ enum CoreDataError: Error {
 /// Generic class for handling NSManagedObject subclasses.
 class CoreDataRepository<T: NSManagedObject>: Repository {
     typealias Entity = T
-
+    
     /// The NSManagedObjectContext instance to be used for performing the operations.
     private let managedObjectContext: NSManagedObjectContext
-
+    
     /// Designated initializer.
     /// - Parameter managedObjectContext: The NSManagedObjectContext instance to be used for performing the operations.
     init(managedObjectContext: NSManagedObjectContext) {
         self.managedObjectContext = managedObjectContext
     }
-
+    
     /// Gets an array of NSManagedObject entities.
     /// - Parameters:
     ///   - predicate: The predicate to be used for fetching the entities.
@@ -52,7 +52,7 @@ class CoreDataRepository<T: NSManagedObject>: Repository {
             return .failure(error)
         }
     }
-
+    
     /// Creates a NSManagedObject entity.
     /// - Returns: A result consisting of either a NSManagedObject entity or an Error.
     func create() -> Result<Entity, Error> {
@@ -62,7 +62,7 @@ class CoreDataRepository<T: NSManagedObject>: Repository {
         }
         return .success(managedObject)
     }
-
+    
     /// Deletes a NSManagedObject entity.
     /// - Parameter entity: The NSManagedObject to be deleted.
     /// - Returns: A result consisting of either a Bool set to true or an Error.
@@ -71,16 +71,16 @@ class CoreDataRepository<T: NSManagedObject>: Repository {
         return .success(true)
     }
     
-    func deleteAllData(entity: Entity)-> Result<Bool, Error> {
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName:  entity.entity.name)
-       
+    func deleteAllData(entityName: String)-> Result<Bool, Error> {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
+        
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-
+        
         do {
-            try myPersistentStoreCoordinator.execute(deleteRequest, with: self.context)
-        } catch let error as NSError {
-            return false
+            try self.managedObjectContext.execute(deleteRequest)
+        } catch {
+            return .failure(false as! Error)
         }
-        return true
+        return .success(true)
     }
 }

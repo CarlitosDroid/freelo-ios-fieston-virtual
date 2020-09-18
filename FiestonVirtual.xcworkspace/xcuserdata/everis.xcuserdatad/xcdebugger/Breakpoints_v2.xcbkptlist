@@ -228,7 +228,7 @@
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "76BF5B1F-7E42-477B-ABFC-552194F6C7B3 - 8a03e03559fd7317"
+                  uuid = "76BF5B1F-7E42-477B-ABFC-552194F6C7B3 - 4690a4e7169dc00"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -399,8 +399,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "verifyCode(code:)"
-            landmarkType = "7">
+            landmarkName = "CodeVerificationViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -464,358 +464,6 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "signOut()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A661673-1B41-4BFE-8EFD-E70E68425272"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Domain/UseCases/SignOut/SignOutUseCaseImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "invoke()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BEDBD310-753B-45A9-8A3F-8070AE4DE143"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/EventCode/CodeVerificationViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "verifyCode(code:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1FE351DC-872F-4992-A8CC-1372807C5456"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/EventCode/CodeVerificationViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "verifyCode(code:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A6F9A76E-CA16-4A3A-B253-23B57AD48AE3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/DataSource/CodeRemoteDataSourceImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "verificateEventCode(validateCodeRequest:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6D596676-C275-464C-87B3-EEAFD9B69A33"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/DataSource/CodeRemoteDataSourceImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "verificateEventCode(validateCodeRequest:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "09375006-4826-4CFD-80CD-2783C867462B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/DataSource/CodeRemoteDataSourceImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "verificateEventCode(validateCodeRequest:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "51A053B8-B5AB-42C8-9355-97B8FC4C84FF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/DataSource/CodeRemoteDataSourceImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "verificateEventCode(validateCodeRequest:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "95D6459F-371A-4EAC-8742-1A04D4D92AB0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "validateCode(validateCodeRequest:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2222916F-54C7-4381-9345-6D8A7ADDF8A9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "validateCode(validateCodeRequest:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5F2A2B41-0540-4524-AAAA-5D1C2080D154"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "validateCode(validateCodeRequest:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5F2A2B41-0540-4524-AAAA-5D1C2080D154 - d73b6edb4c3f632a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Alamofire.DataResponse&lt;FiestonVirtual.CodeVerificationResponse, Alamofire.AFError&gt;) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt; in FiestonVirtual.EventCodeApiImpl.validateCode(validateCodeRequest: FiestonVirtual.ValidateCodeRequest) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt;"
-                  moduleName = "FiestonVirtual"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "149">
-               </Location>
-               <Location
-                  uuid = "5F2A2B41-0540-4524-AAAA-5D1C2080D154 - 5108cd6be076f273"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 ((Swift.Result&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt;) -&gt; ()) -&gt; () in closure #2 (Alamofire.DataResponse&lt;FiestonVirtual.CodeVerificationResponse, Alamofire.AFError&gt;) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt; in FiestonVirtual.EventCodeApiImpl.validateCode(validateCodeRequest: FiestonVirtual.ValidateCodeRequest) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt;"
-                  moduleName = "FiestonVirtual"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "1169">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7F59C53D-1BB7-4FD2-9755-F53DE53DE327"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "validateCode(validateCodeRequest:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7F59C53D-1BB7-4FD2-9755-F53DE53DE327 - f089df4a4e9725a2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FiestonVirtual.EventCodeApiImpl.validateCode(validateCodeRequest: FiestonVirtual.ValidateCodeRequest) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt;"
-                  moduleName = "FiestonVirtual"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "2180">
-               </Location>
-               <Location
-                  uuid = "7F59C53D-1BB7-4FD2-9755-F53DE53DE327 - d73b6edb4c3f632a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Alamofire.DataResponse&lt;FiestonVirtual.CodeVerificationResponse, Alamofire.AFError&gt;) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt; in FiestonVirtual.EventCodeApiImpl.validateCode(validateCodeRequest: FiestonVirtual.ValidateCodeRequest) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt;"
-                  moduleName = "FiestonVirtual"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "170">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DB0D86A1-D75C-41A1-B222-5AF46634B5A1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "validateCode(validateCodeRequest:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6E96DEA9-A984-4153-B999-E8331E453138"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/DataSource/CodeRemoteDataSourceImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "verificateEventCode(validateCodeRequest:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "96248391-EEA1-42A6-AC5E-D2700976956A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/Framework/Api/UserApiImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "getUserData(idUser:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A01803E-366A-4B43-8920-AF7A1F4C84EC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "signOut()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AD6F0AA7-B0F1-474E-933A-B7B9BEA63DE1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "signOut()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0D7BF6BD-E419-431A-817D-5CB19A1C31D2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "signOut()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A661673-1B41-4BFE-8EFD-E70E68425272"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Domain/UseCases/SignOut/SignOutUseCaseImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "invoke()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1072,6 +720,582 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "verificateEventCode(validateCodeRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96248391-EEA1-42A6-AC5E-D2700976956A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/Api/UserApiImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getUserData(idUser:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A01803E-366A-4B43-8920-AF7A1F4C84EC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/Main/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "signOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD6F0AA7-B0F1-474E-933A-B7B9BEA63DE1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/Main/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "signOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D7BF6BD-E419-431A-817D-5CB19A1C31D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/Main/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "signOut()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A661673-1B41-4BFE-8EFD-E70E68425272"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Domain/UseCases/SignOut/SignOutUseCaseImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "invoke()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4A661673-1B41-4BFE-8EFD-E70E68425272 - 2a35a27ecfd85a27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FiestonVirtual.SignOutUseCaseImpl.invoke() -&gt; Combine.AnyPublisher&lt;Swift.Bool, FiestonVirtual.ErrorResponse&gt;"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Domain/UseCases/SignOut/SignOutUseCaseImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "465">
+               </Location>
+               <Location
+                  uuid = "4A661673-1B41-4BFE-8EFD-E70E68425272 - f92bf341473e0b71"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; Combine.AnyPublisher&lt;Swift.Bool, FiestonVirtual.ErrorResponse&gt; in FiestonVirtual.SignOutUseCaseImpl.invoke() -&gt; Combine.AnyPublisher&lt;Swift.Bool, FiestonVirtual.ErrorResponse&gt;"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Domain/UseCases/SignOut/SignOutUseCaseImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "163">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEDBD310-753B-45A9-8A3F-8070AE4DE143"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/EventCode/CodeVerificationViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "verifyCode(code:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FE351DC-872F-4992-A8CC-1372807C5456"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/EventCode/CodeVerificationViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "verifyCode(code:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6F9A76E-CA16-4A3A-B253-23B57AD48AE3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/CodeRemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "verificateEventCode(validateCodeRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D596676-C275-464C-87B3-EEAFD9B69A33"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/CodeRemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "verificateEventCode(validateCodeRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09375006-4826-4CFD-80CD-2783C867462B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/CodeRemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "verificateEventCode(validateCodeRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51A053B8-B5AB-42C8-9355-97B8FC4C84FF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/CodeRemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "verificateEventCode(validateCodeRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95D6459F-371A-4EAC-8742-1A04D4D92AB0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "validateCode(validateCodeRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2222916F-54C7-4381-9345-6D8A7ADDF8A9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "validateCode(validateCodeRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F2A2B41-0540-4524-AAAA-5D1C2080D154"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "validateCode(validateCodeRequest:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5F2A2B41-0540-4524-AAAA-5D1C2080D154 - c4c721dbcb32e799"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;FiestonVirtual.CodeVerificationResponse, Alamofire.AFError&gt;) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt; in FiestonVirtual.EventCodeApiImpl.validateCode(validateCodeRequest: FiestonVirtual.ValidateCodeRequest) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt;"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "149">
+               </Location>
+               <Location
+                  uuid = "5F2A2B41-0540-4524-AAAA-5D1C2080D154 - 42f4826b677b76c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt;) -&gt; ()) -&gt; () in closure #2 (Alamofire.DataResponse&lt;FiestonVirtual.CodeVerificationResponse, Alamofire.AFError&gt;) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt; in FiestonVirtual.EventCodeApiImpl.validateCode(validateCodeRequest: FiestonVirtual.ValidateCodeRequest) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt;"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1169">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F59C53D-1BB7-4FD2-9755-F53DE53DE327"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "validateCode(validateCodeRequest:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7F59C53D-1BB7-4FD2-9755-F53DE53DE327 - e375904ac99aa172"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FiestonVirtual.EventCodeApiImpl.validateCode(validateCodeRequest: FiestonVirtual.ValidateCodeRequest) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt;"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "2180">
+               </Location>
+               <Location
+                  uuid = "7F59C53D-1BB7-4FD2-9755-F53DE53DE327 - c4c721dbcb32e7fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;FiestonVirtual.CodeVerificationResponse, Alamofire.AFError&gt;) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt; in FiestonVirtual.EventCodeApiImpl.validateCode(validateCodeRequest: FiestonVirtual.ValidateCodeRequest) -&gt; Combine.AnyPublisher&lt;FiestonVirtual.CodeVerificationResponse, FiestonVirtual.ExternalError&gt;"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "170">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB0D86A1-D75C-41A1-B222-5AF46634B5A1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/Api/EventCodeApiImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "validateCode(validateCodeRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E96DEA9-A984-4153-B999-E8331E453138"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/CodeRemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "verificateEventCode(validateCodeRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE376376-9D80-4F21-BFEC-36F961E82E32"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Domain/UseCases/SignOut/SignOutUseCaseImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "invoke()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8ACD7E0C-BD94-4C06-A362-F88F529524D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Domain/UseCases/SignOut/SignOutUseCaseImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "invoke()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "204DBDB2-CE13-477A-91B1-9DE4BED27FF5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Domain/UseCases/SignOut/SignOutUseCaseImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "invoke()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6151C51A-4168-4B6C-A546-8CD8171A03DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/UserRemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "signOut(signOutRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B991271-30D5-45F5-9964-F49274054B46"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/UserRemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "signOut(signOutRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2C01330-22A2-44C5-93BF-31330B3FBE1F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/UserRemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "signOut(signOutRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9CB0873B-7509-4708-8787-3D0C45BEE6E1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/UserRemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "signOut(signOutRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A802A3E-89C3-4F69-B369-6411E10E9154"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/UserRemoteDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "signOut(signOutRequest:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9A802A3E-89C3-4F69-B369-6411E10E9154 - 19f74f2497d0f5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (FiestonVirtual.ExternalError) -&gt; FiestonVirtual.ErrorResponse in FiestonVirtual.UserRemoteDataSourceImpl.signOut(signOutRequest: FiestonVirtual.SignOutRequest) -&gt; Combine.AnyPublisher&lt;Swift.Bool, FiestonVirtual.ErrorResponse&gt;"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/DataSource/UserRemoteDataSourceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "63">
+               </Location>
+               <Location
+                  uuid = "9A802A3E-89C3-4F69-B369-6411E10E9154 - 19f74f2497d0f5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (FiestonVirtual.ExternalError) -&gt; FiestonVirtual.ErrorResponse in FiestonVirtual.UserRemoteDataSourceImpl.signOut(signOutRequest: FiestonVirtual.SignOutRequest) -&gt; Combine.AnyPublisher&lt;Swift.Bool, FiestonVirtual.ErrorResponse&gt;"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/DataSource/UserRemoteDataSourceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "222">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2551B496-86DB-48E9-BE40-6FE5B296EDD0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Data/Repository/CoreDataRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "deleteAllData(entityName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FB78BD0-ADEC-4E07-A2DE-73038E477AFA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Data/Repository/CoreDataRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "deleteAllData(entityName:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "016E3491-9B5A-489C-8DC6-0B768B21FC92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Data/Repository/CoreDataRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "deleteAllData(entityName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

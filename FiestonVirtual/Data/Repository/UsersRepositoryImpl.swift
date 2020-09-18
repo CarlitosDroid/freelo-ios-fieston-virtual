@@ -104,7 +104,7 @@ extension UsersRepositoryImpl: UsersRepository {
      }
     
     func deleteLocalAllUsers()-> Result<Bool,Error>{
-        return self.repository.deleteAllData(entity: UserEntity)
+        return self.repository.deleteAllData(entityName: "UserEntity")
     }
     
 }
