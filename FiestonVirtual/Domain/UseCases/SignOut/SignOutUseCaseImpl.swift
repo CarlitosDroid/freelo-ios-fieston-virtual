@@ -11,15 +11,25 @@ class SignOutUseCaseImpl : SignOutUseCase{
     }
     
     func invoke() -> AnyPublisher<Bool, ErrorResponse> {
-        let result = self.usersRepository.getLocalUser()
+        let resultgetLocalUser = self.usersRepository.getLocalUser()
         
-        switch result {
+        switch resultgetLocalUser {
         
-        case .success(let user):
-            return self.usersRepository.signOut(signOutRequest: SignOutRequest(idUser: user.id)).flatMap{(isClosedSession:Bool)->AnyPublisher<Bool,ErrorResponse> in
-                if(isClosedSession){
-                    self.usersRepository.deleteLocalAllUsers()
+        case .success( _):
+            return self.usersRepository.signOut(signOutRequest: SignOutRequest(idUser: 7)).flatMap{(isClosedSession:Bool)->AnyPublisher<Bool,ErrorResponse> in
+                let result = self.usersRepository.deleteLocalAllUsers()
+                switch result{
+                
+                case .success(_):
+                    return Just(true).mapError({ (_) in
+                        ErrorResponse(code: 1, title: "", message: "")
+                    }).eraseToAnyPublisher()
+                case .failure(_):
+                    return Just(false).mapError({ (_) in
+                        ErrorResponse(code: 1, title: "", message: "")
+                    }).eraseToAnyPublisher()
                 }
+                
             }.eraseToAnyPublisher()
             
         case .failure(let error):

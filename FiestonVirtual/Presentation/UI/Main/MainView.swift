@@ -60,25 +60,25 @@ struct MainView: View {
                             .tabItem {
                                 Image(systemName: "list.dash")
                                 Text("Menu")
-                        }.tag(1)
+                            }.tag(1)
                         
                         PhotosView()
                             .tabItem {
                                 Image(systemName: "list.dash")
                                 Text("Menu")
-                        }.tag(2)
+                            }.tag(2)
                         
                         Text("CHAT")
                             .tabItem {
                                 Image(systemName: "list.dash")
                                 Text("Menu")
-                        }.tag(3).foregroundColor(Color.red)
+                            }.tag(3).foregroundColor(Color.red)
                         
                         Text("TRIVIA")
                             .tabItem {
                                 Image(systemName: "list.dash")
                                 Text("Menu")
-                        }.tag(4)
+                            }.tag(4)
                         
                     }
                     
@@ -100,23 +100,39 @@ struct MainView: View {
                 //                .navigationBarBackButtonHidden(true)
                 //                .navigationBarTitle("Hola")
                 //                .navigationBarHidden(true)
-                
+                LoadingView(isShowing: .constant(self.mainviewModel.isLoading)) {
+                    NavigationLink(
+                        destination: CodeVerificationView(),
+                        isActive: self.$mainviewModel.isClosedSession,
+                        label:{EmptyView()}
+                    )
+                }
             }.navigationBarTitle("Fieston Virtual", displayMode: .inline)
-                .navigationBarItems(
-                    leading: Image(systemName: "camera")
-                        .foregroundColor(Color.deep_purple_500),
+            .navigationBarItems(
+                leading: Image(systemName: "camera")
+                    .foregroundColor(Color.deep_purple_500),
+                
+                trailing: HStack {
+                    Image(systemName: "star")
+                        .foregroundColor(Color.deep_purple_500)
                     
-                    trailing: HStack {
-                        Image(systemName: "star")
-                            .foregroundColor(Color.deep_purple_500)
+                    Button("Salir") {
+                        self.showAlert.toggle()
+                        // TODO - CALL THIS METHOD ONCE DATABASE IS EMPTY AFTER LOG OUT
+                        //NotificationCenter.default.post(name: NSNotification.Name("codeVerificationRootViewNotification"), object: nil)
                         
-                        Button("Salir") {
-                            
-                            // TODO - CALL THIS METHOD ONCE DATABASE IS EMPTY AFTER LOG OUT
-                            //NotificationCenter.default.post(name: NSNotification.Name("codeVerificationRootViewNotification"), object: nil)
-                            
-                        }.foregroundColor(Color.deep_purple_500)
+                    }.foregroundColor(Color.deep_purple_500)
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("¿Cerrar sesión?"),
+                            primaryButton: .cancel(Text("No"), action: {}),
+                            secondaryButton: .destructive(Text("Si"), action: {
+                                self.mainviewModel.signOut()
+                            })
+                        )
                     }
+                    
+                }
             )
         }.accentColor(Color.deep_purple_500)
         
