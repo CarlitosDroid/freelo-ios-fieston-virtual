@@ -70,4 +70,17 @@ class CoreDataRepository<T: NSManagedObject>: Repository {
         managedObjectContext.delete(entity)
         return .success(true)
     }
+    
+    func deleteAllData(entity: Entity)-> Result<Bool, Error> {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName:  entity.entity.name)
+       
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try myPersistentStoreCoordinator.execute(deleteRequest, with: self.context)
+        } catch let error as NSError {
+            return false
+        }
+        return true
+    }
 }
