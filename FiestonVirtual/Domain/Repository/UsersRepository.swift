@@ -18,4 +18,6 @@ protocol UsersRepository {
     func getLocalUser() -> Result<User, Error>
     
     func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse>
+    
+    func deleteLocalAllUsers()-> Result<Bool,Error>
 }

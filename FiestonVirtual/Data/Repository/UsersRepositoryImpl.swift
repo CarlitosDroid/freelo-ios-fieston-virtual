@@ -103,4 +103,8 @@ extension UsersRepositoryImpl: UsersRepository {
         return self.userRemoteDataSource.signOut(signOutRequest: signOutRequest)
      }
     
+    func deleteLocalAllUsers()-> Result<Bool,Error>{
+        return self.repository.deleteAllData(entity: UserEntity)
+    }
+    
 }
