@@ -11,17 +11,18 @@ import SwiftUI
 class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @Binding var isCoordinatorShown: Bool
-    @Binding var imageInCoordinator: Image?
+    var onImageFromPickerSelected: (_ fileURL: UIImage) -> Void
     
-    init(isShown: Binding<Bool>, image: Binding<Image?>) {
+    init(isShown: Binding<Bool>, onImageFromPickerSelected:  @escaping (_ fileURL: UIImage) -> Void) {
         _isCoordinatorShown = isShown
-        _imageInCoordinator = image
+        self.onImageFromPickerSelected = onImageFromPickerSelected
     }
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let unwrapImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
-        imageInCoordinator = Image(uiImage: unwrapImage)
+        
+        onImageFromPickerSelected(unwrapImage)
         isCoordinatorShown = false
     }
     

@@ -57,7 +57,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>We need camera to share in the event</string>
+	<string>Usar la camara y foto para compartir en el evento y ganaer puntos</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

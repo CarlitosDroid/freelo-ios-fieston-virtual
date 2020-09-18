@@ -11,20 +11,19 @@ import Combine
 
 protocol GalleryApi {
     
-    func uploadImage(
+    func uploadFile(
         data: URL,
         idUser: Int,
         idEvent: Int,
- 
+        postTitle: String
+    ) -> AnyPublisher<UploadImageResponse, ExternalError>
+    
+    func uploadImage(
+        data: Data,
+        idUser: Int,
+        idEvent: Int,
         postTitle: String
     ) -> AnyPublisher<UploadImageResponse, ExternalError>
 
-//    func uploadVideo(
-//        data: URL,
-//        idUser: Int,
-//        idEvent: Int,
-//        postType: Int
-//    ) -> AnyPublisher<UploadImageResponse, ExternalError>
-//    
 }
 

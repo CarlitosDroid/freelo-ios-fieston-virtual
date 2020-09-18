@@ -12,10 +12,11 @@ struct CaptureImageView: UIViewControllerRepresentable {
     
     /// MARK: - Properties
     @Binding var isShown: Bool
-    @Binding var image: Image?
+    
+    var onImageFromPickerSelected: (_ fileURL: UIImage) -> Void
     
     func makeCoordinator() -> Coordinator {
-        return Coordinator(isShown: $isShown, image: $image)
+        return Coordinator(isShown: $isShown, onImageFromPickerSelected: onImageFromPickerSelected)
     }
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<CaptureImageView>) -> UIImagePickerController {
@@ -29,4 +30,5 @@ struct CaptureImageView: UIViewControllerRepresentable {
                                 context: UIViewControllerRepresentableContext<CaptureImageView>) {
         
     }
+    
 }

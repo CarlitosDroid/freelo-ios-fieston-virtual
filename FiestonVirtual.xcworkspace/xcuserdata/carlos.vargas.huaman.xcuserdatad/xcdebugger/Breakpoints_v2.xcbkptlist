@@ -78,8 +78,8 @@
             filePath = "FiestonVirtual/Presentation/UI/Welcome/WelcomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "getWelcome()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "FiestonVirtual/Presentation/UI/Welcome/WelcomeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "getWelcome()"
             landmarkType = "7">
          </BreakpointContent>
@@ -103,32 +103,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9A7932EC-54C9-4E3D-96E5-7ED52E0ED2E4"
+            uuid = "3C16DD5E-3EE0-4839-8218-0E8EB5E7BDEB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/Camera/Coordinator.swift"
+            filePath = "FiestonVirtual/Presentation/UI/Main/Camera/ImageSaver.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "imagePickerControllerDidCancel(_:)"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "writeToPhotoAlbum(image:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CE5D97B3-348A-45F1-8522-603335A35571"
+            uuid = "46AB5513-897D-4601-9542-EFEC4127A7B3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FiestonVirtual/Presentation/UI/Main/Camera/Coordinator.swift"
+            filePath = "FiestonVirtual/Presentation/UI/Main/Camera/ImageSaver.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "saveError(_:didFinishSavingWithError:contextInfo:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
