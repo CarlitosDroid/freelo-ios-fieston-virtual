@@ -9,6 +9,15 @@
           "revision": "175eeb4618b0a6ef4d69a7409b6a74ddd235a093",
           "version": "5.15.0"
         }
+      },
+      {
+        "package": "Grid",
+        "repositoryURL": "https://github.com/swift-extensions/swiftui-grid.git",
+        "state": {
+          "branch": null,
+          "revision": "a3441f80bd01029507bc19e463e7c7208ffcf3f9",
+          "version": "1.0.4"
+        }
       }
     ]
   },

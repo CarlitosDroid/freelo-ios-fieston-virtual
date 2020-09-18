@@ -15,9 +15,9 @@ class CodeVerificationViewModel: ObservableObject {
     let loginUseCase: LoginUseCase
     let verifySessionUseCase: VerifySessionUseCase
     
-    @Published var eventCode: EventCode?
     @Published var isLoading = false
     @Published var errorMessage = ""
+    @Published var isError = false
     @Published var inSession = false
     
     private var disposables = Set<AnyCancellable>()
@@ -30,25 +30,26 @@ class CodeVerificationViewModel: ObservableObject {
     
     func verifyCode(code: String) {
         self.isLoading = true
+        self.isError=false
         if (!code.isEmpty) {
             loginUseCase.invoke(userInvitationCode: Int(code)!)
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
-                switch completion {
-                case .finished:
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
+                    switch completion {
+                    case .finished:
+                        print("finished")
+                        break
+                    case .failure(let errorResponse):
+                        self.isLoading = false
+                        self.isError=true
+                        self.errorMessage = errorResponse.localizedDescription
+                        break
+                    }
+                }, receiveValue: { (eventCode: Bool) in
                     self.isLoading = false
-                    break
-                case .failure(let errorResponse):
-                    self.errorMessage = errorResponse.localizedDescription
-                    print("\(self.errorMessage)")
-                    self.isLoading = false
-                    break
-                }
-            }, receiveValue: { (eventCode: Bool) in
-                self.isLoading = false
-                self.inSession = true
-            })
-            .store(in: &disposables)
+                    self.inSession = true
+                })
+                .store(in: &disposables)
         }
     }
     

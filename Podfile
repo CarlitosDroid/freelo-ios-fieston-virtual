@@ -10,6 +10,7 @@ target 'FiestonVirtual' do
   pod 'Swinject', '~> 2.7'
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
+  pod 'SwiftyJSON', '~> 5.0'
 
   target 'FiestonVirtualTests' do
     inherit! :search_paths

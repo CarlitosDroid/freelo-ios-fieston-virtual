@@ -10,7 +10,7 @@ import Foundation
 
 
 // MARK: - GetComentResponse
-struct GetComentResponse: Decodable {
+struct GetCommentResponse: Decodable {
     let message: String
     let data: ChildGetComentDataResponse
     
