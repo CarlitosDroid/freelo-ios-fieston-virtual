@@ -14,7 +14,10 @@ struct MainView: View {
     
     @State private var selectedTab = 0
     
-    @State var isActive: Bool = false
+    @State var showPlayListView: Bool = false
+    
+    @State var image: Image? = nil
+    @State var showCaptureImageView: Bool = false
     
     var body: some View {
         NavigationView {
@@ -42,7 +45,7 @@ struct MainView: View {
                     TabView(selection: $selectedTab) {
                         HomeView { (index: Int) in
                             if(index == 8) {
-                                self.isActive = true
+                                self.showPlayListView = true
                             } else {
                                 self.selectedTab = index
                             }
@@ -57,63 +60,78 @@ struct MainView: View {
                             .tabItem {
                                 Image(systemName: "list.dash")
                                 Text("Menu")
-                        }.tag(1)
+                            }.tag(1)
                         
                         PhotosView()
                             .tabItem {
                                 Image(systemName: "list.dash")
                                 Text("Menu")
-                        }.tag(2)
+                            }.tag(2)
                         
                         Text("CHAT")
                             .tabItem {
                                 Image(systemName: "list.dash")
                                 Text("Menu")
-                        }.tag(3).foregroundColor(Color.red)
+                            }.tag(3).foregroundColor(Color.red)
                         
                         Text("TRIVIA")
                             .tabItem {
                                 Image(systemName: "list.dash")
                                 Text("Menu")
-                        }.tag(4)
+                            }.tag(4)
                         
                     }
                     
                     WelcomeView(
-                        welcome:.constant(self.viewModel.welcome),
+                        welcome: self.$viewModel.welcome,
                         showSheet: self.$viewModel.hasWelcome
                     )
                     
                 }
                 .onAppear{
-                    if(!self.isActive) {
+                    print("PLAY LSIT \(self.showPlayListView)")
+                    print("IMAGE CAPTURE \(self.showCaptureImageView)")
+                    if(!self.showPlayListView && !self.showCaptureImageView) {
                         self.viewModel.getWelcome()
                     }
                 }
                 
-                NavigationLink(destination: PlayListView(), isActive: $isActive){
+                NavigationLink(destination: PlayListView(), isActive: $showPlayListView){
                     EmptyView()
                 }
+                
+                NavigationLink(
+                    destination: CaptureImageView(isShown: $showCaptureImageView, image: $image),
+                    isActive: $showCaptureImageView,
+                    label: {
+                        EmptyView()
+                    })
                 //                .navigationBarBackButtonHidden(true)
                 //                .navigationBarTitle("Hola")
                 //                .navigationBarHidden(true)
                 
             }.navigationBarTitle("Fieston Virtual", displayMode: .inline)
-                .navigationBarItems(
-                    leading: Image(systemName: "camera")
-                        .foregroundColor(Color.deep_purple_500),
+            .navigationBarItems(
+                leading: Button(action: {
+//                    print(showCaptureImageView)
                     
-                    trailing: HStack {
-                        Image(systemName: "star")
-                            .foregroundColor(Color.deep_purple_500)
+                    self.showCaptureImageView.toggle()
+                }) {
+                    Image(systemName: "camera")
+                        .foregroundColor(Color.deep_purple_500)
+                },
+                
+                trailing: HStack {
+                    Image(systemName: "star")
+                        .foregroundColor(Color.deep_purple_500)
+                    
+                    Button("Salir") {
                         
-                        Button("Salir") {
-                            
-                            // TODO - CALL THIS METHOD ONCE DATABASE IS EMPTY AFTER LOG OUT
-                            //NotificationCenter.default.post(name: NSNotification.Name("codeVerificationRootViewNotification"), object: nil)
-                            
-                        }.foregroundColor(Color.deep_purple_500)
-                    }
+                        // TODO - CALL THIS METHOD ONCE DATABASE IS EMPTY AFTER LOG OUT
+                        //NotificationCenter.default.post(name: NSNotification.Name("codeVerificationRootViewNotification"), object: nil)
+                        
+                    }.foregroundColor(Color.deep_purple_500)
+                }
             )
         }.accentColor(Color.deep_purple_500)
         
