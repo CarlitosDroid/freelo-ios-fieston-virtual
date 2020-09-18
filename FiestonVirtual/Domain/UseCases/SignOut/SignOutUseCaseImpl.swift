@@ -15,8 +15,8 @@ class SignOutUseCaseImpl : SignOutUseCase{
         
         switch resultgetLocalUser {
         
-        case .success( _):
-            return self.usersRepository.signOut(signOutRequest: SignOutRequest(idUser: 7)).flatMap{(isClosedSession:Bool)->AnyPublisher<Bool,ErrorResponse> in
+        case .success( let user):
+            return self.usersRepository.signOut(signOutRequest: SignOutRequest(idUser:user.id)).flatMap{(isClosedSession:Bool)->AnyPublisher<Bool,ErrorResponse> in
                 let result = self.usersRepository.deleteLocalAllUsers()
                 switch result{
                 

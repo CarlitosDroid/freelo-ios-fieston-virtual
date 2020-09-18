@@ -18,7 +18,7 @@ class GetWelcomeUseCaseImpl:GetWelcomeUseCase  {
         let result = self.usersRepository.getLocalUser()
         switch result {
         case .success(let user):
-            return eventRepository.getWelcome(welcomeRequest: WelcomeRequest(idEvent: 3))
+            return eventRepository.getWelcome(welcomeRequest: WelcomeRequest(idEvent: user.idEvent))
         case .failure(let error):
             return Just(Welcome(title:"", description: "", subtitle: "", imageUrl: ""))
                 .mapError({ (_) in

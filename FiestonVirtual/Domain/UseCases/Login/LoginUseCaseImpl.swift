@@ -34,8 +34,7 @@ class LoginUseCaseImpl: LoginUseCase {
                     //save to disk
                     let result = self.usersRepository.create(user: user)
                     switch result {
-                    case .success(let isSaved):
-                        print("was saved: \(isSaved)")
+                    case .success( _):
                         return Just(true).mapError({ (_) in
                             ErrorResponse(code: 1, title: "", message: "")
                         }).eraseToAnyPublisher()
