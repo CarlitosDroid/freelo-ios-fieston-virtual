@@ -43,6 +43,7 @@
 		2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339D250714C4007C3FFC /* VerifySessionUseCase.swift */; };
 		2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339F250714D1007C3FFC /* VerifySessionUseCaseImpl.swift */; };
 		2BA2AFBA250990E000236FDD /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AFB9250990E000236FDD /* PhotosView.swift */; };
+		2BA67BCE251436E700BAD228 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BA67BCD251436E700BAD228 /* GoogleService-Info.plist */; };
 		2BB278E225115AF9002A234E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB278E125115AF9002A234E /* HomeViewModel.swift */; };
 		2BB278E52511637C002A234E /* PlayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB278E42511637C002A234E /* PlayListView.swift */; };
 		2BB6E7EA250AD3990074B6DB /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB6E7E9250AD3990074B6DB /* PhotosViewModel.swift */; };
@@ -184,6 +185,7 @@
 		2B8B339D250714C4007C3FFC /* VerifySessionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifySessionUseCase.swift; sourceTree = "<group>"; };
 		2B8B339F250714D1007C3FFC /* VerifySessionUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifySessionUseCaseImpl.swift; sourceTree = "<group>"; };
 		2BA2AFB9250990E000236FDD /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		2BA67BCD251436E700BAD228 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BB278E125115AF9002A234E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2BB278E42511637C002A234E /* PlayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListView.swift; sourceTree = "<group>"; };
 		2BB6E7E9250AD3990074B6DB /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 		2BC257032505478200B433CC /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2BA67BCD251436E700BAD228 /* GoogleService-Info.plist */,
 				2BC256DC250546D200B433CC /* LaunchScreen.storyboard */,
 				2BC256DF250546D200B433CC /* Info.plist */,
 				2BC256D0250546D100B433CC /* SceneDelegate.swift */,
@@ -1005,6 +1008,7 @@
 			files = (
 				2BC256DE250546D200B433CC /* LaunchScreen.storyboard in Resources */,
 				2B3070EC25089659005198F7 /* Colors.xcassets in Resources */,
+				2BA67BCE251436E700BAD228 /* GoogleService-Info.plist in Resources */,
 				2BC256DB250546D200B433CC /* Preview Assets.xcassets in Resources */,
 				2BC256D8250546D200B433CC /* Assets.xcassets in Resources */,
 			);
@@ -1406,6 +1410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
+				DEVELOPMENT_TEAM = H9JXH336V5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FiestonVirtual/Main/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1426,6 +1431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
+				DEVELOPMENT_TEAM = H9JXH336V5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FiestonVirtual/Main/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
