@@ -22,6 +22,8 @@
 		2B48232425069FA100AF312D /* TextingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B48232325069FA100AF312D /* TextingData.swift */; };
 		2B4823262506A29600AF312D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4823252506A29600AF312D /* Repository.swift */; };
 		2B4823282506A32400AF312D /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4823272506A32400AF312D /* CoreDataRepository.swift */; };
+		2B5A53A8251475D80036AB9E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5A53A7251475D80036AB9E /* Coordinator.swift */; };
+		2B5A53B0251476050036AB9E /* CaptureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5A53AF251476050036AB9E /* CaptureImageView.swift */; };
 		2B81FCDB2507342400EC9E10 /* UserRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCDA2507342400EC9E10 /* UserRemoteDataSource.swift */; };
 		2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCDC2507349300EC9E10 /* UserRemoteDataSourceImpl.swift */; };
 		2B81FCDF250734D500EC9E10 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCDE250734D500EC9E10 /* UserApi.swift */; };
@@ -164,6 +166,8 @@
 		2B48232325069FA100AF312D /* TextingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextingData.swift; sourceTree = "<group>"; };
 		2B4823252506A29600AF312D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2B4823272506A32400AF312D /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
+		2B5A53A7251475D80036AB9E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2B5A53AF251476050036AB9E /* CaptureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureImageView.swift; sourceTree = "<group>"; };
 		2B81FCDA2507342400EC9E10 /* UserRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSource.swift; sourceTree = "<group>"; };
 		2B81FCDC2507349300EC9E10 /* UserRemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		2B81FCDE250734D500EC9E10 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
@@ -356,9 +360,19 @@
 			path = TestData;
 			sourceTree = "<group>";
 		};
+		2B5A53A6251475BB0036AB9E /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				2B5A53A7251475D80036AB9E /* Coordinator.swift */,
+				2B5A53AF251476050036AB9E /* CaptureImageView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		2B81FCE625073D5E00EC9E10 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2B5A53A6251475BB0036AB9E /* Camera */,
 				2B1D05702510341A00EA4B56 /* Home */,
 				2B3747F8250C55CD00BE13B4 /* Video */,
 				2BA2AFB82509908D00236FDD /* Photo */,
@@ -1152,6 +1166,7 @@
 				FBBA41FF251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift in Sources */,
 				FBBA41FB25105A4E0016ACC6 /* Ranking.swift in Sources */,
 				2BB6E7EC250AE25A0074B6DB /* Data.swift in Sources */,
+				2B5A53B0251476050036AB9E /* CaptureImageView.swift in Sources */,
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
 				2B83E79A25081594004B1BF2 /* GetRemoteUserRequest.swift in Sources */,
 				2BC2571C250561D800B433CC /* EventCodeRemoteDataSource.swift in Sources */,
@@ -1218,6 +1233,7 @@
 				2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */,
 				2BC2570A25055A3900B433CC /* CodeVerificationResponse.swift in Sources */,
 				2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */,
+				2B5A53A8251475D80036AB9E /* Coordinator.swift in Sources */,
 				2B3070EA25089603005198F7 /* Color.swift in Sources */,
 				2B83E7912507F584004B1BF2 /* LoadingIndicator.swift in Sources */,
 				2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */,

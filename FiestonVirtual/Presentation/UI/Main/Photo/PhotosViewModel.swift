@@ -15,7 +15,7 @@ class PhotosViewModel {
     
     func uploadFile(data: URL) {
         let galleryApi = GalleryApiImpl()
-        galleryApi.uploadImage(
+        galleryApi.uploadFile(
             data: data,
             idUser: 17,
             idEvent: 3,

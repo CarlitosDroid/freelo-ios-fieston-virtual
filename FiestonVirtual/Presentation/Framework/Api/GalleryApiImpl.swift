@@ -9,10 +9,11 @@
 import Foundation
 import Combine
 import Alamofire
+import SwiftyJSON
 
 class GalleryApiImpl: GalleryApi {
     
-    func uploadImage(
+    func uploadFile(
         data: URL,
         idUser: Int,
         idEvent: Int,
@@ -92,6 +93,44 @@ class GalleryApiImpl: GalleryApi {
                 }.eraseToAnyPublisher()
             }).eraseToAnyPublisher()
         
+    }
+    
+    func uploadImage(data: Data, idUser: Int, idEvent: Int, postTitle: String) -> AnyPublisher<UploadImageResponse, ExternalError> {
+        return AF.upload(multipartFormData: { (multipartFormData: MultipartFormData) in
+            multipartFormData.append(String(idUser).data(using: .utf8)!, withName: "idUser")
+            multipartFormData.append(String(idEvent).data(using: .utf8)!, withName: "idEvent")
+            multipartFormData.append("1".data(using: .utf8)!, withName: "postType")
+            multipartFormData.append(String(postTitle).data(using: .utf8)!, withName: "postTitle")
+            multipartFormData.append(data,
+                                     withName: "file",
+                                     fileName: "\(self.getCurrentTimeStamp()).jpeg",
+                                     mimeType: "image/jpeg")
+        },
+                         to: "http://fiestonvirtual.com/app/api/publicaciones.php",
+                         method: .post,
+                         interceptor: nil,
+                         requestModifier: nil)
+            .validate()
+            .publishDecodable(type: UploadImageResponse.self)
+            .mapError({ (never : Never) -> ExternalError in
+                ExternalError.UnknowError(description: never.localizedDescription)
+            })
+            .flatMap({ (dataResponse: DataResponse<UploadImageResponse, AFError>)-> AnyPublisher<UploadImageResponse, ExternalError> in
+                Future<UploadImageResponse, ExternalError> { promise in
+                    switch dataResponse.result {
+                        
+                    case .failure(let afError):
+                        guard let errorDescription = afError.errorDescription else { return }
+                        promise(.failure(ExternalError.NetworkError(description: "\(errorDescription)")))
+                        break
+                        
+                    case .success(let uploadImageResponse):
+                        promise(.success(uploadImageResponse))
+                        break
+                    }
+                    
+                }.eraseToAnyPublisher()
+            }).eraseToAnyPublisher()
     }
     
     private func getCurrentTimeStamp() -> String {

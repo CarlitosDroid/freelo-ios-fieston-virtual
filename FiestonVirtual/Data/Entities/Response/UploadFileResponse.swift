@@ -12,12 +12,9 @@ import Foundation
 struct UploadImageResponse: Decodable {
     let message: String
     let data: ChildUploadImageDataResponse
-    let r1, r2: String
     enum CodingKeys: String, CodingKey {
         case message = "message"
         case data = "data"
-        case r1 = "r1"
-        case r2 = "r2"
     }
 }
 
