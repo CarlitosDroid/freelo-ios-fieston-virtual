@@ -14,9 +14,13 @@ class SignOutUseCaseImpl : SignOutUseCase{
         let result = self.usersRepository.getLocalUser()
         
         switch result {
-            
+        
         case .success(let user):
-            return self.usersRepository.signOut(signOutRequest: SignOutRequest(idUser: user.id)).eraseToAnyPublisher()
+            return self.usersRepository.signOut(signOutRequest: SignOutRequest(idUser: user.id)).flatMap{(isClosedSession:Bool)->AnyPublisher<Bool,ErrorResponse> in
+                if(isClosedSession){
+                    self.usersRepository.deleteLocalAllUsers()
+                }
+            }.eraseToAnyPublisher()
             
         case .failure(let error):
             return Just(false).mapError({ (_) in
