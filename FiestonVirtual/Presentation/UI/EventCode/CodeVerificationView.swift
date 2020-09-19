@@ -21,18 +21,19 @@ struct CodeVerificationView: View {
         ZStack {
             Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
             
-            Button(action: {
-                self.viewModel.verifyCode(code: self.eventCode)
-            }) {
-                Text("Entrar")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 50, alignment: .center)
-                    .background(Color.aqua.cornerRadius(8))
-                    .foregroundColor(Color.white)
-            }.padding(.all, 20)
-            
             LoadingView(isShowing: self.$viewModel.isLoading) {
                 ZStack{
+                    
+                    Button(action: {
+                        self.viewModel.verifyCode(code: self.eventCode)
+                    }) {
+                        Text("Entrar")
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 50, alignment: .center)
+                            .background(Color.aqua.cornerRadius(8))
+                            .foregroundColor(Color.white)
+                    }
+                    
                     VStack {
                         Image("Fieston")
                             .resizable()
@@ -56,7 +57,8 @@ struct CodeVerificationView: View {
                 NotificationCenter.default.post(name: NSNotification.Name("loginRootViewNotification"), object: nil)
             }
             
-        }.alert(isPresented: .constant(self.viewModel.isError), content:{
+        }.navigationBarHidden(true)
+        .alert(isPresented: .constant(self.viewModel.isError), content:{
             Alert(
                 title: Text(self.viewModel.errorMessage),
                 dismissButton: .default(Text("Aceptar"))
@@ -73,7 +75,7 @@ struct CodeVerificationView: View {
 }
 
 struct CodeVerificationView_Previews: PreviewProvider {
-
+    
     static var previews: some View {
         CodeVerificationView()
     }

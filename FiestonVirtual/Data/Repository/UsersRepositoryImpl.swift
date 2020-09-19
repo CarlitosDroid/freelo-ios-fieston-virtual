@@ -17,10 +17,6 @@ class UsersRepositoryImpl {
     private let context: NSManagedObjectContext
     
     let userRemoteDataSource: UserRemoteDataSource
-    //
-    //    init(userLocalDataSource: UserLocalDataSource) {
-    //        self.userLocalDataSource = userLocalDataSource
-    //    }
     
     init(
         context: NSManagedObjectContext,
@@ -31,18 +27,10 @@ class UsersRepositoryImpl {
         self.userRemoteDataSource = userRemoteDataSource
     }
     
-    
-    //    func setLoggedInUser() {
-    //        self.userLocalDataSource.saveUser()
-    //    }
-    //
-    //    func getLocalUsers() -> [User] {
-    //        return self.userLocalDataSource.getUsers()
-    //    }
-    
 }
 
 extension UsersRepositoryImpl: UsersRepository {
+    
     func getRemoteUser(idUser: Int) -> AnyPublisher<User, ErrorResponse> {
         return self.userRemoteDataSource.getUsers(idUser: idUser)
     }
@@ -53,8 +41,14 @@ extension UsersRepositoryImpl: UsersRepository {
         let result = repository.create()
         switch result {
         case .success(let userEntity):
+            userEntity.avatar = user.avatar
             userEntity.firstName = user.name
-            
+            userEntity.id = Int64(user.id)
+            userEntity.idEvent = Int64(user.idEvent)
+            userEntity.lastName = user.lastName
+            userEntity.ranking = Int16(user.ranking)
+            userEntity.token = user.token
+            userEntity.totalScore = Int64(user.totalScore)
             
             //TODO: - use unit of work pattern instead of calling context here
             do {
@@ -89,12 +83,21 @@ extension UsersRepositoryImpl: UsersRepository {
     }
     
     @discardableResult func getLocalUser() -> Result<User, Error> {
-            let result = repository.get(predicate: nil, sortDescriptors: nil)
-            switch result {
-            case .success(let userEntities):
-                return .success( userEntities[0].toDomainModel())
-            case .failure(let error):
-                return .failure(error)
-            }
+        let result = repository.get(predicate: nil, sortDescriptors: nil)
+        switch result {
+        case .success(let userEntities):
+            return .success( userEntities[0].toDomainModel())
+        case .failure(let error):
+            return .failure(error)
         }
+    }
+    
+    func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse> {
+        return self.userRemoteDataSource.signOut(signOutRequest: signOutRequest)
+    }
+    
+    func deleteLocalAllUsers()-> Result<Bool,Error>{
+        return self.repository.deleteAllData(entityName: "UserEntity")
+    }
+    
 }

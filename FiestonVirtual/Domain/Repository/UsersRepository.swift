@@ -16,4 +16,8 @@ protocol UsersRepository {
     func getRemoteUser(idUser: Int) -> AnyPublisher<User, ErrorResponse>
     
     func getLocalUser() -> Result<User, Error>
+    
+    func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse>
+    
+    func deleteLocalAllUsers()-> Result<Bool,Error>
 }

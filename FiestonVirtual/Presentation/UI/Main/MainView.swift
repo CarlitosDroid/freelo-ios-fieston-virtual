@@ -10,7 +10,9 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(WelcomeViewModel.self)!
+    @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(MainViewModel.self)!
+    
+    @State var showAlert = false
     
     @State private var selectedTab = 0
     
@@ -22,29 +24,11 @@ struct MainView: View {
     
     var body: some View {
         
-        LoadingView(isShowing: self.$viewModel.isUploadingPhoto) {
+        LoadingView(isShowing: self.$viewModel.isLoading) {
             
             NavigationView {
                 ZStack {
                     VStack(spacing:0) {
-                        //                    ZStack{
-                        //                        Image("Fieston")
-                        //                        HStack{
-                        //                            Button(action: {
-                        //                            }, label: {
-                        //                                Image(systemName: "camera").accentColor(Color.white)
-                        //                            })
-                        //                            Spacer()
-                        //                            Button(action: {
-                        //                            }, label: {
-                        //                                Image(systemName: "star").accentColor(Color.white)
-                        //                            })
-                        //                            Button(action: {
-                        //                            }, label: {
-                        //                                Image(systemName: "star").accentColor(Color.white)
-                        //                            })
-                        //                        }
-                        //                    }.padding(10).background(Color.deep_purple_500)
                         
                         TabView(selection: $selectedTab) {
                             HomeView { (index: Int) in
@@ -106,36 +90,43 @@ struct MainView: View {
                         label: {
                             EmptyView()
                         })
-                    //                .navigationBarBackButtonHidden(true)
-                    //                .navigationBarTitle("Hola")
-                    //                .navigationBarHidden(true)
                     
                 }.navigationBarTitle("Fieston Virtual", displayMode: .inline)
                 .navigationBarItems(
                     leading: Button(action: {
-                        //                    print(showCaptureImageView)
                         
                         self.showCaptureImageView.toggle()
                     }) {
                         Image(systemName: "camera")
                             .foregroundColor(Color.deep_purple_500)
+                            .imageScale(.large)
                     },
                     
-                    trailing: HStack {
-                        Image(systemName: "star")
-                            .foregroundColor(Color.deep_purple_500)
+                    trailing: Button(action: {
                         
-                        Button("Salir") {
-                            
-                            // TODO - CALL THIS METHOD ONCE DATABASE IS EMPTY AFTER LOG OUT
-                            //NotificationCenter.default.post(name: NSNotification.Name("codeVerificationRootViewNotification"), object: nil)
-                            
-                        }.foregroundColor(Color.deep_purple_500)
+                        self.showAlert.toggle()
+                    }){
+                        Image(systemName: "arrow.right.square")
+                            .foregroundColor(Color.deep_purple_500)
+                            .imageScale(.large)
+                    }.foregroundColor(Color.deep_purple_500)
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("¿Cerrar sesión?"),
+                            primaryButton: .cancel(Text("No"), action: {}),
+                            secondaryButton: .destructive(Text("Si"), action: {
+                                self.viewModel.signOut()
+                            })
+                        )
                     }
                 )
             }.accentColor(Color.deep_purple_500)
             
-        }.onAppear{
+        }.onReceive(self.viewModel.$isClosedSession, perform: { isClosedSession in
+            if(isClosedSession){
+                NotificationCenter.default.post(name: NSNotification.Name("codeVerificationRootViewNotification"), object: nil)
+            }
+        }).onAppear {
             if(showWelcomeOnlyOnce) {
                 self.viewModel.getWelcome()
                 self.showWelcomeOnlyOnce = false
