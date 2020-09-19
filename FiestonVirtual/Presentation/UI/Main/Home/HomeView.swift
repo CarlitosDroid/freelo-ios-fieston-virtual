@@ -41,12 +41,27 @@ struct HomeView: View {
                 .resizable()
                 .scaledToFit()
                 .background(Color.red)
-            VStack {
+            
+            VStack(alignment: .leading, spacing: 0, content: {
+                
                 Text(category.name)
+                    .foregroundColor(.deep_purple_500)
+                    .bold()
+                    .font(.system(size:20))
+                
                 Text(category.description)
+                    .foregroundColor(.gray)
+                    .font(.system(size:14))
+                
                 Text(category.subDescription)
-            }
-            .padding(.all, 20)
+                    .foregroundColor(.deep_purple_500)
+                    .bold()
+                    .font(.system(size:14))
+            })
+            .padding(.leading, 5)
+            .padding(.trailing, 5)
+            .padding(.bottom, 5)
+            
         }
         .background(Color.white)
         .cornerRadius(10)
