@@ -6,8 +6,11 @@ class ViewModelAssembly: Assembly {
     
     func assemble(container: Container) {
         
-        container.register(WelcomeViewModel.self) { resolver in
-            WelcomeViewModel(getWelcomeUseCase: resolver.resolve(GetWelcomeUseCase.self)!)
+        container.register(MainViewModel.self) { resolver in
+            MainViewModel(
+                getWelcomeUseCase: resolver.resolve(GetWelcomeUseCase.self)!,
+                signOutUseCase: resolver.resolve(SignOutUseCase.self)!
+            )
         }
         
         container.register(CodeVerificationViewModel.self) { resolver in
@@ -19,9 +22,6 @@ class ViewModelAssembly: Assembly {
         
         container.register(HomeViewModel.self) { resolver in
             HomeViewModel()
-        }
-        container.register(MainViewModel.self) { resolver in
-            MainViewModel(signOutUseCase: resolver.resolve(SignOutUseCase.self)!)
         }
         
     }

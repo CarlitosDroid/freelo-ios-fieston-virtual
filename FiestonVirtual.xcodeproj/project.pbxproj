@@ -87,7 +87,6 @@
 		54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */; };
 		9A73CC892508910900D9C310 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73CC882508910900D9C310 /* ViewModelAssembly.swift */; };
-		9A7AAFCE251054DD00D20A6D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFCD251054DD00D20A6D /* MainViewModel.swift */; };
 		9A7AAFD12510568B00D20A6D /* SignOutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD02510568B00D20A6D /* SignOutUseCase.swift */; };
 		9A7AAFD32510571F00D20A6D /* SignOutUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD22510571F00D20A6D /* SignOutUseCaseImpl.swift */; };
 		9A7AAFD525105F6C00D20A6D /* SignOutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD425105F6C00D20A6D /* SignOutRequest.swift */; };
@@ -98,7 +97,7 @@
 		9A8145762505E898001A012A /* WelcomeResponseEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145752505E898001A012A /* WelcomeResponseEntityMapper.swift */; };
 		9A81457D2505F3B8001A012A /* GetWelcomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81457C2505F3B8001A012A /* GetWelcomeUseCase.swift */; };
 		9A81457F2505F420001A012A /* GetWelcomeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81457E2505F420001A012A /* GetWelcomeUseCaseImpl.swift */; };
-		9A8145822505F8A0001A012A /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145812505F8A0001A012A /* WelcomeViewModel.swift */; };
+		9A8145822505F8A0001A012A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145812505F8A0001A012A /* MainViewModel.swift */; };
 		9A8145842505F90C001A012A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145832505F90C001A012A /* WelcomeView.swift */; };
 		9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
@@ -241,7 +240,6 @@
 		81DC065DED1DF8D5FC710C7D /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86D1C4045236C783848B4F61 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual_FiestonVirtualUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A73CC882508910900D9C310 /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
-		9A7AAFCD251054DD00D20A6D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9A7AAFD02510568B00D20A6D /* SignOutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutUseCase.swift; sourceTree = "<group>"; };
 		9A7AAFD22510571F00D20A6D /* SignOutUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutUseCaseImpl.swift; sourceTree = "<group>"; };
 		9A7AAFD425105F6C00D20A6D /* SignOutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutRequest.swift; sourceTree = "<group>"; };
@@ -252,7 +250,7 @@
 		9A8145752505E898001A012A /* WelcomeResponseEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeResponseEntityMapper.swift; sourceTree = "<group>"; };
 		9A81457C2505F3B8001A012A /* GetWelcomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWelcomeUseCase.swift; sourceTree = "<group>"; };
 		9A81457E2505F420001A012A /* GetWelcomeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWelcomeUseCaseImpl.swift; sourceTree = "<group>"; };
-		9A8145812505F8A0001A012A /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		9A8145812505F8A0001A012A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9A8145832505F90C001A012A /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		AC9F56DA6C3EAA9D0D05ECA3 /* Pods-FiestonVirtualTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.release.xcconfig"; sourceTree = "<group>"; };
 		D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtualTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -388,7 +386,7 @@
 				2B3747F8250C55CD00BE13B4 /* Video */,
 				2BA2AFB82509908D00236FDD /* Photo */,
 				2B81FCE725073DCC00EC9E10 /* MainView.swift */,
-				9A7AAFCD251054DD00D20A6D /* MainViewModel.swift */,
+				9A8145812505F8A0001A012A /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -815,7 +813,6 @@
 		9A8145802505F867001A012A /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				9A8145812505F8A0001A012A /* WelcomeViewModel.swift */,
 				9A8145832505F90C001A012A /* WelcomeView.swift */,
 			);
 			path = Welcome;
@@ -1208,7 +1205,6 @@
 				2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */,
 				2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */,
 				FBBA420525106FB90016ACC6 /* ComentRemoteDataSource.swift in Sources */,
-				9A7AAFCE251054DD00D20A6D /* MainViewModel.swift in Sources */,
 				2B4823282506A32400AF312D /* CoreDataRepository.swift in Sources */,
 				FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */,
 				FB1014D525086E0A002C91ED /* RankingApi.swift in Sources */,
@@ -1269,7 +1265,7 @@
 				FB1014D025086338002C91ED /* RankingResponse.swift in Sources */,
 				9A81456C2505D79A001A012A /* Welcome.swift in Sources */,
 				9A7AAFD32510571F00D20A6D /* SignOutUseCaseImpl.swift in Sources */,
-				9A8145822505F8A0001A012A /* WelcomeViewModel.swift in Sources */,
+				9A8145822505F8A0001A012A /* MainViewModel.swift in Sources */,
 				9A81456E2505D7B4001A012A /* WelcomeRequest.swift in Sources */,
 				2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */,
 				FB101501250B2B5A002C91ED /* RespuestaTriviaResponse.swift in Sources */,
