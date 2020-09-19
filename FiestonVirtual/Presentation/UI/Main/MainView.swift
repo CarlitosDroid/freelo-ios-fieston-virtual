@@ -91,11 +91,6 @@ struct MainView: View {
                             EmptyView()
                         })
                     
-                    NavigationLink(
-                        destination: CodeVerificationView(),
-                        isActive: self.$viewModel.isClosedSession
-                    ){EmptyView()}
-                    
                 }.navigationBarTitle("Fieston Virtual", displayMode: .inline)
                 .navigationBarItems(
                     leading: Button(action: {
@@ -127,7 +122,11 @@ struct MainView: View {
                 )
             }.accentColor(Color.deep_purple_500)
             
-        }.onAppear{
+        }.onReceive(self.viewModel.$isClosedSession, perform: { isClosedSession in
+            if(isClosedSession){
+                NotificationCenter.default.post(name: NSNotification.Name("codeVerificationRootViewNotification"), object: nil)
+            }
+        }).onAppear {
             if(showWelcomeOnlyOnce) {
                 self.viewModel.getWelcome()
                 self.showWelcomeOnlyOnce = false
