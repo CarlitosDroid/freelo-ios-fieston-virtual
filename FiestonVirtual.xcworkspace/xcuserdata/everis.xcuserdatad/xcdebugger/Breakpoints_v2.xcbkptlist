@@ -1175,7 +1175,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2551B496-86DB-48E9-BE40-6FE5B296EDD0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FiestonVirtual/Data/Repository/CoreDataRepository.swift"
@@ -1207,7 +1207,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "016E3491-9B5A-489C-8DC6-0B768B21FC92"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FiestonVirtual/Data/Repository/CoreDataRepository.swift"
