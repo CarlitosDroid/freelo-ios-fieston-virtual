@@ -27,17 +27,15 @@ class MainViewModel: ObservableObject {
     }
     
     func getWelcome() {
-        self.isLoading = true
         getWelcomeUseCase.invoke()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
                 switch completion {
                 case .finished:
-                    self.isLoading = false
+                    
                     break
                 case .failure(let errorResponse):
                     self.errorMessage = errorResponse.localizedDescription
-                    self.isLoading = false
                     break
                 }
             }, receiveValue: { (welcome: Welcome) in
