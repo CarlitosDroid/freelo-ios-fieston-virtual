@@ -56,7 +56,8 @@ struct CodeVerificationView: View {
                 NotificationCenter.default.post(name: NSNotification.Name("loginRootViewNotification"), object: nil)
             }
             
-        }.alert(isPresented: .constant(self.viewModel.isError), content:{
+        }.navigationBarHidden(true)
+        .alert(isPresented: .constant(self.viewModel.isError), content:{
             Alert(
                 title: Text(self.viewModel.errorMessage),
                 dismissButton: .default(Text("Aceptar"))
@@ -73,7 +74,7 @@ struct CodeVerificationView: View {
 }
 
 struct CodeVerificationView_Previews: PreviewProvider {
-
+    
     static var previews: some View {
         CodeVerificationView()
     }
