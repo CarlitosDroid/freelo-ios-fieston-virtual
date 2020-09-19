@@ -104,10 +104,16 @@ struct MainView: View {
                     }) {
                         Image(systemName: "camera")
                             .foregroundColor(Color.deep_purple_500)
+                            .imageScale(.large)
                     },
                     
-                    trailing: Button("Salir") {
+                    trailing: Button(action: {
+                        
                         self.showAlert.toggle()
+                    }){
+                        Image(systemName: "arrow.right.square")
+                            .foregroundColor(Color.deep_purple_500)
+                            .imageScale(.large)
                     }.foregroundColor(Color.deep_purple_500)
                     .alert(isPresented: $showAlert) {
                         Alert(
