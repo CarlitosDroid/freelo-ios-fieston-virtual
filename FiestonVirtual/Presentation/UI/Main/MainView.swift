@@ -40,32 +40,32 @@ struct MainView: View {
                                 
                             }
                             .tabItem {
-                                Image(systemName: "list.dash")
-                                Text("Menu")
+                                Image(systemName: "house.fill")
+                                Text("Home")
                             }.tag(0)
                             
                             Text("GALERIA")
                                 .tabItem {
-                                    Image(systemName: "list.dash")
-                                    Text("Menu")
+                                    Image(systemName: "photo.fill.on.rectangle.fill")
+                                    Text("Galeria")
                                 }.tag(1)
                             
                             PhotosView()
                                 .tabItem {
-                                    Image(systemName: "list.dash")
-                                    Text("Menu")
+                                    Image(systemName: "plus.app.fill")
+                                    Text("Foto")
                                 }.tag(2)
                             
                             Text("CHAT")
                                 .tabItem {
-                                    Image(systemName: "list.dash")
-                                    Text("Menu")
+                                    Image(systemName: "bubble.left.and.bubble.right.fill")
+                                    Text("Chat")
                                 }.tag(3).foregroundColor(Color.red)
                             
                             Text("TRIVIA")
                                 .tabItem {
-                                    Image(systemName: "list.dash")
-                                    Text("Menu")
+                                    Image(systemName: "cube.box")
+                                    Text("Trivia")
                                 }.tag(4)
                             
                         }
