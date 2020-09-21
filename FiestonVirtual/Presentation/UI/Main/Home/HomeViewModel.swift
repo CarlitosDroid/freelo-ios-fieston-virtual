@@ -22,15 +22,15 @@ class HomeViewModel: ObservableObject {
             description: "CHATEAR AHORA",
             subDescription: "ARMA LA CONVERSA"),
         Category(
-            name: CATEGORY_NAME_PLAY_LIST,
-            image: "home_playlist",
-            description: "Participa de la fiesta",
-            subDescription: "PIDE UNA CANCIÓN"),
-        Category(
             name: CATEGORY_NAME_TRIVIA,
             image: "home_trivia",
             description: "GANA PUNTOS",
-            subDescription: "JUGAR AHORA")
+            subDescription: "JUGAR AHORA"),
+        Category(
+            name: CATEGORY_NAME_PLAY_LIST,
+            image: "home_playlist",
+            description: "Participa de la fiesta",
+            subDescription: "PIDE UNA CANCIÓN")
     ]
     
 }
