@@ -42,25 +42,29 @@ struct HomeView: View {
                 .scaledToFit()
                 .background(Color.red)
             
-            VStack(alignment: .leading, spacing: 0, content: {
+            VStack(spacing: 0, content: {
                 
                 Text(category.name)
                     .foregroundColor(.deep_purple_500)
                     .bold()
                     .font(.system(size:20))
+                    .frame(maxWidth: .infinity,alignment: .leading)
                 
                 Text(category.description)
                     .foregroundColor(.gray)
                     .font(.system(size:14))
+                    .frame(maxWidth: .infinity,alignment: .leading)
                 
                 Text(category.subDescription)
                     .foregroundColor(.deep_purple_500)
                     .bold()
                     .font(.system(size:14))
+                    .frame(maxWidth: .infinity,alignment: .leading)
+                
             })
-            .padding(.leading, 5)
-            .padding(.trailing, 5)
-            .padding(.bottom, 5)
+            .padding(.leading, 10)
+            .padding(.trailing, 10)
+            .padding(.bottom, 10)
             
         }
         .background(Color.white)
