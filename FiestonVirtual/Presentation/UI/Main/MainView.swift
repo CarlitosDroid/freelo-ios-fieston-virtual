@@ -50,7 +50,8 @@ struct MainView: View {
                                     Text("Galeria")
                                 }.tag(1)
                             
-                            PhotosView()
+//                            PhotosView()
+                            Text("FOTO")
                                 .tabItem {
                                     Image(systemName: "plus.app.fill")
                                     Text("Foto")
