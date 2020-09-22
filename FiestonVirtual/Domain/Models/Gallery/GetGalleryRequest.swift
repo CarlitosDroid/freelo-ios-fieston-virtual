@@ -9,5 +9,6 @@
 import Foundation
 
 struct GetGalleryRequest: Encodable {
-    let idPost: Int
+    var idEvent: Int
+    var postStatus: Int
 }

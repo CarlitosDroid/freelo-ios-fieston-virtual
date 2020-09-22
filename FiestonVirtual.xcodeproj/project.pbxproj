@@ -86,6 +86,10 @@
 		2BDAC59B250ACFB500DA6A74 /* UploadFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */; };
 		54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */; };
+		9A15E9B3251974BF00891B55 /* GetGalleryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */; };
+		9A15E9BB251974E800891B55 /* GetGalleryUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */; };
+		9A15E9C02519753800891B55 /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BF2519753800891B55 /* GalleryRepository.swift */; };
+		9A15E9C52519790400891B55 /* GalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9C42519790400891B55 /* GalleryItem.swift */; };
 		9A73CC892508910900D9C310 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73CC882508910900D9C310 /* ViewModelAssembly.swift */; };
 		9A7AAFD12510568B00D20A6D /* SignOutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD02510568B00D20A6D /* SignOutUseCase.swift */; };
 		9A7AAFD32510571F00D20A6D /* SignOutUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD22510571F00D20A6D /* SignOutUseCaseImpl.swift */; };
@@ -239,6 +243,10 @@
 		5E00F9A42143DA0A2E88BEBD /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81DC065DED1DF8D5FC710C7D /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86D1C4045236C783848B4F61 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual_FiestonVirtualUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryUseCase.swift; sourceTree = "<group>"; };
+		9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryUseCaseImpl.swift; sourceTree = "<group>"; };
+		9A15E9BF2519753800891B55 /* GalleryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepository.swift; sourceTree = "<group>"; };
+		9A15E9C42519790400891B55 /* GalleryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItem.swift; sourceTree = "<group>"; };
 		9A73CC882508910900D9C310 /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
 		9A7AAFD02510568B00D20A6D /* SignOutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutUseCase.swift; sourceTree = "<group>"; };
 		9A7AAFD22510571F00D20A6D /* SignOutUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutUseCaseImpl.swift; sourceTree = "<group>"; };
@@ -726,6 +734,7 @@
 				2BC2572D250564FB00B433CC /* EventCodeRepository.swift */,
 				2BC257352505A91B00B433CC /* UsersRepository.swift */,
 				2B4823252506A29600AF312D /* Repository.swift */,
+				9A15E9BF2519753800891B55 /* GalleryRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -733,6 +742,7 @@
 		2BC2572F2505A37400B433CC /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				9A15E9B12519742C00891B55 /* Gallery */,
 				9A7AAFCF2510565900D20A6D /* SignOut */,
 				9A81457B2505F3A2001A012A /* welcome */,
 				2B8B339C250714B4007C3FFC /* VerifySession */,
@@ -781,6 +791,15 @@
 				AC9F56DA6C3EAA9D0D05ECA3 /* Pods-FiestonVirtualTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A15E9B12519742C00891B55 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */,
+				9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */,
+			);
+			path = Gallery;
 			sourceTree = "<group>";
 		};
 		9A7AAFCF2510565900D20A6D /* SignOut */ = {
@@ -852,6 +871,7 @@
 			children = (
 				FB1014E42509B35E002C91ED /* GetGalleryRequest.swift */,
 				FB1014E62509B394002C91ED /* GetGalleryDiteilRequest.swift */,
+				9A15E9C42519790400891B55 /* GalleryItem.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -1232,12 +1252,14 @@
 				FB1014F4250B27A7002C91ED /* GetRemoteLikesRequest.swift in Sources */,
 				FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */,
 				2BC25729250564A100B433CC /* EventCodeRepositoryImpl.swift in Sources */,
+				9A15E9C52519790400891B55 /* GalleryItem.swift in Sources */,
 				2B81FCE3250736C800EC9E10 /* UserResponseMapper.swift in Sources */,
 				2BC25719250561B700B433CC /* CodeRemoteDataSourceImpl.swift in Sources */,
 				FB1014E12509B2E9002C91ED /* GetComentRequest.swift in Sources */,
 				2BDAC593250AC52200DA6A74 /* GalleryApi.swift in Sources */,
 				2BC2571325055D8C00B433CC /* EventCodeApiImpl.swift in Sources */,
 				2B81FCEF25074CE900EC9E10 /* RepositoriesAssembly.swift in Sources */,
+				9A15E9C02519753800891B55 /* GalleryRepository.swift in Sources */,
 				2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */,
 				FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */,
 				2B1D057A25103F4100EA4B56 /* UserProfileView.swift in Sources */,
@@ -1257,6 +1279,7 @@
 				2BC2570A25055A3900B433CC /* CodeVerificationResponse.swift in Sources */,
 				2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */,
 				2B5A53A8251475D80036AB9E /* Coordinator.swift in Sources */,
+				9A15E9B3251974BF00891B55 /* GetGalleryUseCase.swift in Sources */,
 				2B3070EA25089603005198F7 /* Color.swift in Sources */,
 				2B83E7912507F584004B1BF2 /* LoadingIndicator.swift in Sources */,
 				2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */,
@@ -1271,6 +1294,7 @@
 				FB101501250B2B5A002C91ED /* RespuestaTriviaResponse.swift in Sources */,
 				2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */,
 				2B81FCDF250734D500EC9E10 /* UserApi.swift in Sources */,
+				9A15E9BB251974E800891B55 /* GetGalleryUseCaseImpl.swift in Sources */,
 				2B81FCEB2507443F00EC9E10 /* DataSourcesAssembly.swift in Sources */,
 				2B83E79825081540004B1BF2 /* ValidateCodeRequest.swift in Sources */,
 				2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */,
