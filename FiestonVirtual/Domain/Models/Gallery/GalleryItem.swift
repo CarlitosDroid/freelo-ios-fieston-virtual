@@ -8,3 +8,8 @@ struct GalleryItem: Codable,Identifiable{
     var status: Int
     var preview: String
 }
+
+enum GalleryItemType : Int {
+    case photo = 1
+    case video = 2
+}
