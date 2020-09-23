@@ -2,8 +2,10 @@
 import Foundation
 import Combine
 
-protocol GalleryRepository{
+protocol GalleryRepository {
+    
     func getGallery(
         galleryRequest: GetGalleryRequest
     )-> AnyPublisher<[GalleryItem], ErrorResponse>
+    
 }
