@@ -10,10 +10,14 @@ import SwiftUI
 
 struct PhotosView: View {
     
+    var onCategorySelected: (_ categoryIndex: Int) -> Void
+    
     @State var isShowingImagePicker = false
-    @State var imageInBlackBox = UIImage()
+    @State var imageInBlackBox: UIImage?
+    @State var fileURL: URL?
     @State private var eventCode: String = ""
     @State private var isImageSelected = false
+    @State var fileType = ""
     
     let viewmodel = PhotosViewModel()
     
@@ -28,60 +32,64 @@ struct PhotosView: View {
                     VStack {
                         
                         ZStack {
-                            Image(uiImage: self.imageInBlackBox)
+
+                            Image(uiImage: self.imageInBlackBox ?? UIImage())
                                 .resizable()
                                 .scaledToFit()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(height: 300)
                             
-                            Text("Image")
+                            VStack {
+                                Spacer()
+                                Text(self.fileType)
+                                    .foregroundColor(.white)
+                                
+                            }
                             
-                        }
+                        }.frame(height: 280)
                         TextField("Ingrese un título (opcional)", text: self.$eventCode)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                    }
-                    
-                } else {
-                    emptyView()
-                }
-                
-                
-                ZStack {
-                    if(isImageSelected) {
+                        
                         Button(action: {
-                            self.isShowingImagePicker.toggle()
+                            guard let fileURL = fileURL else { return }
+                            print(fileURL)
+                            //self.viewmodel.uploadFile(data: fileURL)
+                            self.onCategorySelected(1)
                         }) {
                             Text("Publicar")
                                 .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
                                 .background(Color.orange_500.cornerRadius(8))
                                 .foregroundColor(Color.white)
                         }
-                    } else {
-                        Button(action: {
-                            self.isShowingImagePicker.toggle()
-                        }) {
-                            Text("Elegir")
-                                .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-                                .background(Color.deep_purple_500.cornerRadius(8))
-                                .foregroundColor(Color.white)
-                        }.sheet(isPresented: $isShowingImagePicker) {
-                            ImagePickerView(
-                                isPresented: self.$isShowingImagePicker,
-                                selectedImage: self.$imageInBlackBox) { isImageSelected, fileURL in
-                                    self.isImageSelected = isImageSelected
-                                    self.viewmodel.uploadFile(data: fileURL)
-                            }
-                        }
                     }
                     
+                } else {
+                    informationView()
+                    Button(action: {
+                        self.isShowingImagePicker.toggle()
+                    }) {
+                        Text("Elegir")
+                            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                            .background(Color.deep_purple_500.cornerRadius(8))
+                            .foregroundColor(Color.white)
+                    }.sheet(isPresented: $isShowingImagePicker) {
+                        ImagePickerView(
+                            isPresented: self.$isShowingImagePicker,
+                            selectedImage: self.$imageInBlackBox,
+                            fileURL: self.$fileURL,
+                            fileType: self.$fileType
+                        ) { isImageSelected, fileURL in
+                            self.isImageSelected = isImageSelected
+                            //                            self.viewmodel.uploadFile(data: fileURL)
+                        }
+                    }
                 }
                 
-            }.padding(.bottom, 50)
+            }.padding(.all, 10)
         }
         
     }
     
-    func emptyView() -> some View {
+    func informationView() -> some View {
         VStack {
             Text("1 - Presiona el botón ELEGIR para publicar una\n foto o video de la galería de tu celular.")
                 .foregroundColor(Color.white)
@@ -96,7 +104,9 @@ struct PhotosView: View {
 struct ImagePickerView: UIViewControllerRepresentable {
     
     @Binding var isPresented: Bool
-    @Binding var selectedImage: UIImage
+    @Binding var selectedImage: UIImage?
+    @Binding var fileURL: URL?
+    @Binding var fileType: String
     
     var onImageFromPickerSelected: (_ isImageSelected: Bool, _ fileURL: URL) -> Void
     
@@ -109,40 +119,9 @@ struct ImagePickerView: UIViewControllerRepresentable {
         return pickerController
     }
     
-    func makeCoordinator() -> ImagePickerView.Coordinator {
-        return Coordinator(parent: self) { isImageSelected, fileURL in
+    func makeCoordinator() -> GalleryCoordinator {
+        return GalleryCoordinator(parent: self) { isImageSelected, fileURL in
             self.onImageFromPickerSelected(isImageSelected, fileURL)
-        }
-    }
-    
-    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-        
-        let parent: ImagePickerView
-        var onFileSelected: (_ isImageSelected: Bool, _ fileUrl: URL) -> Void
-        
-        
-        init(parent: ImagePickerView, onFileSelected: @escaping (_ isImageSelected: Bool, _ fileURL: URL) -> Void) {
-            self.parent = parent
-            self.onFileSelected = onFileSelected
-        }
-        
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            
-            //VIDEO
-            if let mediaUrl = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
-                onFileSelected(true, mediaUrl)
-            }
-            
-            //IMAGE
-            if let selectedImageFromPicker = info[UIImagePickerController.InfoKey.imageURL] as? URL {
-                onFileSelected(true, selectedImageFromPicker)
-                
-                if let selectedImageFromPicker = info[.originalImage] as? UIImage {
-                    self.parent.selectedImage = selectedImageFromPicker
-                }
-            }
-            
-            self.parent.isPresented = false
         }
     }
     
@@ -154,6 +133,8 @@ struct ImagePickerView: UIViewControllerRepresentable {
 
 struct PhotosView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotosView()
+        PhotosView() {_ in
+            
+        }
     }
 }
