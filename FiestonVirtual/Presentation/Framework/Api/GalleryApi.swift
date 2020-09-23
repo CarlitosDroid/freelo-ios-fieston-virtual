@@ -24,6 +24,10 @@ protocol GalleryApi {
         idEvent: Int,
         postTitle: String
     ) -> AnyPublisher<UploadImageResponse, ExternalError>
+    
+    func getGallery(
+        galleryRequest: GetGalleryRequest
+    )-> AnyPublisher<GetGalleryResponse, ExternalError>
 
 }
 

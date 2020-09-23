@@ -68,30 +68,30 @@ class GalleryApiImpl: GalleryApi {
                                      fileName: "\(self.getCurrentTimeStamp()).\(data.pathExtension)",
                                      mimeType: mimeType)
         },
-                         to: "http://fiestonvirtual.com/app/api/publicaciones.php",
-                         method: .post,
-                         interceptor: nil,
-                         requestModifier: nil)
-            .validate()
-            .publishDecodable(type: UploadImageResponse.self)
-            .mapError({ (never : Never) -> ExternalError in
-                ExternalError.UnknowError(description: never.localizedDescription)
-            })
-            .flatMap({ (dataResponse: DataResponse<UploadImageResponse, AFError>)-> AnyPublisher<UploadImageResponse, ExternalError> in
-                Future<UploadImageResponse, ExternalError> { promise in
-                    switch dataResponse.result {
-                        
-                    case .failure(let afError):
-                        promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
-                        break
-                        
-                    case .success(let uploadImageResponse):
-                        promise(.success(uploadImageResponse))
-                        break
-                    }
+        to: "http://fiestonvirtual.com/app/api/publicaciones.php",
+        method: .post,
+        interceptor: nil,
+        requestModifier: nil)
+        .validate()
+        .publishDecodable(type: UploadImageResponse.self)
+        .mapError({ (never : Never) -> ExternalError in
+            ExternalError.UnknowError(description: never.localizedDescription)
+        })
+        .flatMap({ (dataResponse: DataResponse<UploadImageResponse, AFError>)-> AnyPublisher<UploadImageResponse, ExternalError> in
+            Future<UploadImageResponse, ExternalError> { promise in
+                switch dataResponse.result {
+                
+                case .failure(let afError):
+                    promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
+                    break
                     
-                }.eraseToAnyPublisher()
-            }).eraseToAnyPublisher()
+                case .success(let uploadImageResponse):
+                    promise(.success(uploadImageResponse))
+                    break
+                }
+                
+            }.eraseToAnyPublisher()
+        }).eraseToAnyPublisher()
         
     }
     
@@ -106,26 +106,70 @@ class GalleryApiImpl: GalleryApi {
                                      fileName: "\(self.getCurrentTimeStamp()).jpeg",
                                      mimeType: "image/jpeg")
         },
-                         to: "http://fiestonvirtual.com/app/api/publicaciones.php",
-                         method: .post,
-                         interceptor: nil,
-                         requestModifier: nil)
+        to: "http://fiestonvirtual.com/app/api/publicaciones.php",
+        method: .post,
+        interceptor: nil,
+        requestModifier: nil)
+        .validate()
+        .publishDecodable(type: UploadImageResponse.self)
+        .mapError({ (never : Never) -> ExternalError in
+            ExternalError.UnknowError(description: never.localizedDescription)
+        })
+        .flatMap({ (dataResponse: DataResponse<UploadImageResponse, AFError>)-> AnyPublisher<UploadImageResponse, ExternalError> in
+            Future<UploadImageResponse, ExternalError> { promise in
+                switch dataResponse.result {
+                
+                case .failure(let afError):
+                    guard let errorDescription = afError.errorDescription else { return }
+                    promise(.failure(ExternalError.NetworkError(description: "\(errorDescription)")))
+                    break
+                    
+                case .success(let uploadImageResponse):
+                    promise(.success(uploadImageResponse))
+                    break
+                }
+                
+            }.eraseToAnyPublisher()
+        }).eraseToAnyPublisher()
+    }
+    
+    func getGallery(
+        galleryRequest: GetGalleryRequest
+    ) -> AnyPublisher<GetGalleryResponse, ExternalError> {
+        
+        guard let url = getGalleryComponents().url else {
+            let error = ExternalError.NetworkError(description: "Couldn't create URL")
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+        
+        return AF.request(url,
+                          method: .post,
+                          parameters: galleryRequest,
+                          encoder: JSONParameterEncoder.default,
+                          headers: nil,
+                          interceptor: nil,
+                          requestModifier: nil)
             .validate()
-            .publishDecodable(type: UploadImageResponse.self)
+            .publishDecodable(type: GetGalleryResponse.self)
             .mapError({ (never : Never) -> ExternalError in
                 ExternalError.UnknowError(description: never.localizedDescription)
             })
-            .flatMap({ (dataResponse: DataResponse<UploadImageResponse, AFError>)-> AnyPublisher<UploadImageResponse, ExternalError> in
-                Future<UploadImageResponse, ExternalError> { promise in
+            .flatMap({ (dataResponse: DataResponse<GetGalleryResponse, AFError>)-> AnyPublisher<GetGalleryResponse, ExternalError> in
+                Future<GetGalleryResponse, ExternalError> { promise in
                     switch dataResponse.result {
-                        
+                    
                     case .failure(let afError):
-                        guard let errorDescription = afError.errorDescription else { return }
-                        promise(.failure(ExternalError.NetworkError(description: "\(errorDescription)")))
+                        if let data = dataResponse.data {
+                            if let json = try? JSON(data: data) {
+                                let message = json["message"].stringValue
+                                promise(.failure(ExternalError.NetworkError(description: "\(message)")))
+                            }
+                        }
+                        promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
                         break
                         
-                    case .success(let uploadImageResponse):
-                        promise(.success(uploadImageResponse))
+                    case .success(let codeVerificationResponse):
+                        promise(.success(codeVerificationResponse))
                         break
                     }
                     
@@ -139,6 +183,24 @@ class GalleryApiImpl: GalleryApi {
         formatter.timeZone = TimeZone.current
         formatter.dateFormat = "yyyyMMddHHmmss"
         return formatter.string(from: now)
+    }
+    
+}
+
+private extension GalleryApiImpl {
+    
+    struct FiestonVirtualAPI {
+        static let scheme = "http"
+        static let host = "fiestonvirtual.com"
+        static let path = "/app/api"
+    }
+    
+    func getGalleryComponents() -> URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = FiestonVirtualAPI.scheme
+        urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.path = FiestonVirtualAPI.path + "/galeria.php"
+        return urlComponents
     }
     
 }
