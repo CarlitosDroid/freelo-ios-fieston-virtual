@@ -19,5 +19,10 @@ class RepositoriesAssembly: Assembly {
             let coreDataContext = CoreDataContextProvider().viewContext
             return UsersRepositoryImpl(context: coreDataContext, userRemoteDataSource: UserRemoteDataSourceImpl(userApi: resolver.resolve(UserApi.self)!))
         }
+        container.register(GalleryRepository.self) { resolver in
+            GalleryRepositoryImpl(
+                galleryDataSource: resolver.resolve(GalleryDataSource.self)!
+            )
+        }
     }
 }

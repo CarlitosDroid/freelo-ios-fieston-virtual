@@ -44,7 +44,7 @@ struct MainView: View {
                                 Text("Home")
                             }.tag(0)
                             
-                            Text("GALERIA")
+                            GalleryView()
                                 .tabItem {
                                     Image(systemName: "photo.fill.on.rectangle.fill")
                                     Text("Galeria")
