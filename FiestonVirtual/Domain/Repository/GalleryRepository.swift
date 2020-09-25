@@ -6,6 +6,10 @@ protocol GalleryRepository {
     
     func getGallery(
         galleryRequest: GetGalleryRequest
-    )-> AnyPublisher<[GalleryItem], ErrorResponse>
+    ) -> AnyPublisher<[GalleryItem], ErrorResponse>
+    
+    func getGalleryDetail(
+        getGalleryDetailRequest: GetGalleryDetailRequest
+    ) -> AnyPublisher<GetGalleryDetail, ErrorResponse>
     
 }

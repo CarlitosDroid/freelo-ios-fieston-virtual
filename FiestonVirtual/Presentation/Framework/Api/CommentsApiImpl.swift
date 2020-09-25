@@ -10,20 +10,18 @@ import Foundation
 import Combine
 import Alamofire
 
-class ComentApiImpl: ComentApi {
+class CommentsApiImpl: CommentsApi {
     
-    func getComentApi(idUser: Int) -> AnyPublisher<GetCommentResponse, ExternalError> {
-        
-        let getComentRequest = GetComentRequest(idPost: 0)
+    func getComments(getCommentsRequest: GetCommentsRequest) -> AnyPublisher<GetCommentResponse, ExternalError> {
             
-            guard let url = makeGetComentComponents().url else {
+            guard let url = getCommentsComponents().url else {
                 let error = ExternalError.NetworkError(description: "Couldn't create URL")
                 return Fail(error: error).eraseToAnyPublisher()
             }
             
             return AF.request(url,
                               method: .post,
-                              parameters: getComentRequest,
+                              parameters: getCommentsRequest,
                               encoder: JSONParameterEncoder.default,
                               headers: nil,
                               interceptor: nil,
@@ -48,14 +46,13 @@ class ComentApiImpl: ComentApi {
                         
                     }.eraseToAnyPublisher()
                 }).eraseToAnyPublisher()
-            
-        }
+    }
 
     func addComent() -> AnyPublisher<AddComentResponse, ExternalError> {
          
                let addComentRequest = AddComentRequest(idPost: 0, idUserComment: 2, comment: "e")
                    
-                   guard let url = makeGetComentComponents().url else {
+                   guard let url = makeAddComentComponents().url else {
                        let error = ExternalError.NetworkError(description: "Couldn't create URL")
                        return Fail(error: error).eraseToAnyPublisher()
                    }
@@ -92,7 +89,7 @@ class ComentApiImpl: ComentApi {
     
 }
 
-private extension ComentApiImpl {
+private extension CommentsApiImpl {
     struct FiestonVirtualAPI {
         static let scheme = "http"
         static let host = "fiestonvirtual.com"
@@ -100,7 +97,7 @@ private extension ComentApiImpl {
         static let key = "<your key>"
     }
     
-    func makeGetComentComponents() -> URLComponents {
+    func getCommentsComponents() -> URLComponents {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host

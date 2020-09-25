@@ -9,7 +9,9 @@
 import Foundation
 import Combine
 
-protocol ComentRemoteDataSource {
-    func getComent(getComentRequest: GetComentRequest) ->
-    AnyPublisher<Comment,ErrorResponse>
+protocol CommentsRemoteDataSource {
+    
+    func getComments(
+        getCommentsRequest: GetCommentsRequest) -> AnyPublisher<[Comment], ErrorResponse>
+    
 }

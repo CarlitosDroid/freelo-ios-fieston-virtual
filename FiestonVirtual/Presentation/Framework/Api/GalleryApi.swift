@@ -29,5 +29,9 @@ protocol GalleryApi {
         galleryRequest: GetGalleryRequest
     )-> AnyPublisher<GetGalleryResponse, ExternalError>
 
+    func getGalleryDetail(
+        getGalleryDetailRequest: GetGalleryDetailRequest
+    ) -> AnyPublisher<GetGalleryDetailResponse, ExternalError>
+    
 }
 

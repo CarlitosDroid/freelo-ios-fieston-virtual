@@ -1,5 +1,5 @@
 //
-//  GetGalleryDiteilRequest.swift
+//  GetComentRequest.swift
 //  FiestonVirtual
 //
 //  Created by Ronaldo Andre Vargas Huaman on 9/9/20.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-struct GetGalleryDiteilRequest: Encodable {
+struct GetCommentsRequest: Encodable {
     let idPost: Int
-    let idUserSesion: Int
 }

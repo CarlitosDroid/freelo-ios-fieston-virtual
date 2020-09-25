@@ -9,9 +9,9 @@
 import Foundation
 import Combine
 
-protocol ComentApi {
+protocol CommentsApi {
     
-    func getComentApi(idUser: Int) ->
+    func getComments(getCommentsRequest: GetCommentsRequest) ->
     AnyPublisher<GetCommentResponse,ExternalError>
     
     func addComent()->

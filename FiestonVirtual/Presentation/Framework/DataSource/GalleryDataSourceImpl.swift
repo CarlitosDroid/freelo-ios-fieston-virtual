@@ -30,4 +30,23 @@ class GalleryDataSourceImpl : GalleryDataSource{
             }.eraseToAnyPublisher()
     }
     
+    func getGalleryDetail(
+        getGalleryDetailRequest: GetGalleryDetailRequest
+    ) -> AnyPublisher<GetGalleryDetail, ErrorResponse> {
+        return self.galleryApi.getGalleryDetail(getGalleryDetailRequest: getGalleryDetailRequest)
+            .mapError{ (externalError:ExternalError) -> ErrorResponse in
+                switch externalError {
+                case .NetworkError(let description):
+                    return ErrorResponse(title: "Error en la red", message: description)
+                case .Parsing(let description):
+                    return ErrorResponse(title: "Error al parsear", message: description)
+                case .UnknowError(let description):
+                    return ErrorResponse(title: "Error Desconocido", message: description)
+                }
+            }
+            .map{ (getGalleryDetailResponse : GetGalleryDetailResponse) -> GetGalleryDetail in
+                return  getGalleryDetailResponse.data.toDomain()
+            }.eraseToAnyPublisher()
+    }
+    
 }

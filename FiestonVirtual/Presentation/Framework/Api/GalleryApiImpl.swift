@@ -177,6 +177,50 @@ class GalleryApiImpl: GalleryApi {
             }).eraseToAnyPublisher()
     }
     
+    func getGalleryDetail(
+        getGalleryDetailRequest: GetGalleryDetailRequest
+    ) -> AnyPublisher<GetGalleryDetailResponse, ExternalError> {
+        
+        guard let url = getGalleryDetailComponents().url else {
+            let error = ExternalError.NetworkError(description: "Couldn't create URL")
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+        
+        return AF.request(url,
+                          method: .post,
+                          parameters: getGalleryDetailRequest,
+                          encoder: JSONParameterEncoder.default,
+                          headers: nil,
+                          interceptor: nil,
+                          requestModifier: nil)
+            .validate()
+            .publishDecodable(type: GetGalleryDetailResponse.self)
+            .mapError({ (never : Never) -> ExternalError in
+                ExternalError.UnknowError(description: never.localizedDescription)
+            })
+            .flatMap({ (dataResponse: DataResponse<GetGalleryDetailResponse, AFError>)-> AnyPublisher<GetGalleryDetailResponse, ExternalError> in
+                Future<GetGalleryDetailResponse, ExternalError> { promise in
+                    switch dataResponse.result {
+                    
+                    case .failure(let afError):
+                        if let data = dataResponse.data {
+                            if let json = try? JSON(data: data) {
+                                let message = json["message"].stringValue
+                                promise(.failure(ExternalError.NetworkError(description: "\(message)")))
+                            }
+                        }
+                        promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
+                        break
+                        
+                    case .success(let codeVerificationResponse):
+                        promise(.success(codeVerificationResponse))
+                        break
+                    }
+                    
+                }.eraseToAnyPublisher()
+            }).eraseToAnyPublisher()
+    }
+    
     private func getCurrentTimeStamp() -> String {
         let now = Date()
         let formatter = DateFormatter()
@@ -200,6 +244,14 @@ private extension GalleryApiImpl {
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
         urlComponents.path = FiestonVirtualAPI.path + "/galeria.php"
+        return urlComponents
+    }
+    
+    func getGalleryDetailComponents() -> URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = FiestonVirtualAPI.scheme
+        urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.path = FiestonVirtualAPI.path + "/detalle_publicacion.php"
         return urlComponents
     }
     
