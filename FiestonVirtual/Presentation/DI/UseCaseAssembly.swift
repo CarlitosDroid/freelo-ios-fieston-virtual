@@ -30,5 +30,11 @@ class UseCasesAssembly: Assembly {
                 usersRepository: resolver.resolve(UsersRepository.self)!
             )
         }
+        container.register(GetGalleryUseCase.self) { resolver in
+            GetGalleryUseCaseImpl(
+                galleryRepository: resolver.resolve( GalleryRepository.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
     }
 }

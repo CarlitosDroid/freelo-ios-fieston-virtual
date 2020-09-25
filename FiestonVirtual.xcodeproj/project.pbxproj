@@ -87,7 +87,18 @@
 		2BDAC59B250ACFB500DA6A74 /* UploadFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */; };
 		54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */; };
+		9A15E9B3251974BF00891B55 /* GetGalleryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */; };
+		9A15E9BB251974E800891B55 /* GetGalleryUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */; };
+		9A15E9C02519753800891B55 /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BF2519753800891B55 /* GalleryRepository.swift */; };
+		9A15E9C52519790400891B55 /* GalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9C42519790400891B55 /* GalleryItem.swift */; };
+		9A15E9CA2519B64C00891B55 /* GalleryRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9C92519B64C00891B55 /* GalleryRepositoryImpl.swift */; };
+		9A15E9CF2519B69000891B55 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9CE2519B69000891B55 /* GalleryDataSource.swift */; };
+		9A15E9D42519B88600891B55 /* GalleryDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9D32519B88600891B55 /* GalleryDataSourceImpl.swift */; };
+		9A15E9D92519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9D82519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift */; };
 		9A73CC892508910900D9C310 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73CC882508910900D9C310 /* ViewModelAssembly.swift */; };
+		9A7815D4251AC98B006D0BD9 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7815D3251AC98B006D0BD9 /* GalleryViewModel.swift */; };
+		9A7815DC251AC9A9006D0BD9 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7815DB251AC9A9006D0BD9 /* GalleryView.swift */; };
+		9A7815E1251AD41B006D0BD9 /* GalleryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7815E0251AD41B006D0BD9 /* GalleryItemView.swift */; };
 		9A7AAFD12510568B00D20A6D /* SignOutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD02510568B00D20A6D /* SignOutUseCase.swift */; };
 		9A7AAFD32510571F00D20A6D /* SignOutUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD22510571F00D20A6D /* SignOutUseCaseImpl.swift */; };
 		9A7AAFD525105F6C00D20A6D /* SignOutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AAFD425105F6C00D20A6D /* SignOutRequest.swift */; };
@@ -241,7 +252,18 @@
 		5E00F9A42143DA0A2E88BEBD /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81DC065DED1DF8D5FC710C7D /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86D1C4045236C783848B4F61 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual_FiestonVirtualUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryUseCase.swift; sourceTree = "<group>"; };
+		9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryUseCaseImpl.swift; sourceTree = "<group>"; };
+		9A15E9BF2519753800891B55 /* GalleryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepository.swift; sourceTree = "<group>"; };
+		9A15E9C42519790400891B55 /* GalleryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItem.swift; sourceTree = "<group>"; };
+		9A15E9C92519B64C00891B55 /* GalleryRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepositoryImpl.swift; sourceTree = "<group>"; };
+		9A15E9CE2519B69000891B55 /* GalleryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
+		9A15E9D32519B88600891B55 /* GalleryDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSourceImpl.swift; sourceTree = "<group>"; };
+		9A15E9D82519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildGetGalleryPostsResponseMapper.swift; sourceTree = "<group>"; };
 		9A73CC882508910900D9C310 /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
+		9A7815D3251AC98B006D0BD9 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		9A7815DB251AC9A9006D0BD9 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		9A7815E0251AD41B006D0BD9 /* GalleryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItemView.swift; sourceTree = "<group>"; };
 		9A7AAFD02510568B00D20A6D /* SignOutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutUseCase.swift; sourceTree = "<group>"; };
 		9A7AAFD22510571F00D20A6D /* SignOutUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutUseCaseImpl.swift; sourceTree = "<group>"; };
 		9A7AAFD425105F6C00D20A6D /* SignOutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutRequest.swift; sourceTree = "<group>"; };
@@ -383,6 +405,7 @@
 		2B81FCE625073D5E00EC9E10 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9A7815D2251AC951006D0BD9 /* Gallery */,
 				2B5A53A6251475BB0036AB9E /* Camera */,
 				2B1D05702510341A00EA4B56 /* Home */,
 				2B3747F8250C55CD00BE13B4 /* Video */,
@@ -649,6 +672,7 @@
 				2BC2573F2505FF7500B433CC /* UserLocalDataSourceImpl.swift */,
 				2B81FCDC2507349300EC9E10 /* UserRemoteDataSourceImpl.swift */,
 				FBBA41FE251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift */,
+				9A15E9D32519B88600891B55 /* GalleryDataSourceImpl.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -661,6 +685,7 @@
 				2B81FCDA2507342400EC9E10 /* UserRemoteDataSource.swift */,
 				FBBA41FC25105F3F0016ACC6 /* RankingRemoteDataSource.swift */,
 				FBBA420425106FB90016ACC6 /* ComentRemoteDataSource.swift */,
+				9A15E9CE2519B69000891B55 /* GalleryDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -709,6 +734,7 @@
 				2B81FCE2250736C800EC9E10 /* UserResponseMapper.swift */,
 				FBBA4200251068270016ACC6 /* RankingResponseMapper.swift */,
 				FBBA4206251070820016ACC6 /* ComentResponseMapper.swift */,
+				9A15E9D82519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -719,6 +745,7 @@
 				2BC25728250564A100B433CC /* EventCodeRepositoryImpl.swift */,
 				2BC2573D2505AEF100B433CC /* UsersRepositoryImpl.swift */,
 				2B4823272506A32400AF312D /* CoreDataRepository.swift */,
+				9A15E9C92519B64C00891B55 /* GalleryRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -729,6 +756,7 @@
 				2BC2572D250564FB00B433CC /* EventCodeRepository.swift */,
 				2BC257352505A91B00B433CC /* UsersRepository.swift */,
 				2B4823252506A29600AF312D /* Repository.swift */,
+				9A15E9BF2519753800891B55 /* GalleryRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -736,6 +764,7 @@
 		2BC2572F2505A37400B433CC /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				9A15E9B12519742C00891B55 /* Gallery */,
 				9A7AAFCF2510565900D20A6D /* SignOut */,
 				9A81457B2505F3A2001A012A /* welcome */,
 				2B8B339C250714B4007C3FFC /* VerifySession */,
@@ -784,6 +813,25 @@
 				AC9F56DA6C3EAA9D0D05ECA3 /* Pods-FiestonVirtualTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A15E9B12519742C00891B55 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */,
+				9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		9A7815D2251AC951006D0BD9 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				9A7815D3251AC98B006D0BD9 /* GalleryViewModel.swift */,
+				9A7815DB251AC9A9006D0BD9 /* GalleryView.swift */,
+				9A7815E0251AD41B006D0BD9 /* GalleryItemView.swift */,
+			);
+			path = Gallery;
 			sourceTree = "<group>";
 		};
 		9A7AAFCF2510565900D20A6D /* SignOut */ = {
@@ -855,6 +903,7 @@
 			children = (
 				FB1014E42509B35E002C91ED /* GetGalleryRequest.swift */,
 				FB1014E62509B394002C91ED /* GetGalleryDiteilRequest.swift */,
+				9A15E9C42519790400891B55 /* GalleryItem.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -1177,6 +1226,7 @@
 			files = (
 				FBBA4207251070820016ACC6 /* ComentResponseMapper.swift in Sources */,
 				2B48231F25068B4400AF312D /* User.swift in Sources */,
+				9A15E9CF2519B69000891B55 /* GalleryDataSource.swift in Sources */,
 				2B81FCF12507553100EC9E10 /* UseCaseAssembly.swift in Sources */,
 				2B0981E82509274100C78FFF /* Log.swift in Sources */,
 				2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */,
@@ -1193,10 +1243,12 @@
 				2BB6E7EC250AE25A0074B6DB /* Data.swift in Sources */,
 				2B5A53B0251476050036AB9E /* CaptureImageView.swift in Sources */,
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
+				9A7815D4251AC98B006D0BD9 /* GalleryViewModel.swift in Sources */,
 				2B83E79A25081594004B1BF2 /* GetRemoteUserRequest.swift in Sources */,
 				2BC2571C250561D800B433CC /* EventCodeRemoteDataSource.swift in Sources */,
 				2BC257312505A38C00B433CC /* LoginUseCase.swift in Sources */,
 				9A8145842505F90C001A012A /* WelcomeView.swift in Sources */,
+				9A15E9D42519B88600891B55 /* GalleryDataSourceImpl.swift in Sources */,
 				2BC257342505A3B500B433CC /* LoginUseCaseImpl.swift in Sources */,
 				2B4823262506A29600AF312D /* Repository.swift in Sources */,
 				FB1014F12509B9C6002C91ED /* AddComentResponse.swift in Sources */,
@@ -1214,6 +1266,7 @@
 				2BC2572E250564FB00B433CC /* EventCodeRepository.swift in Sources */,
 				FB1014E52509B35E002C91ED /* GetGalleryRequest.swift in Sources */,
 				2BC2571625055F7A00B433CC /* Parsing.swift in Sources */,
+				9A7815E1251AD41B006D0BD9 /* GalleryItemView.swift in Sources */,
 				2B1D05722510342B00EA4B56 /* HomeView.swift in Sources */,
 				2BC257202505623000B433CC /* ErrorResponse.swift in Sources */,
 				2B81FCE12507352300EC9E10 /* UserResponse.swift in Sources */,
@@ -1228,19 +1281,23 @@
 				2BB278E52511637C002A234E /* PlayListView.swift in Sources */,
 				2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */,
 				FB1014E32509B321002C91ED /* AddComentRequest.swift in Sources */,
+				9A7815DC251AC9A9006D0BD9 /* GalleryView.swift in Sources */,
 				FB1014FA250B2A08002C91ED /* GetRemotePedirCancionRequest.swift in Sources */,
+				9A15E9D92519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift in Sources */,
 				FB1014F8250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift in Sources */,
 				2B83E7932507F6E4004B1BF2 /* TextFields.swift in Sources */,
 				2BC25726250563FB00B433CC /* EventCodeMapper.swift in Sources */,
 				FB1014F4250B27A7002C91ED /* GetRemoteLikesRequest.swift in Sources */,
 				FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */,
 				2BC25729250564A100B433CC /* EventCodeRepositoryImpl.swift in Sources */,
+				9A15E9C52519790400891B55 /* GalleryItem.swift in Sources */,
 				2B81FCE3250736C800EC9E10 /* UserResponseMapper.swift in Sources */,
 				2BC25719250561B700B433CC /* CodeRemoteDataSourceImpl.swift in Sources */,
 				FB1014E12509B2E9002C91ED /* GetComentRequest.swift in Sources */,
 				2BDAC593250AC52200DA6A74 /* GalleryApi.swift in Sources */,
 				2BC2571325055D8C00B433CC /* EventCodeApiImpl.swift in Sources */,
 				2B81FCEF25074CE900EC9E10 /* RepositoriesAssembly.swift in Sources */,
+				9A15E9C02519753800891B55 /* GalleryRepository.swift in Sources */,
 				2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */,
 				FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */,
 				2B1D057A25103F4100EA4B56 /* UserProfileView.swift in Sources */,
@@ -1251,6 +1308,7 @@
 				2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */,
 				2BC2573A2505AAD200B433CC /* CodeVerificationView.swift in Sources */,
 				2BDAC599250AC66300DA6A74 /* GalleryApiImpl.swift in Sources */,
+				9A15E9CA2519B64C00891B55 /* GalleryRepositoryImpl.swift in Sources */,
 				2BA2AFBA250990E000236FDD /* PhotosView.swift in Sources */,
 				FB10151A250C730E002C91ED /* ComentApiImpl.swift in Sources */,
 				9A8145762505E898001A012A /* WelcomeResponseEntityMapper.swift in Sources */,
@@ -1260,6 +1318,7 @@
 				2BC2570A25055A3900B433CC /* CodeVerificationResponse.swift in Sources */,
 				2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */,
 				2B5A53A8251475D80036AB9E /* Coordinator.swift in Sources */,
+				9A15E9B3251974BF00891B55 /* GetGalleryUseCase.swift in Sources */,
 				2B3070EA25089603005198F7 /* Color.swift in Sources */,
 				2B83E7912507F584004B1BF2 /* LoadingIndicator.swift in Sources */,
 				2B48232225069E2200AF312D /* CoreDataContextProvider.swift in Sources */,
@@ -1274,6 +1333,7 @@
 				FB101501250B2B5A002C91ED /* RespuestaTriviaResponse.swift in Sources */,
 				2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */,
 				2B81FCDF250734D500EC9E10 /* UserApi.swift in Sources */,
+				9A15E9BB251974E800891B55 /* GetGalleryUseCaseImpl.swift in Sources */,
 				2B81FCEB2507443F00EC9E10 /* DataSourcesAssembly.swift in Sources */,
 				2B83E79825081540004B1BF2 /* ValidateCodeRequest.swift in Sources */,
 				2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */,

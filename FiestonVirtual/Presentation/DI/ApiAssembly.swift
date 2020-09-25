@@ -19,6 +19,10 @@ class ApiAssembly: Assembly {
         container.register(EventCodeApi.self) { (resolver: Resolver) in
             EventCodeApiImpl()
         }
+        
+        container.register(GalleryApi.self) {_ in 
+            GalleryApiImpl()
+        }
     }
     
 }

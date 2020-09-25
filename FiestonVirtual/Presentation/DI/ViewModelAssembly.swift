@@ -24,5 +24,11 @@ class ViewModelAssembly: Assembly {
             HomeViewModel()
         }
         
+        container.register(GalleryViewModel.self) { resolver in
+            GalleryViewModel(
+                getGalleryUseCase: resolver.resolve(GetGalleryUseCase.self)!
+            )
+        }
+        
     }
 }
