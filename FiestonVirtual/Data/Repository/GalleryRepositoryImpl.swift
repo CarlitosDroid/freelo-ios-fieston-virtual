@@ -4,7 +4,7 @@ import Combine
 
 class GalleryRepositoryImpl : GalleryRepository{
     
-    let galleryDataSource :GalleryDataSource
+    let galleryDataSource : GalleryDataSource
     
     init(galleryDataSource :GalleryDataSource){
         self.galleryDataSource = galleryDataSource
@@ -16,5 +16,10 @@ class GalleryRepositoryImpl : GalleryRepository{
         return self.galleryDataSource.getGallery(galleryRequest: galleryRequest)
     }
     
+    func getGalleryDetail(
+        getGalleryDetailRequest: GetGalleryDetailRequest
+    ) -> AnyPublisher<GetGalleryDetail, ErrorResponse> {
+        return self.galleryDataSource.getGalleryDetail(getGalleryDetailRequest: getGalleryDetailRequest)
+    }
     
 }
