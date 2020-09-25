@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct GetComentRequest: Encodable {
+struct GetCommentsRequest: Encodable {
     let idPost: Int
 }
