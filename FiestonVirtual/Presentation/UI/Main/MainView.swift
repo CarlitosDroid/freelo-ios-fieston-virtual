@@ -31,11 +31,11 @@ struct MainView: View {
                     VStack(spacing:0) {
                         
                         TabView(selection: $selectedTab) {
-                            HomeView { (index: Int) in
-                                if(index == 8) {
+                            HomeView { (categoryIndex: Int) in
+                                if(categoryIndex == 8) {
                                     self.showPlayListView = true
                                 } else {
-                                    self.selectedTab = index
+                                    self.selectedTab = categoryIndex
                                 }
                                 
                             }
@@ -60,7 +60,7 @@ struct MainView: View {
                                 Text("Galeria")
                             }.tag(1)
                             
-                            PhotosView()
+                            PhotosView(selectedTab: $selectedTab)
                                 .tabItem {
                                     Image(systemName: "plus.app.fill")
                                     Text("Foto")
@@ -113,7 +113,6 @@ struct MainView: View {
                     },
                     
                     trailing: Button(action: {
-                        
                         self.showAlert.toggle()
                     }){
                         Image(systemName: "arrow.right.square")

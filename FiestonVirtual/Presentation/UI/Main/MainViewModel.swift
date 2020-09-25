@@ -56,12 +56,12 @@ class MainViewModel: ObservableObject {
             .subscribe(on: DispatchQueue.global())
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { (completion: Subscribers.Completion<ExternalError>) in
+                self.isLoading = false
                 switch completion {
                 case .finished:
-                    self.isLoading = false
+                    print("finished camera photo")
                     break
                 case .failure(let errorResponse):
-                    self.isLoading = false
                     self.uploadPhotoHasFinished = true
                     self.uploadPhotoMessage = errorResponse.localizedDescription
                     break
