@@ -95,6 +95,10 @@
 		9A15E9CF2519B69000891B55 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9CE2519B69000891B55 /* GalleryDataSource.swift */; };
 		9A15E9D42519B88600891B55 /* GalleryDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9D32519B88600891B55 /* GalleryDataSourceImpl.swift */; };
 		9A15E9D92519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9D82519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift */; };
+		9A6564EF251DA176000C6031 /* GetPostDetailUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6564EE251DA175000C6031 /* GetPostDetailUseCaseImpl.swift */; };
+		9A6564F4251DA180000C6031 /* GetPostDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6564F3251DA180000C6031 /* GetPostDetailUseCase.swift */; };
+		9A6564F9251DA5A6000C6031 /* GetGalleryDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6564F8251DA5A6000C6031 /* GetGalleryDetailRequest.swift */; };
+		9A656504251DBC60000C6031 /* ChildGetGalleryDetailDataResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A656503251DBC60000C6031 /* ChildGetGalleryDetailDataResponseMapper.swift */; };
 		9A73CC892508910900D9C310 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A73CC882508910900D9C310 /* ViewModelAssembly.swift */; };
 		9A7815D4251AC98B006D0BD9 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7815D3251AC98B006D0BD9 /* GalleryViewModel.swift */; };
 		9A7815DC251AC9A9006D0BD9 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7815DB251AC9A9006D0BD9 /* GalleryView.swift */; };
@@ -123,9 +127,9 @@
 		FB1014E12509B2E9002C91ED /* GetComentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014E02509B2E9002C91ED /* GetComentRequest.swift */; };
 		FB1014E32509B321002C91ED /* AddComentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014E22509B321002C91ED /* AddComentRequest.swift */; };
 		FB1014E52509B35E002C91ED /* GetGalleryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014E42509B35E002C91ED /* GetGalleryRequest.swift */; };
-		FB1014E72509B394002C91ED /* GetGalleryDiteilRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014E62509B394002C91ED /* GetGalleryDiteilRequest.swift */; };
+		FB1014E72509B394002C91ED /* GetGalleryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014E62509B394002C91ED /* GetGalleryDetail.swift */; };
 		FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EA2509B8FC002C91ED /* GetGalleryResponse.swift */; };
-		FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */; };
+		FB1014ED2509B974002C91ED /* GetGalleryDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EC2509B974002C91ED /* GetGalleryDetailResponse.swift */; };
 		FB1014EF2509B9A4002C91ED /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EE2509B9A4002C91ED /* GetCommentResponse.swift */; };
 		FB1014F12509B9C6002C91ED /* AddComentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F02509B9C6002C91ED /* AddComentResponse.swift */; };
 		FB1014F4250B27A7002C91ED /* GetRemoteLikesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F3250B27A7002C91ED /* GetRemoteLikesRequest.swift */; };
@@ -260,6 +264,10 @@
 		9A15E9CE2519B69000891B55 /* GalleryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
 		9A15E9D32519B88600891B55 /* GalleryDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSourceImpl.swift; sourceTree = "<group>"; };
 		9A15E9D82519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildGetGalleryPostsResponseMapper.swift; sourceTree = "<group>"; };
+		9A6564EE251DA175000C6031 /* GetPostDetailUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostDetailUseCaseImpl.swift; sourceTree = "<group>"; };
+		9A6564F3251DA180000C6031 /* GetPostDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostDetailUseCase.swift; sourceTree = "<group>"; };
+		9A6564F8251DA5A6000C6031 /* GetGalleryDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDetailRequest.swift; sourceTree = "<group>"; };
+		9A656503251DBC60000C6031 /* ChildGetGalleryDetailDataResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildGetGalleryDetailDataResponseMapper.swift; sourceTree = "<group>"; };
 		9A73CC882508910900D9C310 /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
 		9A7815D3251AC98B006D0BD9 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		9A7815DB251AC9A9006D0BD9 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
@@ -286,9 +294,9 @@
 		FB1014E02509B2E9002C91ED /* GetComentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComentRequest.swift; sourceTree = "<group>"; };
 		FB1014E22509B321002C91ED /* AddComentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComentRequest.swift; sourceTree = "<group>"; };
 		FB1014E42509B35E002C91ED /* GetGalleryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryRequest.swift; sourceTree = "<group>"; };
-		FB1014E62509B394002C91ED /* GetGalleryDiteilRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDiteilRequest.swift; sourceTree = "<group>"; };
+		FB1014E62509B394002C91ED /* GetGalleryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDetail.swift; sourceTree = "<group>"; };
 		FB1014EA2509B8FC002C91ED /* GetGalleryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryResponse.swift; sourceTree = "<group>"; };
-		FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDitailResponse.swift; sourceTree = "<group>"; };
+		FB1014EC2509B974002C91ED /* GetGalleryDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDetailResponse.swift; sourceTree = "<group>"; };
 		FB1014EE2509B9A4002C91ED /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
 		FB1014F02509B9C6002C91ED /* AddComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComentResponse.swift; sourceTree = "<group>"; };
 		FB1014F3250B27A7002C91ED /* GetRemoteLikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteLikesRequest.swift; sourceTree = "<group>"; };
@@ -735,6 +743,7 @@
 				FBBA4200251068270016ACC6 /* RankingResponseMapper.swift */,
 				FBBA4206251070820016ACC6 /* ComentResponseMapper.swift */,
 				9A15E9D82519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift */,
+				9A656503251DBC60000C6031 /* ChildGetGalleryDetailDataResponseMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -820,6 +829,8 @@
 			children = (
 				9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */,
 				9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */,
+				9A6564EE251DA175000C6031 /* GetPostDetailUseCaseImpl.swift */,
+				9A6564F3251DA180000C6031 /* GetPostDetailUseCase.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -902,8 +913,9 @@
 			isa = PBXGroup;
 			children = (
 				FB1014E42509B35E002C91ED /* GetGalleryRequest.swift */,
-				FB1014E62509B394002C91ED /* GetGalleryDiteilRequest.swift */,
+				FB1014E62509B394002C91ED /* GetGalleryDetail.swift */,
 				9A15E9C42519790400891B55 /* GalleryItem.swift */,
+				9A6564F8251DA5A6000C6031 /* GetGalleryDetailRequest.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -921,7 +933,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1014EA2509B8FC002C91ED /* GetGalleryResponse.swift */,
-				FB1014EC2509B974002C91ED /* GetGalleryDitailResponse.swift */,
+				FB1014EC2509B974002C91ED /* GetGalleryDetailResponse.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -1234,6 +1246,7 @@
 				2B81FCF52507567800EC9E10 /* DependecyProvider.swift in Sources */,
 				2B48232425069FA100AF312D /* TextingData.swift in Sources */,
 				2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */,
+				9A656504251DBC60000C6031 /* ChildGetGalleryDetailDataResponseMapper.swift in Sources */,
 				FBBA420325106E400016ACC6 /* Comment.swift in Sources */,
 				FB1014FF250B2B24002C91ED /* LikesResponse.swift in Sources */,
 				FBBA41FF251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift in Sources */,
@@ -1275,10 +1288,12 @@
 				2B81FCED2507454D00EC9E10 /* ApiAssembly.swift in Sources */,
 				2BB6E7EA250AD3990074B6DB /* PhotosViewModel.swift in Sources */,
 				9A8145672505D1DA001A012A /* WelcomeResponseEntity.swift in Sources */,
+				9A6564EF251DA176000C6031 /* GetPostDetailUseCaseImpl.swift in Sources */,
 				9A7AAFD7251062A100D20A6D /* SignOutResponse.swift in Sources */,
 				2BC2571125055D0500B433CC /* ExternalError.swift in Sources */,
 				9A81457F2505F420001A012A /* GetWelcomeUseCaseImpl.swift in Sources */,
 				2BB278E52511637C002A234E /* PlayListView.swift in Sources */,
+				9A6564F9251DA5A6000C6031 /* GetGalleryDetailRequest.swift in Sources */,
 				2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */,
 				FB1014E32509B321002C91ED /* AddComentRequest.swift in Sources */,
 				9A7815DC251AC9A9006D0BD9 /* GalleryView.swift in Sources */,
@@ -1299,7 +1314,7 @@
 				2B81FCEF25074CE900EC9E10 /* RepositoriesAssembly.swift in Sources */,
 				9A15E9C02519753800891B55 /* GalleryRepository.swift in Sources */,
 				2BC256D4250546D100B433CC /* FiestonVirtual.xcdatamodeld in Sources */,
-				FB1014ED2509B974002C91ED /* GetGalleryDitailResponse.swift in Sources */,
+				FB1014ED2509B974002C91ED /* GetGalleryDetailResponse.swift in Sources */,
 				2B1D057A25103F4100EA4B56 /* UserProfileView.swift in Sources */,
 				2BDAC595250AC55700DA6A74 /* Photo.swift in Sources */,
 				9A81457D2505F3B8001A012A /* GetWelcomeUseCase.swift in Sources */,
@@ -1312,7 +1327,7 @@
 				2BA2AFBA250990E000236FDD /* PhotosView.swift in Sources */,
 				FB10151A250C730E002C91ED /* ComentApiImpl.swift in Sources */,
 				9A8145762505E898001A012A /* WelcomeResponseEntityMapper.swift in Sources */,
-				FB1014E72509B394002C91ED /* GetGalleryDiteilRequest.swift in Sources */,
+				FB1014E72509B394002C91ED /* GetGalleryDetail.swift in Sources */,
 				FBBA41F9250F3A320016ACC6 /* LikesApiImpl.swift in Sources */,
 				2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */,
 				2BC2570A25055A3900B433CC /* CodeVerificationResponse.swift in Sources */,
@@ -1342,6 +1357,7 @@
 				2B81FCDB2507342400EC9E10 /* UserRemoteDataSource.swift in Sources */,
 				2BD9D68E251B08E300188114 /* GalleryCoordinator.swift in Sources */,
 				FBBA4201251068270016ACC6 /* RankingResponseMapper.swift in Sources */,
+				9A6564F4251DA180000C6031 /* GetPostDetailUseCase.swift in Sources */,
 				FB1014EF2509B9A4002C91ED /* GetCommentResponse.swift in Sources */,
 				2B83E78F2507F519004B1BF2 /* LoadingView.swift in Sources */,
 				FB1014D725086F1C002C91ED /* RankingApiImpl.swift in Sources */,
