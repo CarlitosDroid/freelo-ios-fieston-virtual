@@ -10,82 +10,95 @@ import SwiftUI
 
 struct PhotosView: View {
     
-    var onCategorySelected: (_ categoryIndex: Int) -> Void
-    
+    @Binding var selectedTab: Int
+
     @State var isShowingImagePicker = false
     @State var imageInBlackBox: UIImage?
     @State var fileURL: URL?
-    @State private var eventCode: String = ""
+    @State private var postTitle: String = ""
     @State private var isImageSelected = false
     @State var fileType = ""
     
-    let viewmodel = PhotosViewModel()
+    @ObservedObject var viewModel = PhotosViewModel()
     
     var body: some View {
-        ZStack {
+        LoadingView(isShowing: self.$viewModel.isLoading) {
             
-            Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
-            
-            VStack {
+            ZStack {
                 
-                if(isImageSelected) {
-                    VStack {
-                        
-                        ZStack {
-
-                            Image(uiImage: self.imageInBlackBox ?? UIImage())
-                                .resizable()
-                                .scaledToFit()
-                                .aspectRatio(contentMode: .fit)
+                Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    
+                    if(isImageSelected) {
+                        VStack {
                             
-                            VStack {
-                                Spacer()
-                                Text(self.fileType)
-                                    .foregroundColor(.white)
+                            ZStack {
                                 
-                            }
+                                Image(uiImage: self.imageInBlackBox ?? UIImage())
+                                    .resizable()
+                                    .scaledToFit()
+                                    .aspectRatio(contentMode: .fit)
+                                
+                                VStack {
+                                    Spacer()
+                                    Text(self.fileType)
+                                        .foregroundColor(.white)
+                                    
+                                }
+                                
+                            }.frame(height: 280)
+                            TextField("Ingrese un título (opcional)", text: self.$postTitle)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
                             
-                        }.frame(height: 280)
-                        TextField("Ingrese un título (opcional)", text: self.$eventCode)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            Button(action: {
+                                guard let fileURL = fileURL else { return }
+                                print(fileURL)
+                                self.viewModel.uploadFile(data: fileURL, postTitle: postTitle)
+                                
+                            }) {
+                                Text("Publicar")
+                                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                                    .background(Color.orange_500.cornerRadius(8))
+                                    .foregroundColor(Color.white)
+                            }
+                        }
                         
+                    } else {
+                        informationView()
                         Button(action: {
-                            guard let fileURL = fileURL else { return }
-                            print(fileURL)
-                            //self.viewmodel.uploadFile(data: fileURL)
-                            self.onCategorySelected(1)
+                            self.isShowingImagePicker.toggle()
                         }) {
-                            Text("Publicar")
+                            Text("Elegir")
                                 .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-                                .background(Color.orange_500.cornerRadius(8))
+                                .background(Color.deep_purple_500.cornerRadius(8))
                                 .foregroundColor(Color.white)
+                        }.sheet(isPresented: $isShowingImagePicker) {
+                            ImagePickerView(
+                                isPresented: self.$isShowingImagePicker,
+                                selectedImage: self.$imageInBlackBox,
+                                fileURL: self.$fileURL,
+                                fileType: self.$fileType
+                            ) { isImageSelected, fileURL in
+                                self.isImageSelected = isImageSelected
+                            }
                         }
                     }
                     
-                } else {
-                    informationView()
-                    Button(action: {
-                        self.isShowingImagePicker.toggle()
-                    }) {
-                        Text("Elegir")
-                            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-                            .background(Color.deep_purple_500.cornerRadius(8))
-                            .foregroundColor(Color.white)
-                    }.sheet(isPresented: $isShowingImagePicker) {
-                        ImagePickerView(
-                            isPresented: self.$isShowingImagePicker,
-                            selectedImage: self.$imageInBlackBox,
-                            fileURL: self.$fileURL,
-                            fileType: self.$fileType
-                        ) { isImageSelected, fileURL in
-                            self.isImageSelected = isImageSelected
-                            //                            self.viewmodel.uploadFile(data: fileURL)
-                        }
-                    }
-                }
+                }.padding(.all, 10)
                 
-            }.padding(.all, 10)
-        }
+            }
+        }.onAppear(perform: {
+            isImageSelected = false
+        })
+        .alert(isPresented: self.$viewModel.uploadPhotoHasFinished, content: {
+            Alert(
+                title: Text(self.viewModel.uploadPhotoMessage),
+                dismissButton: .default(Text("Aceptar"), action: {
+                    selectedTab = 1
+                })
+            )
+        })
         
     }
     
@@ -133,8 +146,31 @@ struct ImagePickerView: UIViewControllerRepresentable {
 
 struct PhotosView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotosView() {_ in
-            
-        }
+        PhotosView(selectedTab: .constant(1))
     }
 }
+
+//struct ActivityIndicator: UIViewRepresentable {
+//    @Binding var animate: Bool
+//
+//    func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
+//        return UIActivityIndicatorView(style: .large)
+//    }
+//
+//    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
+//        if animate {
+//            uiView.startAnimating()
+//        } else {
+//            uiView.stopAnimating()
+//        }
+//    }
+//}
+//
+//VStack{
+//    ActivityIndicator(animate: .constant(true))
+//
+//}
+//.frame(width: 200, height: 200)
+//.background(Color.white)
+//.cornerRadius(10)
+//.shadow(radius: 3)

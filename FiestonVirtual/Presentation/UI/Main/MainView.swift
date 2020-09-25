@@ -50,9 +50,7 @@ struct MainView: View {
                                     Text("Galeria")
                                 }.tag(1)
                             
-                            PhotosView() { categoryIndex in
-                                self.selectedTab = categoryIndex
-                            }
+                            PhotosView(selectedTab: $selectedTab)
                                 .tabItem {
                                     Image(systemName: "plus.app.fill")
                                     Text("Foto")
@@ -105,7 +103,6 @@ struct MainView: View {
                     },
                     
                     trailing: Button(action: {
-                        
                         self.showAlert.toggle()
                     }){
                         Image(systemName: "arrow.right.square")

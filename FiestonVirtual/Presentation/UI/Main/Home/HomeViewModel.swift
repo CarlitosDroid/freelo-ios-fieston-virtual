@@ -29,7 +29,7 @@ class HomeViewModel: ObservableObject {
         Category(
             name: CATEGORY_NAME_PLAY_LIST,
             image: "home_playlist",
-            description: "Participa de la fiesta",
+            description: "PARTICIPA DE LA FIESTA",
             subDescription: "PIDE UNA CANCIÓN")
     ]
     
