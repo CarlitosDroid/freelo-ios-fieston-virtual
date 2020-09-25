@@ -8,6 +8,8 @@ struct GalleryView: View {
     
     var onGalleryItemSelected: (_ galleryItem: GalleryItem) -> Void
     
+    @State private var scrollViewID = UUID()
+    
     var body: some View {
         
         ZStack{
@@ -15,7 +17,7 @@ struct GalleryView: View {
             Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
             
             LoadingView(isShowing: self.$viewModel.isLoading){
-                ScrollView(.vertical, showsIndicators: true) {
+                ScrollView {
                     
                     Grid(viewModel.galleryItems) { galleryItem in
                         GalleryItemView(galleryItem: galleryItem){
@@ -26,12 +28,13 @@ struct GalleryView: View {
                         ModularGridStyle(columns: 3, rows: .fixed(130))
                     )
                     
-                }
+                }.id(self.scrollViewID)
                 .padding(8)
             }
             
         }
         .onAppear {
+            scrollViewID = UUID()
             viewModel.getGallery()
         }
         
