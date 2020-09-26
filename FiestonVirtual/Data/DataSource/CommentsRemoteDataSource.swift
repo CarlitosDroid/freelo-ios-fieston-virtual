@@ -14,4 +14,8 @@ protocol CommentsRemoteDataSource {
     func getComments(
         getCommentsRequest: GetCommentsRequest) -> AnyPublisher<[Comment], ErrorResponse>
     
+    func addComment(
+        addCommentRequest:AddCommentRequest
+    ) -> AnyPublisher<Comment,ErrorResponse>
+    
 }

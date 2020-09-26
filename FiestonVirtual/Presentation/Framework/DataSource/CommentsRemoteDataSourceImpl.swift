@@ -31,4 +31,26 @@ class CommentsRemoteDataSourceImpl : CommentsRemoteDataSource {
             }.eraseToAnyPublisher()
     }
     
+    func addComment(
+        addCommentRequest : AddCommentRequest
+    ) -> AnyPublisher<Comment, ErrorResponse> {
+        return self.commentsApi.addComment(addCommentRequest: addCommentRequest )
+            .mapError{(externalError:ExternalError) -> ErrorResponse in
+                switch externalError {
+                case .NetworkError(let description):
+                    return ErrorResponse(title: "Error en la red", message: description)
+                case .Parsing(let description):
+                    return ErrorResponse(title: "Error al parsear", message: description)
+                case .UnknowError(let description):
+                    return ErrorResponse(title: "Error Desconocido", message: description)
+                }
+            }
+            .map{
+                (addComentResponse : AddCommentResponse) -> Comment in
+                return  addComentResponse.data.comment.toComment()
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    
 }
