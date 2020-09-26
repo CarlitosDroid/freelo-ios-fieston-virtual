@@ -14,6 +14,7 @@ protocol CommentsApi {
     func getComments(getCommentsRequest: GetCommentsRequest) ->
     AnyPublisher<GetCommentResponse,ExternalError>
     
-    func addComent()->
-    AnyPublisher<AddComentResponse,ExternalError>
+    func addComment(
+        addCommentRequest:AddCommentRequest
+    ) -> AnyPublisher<AddCommentResponse,ExternalError>
 }

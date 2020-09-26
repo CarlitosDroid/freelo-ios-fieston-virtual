@@ -140,7 +140,7 @@
 		FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EA2509B8FC002C91ED /* GetGalleryResponse.swift */; };
 		FB1014ED2509B974002C91ED /* GetGalleryDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EC2509B974002C91ED /* GetGalleryDetailResponse.swift */; };
 		FB1014EF2509B9A4002C91ED /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014EE2509B9A4002C91ED /* GetCommentResponse.swift */; };
-		FB1014F12509B9C6002C91ED /* AddComentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F02509B9C6002C91ED /* AddComentResponse.swift */; };
+		FB1014F12509B9C6002C91ED /* AddCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F02509B9C6002C91ED /* AddCommentResponse.swift */; };
 		FB1014F4250B27A7002C91ED /* GetRemoteLikesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F3250B27A7002C91ED /* GetRemoteLikesRequest.swift */; };
 		FB1014F8250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */; };
 		FB1014FA250B2A08002C91ED /* GetRemotePedirCancionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F9250B2A08002C91ED /* GetRemotePedirCancionRequest.swift */; };
@@ -316,7 +316,7 @@
 		FB1014EA2509B8FC002C91ED /* GetGalleryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryResponse.swift; sourceTree = "<group>"; };
 		FB1014EC2509B974002C91ED /* GetGalleryDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDetailResponse.swift; sourceTree = "<group>"; };
 		FB1014EE2509B9A4002C91ED /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
-		FB1014F02509B9C6002C91ED /* AddComentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComentResponse.swift; sourceTree = "<group>"; };
+		FB1014F02509B9C6002C91ED /* AddCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentResponse.swift; sourceTree = "<group>"; };
 		FB1014F3250B27A7002C91ED /* GetRemoteLikesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteLikesRequest.swift; sourceTree = "<group>"; };
 		FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteRespuestaTriviaRequest.swift; sourceTree = "<group>"; };
 		FB1014F9250B2A08002C91ED /* GetRemotePedirCancionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemotePedirCancionRequest.swift; sourceTree = "<group>"; };
@@ -624,7 +624,7 @@
 				FB1014FC250B2AD6002C91ED /* RespuestaTrivia */,
 				FB1014FB250B2AD3002C91ED /* Likes */,
 				FB1014E92509B872002C91ED /* Gallery */,
-				FB1014E82509B83E002C91ED /* Coment */,
+				FB1014E82509B83E002C91ED /* Comment */,
 				2BC2570825055A0F00B433CC /* Response */,
 			);
 			path = Entities;
@@ -724,7 +724,7 @@
 				FB1014F5250B27E8002C91ED /* RespuestaTrivia */,
 				FB1014F2250B274E002C91ED /* Likes */,
 				FB1014DF2509B232002C91ED /* Gallery */,
-				FB1014DE2509B02D002C91ED /* Coment */,
+				FB1014DE2509B02D002C91ED /* Comment */,
 				FB1014D125086D3B002C91ED /* Ranking */,
 				9A81456A2505D780001A012A /* welcome */,
 				2B48231D25068B3700AF312D /* User */,
@@ -934,14 +934,14 @@
 			path = Ranking;
 			sourceTree = "<group>";
 		};
-		FB1014DE2509B02D002C91ED /* Coment */ = {
+		FB1014DE2509B02D002C91ED /* Comment */ = {
 			isa = PBXGroup;
 			children = (
 				FB1014E02509B2E9002C91ED /* GetCommentsRequest.swift */,
 				FB1014E22509B321002C91ED /* AddCommentRequest.swift */,
 				FBBA420225106E400016ACC6 /* Comment.swift */,
 			);
-			path = Coment;
+			path = Comment;
 			sourceTree = "<group>";
 		};
 		FB1014DF2509B232002C91ED /* Gallery */ = {
@@ -955,13 +955,13 @@
 			path = Gallery;
 			sourceTree = "<group>";
 		};
-		FB1014E82509B83E002C91ED /* Coment */ = {
+		FB1014E82509B83E002C91ED /* Comment */ = {
 			isa = PBXGroup;
 			children = (
 				FB1014EE2509B9A4002C91ED /* GetCommentResponse.swift */,
-				FB1014F02509B9C6002C91ED /* AddComentResponse.swift */,
+				FB1014F02509B9C6002C91ED /* AddCommentResponse.swift */,
 			);
-			path = Coment;
+			path = Comment;
 			sourceTree = "<group>";
 		};
 		FB1014E92509B872002C91ED /* Gallery */ = {
@@ -1300,7 +1300,7 @@
 				9A15E9D42519B88600891B55 /* GalleryDataSourceImpl.swift in Sources */,
 				2BC257342505A3B500B433CC /* LoginUseCaseImpl.swift in Sources */,
 				2B4823262506A29600AF312D /* Repository.swift in Sources */,
-				FB1014F12509B9C6002C91ED /* AddComentResponse.swift in Sources */,
+				FB1014F12509B9C6002C91ED /* AddCommentResponse.swift in Sources */,
 				2B48231C25068AF600AF312D /* UserEntityMapper.swift in Sources */,
 				FBBA41FD25105F3F0016ACC6 /* RankingRemoteDataSource.swift in Sources */,
 				2BC2573C2505AAE000B433CC /* CodeVerificationViewModel.swift in Sources */,
