@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AddComentRequest: Encodable {
+struct AddCommentRequest: Encodable {
     let idPost: Int
     let idUserComment: Int
     let comment: String

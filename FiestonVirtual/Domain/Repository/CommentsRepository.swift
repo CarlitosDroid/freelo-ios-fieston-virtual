@@ -4,8 +4,12 @@ import Combine
 
 protocol CommentsRepository{
     
-     func getRemoteComments(
+    func getRemoteComments(
         getCommentsRequest: GetCommentsRequest
-      ) -> AnyPublisher<[Comment], ErrorResponse>
+    ) -> AnyPublisher<[Comment], ErrorResponse>
+    
+    func addComment(
+        addCommentRequest : AddCommentRequest
+    ) -> AnyPublisher<Comment,ErrorResponse>
     
 }
