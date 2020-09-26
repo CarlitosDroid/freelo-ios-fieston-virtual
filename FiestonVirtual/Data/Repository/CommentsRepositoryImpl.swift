@@ -16,4 +16,12 @@ class CommentsRepositoryImpl : CommentsRepository{
         return self.commentsRemoteDataSource.getComments(getCommentsRequest:getCommentsRequest)
     }
     
+    func addComment(
+        addCommentRequest : AddCommentRequest
+    ) -> AnyPublisher<Comment, ErrorResponse> {
+        return self.commentsRemoteDataSource.addComment(
+            addCommentRequest : addCommentRequest
+        )
+    }
+    
 }
