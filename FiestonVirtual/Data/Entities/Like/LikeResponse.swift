@@ -8,10 +8,9 @@
 
 import Foundation
 
-// MARK: - LikesResponse
-struct LikesResponse: Decodable {
+struct LikeResponse: Decodable {
     let message: String
-    let data: ChildLikesDataResponse
+    let data: ChildLikeDataResponse
     
     enum CodingKeys: String, CodingKey {
         case message = "message"
@@ -19,8 +18,7 @@ struct LikesResponse: Decodable {
     }
 }
 
-// MARK: - ChildLikesDataResponse
-struct ChildLikesDataResponse: Decodable {
+struct ChildLikeDataResponse: Decodable {
     let userLikes: Int
     
     enum CodingKeys: String, CodingKey {

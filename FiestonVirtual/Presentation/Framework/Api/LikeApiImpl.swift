@@ -10,7 +10,7 @@ import Foundation
 import Combine
 import Alamofire
 
-class LikesApiImpl: LikesApi {
+class LikeApiImpl: LikeApi {
     
     private let session: URLSession
     
@@ -18,13 +18,9 @@ class LikesApiImpl: LikesApi {
         self.session = session
     }
     
-    func getLikesData(getRemoteLikesRequest: GetRemoteLikesRequest) -> AnyPublisher<LikesResponse, ExternalError> {
-        
-        let getRemoteLikesRequest =
-        GetRemoteLikesRequest(idUserSesion: 0, idPost: 0)
-        
-        
-        guard let url = makeLikesComponents().url
+    func makeLike(makeLikeRequest: MakeLikeRequest) -> AnyPublisher<LikeResponse, ExternalError> {
+    
+        guard let url = makeLikeComponents().url
             else {
                 let error =
                 ExternalError
@@ -32,15 +28,20 @@ class LikesApiImpl: LikesApi {
                 return Fail(error: error) .eraseToAnyPublisher()
         }
         
-        return AF.request(url, method: . post,
-                          parameters: getRemoteLikesRequest, encoder: JSONParameterEncoder.default,headers: nil,interceptor: nil, requestModifier: nil)
+        return AF.request(url,
+                          method: .post,
+                          parameters: makeLikeRequest,
+                          encoder: JSONParameterEncoder.default,
+                          headers: nil,
+                          interceptor: nil,
+                          requestModifier: nil)
         .validate()
             .publishDecodable(type:
-                LikesResponse.self)
+                LikeResponse.self)
             .mapError({(never : Never) -> ExternalError in ExternalError.UnknowError(description: never.localizedDescription)
             })
             .flatMap({(dataResponse:
-                DataResponse<LikesResponse,AFError>)-> AnyPublisher<LikesResponse, ExternalError> in Future<LikesResponse, ExternalError> {
+                DataResponse<LikeResponse,AFError>)-> AnyPublisher<LikeResponse, ExternalError> in Future<LikeResponse, ExternalError> {
                     promise in switch dataResponse.result {
                     case .failure(let afError): promise( .failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
                         break
@@ -56,21 +57,20 @@ class LikesApiImpl: LikesApi {
     
 }
 
-private extension LikesApiImpl {
+private extension LikeApiImpl {
+    
     struct FiestonVirtualAPI {
         static let scheme = "http"
         static let host = "fiestonvirtual.com"
         static let path = "/app/api"
-        static let key = "<your key>"
     }
     
-    func makeLikesComponents() ->URLComponents {
+    func makeLikeComponents() -> URLComponents {
         var urlComponents = URLComponents()
-        urlComponents.scheme =
-        FiestonVirtualAPI.scheme
+        urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
-        urlComponents.path = FiestonVirtualAPI.path
-        + "/likes.php"
+        urlComponents.path = FiestonVirtualAPI.path + "/likes.php"
         return urlComponents
     }
+    
 }
