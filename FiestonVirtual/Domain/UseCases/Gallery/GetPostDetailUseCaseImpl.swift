@@ -10,10 +10,10 @@ class GetPostDetailUseCaseImpl: GetPostDetailUseCase{
         self.galleryRepository = galleryRepository
     }
     
-    func invoke() -> AnyPublisher<GetGalleryDetail, ErrorResponse> {
+    func invoke(postId: Int) -> AnyPublisher<GetGalleryDetail, ErrorResponse> {
         return self.galleryRepository.getGalleryDetail(
             getGalleryDetailRequest: GetGalleryDetailRequest(
-                idUserSesion: 1, idPost: 1
+                idUserSesion: 1, idPost: postId
             )
         )
     }

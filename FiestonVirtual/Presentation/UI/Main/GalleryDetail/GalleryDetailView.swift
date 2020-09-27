@@ -11,25 +11,36 @@ import KingfisherSwiftUI
 
 struct GalleryDetailView: View {
     
+    @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(GalleryDetailViewModel.self)!
+    
     var galleryItem: GalleryItem
     
     @State private var eventCode: String = ""
     
     @State var text: String = ""
     
+    //User
+    @State private var userName: String = ""
+    @State private var userImage: String = ""
+    
+    @State private var postFile: String = ""
+    
     var body: some View {
-        VStack {
+        VStack(spacing: 5) {
             HStack {
-                Image(systemName: "house.fill")
-                Text("Placeholder")
+                KFImage(URL(string: userImage))
+                    .placeholder{
+                        Image(systemName: "house.fill")
+                    }
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30.0, height: 30.0)
+                Text(userName)
                 Spacer()
             }
-            .background(Color.red)
-            KFImage(URL(string:galleryItem.file))
+            KFImage(URL(string: postFile))
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .background(Color.green)
-                .padding(10)
                 
             HStack {
                 Image(systemName: "house.fill")
@@ -51,7 +62,18 @@ struct GalleryDetailView: View {
                 }
             }
         }
+        .padding(5)
+        .onAppear(perform: {
+            viewModel.getPostDetail(postId: galleryItem.id)
+        })
+        .onReceive(self.viewModel.$getGalleryDetail, perform: { getGalleryDetail in
+            userName = getGalleryDetail?.userName ?? ""
+            userImage = getGalleryDetail?.userImage ?? ""
+            
+            postFile = getGalleryDetail?.postFile ?? ""
+        })
     }
+    
 }
 
 struct GalleryDetailView_Previews: PreviewProvider {

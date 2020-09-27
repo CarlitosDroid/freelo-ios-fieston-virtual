@@ -30,5 +30,10 @@ class ViewModelAssembly: Assembly {
             )
         }
         
+        container.register(GalleryDetailViewModel.self) { resolver in
+            GalleryDetailViewModel(
+                getPostDetailUseCase: resolver.resolve(GetPostDetailUseCase.self)!
+            )
+        }
     }
 }
