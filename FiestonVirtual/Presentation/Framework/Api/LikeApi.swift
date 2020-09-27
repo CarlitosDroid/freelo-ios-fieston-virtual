@@ -9,7 +9,9 @@
 import Foundation
 import Combine
 
-protocol LikesApi {
-    func getLikesData(getRemoteLikesRequest:GetRemoteLikesRequest) ->
+protocol LikeApi {
+    
+    func makeLike(makeLikeRequest: MakeLikeRequest) ->
     AnyPublisher<LikesResponse,ExternalError>
+    
 }
