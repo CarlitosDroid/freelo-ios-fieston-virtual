@@ -5,8 +5,7 @@ import KingfisherSwiftUI
 struct GalleryItemView: View {
     
     var galleryItem : GalleryItem
-    var onGalleryItemSelected: (_ galleryItem: GalleryItem) -> Void
-    
+   
     var body: some View {
         
         KFImage(
@@ -18,9 +17,6 @@ struct GalleryItemView: View {
         )
         .resizable()
         .cornerRadius(6)
-        .onTapGesture{
-            self.onGalleryItemSelected(galleryItem)
-        }
         
     }
     
@@ -48,8 +44,6 @@ struct GalleryItemView_Previews: PreviewProvider {
                 status: 1,
                 preview: "1"
             )
-        ){(categorIndex: GalleryItem) in
-            
-        }
+        )
     }
 }
