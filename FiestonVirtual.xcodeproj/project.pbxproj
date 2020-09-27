@@ -151,7 +151,7 @@
 		FB1014F12509B9C6002C91ED /* AddCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F02509B9C6002C91ED /* AddCommentResponse.swift */; };
 		FB1014F8250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */; };
 		FB1014FA250B2A08002C91ED /* GetRemotePedirCancionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F9250B2A08002C91ED /* GetRemotePedirCancionRequest.swift */; };
-		FB1014FF250B2B24002C91ED /* LikesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014FE250B2B24002C91ED /* LikesResponse.swift */; };
+		FB1014FF250B2B24002C91ED /* LikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014FE250B2B24002C91ED /* LikeResponse.swift */; };
 		FB101501250B2B5A002C91ED /* RespuestaTriviaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */; };
 		FB101503250B2B81002C91ED /* PedirCancionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101502250B2B81002C91ED /* PedirCancionResponse.swift */; };
 		FB101518250C70E0002C91ED /* CommentsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101517250C70E0002C91ED /* CommentsApi.swift */; };
@@ -334,7 +334,7 @@
 		FB1014F02509B9C6002C91ED /* AddCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentResponse.swift; sourceTree = "<group>"; };
 		FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteRespuestaTriviaRequest.swift; sourceTree = "<group>"; };
 		FB1014F9250B2A08002C91ED /* GetRemotePedirCancionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemotePedirCancionRequest.swift; sourceTree = "<group>"; };
-		FB1014FE250B2B24002C91ED /* LikesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesResponse.swift; sourceTree = "<group>"; };
+		FB1014FE250B2B24002C91ED /* LikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeResponse.swift; sourceTree = "<group>"; };
 		FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespuestaTriviaResponse.swift; sourceTree = "<group>"; };
 		FB101502250B2B81002C91ED /* PedirCancionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedirCancionResponse.swift; sourceTree = "<group>"; };
 		FB101517250C70E0002C91ED /* CommentsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsApi.swift; sourceTree = "<group>"; };
@@ -636,7 +636,7 @@
 			children = (
 				FB1014FD250B2AD9002C91ED /* PedirCancion */,
 				FB1014FC250B2AD6002C91ED /* RespuestaTrivia */,
-				FB1014FB250B2AD3002C91ED /* Likes */,
+				FB1014FB250B2AD3002C91ED /* Like */,
 				FB1014E92509B872002C91ED /* Gallery */,
 				FB1014E82509B83E002C91ED /* Comment */,
 				2BC2570825055A0F00B433CC /* Response */,
@@ -1026,12 +1026,12 @@
 			path = PedirCancion;
 			sourceTree = "<group>";
 		};
-		FB1014FB250B2AD3002C91ED /* Likes */ = {
+		FB1014FB250B2AD3002C91ED /* Like */ = {
 			isa = PBXGroup;
 			children = (
-				FB1014FE250B2B24002C91ED /* LikesResponse.swift */,
+				FB1014FE250B2B24002C91ED /* LikeResponse.swift */,
 			);
-			path = Likes;
+			path = Like;
 			sourceTree = "<group>";
 		};
 		FB1014FC250B2AD6002C91ED /* RespuestaTrivia */ = {
@@ -1314,7 +1314,7 @@
 				2BC256CF250546D100B433CC /* AppDelegate.swift in Sources */,
 				9A656504251DBC60000C6031 /* ChildGetGalleryDetailDataResponseMapper.swift in Sources */,
 				FBBA420325106E400016ACC6 /* Comment.swift in Sources */,
-				FB1014FF250B2B24002C91ED /* LikesResponse.swift in Sources */,
+				FB1014FF250B2B24002C91ED /* LikeResponse.swift in Sources */,
 				FBBA41FF251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift in Sources */,
 				9A656553251DCDBB000C6031 /* CommentsRemoteDataSourceImpl.swift in Sources */,
 				FBBA41FB25105A4E0016ACC6 /* Ranking.swift in Sources */,

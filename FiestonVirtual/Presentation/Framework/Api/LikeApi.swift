@@ -12,6 +12,6 @@ import Combine
 protocol LikeApi {
     
     func makeLike(makeLikeRequest: MakeLikeRequest) ->
-    AnyPublisher<LikesResponse,ExternalError>
+    AnyPublisher<LikeResponse,ExternalError>
     
 }

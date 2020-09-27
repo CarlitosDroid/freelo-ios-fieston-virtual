@@ -18,7 +18,7 @@ class LikeApiImpl: LikeApi {
         self.session = session
     }
     
-    func makeLike(makeLikeRequest: MakeLikeRequest) -> AnyPublisher<LikesResponse, ExternalError> {
+    func makeLike(makeLikeRequest: MakeLikeRequest) -> AnyPublisher<LikeResponse, ExternalError> {
     
         guard let url = makeLikeComponents().url
             else {
@@ -37,11 +37,11 @@ class LikeApiImpl: LikeApi {
                           requestModifier: nil)
         .validate()
             .publishDecodable(type:
-                LikesResponse.self)
+                LikeResponse.self)
             .mapError({(never : Never) -> ExternalError in ExternalError.UnknowError(description: never.localizedDescription)
             })
             .flatMap({(dataResponse:
-                DataResponse<LikesResponse,AFError>)-> AnyPublisher<LikesResponse, ExternalError> in Future<LikesResponse, ExternalError> {
+                DataResponse<LikeResponse,AFError>)-> AnyPublisher<LikeResponse, ExternalError> in Future<LikeResponse, ExternalError> {
                     promise in switch dataResponse.result {
                     case .failure(let afError): promise( .failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
                         break

@@ -24,8 +24,8 @@ class LikeDataSourceImpl : LikeDataSource {
                     return ErrorResponse(title: "Error Desconocido", message: description)
                 }
             }
-            .map{ (likesResponse : LikesResponse) -> MakeLikeResponse in
-                return MakeLikeResponse(likes : likesResponse.data.userLikes )
+            .map{ (likeResponse : LikeResponse) -> MakeLikeResponse in
+                return MakeLikeResponse(likes : likeResponse.data.userLikes )
             }.eraseToAnyPublisher()
     }
     
