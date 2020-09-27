@@ -32,8 +32,12 @@ class ViewModelAssembly: Assembly {
         
         container.register(GalleryDetailViewModel.self) { resolver in
             GalleryDetailViewModel(
-                getPostDetailUseCase: resolver.resolve(GetPostDetailUseCase.self)!
+                getCommentsUseCase: resolver.resolve(GetCommentsUseCase.self)!,
+                getPostDetailUseCase: resolver.resolve(GetPostDetailUseCase.self)!,
+                addCommentUseCase: resolver.resolve(AddCommentUseCase.self)!,
+                makeLikeUseCase: resolver.resolve(MakeLikeUseCase.self)!
             )
         }
+    
     }
 }

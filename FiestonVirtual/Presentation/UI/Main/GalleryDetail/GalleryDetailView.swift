@@ -15,7 +15,6 @@ struct GalleryDetailView: View {
     
     var galleryItem: GalleryItem
     
-    @State private var eventCode: String = ""
     
     @State var text: String = ""
     
@@ -25,60 +24,121 @@ struct GalleryDetailView: View {
     
     @State private var postFile: String = ""
     
+    @State private var showLike: Bool = false
+    @State private var likeCounter: String = ""
+    @State private var postTitle: String = ""
+    
+    @State private var comments: [Comment] = []
+    @State private var writtenComment: String = ""
+    
     var body: some View {
-        VStack(spacing: 5) {
-            HStack {
-                KFImage(URL(string: userImage))
-                    .placeholder{
-                        Image(systemName: "house.fill")
-                    }
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 30.0, height: 30.0)
-                Text(userName)
-                Spacer()
-            }
-            KFImage(URL(string: postFile))
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                
-            HStack {
-                Image(systemName: "house.fill")
-                Text("Placeholder")
-            }
-            Text("Placeholder")
-            List {
-                Text("comment").background(Color.yellow)
-            }
+        
+        LoadingView(isShowing: self.$viewModel.isLoading) {
             
-            HStack {
-                TextField("Coloque su código", text: self.$eventCode)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
-                Button(action: {
+            ZStack {
+                
+                Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
+                
+                VStack(spacing: 5) {
+                    HStack {
+                        KFImage(URL(string: userImage))
+                            .placeholder{
+                                Image(systemName: "house.fill")
+                                
+                            }
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30.0, height: 30.0)
+                        Text(userName)
+                        Spacer()
+                    }
+                    KFImage(URL(string: postFile))
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
                     
-                }) {
-                    Image(systemName: "house.fill")
+                    HStack {
+                        if(showLike) {
+                            Image(systemName: "heart.fill")
+                        } else {
+                            Image(systemName: "heart")
+                        }
+                        Text(likeCounter)
+                        Spacer()
+                    }
+                    HStack {
+                        if(!postTitle.isEmpty) {
+                            Text(postTitle)
+                        }
+                        Spacer()
+                    }
+                    //                List {
+                    ScrollView {
+                        ForEach(comments, id: \.id) { comment in
+                            GalleryDetailItemView(comment: comment)
+                        }.listRowBackground(Color.deep_purple_intense)
+                    }
+                    //                }
+                    
+                    //                List(comments, id: \.id) { comment in
+                    //                    GalleryDetailItemView(comment: comment)
+                    //
+                    //                }
+                    //
+                    HStack {
+                        TextField("Comentar...", text: self.$writtenComment)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.default)
+                        Button(action: {
+                            
+                            viewModel.addComment(postId: galleryItem.id, comment: writtenComment)
+                            
+                        }) {
+                            Image(systemName: "send.fill")
+                        }
+                    }
                 }
+                .padding(5)
+                .onAppear(perform: {
+                    viewModel.getComments(postId: galleryItem.id)
+                    viewModel.getPostDetail(postId: galleryItem.id)
+                })
+                .onReceive(self.viewModel.$getGalleryDetail, perform: { getGalleryDetail in
+                    userName = getGalleryDetail?.userName ?? ""
+                    userImage = getGalleryDetail?.userImage ?? ""
+                    
+                    postFile = getGalleryDetail?.postFile ?? ""
+                    
+                    showLike = getGalleryDetail?.postLike ?? false
+                    likeCounter = String(getGalleryDetail?.postLikeCount ?? 0)
+                    
+                    postTitle = getGalleryDetail?.postTitle ?? ""
+                    
+                })
+                .onReceive(self.viewModel.$comments, perform: { comments in
+                    self.comments = comments
+                })
+                .onReceive(self.viewModel.$comment, perform: { comment in
+                    guard let comment = comment else { return }
+                    self.comments.append(comment)
+                    self.writtenComment = ""
+                })
+                
             }
         }
-        .padding(5)
-        .onAppear(perform: {
-            viewModel.getPostDetail(postId: galleryItem.id)
-        })
-        .onReceive(self.viewModel.$getGalleryDetail, perform: { getGalleryDetail in
-            userName = getGalleryDetail?.userName ?? ""
-            userImage = getGalleryDetail?.userImage ?? ""
-            
-            postFile = getGalleryDetail?.postFile ?? ""
-        })
     }
     
 }
 
 struct GalleryDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        GalleryDetailView(galleryItem: GalleryItem(id: 0, type: 0, file: "", status: 0, preview: ""))
-        
+        GalleryDetailView(
+            galleryItem: GalleryItem(
+                id: 0,
+                type: 0,
+                file: "",
+                status: 0,
+                preview: ""
+            )
+        )
     }
 }

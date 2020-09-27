@@ -19,7 +19,8 @@ struct GalleryView: View {
                 ScrollView {
                     Grid(viewModel.galleryItems) { galleryItem in
                         NavigationLink(destination: GalleryDetailView(galleryItem: galleryItem)) {
-                            GalleryItemView(galleryItem: galleryItem)
+                            Text("carlos")
+//                            GalleryItemView(galleryItem: galleryItem)
                         }
                     }
                     .gridStyle(
