@@ -15,7 +15,6 @@ struct GalleryDetailView: View {
     
     var galleryItem: GalleryItem
     
-    
     @State var text: String = ""
     
     //User
@@ -24,8 +23,7 @@ struct GalleryDetailView: View {
     
     @State private var postFile: String = ""
     
-    @State private var showLike: Bool = false
-    @State private var likeCounter: String = ""
+    @State private var totalLikes: String = ""
     @State private var postTitle: String = ""
     
     @State private var comments: [Comment] = []
@@ -58,20 +56,26 @@ struct GalleryDetailView: View {
                         .aspectRatio(contentMode: .fill)
                     
                     HStack {
-                        if(showLike) {
+                        if(self.viewModel.showLike){
                             Image(systemName: "heart.fill")
                                 .foregroundColor(Color.white)
-                        } else {
-                            Image(systemName: "heart")
-                                .foregroundColor(Color.white)
+                        }else{
+                            Button(action:{
+                                self.viewModel.makeLike(idPost: galleryItem.id)
+                                
+                            }){
+                                Image(systemName: "heart")
+                                    .foregroundColor(Color.white)
+                            }
                         }
-                        Text(likeCounter)
+                        Text(totalLikes)
                             .foregroundColor(Color.white)
                         Spacer()
                     }
                     HStack {
                         if(!postTitle.isEmpty) {
                             Text(postTitle)
+                                .foregroundColor(Color.white)
                         }
                         Spacer()
                     }
@@ -91,6 +95,7 @@ struct GalleryDetailView: View {
                         }) {
                             Image(systemName: "paperplane.fill")
                                 .foregroundColor(Color.white)
+                                .frame(width: 30.0)
                         }
                     }
                 }
@@ -105,8 +110,7 @@ struct GalleryDetailView: View {
                     
                     postFile = getGalleryDetail?.postFile ?? ""
                     
-                    showLike = getGalleryDetail?.postLike ?? false
-                    likeCounter = String(getGalleryDetail?.postLikeCount ?? 0)
+                    totalLikes = String(getGalleryDetail?.postLikeCount ?? 0)
                     
                     postTitle = getGalleryDetail?.postTitle ?? ""
                     
@@ -115,13 +119,20 @@ struct GalleryDetailView: View {
                     self.comments = comments
                 })
                 .onReceive(self.viewModel.$comment, perform: { comment in
-                    guard let comment = comment else { return }
-                    self.comments.append(comment)
                     self.writtenComment = ""
                 })
+                .onReceive(self.viewModel.$totalLikes) { totalLikes in
+                    self.totalLikes = String(totalLikes)
+                }
                 
             }
         }
+        .alert(isPresented: .constant(self.viewModel.isError), content:{
+            Alert(
+                title: Text(self.viewModel.errorMessage),
+                dismissButton: .default(Text("Aceptar"))
+            )
+        })
     }
     
 }
