@@ -43,7 +43,8 @@ class UseCasesAssembly: Assembly {
         
         container.register(GetPostDetailUseCase.self) { resolver in
             GetPostDetailUseCaseImpl(
-                galleryRepository: resolver.resolve(GalleryRepository.self)!
+                galleryRepository: resolver.resolve(GalleryRepository.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!
             )
         }
         
