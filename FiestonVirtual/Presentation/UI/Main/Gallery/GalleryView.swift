@@ -17,45 +17,55 @@ struct GalleryView: View {
         ZStack{
             Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
             LoadingView(isShowing: self.$viewModel.isLoading) {
-                GridStack(minCellWidth: 110, spacing: 5, numItems: viewModel.galleryItems.count) { index, cellWidth in
-                    NavigationLink(destination: GalleryDetailView(galleryItem: viewModel.galleryItems[index])) {
-                        GalleryItemView(galleryItem: viewModel.galleryItems[index], cellWidth: cellWidth)
-                    }.buttonStyle(PlainButtonStyle())
-                }
-            }
-            .onAppear {
-                scrollViewID = UUID()
-                if(onlyFirstTime) {
-                    viewModel.getGallery()
-                    onlyFirstTime = false
+                
+                List(self.viewModel.galleryItems.chunks(size: 3),id: \.self){chunks in
+                    ForEach(chunks,id: \.self) { galleryItem in
+                        NavigationLink(destination: GalleryDetailView(galleryItem: galleryItem)) {
+                            GalleryItemView(galleryItem: galleryItem,cellWidth: 30.0)
+                        }.buttonStyle(PlainButtonStyle())
+                    }
                 }
                 
+                /*GridStack(minCellWidth: 110, spacing: 5, numItems: viewModel.galleryItems.count) { index, cellWidth in
+                 NavigationLink(destination: GalleryDetailView(galleryItem: viewModel.galleryItems[index])) {
+                 GalleryItemView(galleryItem: viewModel.galleryItems[index], cellWidth: cellWidth)
+                 }.buttonStyle(PlainButtonStyle())*/
             }
         }
-        
-    }
-    
-    struct GalleryView_Previews: PreviewProvider {
-        static var previews: some View {
-            GalleryView()
+        .onAppear {
+            viewModel.getGallery()
+            /*scrollViewID = UUID()
+             if(onlyFirstTime) {
+             viewModel.getGallery()
+             onlyFirstTime = false
+             }*/
+            
         }
     }
     
+}
+
+struct GalleryView_Previews: PreviewProvider {
+    static var previews: some View {
+        GalleryView()
+    }
+}
+
+
+struct GridCell: View {
+    var person: GalleryItem
     
-    struct GridCell: View {
-        var person: GalleryItem
-        
-        var body: some View {
-            VStack() {
-                Image(person.file)
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(Circle())
-                    .shadow(color: .primary, radius: 5)
-                    .padding([.horizontal, .top], 7)
-                Text(person.preview).lineLimit(1)
-                Text(person.preview).lineLimit(1)
-            }
+    var body: some View {
+        VStack() {
+            Image(person.file)
+                .resizable()
+                .scaledToFit()
+                .clipShape(Circle())
+                .shadow(color: .primary, radius: 5)
+                .padding([.horizontal, .top], 7)
+            Text(person.preview).lineLimit(1)
+            Text(person.preview).lineLimit(1)
         }
     }
 }
+

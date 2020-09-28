@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct GalleryItem: Codable, Identifiable{
+struct GalleryItem: Codable, Identifiable, Hashable{
     let id: Int
     var type: Int
     var file: String
