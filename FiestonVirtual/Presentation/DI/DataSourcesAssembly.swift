@@ -23,10 +23,19 @@ class DataSourcesAssembly: Assembly {
         container.register(EventCodeRemoteDataSource.self) { (resolver: Resolver) in
             EventCodeRemoteDataSourceImpl(eventCodeApi: resolver.resolve(EventCodeApi.self)!)
         }
+        
         container.register(GalleryDataSource.self) { (resolver: Resolver) in
             GalleryDataSourceImpl(
                 galleryApi: resolver.resolve(GalleryApi.self)!
             )
+        }
+        
+        container.register(CommentsRemoteDataSource.self) { (resolver: Resolver) in
+            CommentsRemoteDataSourceImpl(commentsApi: resolver.resolve(CommentsApi.self)!)
+        }
+        
+        container.register(LikeDataSource.self) { (resolver: Resolver) in
+            LikeDataSourceImpl(likeApi: resolver.resolve(LikeApi.self)!)
         }
     }
     

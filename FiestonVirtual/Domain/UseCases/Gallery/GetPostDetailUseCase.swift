@@ -4,6 +4,6 @@ import Combine
 
 protocol GetPostDetailUseCase{
     
-    func invoke() -> AnyPublisher<GetGalleryDetail, ErrorResponse>
+    func invoke(postId: Int) -> AnyPublisher<GetGalleryDetail, ErrorResponse>
     
 }

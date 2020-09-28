@@ -9,35 +9,33 @@ struct GalleryView: View {
     var onGalleryItemSelected: (_ galleryItem: GalleryItem) -> Void
     
     @State private var scrollViewID = UUID()
+    @State private var showGalleryDetail = false
     
     var body: some View {
         
         ZStack{
-            
             Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
-            
-            LoadingView(isShowing: self.$viewModel.isLoading){
+            LoadingView(isShowing: self.$viewModel.isLoading) {
                 ScrollView {
-                    
                     Grid(viewModel.galleryItems) { galleryItem in
-                        GalleryItemView(galleryItem: galleryItem){
-                            (galleryItem:GalleryItem) in
-                            onGalleryItemSelected(galleryItem)
+                        NavigationLink(destination: GalleryDetailView(galleryItem: galleryItem)) {
+                            Text("carlos")
+//                            GalleryItemView(galleryItem: galleryItem)
                         }
-                    }.gridStyle(
+                    }
+                    .gridStyle(
                         ModularGridStyle(columns: 3, rows: .fixed(130))
                     )
                     
-                }.id(self.scrollViewID)
+                }
+                .id(self.scrollViewID)
                 .padding(8)
             }
-            
         }
         .onAppear {
             scrollViewID = UUID()
             viewModel.getGallery()
         }
-        
     }
     
 }

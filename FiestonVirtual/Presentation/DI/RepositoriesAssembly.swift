@@ -17,12 +17,22 @@ class RepositoriesAssembly: Assembly {
         
         container.register(UsersRepository.self) { resolver in
             let coreDataContext = CoreDataContextProvider().viewContext
-            return UsersRepositoryImpl(context: coreDataContext, userRemoteDataSource: UserRemoteDataSourceImpl(userApi: resolver.resolve(UserApi.self)!))
+            return UsersRepositoryImpl(context: coreDataContext,
+                                       userRemoteDataSource: UserRemoteDataSourceImpl(userApi: resolver.resolve(UserApi.self)!))
         }
+        
         container.register(GalleryRepository.self) { resolver in
             GalleryRepositoryImpl(
                 galleryDataSource: resolver.resolve(GalleryDataSource.self)!
             )
+        }
+        
+        container.register(CommentsRepository.self) { resolver in
+            CommentsRepositoryImpl(commentsRemoteDataSource: resolver.resolve(CommentsRemoteDataSource.self)!)
+        }
+        
+        container.register(LikeRepository.self) { resolver in
+            LikeRepositoryImpl(likeDataSource: resolver.resolve(LikeDataSource.self)!)
         }
     }
 }

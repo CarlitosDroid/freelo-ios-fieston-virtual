@@ -12,16 +12,24 @@ import Swinject
 class ApiAssembly: Assembly {
     
     func assemble(container: Container) {
-        container.register(UserApi.self) { (resolver: Resolver) in
+        container.register(UserApi.self) { _ in
             UserApiImpl()
         }
         
-        container.register(EventCodeApi.self) { (resolver: Resolver) in
+        container.register(EventCodeApi.self) { _ in
             EventCodeApiImpl()
         }
         
-        container.register(GalleryApi.self) {_ in 
+        container.register(GalleryApi.self) { _ in
             GalleryApiImpl()
+        }
+        
+        container.register(CommentsApi.self) { _ in
+            CommentsApiImpl()
+        }
+        
+        container.register(LikeApi.self) { _ in
+            LikeApiImpl()
         }
     }
     
