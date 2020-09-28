@@ -43,13 +43,14 @@ struct GalleryDetailView: View {
                     HStack {
                         KFImage(URL(string: userImage))
                             .placeholder{
-                                Image(systemName: "house.fill")
-                                
+                                Image(systemName: "person.fill")
+                                    .foregroundColor(Color.white)
                             }
                             .resizable()
                             .scaledToFit()
                             .frame(width: 30.0, height: 30.0)
                         Text(userName)
+                            .foregroundColor(Color.aqua)
                         Spacer()
                     }
                     KFImage(URL(string: postFile))
@@ -59,10 +60,13 @@ struct GalleryDetailView: View {
                     HStack {
                         if(showLike) {
                             Image(systemName: "heart.fill")
+                                .foregroundColor(Color.white)
                         } else {
                             Image(systemName: "heart")
+                                .foregroundColor(Color.white)
                         }
                         Text(likeCounter)
+                            .foregroundColor(Color.white)
                         Spacer()
                     }
                     HStack {
@@ -71,19 +75,11 @@ struct GalleryDetailView: View {
                         }
                         Spacer()
                     }
-                    //                List {
                     ScrollView {
                         ForEach(comments, id: \.id) { comment in
                             GalleryDetailItemView(comment: comment)
                         }.listRowBackground(Color.deep_purple_intense)
                     }
-                    //                }
-                    
-                    //                List(comments, id: \.id) { comment in
-                    //                    GalleryDetailItemView(comment: comment)
-                    //
-                    //                }
-                    //
                     HStack {
                         TextField("Comentar...", text: self.$writtenComment)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -93,7 +89,8 @@ struct GalleryDetailView: View {
                             viewModel.addComment(postId: galleryItem.id, comment: writtenComment)
                             
                         }) {
-                            Image(systemName: "send.fill")
+                            Image(systemName: "paperplane.fill")
+                                .foregroundColor(Color.white)
                         }
                     }
                 }
