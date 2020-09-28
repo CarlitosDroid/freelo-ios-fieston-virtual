@@ -42,6 +42,8 @@
 		2B83E79825081540004B1BF2 /* ValidateCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83E79725081540004B1BF2 /* ValidateCodeRequest.swift */; };
 		2B83E79A25081594004B1BF2 /* GetRemoteUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83E79925081594004B1BF2 /* GetRemoteUserRequest.swift */; };
 		2B85E8382521373700E3CD9F /* GalleryDetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85E8372521373700E3CD9F /* GalleryDetailItemView.swift */; };
+		2B85E84A2521848500E3CD9F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B85E8492521848500E3CD9F /* WaterfallGrid */; };
+		2B85E8502521898D00E3CD9F /* GridStack in Frameworks */ = {isa = PBXBuildFile; productRef = 2B85E84F2521898D00E3CD9F /* GridStack */; };
 		2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339A2507093B007C3FFC /* DomainModel.swift */; };
 		2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339D250714C4007C3FFC /* VerifySessionUseCase.swift */; };
 		2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339F250714D1007C3FFC /* VerifySessionUseCaseImpl.swift */; };
@@ -366,6 +368,8 @@
 				54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */,
 				A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */,
 				2B1D0575251034C000EA4B56 /* Grid in Frameworks */,
+				2B85E8502521898D00E3CD9F /* GridStack in Frameworks */,
+				2B85E84A2521848500E3CD9F /* WaterfallGrid in Frameworks */,
 				B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1089,6 +1093,8 @@
 				2BD74DF22509E89C00B0820D /* Kingfisher */,
 				2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */,
 				2B1D0574251034C000EA4B56 /* Grid */,
+				2B85E8492521848500E3CD9F /* WaterfallGrid */,
+				2B85E84F2521898D00E3CD9F /* GridStack */,
 			);
 			productName = FiestonVirtual;
 			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
@@ -1168,6 +1174,8 @@
 			packageReferences = (
 				2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				2B1D0573251034C000EA4B56 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
+				2B85E8482521848500E3CD9F /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
+				2B85E84E2521898D00E3CD9F /* XCRemoteSwiftPackageReference "GridStack" */,
 			);
 			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
 			projectDirPath = "";
@@ -1799,6 +1807,22 @@
 				minimumVersion = 1.0.4;
 			};
 		};
+		2B85E8482521848500E3CD9F /* XCRemoteSwiftPackageReference "WaterfallGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/paololeonardi/WaterfallGrid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		2B85E84E2521898D00E3CD9F /* XCRemoteSwiftPackageReference "GridStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pietropizzi/GridStack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 		2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -1814,6 +1838,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B1D0573251034C000EA4B56 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
 			productName = Grid;
+		};
+		2B85E8492521848500E3CD9F /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B85E8482521848500E3CD9F /* XCRemoteSwiftPackageReference "WaterfallGrid" */;
+			productName = WaterfallGrid;
+		};
+		2B85E84F2521898D00E3CD9F /* GridStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B85E84E2521898D00E3CD9F /* XCRemoteSwiftPackageReference "GridStack" */;
+			productName = GridStack;
 		};
 		2BD74DF22509E89C00B0820D /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

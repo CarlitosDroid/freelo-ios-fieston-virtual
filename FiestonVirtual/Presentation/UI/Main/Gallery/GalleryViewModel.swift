@@ -8,7 +8,7 @@ class GalleryViewModel: ObservableObject {
     
     @Published var isLoading = false
     @Published var errorMessage = ""
-    var galleryItems = [GalleryItem]()
+    @Published var galleryItems = [GalleryItem]()
     
     private var disposables = Set<AnyCancellable>()
     
@@ -19,7 +19,8 @@ class GalleryViewModel: ObservableObject {
     func getGallery() {
         self.isLoading = true
         getGalleryUseCase.invoke()
-            .receive(on: DispatchQueue.main)
+            .subscribe(on: DispatchQueue.global())
+            
             .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
                 switch completion {
                 case .finished:

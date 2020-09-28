@@ -49,14 +49,10 @@ class GalleryDetailViewModel: ObservableObject {
                 case .failure(let errorResponse):
                     print("erroResponse")
                     self.isLoading = false
-                    //                    self.isError=true
-                    //                    self.errorMessage = errorResponse.localizedDescription
                     break
                 }
             }, receiveValue: { (comments: [Comment]) in
                 self.comments = comments
-                //                self.isLoading = false
-                //                self.inSession = true
             })
             .store(in: &disposables)
     }
@@ -73,16 +69,11 @@ class GalleryDetailViewModel: ObservableObject {
                     break
                 case .failure(let errorResponse):
                     print("erroResponse")
-                    //                    self.isLoading = false
-                    //                    self.isError=true
-                    //                    self.errorMessage = errorResponse.localizedDescription
                     break
                 }
             }, receiveValue: { (getGalleryDetail: GetGalleryDetail) in
                 print(getGalleryDetail)
                 self.getGalleryDetail = getGalleryDetail
-                //                self.isLoading = false
-                //                self.inSession = true
             })
             .store(in: &disposables)
         
@@ -100,15 +91,10 @@ class GalleryDetailViewModel: ObservableObject {
                     break
                 case .failure(let errorResponse):
                     print("erroResponse")
-                    //                    self.isLoading = false
-                    //                    self.isError=true
-                    //                    self.errorMessage = errorResponse.localizedDescription
                     break
                 }
             }, receiveValue: { (comment: Comment) in
-                self.comment = comment
-                //                self.isLoading = false
-                //                self.inSession = true
+                self.comments.append(comment)
             })
             .store(in: &disposables)
     }
