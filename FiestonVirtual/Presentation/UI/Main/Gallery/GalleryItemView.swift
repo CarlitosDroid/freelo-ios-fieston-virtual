@@ -5,18 +5,14 @@ import KingfisherSwiftUI
 struct GalleryItemView: View {
     
     var galleryItem : GalleryItem
+    var cellWidth : CGFloat
    
     var body: some View {
         
-        KFImage(
-            URL(
-                string: getImageOfGalleryItem(
-                    galleryItem: galleryItem
-                )
-            )
-        )
-        .resizable()
-        .cornerRadius(6)
+        KFImage(URL(string: getImageOfGalleryItem(galleryItem: galleryItem)))
+            .resizable()
+            .scaledToFit()
+            .frame(width: cellWidth, height: cellWidth)
         
     }
     
@@ -43,7 +39,7 @@ struct GalleryItemView_Previews: PreviewProvider {
                 file: "",
                 status: 1,
                 preview: "1"
-            )
+            ), cellWidth: 50
         )
     }
 }

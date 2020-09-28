@@ -44,17 +44,18 @@ struct MainView: View {
                                 Text("Home")
                             }.tag(0)
                             
-                            GalleryView(){
-                                (galleryItem:GalleryItem) in
-                                switch galleryItem.type {
-                                case GalleryItemType.photo.rawValue:
-                                    ""
-                                case GalleryItemType.video.rawValue:
-                                    ""
-                                default:
-                                    ""
-                                }
-                            }
+                            GalleryView()
+//                            {
+//                                (galleryItem:GalleryItem) in
+//                                switch galleryItem.type {
+//                                case GalleryItemType.photo.rawValue:
+//                                    ""
+//                                case GalleryItemType.video.rawValue:
+//                                    ""
+//                                default:
+//                                    ""
+//                                }
+//                            }
                             .tabItem {
                                 Image(systemName: "photo.fill.on.rectangle.fill")
                                 Text("Galeria")

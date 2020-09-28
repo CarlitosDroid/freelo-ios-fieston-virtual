@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "GridStack",
+        "repositoryURL": "https://github.com/pietropizzi/GridStack.git",
+        "state": {
+          "branch": null,
+          "revision": "32beadda5eacbb05f4d5195df3b049d5e040f5db",
+          "version": "0.4.1"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
@@ -17,6 +26,15 @@
           "branch": null,
           "revision": "a3441f80bd01029507bc19e463e7c7208ffcf3f9",
           "version": "1.0.4"
+        }
+      },
+      {
+        "package": "WaterfallGrid",
+        "repositoryURL": "https://github.com/paololeonardi/WaterfallGrid.git",
+        "state": {
+          "branch": null,
+          "revision": "67bb0263a45357651608faafcd51fe39cfd3cf30",
+          "version": "0.4.0"
         }
       }
     ]
