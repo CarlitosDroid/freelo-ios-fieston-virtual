@@ -11,8 +11,10 @@
 		2B0981E82509274100C78FFF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981E72509274000C78FFF /* Log.swift */; };
 		2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981EC25092F1D00C78FFF /* ContentView.swift */; };
 		2B1D05722510342B00EA4B56 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D05712510342B00EA4B56 /* HomeView.swift */; };
-		2B1D0575251034C000EA4B56 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B1D0574251034C000EA4B56 /* Grid */; };
 		2B1D057A25103F4100EA4B56 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D057925103F4100EA4B56 /* UserProfileView.swift */; };
+		2B23A23C252417A600A348B9 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A23B252417A600A348B9 /* KingfisherSwiftUI */; };
+		2B23A24225241AB200A348B9 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A24125241AB200A348B9 /* Grid */; };
+		2B23A2BB25242CC400A348B9 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A2BA25242CC400A348B9 /* QGrid */; };
 		2B3070EA25089603005198F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3070E925089603005198F7 /* Color.swift */; };
 		2B3070EC25089659005198F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3070EB25089659005198F7 /* Colors.xcassets */; };
 		2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3747F9250C55E200BE13B4 /* VideoView.swift */; };
@@ -42,8 +44,6 @@
 		2B83E79825081540004B1BF2 /* ValidateCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83E79725081540004B1BF2 /* ValidateCodeRequest.swift */; };
 		2B83E79A25081594004B1BF2 /* GetRemoteUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83E79925081594004B1BF2 /* GetRemoteUserRequest.swift */; };
 		2B85E8382521373700E3CD9F /* GalleryDetailItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85E8372521373700E3CD9F /* GalleryDetailItemView.swift */; };
-		2B85E84A2521848500E3CD9F /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B85E8492521848500E3CD9F /* WaterfallGrid */; };
-		2B85E8502521898D00E3CD9F /* GridStack in Frameworks */ = {isa = PBXBuildFile; productRef = 2B85E84F2521898D00E3CD9F /* GridStack */; };
 		2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339A2507093B007C3FFC /* DomainModel.swift */; };
 		2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339D250714C4007C3FFC /* VerifySessionUseCase.swift */; };
 		2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339F250714D1007C3FFC /* VerifySessionUseCaseImpl.swift */; };
@@ -83,8 +83,6 @@
 		2BC2573E2505AEF100B433CC /* UsersRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2573D2505AEF100B433CC /* UsersRepositoryImpl.swift */; };
 		2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC2573F2505FF7500B433CC /* UserLocalDataSourceImpl.swift */; };
 		2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC257412505FF9500B433CC /* UserLocalDataSource.swift */; };
-		2BD74DF32509E89C00B0820D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF22509E89C00B0820D /* Kingfisher */; };
-		2BD74DF52509E89C00B0820D /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */; };
 		2BD9D68E251B08E300188114 /* GalleryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9D68D251B08E300188114 /* GalleryCoordinator.swift */; };
 		2BDAC593250AC52200DA6A74 /* GalleryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC592250AC52200DA6A74 /* GalleryApi.swift */; };
 		2BDAC595250AC55700DA6A74 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC594250AC55700DA6A74 /* Photo.swift */; };
@@ -365,13 +363,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BD74DF52509E89C00B0820D /* KingfisherSwiftUI in Frameworks */,
-				2BD74DF32509E89C00B0820D /* Kingfisher in Frameworks */,
+				2B23A2BB25242CC400A348B9 /* QGrid in Frameworks */,
 				54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */,
 				A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */,
-				2B1D0575251034C000EA4B56 /* Grid in Frameworks */,
-				2B85E8502521898D00E3CD9F /* GridStack in Frameworks */,
-				2B85E84A2521848500E3CD9F /* WaterfallGrid in Frameworks */,
+				2B23A23C252417A600A348B9 /* KingfisherSwiftUI in Frameworks */,
+				2B23A24225241AB200A348B9 /* Grid in Frameworks */,
 				B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1093,11 +1089,9 @@
 			);
 			name = FiestonVirtual;
 			packageProductDependencies = (
-				2BD74DF22509E89C00B0820D /* Kingfisher */,
-				2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */,
-				2B1D0574251034C000EA4B56 /* Grid */,
-				2B85E8492521848500E3CD9F /* WaterfallGrid */,
-				2B85E84F2521898D00E3CD9F /* GridStack */,
+				2B23A23B252417A600A348B9 /* KingfisherSwiftUI */,
+				2B23A24125241AB200A348B9 /* Grid */,
+				2B23A2BA25242CC400A348B9 /* QGrid */,
 			);
 			productName = FiestonVirtual;
 			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
@@ -1175,10 +1169,9 @@
 			);
 			mainGroup = 2BC256C2250546D100B433CC;
 			packageReferences = (
-				2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				2B1D0573251034C000EA4B56 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
-				2B85E8482521848500E3CD9F /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
-				2B85E84E2521898D00E3CD9F /* XCRemoteSwiftPackageReference "GridStack" */,
+				2B23A23A252417A600A348B9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2B23A24025241AB200A348B9 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
+				2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */,
 			);
 			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
 			projectDirPath = "";
@@ -1640,6 +1633,7 @@
 			baseConfigurationReference = DD745BE1A3F56DA73475DD2F /* Pods-FiestonVirtual.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
 				DEVELOPMENT_TEAM = H9JXH336V5;
@@ -1651,6 +1645,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.spydevs.FiestonVirtual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1661,6 +1656,7 @@
 			baseConfigurationReference = 24C1D1A72B0920D76C09E23C /* Pods-FiestonVirtual.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
 				DEVELOPMENT_TEAM = H9JXH336V5;
@@ -1672,6 +1668,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.spydevs.FiestonVirtual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1803,7 +1800,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2B1D0573251034C000EA4B56 /* XCRemoteSwiftPackageReference "swiftui-grid" */ = {
+		2B23A23A252417A600A348B9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.5;
+			};
+		};
+		2B23A24025241AB200A348B9 /* XCRemoteSwiftPackageReference "swiftui-grid" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/swift-extensions/swiftui-grid.git";
 			requirement = {
@@ -1811,57 +1816,31 @@
 				minimumVersion = 1.0.4;
 			};
 		};
-		2B85E8482521848500E3CD9F /* XCRemoteSwiftPackageReference "WaterfallGrid" */ = {
+		2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/paololeonardi/WaterfallGrid.git";
+			repositoryURL = "https://github.com/Q-Mobile/QGrid.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.0;
-			};
-		};
-		2B85E84E2521898D00E3CD9F /* XCRemoteSwiftPackageReference "GridStack" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pietropizzi/GridStack.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.1;
-			};
-		};
-		2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.15.0;
+				minimumVersion = 0.1.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2B1D0574251034C000EA4B56 /* Grid */ = {
+		2B23A23B252417A600A348B9 /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B1D0573251034C000EA4B56 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
+			package = 2B23A23A252417A600A348B9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+		2B23A24125241AB200A348B9 /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B23A24025241AB200A348B9 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
 			productName = Grid;
 		};
-		2B85E8492521848500E3CD9F /* WaterfallGrid */ = {
+		2B23A2BA25242CC400A348B9 /* QGrid */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B85E8482521848500E3CD9F /* XCRemoteSwiftPackageReference "WaterfallGrid" */;
-			productName = WaterfallGrid;
-		};
-		2B85E84F2521898D00E3CD9F /* GridStack */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2B85E84E2521898D00E3CD9F /* XCRemoteSwiftPackageReference "GridStack" */;
-			productName = GridStack;
-		};
-		2BD74DF22509E89C00B0820D /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
-		2BD74DF42509E89C00B0820D /* KingfisherSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2BD74DF12509E89C00B0820D /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = KingfisherSwiftUI;
+			package = 2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
 		};
 /* End XCSwiftPackageProductDependency section */
 

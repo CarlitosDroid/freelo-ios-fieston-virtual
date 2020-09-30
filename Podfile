@@ -11,6 +11,7 @@ target 'FiestonVirtual' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
   pod 'SwiftyJSON', '~> 5.0'
+  pod 'Kingfisher', '~> 5.15'
 
   target 'FiestonVirtualTests' do
     inherit! :search_paths

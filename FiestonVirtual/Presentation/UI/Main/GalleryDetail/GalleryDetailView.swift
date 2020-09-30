@@ -46,84 +46,87 @@ struct GalleryDetailView: View {
                             }
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 30.0, height: 30.0)
+                            
                         Text(userName)
                             .foregroundColor(Color.aqua)
                         Spacer()
                     }
-                    KFImage(URL(string: postFile))
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                    
-                    HStack {
-                        if(self.viewModel.showLike){
-                            Image(systemName: "heart.fill")
-                                .foregroundColor(Color.white)
-                        }else{
-                            Button(action:{
-                                self.viewModel.makeLike(idPost: galleryItem.id)
-                                
-                            }){
-                                Image(systemName: "heart")
-                                    .foregroundColor(Color.white)
-                            }
-                        }
-                        Text(totalLikes)
-                            .foregroundColor(Color.white)
-                        Spacer()
-                    }
-                    HStack {
-                        if(!postTitle.isEmpty) {
-                            Text(postTitle)
-                                .foregroundColor(Color.white)
-                        }
-                        Spacer()
-                    }
-                    ScrollView {
-                        ForEach(comments, id: \.id) { comment in
-                            GalleryDetailItemView(comment: comment)
-                        }.listRowBackground(Color.deep_purple_intense)
-                    }
-                    HStack {
-                        TextField("Comentar...", text: self.$writtenComment)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.default)
-                        Button(action: {
-                            
-                            viewModel.addComment(postId: galleryItem.id, comment: writtenComment)
-                            
-                        }) {
-                            Image(systemName: "paperplane.fill")
-                                .foregroundColor(Color.white)
-                                .frame(width: 30.0)
-                        }
-                    }
+//                    KFImage(URL(string: postFile))
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fill)
+//
+//                    HStack {
+//                        if(self.viewModel.showLike){
+//                            Image(systemName: "heart.fill")
+//                                .foregroundColor(Color.white)
+//                        }else{
+//                            Button(action:{
+//                                self.viewModel.makeLike(idPost: galleryItem.id)
+//
+//                            }){
+//                                Image(systemName: "heart")
+//                                    .foregroundColor(Color.white)
+//                            }
+//                        }
+//                        Text(totalLikes)
+//                            .foregroundColor(Color.white)
+//                        Spacer()
+//                    }
+//                    HStack {
+//                        if(!postTitle.isEmpty) {
+//                            Text(postTitle)
+//                                .foregroundColor(Color.white)
+//                        }
+//                        Spacer()
+//                    }
+//                    ScrollView {
+//                        ForEach(comments, id: \.id) { comment in
+//                            GalleryDetailItemView(comment: comment)
+//                        }.listRowBackground(Color.deep_purple_intense)
+//                    }
+//                    HStack {
+//                        TextField("Comentar...", text: self.$writtenComment)
+//                            .textFieldStyle(RoundedBorderTextFieldStyle())
+//                            .keyboardType(.default)
+//                        Button(action: {
+//
+//                            viewModel.addComment(postId: galleryItem.id, comment: writtenComment)
+//
+//                        }) {
+//                            Image(systemName: "paperplane.fill")
+//                                .foregroundColor(Color.white)
+//                                .frame(width: 30.0)
+//                        }
+//                    }
                 }
                 .padding(5)
                 .onAppear(perform: {
-                    viewModel.getComments(postId: galleryItem.id)
+//                    viewModel.getComments(postId: galleryItem.id)
                     viewModel.getPostDetail(postId: galleryItem.id)
                 })
                 .onReceive(self.viewModel.$getGalleryDetail, perform: { getGalleryDetail in
-                    userName = getGalleryDetail?.userName ?? ""
-                    userImage = getGalleryDetail?.userImage ?? ""
                     
-                    postFile = getGalleryDetail?.postFile ?? ""
+                    guard let galleryNoNull = getGalleryDetail else { return }
                     
-                    totalLikes = String(getGalleryDetail?.postLikeCount ?? 0)
-                    
-                    postTitle = getGalleryDetail?.postTitle ?? ""
-                    
+                    self.userName = galleryNoNull.userName
+                    self.userImage = galleryNoNull.userImage
+//
+//                    postFile = getGalleryDetail?.postFile ?? ""
+//
+//                    totalLikes = String(getGalleryDetail?.postLikeCount ?? 0)
+//
+//                    postTitle = getGalleryDetail?.postTitle ?? ""
+
                 })
-                .onReceive(self.viewModel.$comments, perform: { comments in
-                    self.comments = comments
-                })
-                .onReceive(self.viewModel.$comment, perform: { comment in
-                    self.writtenComment = ""
-                })
-                .onReceive(self.viewModel.$totalLikes) { totalLikes in
-                    self.totalLikes = String(totalLikes)
-                }
+//                .onReceive(self.viewModel.$comments, perform: { comments in
+//                    self.comments = comments
+//                })
+//                .onReceive(self.viewModel.$comment, perform: { comment in
+//                    self.writtenComment = ""
+//                })
+//                .onReceive(self.viewModel.$totalLikes) { totalLikes in
+//                    self.totalLikes = String(totalLikes)
+//                }
                 
             }
         }

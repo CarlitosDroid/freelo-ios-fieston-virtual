@@ -1,8 +1,8 @@
 
 import SwiftUI
 import Grid
-import GridStack
 import KingfisherSwiftUI
+import QGrid
 
 struct GalleryView: View {
     
@@ -17,19 +17,11 @@ struct GalleryView: View {
         ZStack{
             Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
             LoadingView(isShowing: self.$viewModel.isLoading) {
-                
-                List(self.viewModel.galleryItems.chunks(size: 3),id: \.self){chunks in
-                    ForEach(chunks,id: \.self) { galleryItem in
-                        NavigationLink(destination: GalleryDetailView(galleryItem: galleryItem)) {
-                            GalleryItemView(galleryItem: galleryItem,cellWidth: 30.0)
-                        }.buttonStyle(PlainButtonStyle())
-                    }
+                QGrid(viewModel.galleryItems, columns: 3) { item in
+                    NavigationLink(destination: GalleryDetailView(galleryItem: item)) {
+                        GalleryItemView(galleryItem: item)
+                    }.buttonStyle(PlainButtonStyle())
                 }
-                
-                /*GridStack(minCellWidth: 110, spacing: 5, numItems: viewModel.galleryItems.count) { index, cellWidth in
-                 NavigationLink(destination: GalleryDetailView(galleryItem: viewModel.galleryItems[index])) {
-                 GalleryItemView(galleryItem: viewModel.galleryItems[index], cellWidth: cellWidth)
-                 }.buttonStyle(PlainButtonStyle())*/
             }
         }
         .onAppear {
@@ -53,19 +45,41 @@ struct GalleryView_Previews: PreviewProvider {
 
 
 struct GridCell: View {
-    var person: GalleryItem
-    
-    var body: some View {
-        VStack() {
-            Image(person.file)
-                .resizable()
-                .scaledToFit()
-                .clipShape(Circle())
-                .shadow(color: .primary, radius: 5)
-                .padding([.horizontal, .top], 7)
-            Text(person.preview).lineLimit(1)
-            Text(person.preview).lineLimit(1)
-        }
+  var person: Person
+
+  var body: some View {
+    VStack() {
+        KFImage(URL(string: "http://fiestonvirtual.com/app/images/users/17/tn_5f6d1c231c042.jpeg"))
+        .resizable()
+        .scaledToFit()
+        .clipShape(Circle())
+        .shadow(color: .primary, radius: 5)
+        .padding([.horizontal, .top], 7)
+      Text(person.firstName).lineLimit(1)
+      Text(person.lastName).lineLimit(1)
     }
+  }
+}
+
+
+func PERSONASSSSSSSSS(galleryItems: [GalleryItem]) -> [Person] {
+    
+    var listota = [Person]()
+    
+    for index in 1...100 {
+        
+        listota.append(Person(imageName: galleryItems[index].file))
+    }
+    
+    return listota
+    
+}
+
+
+struct Person : Identifiable {
+    let id = UUID().uuidString
+    let imageName: String
+    let firstName = "r21"
+    let lastName = "r21"
 }
 
