@@ -20,12 +20,12 @@ struct GalleryDetailView: View {
     //User
     @State private var userName: String = ""
     @State private var userImage: String = ""
-    
+
     @State private var postFile: String = ""
-    
+
     @State private var totalLikes: String = ""
     @State private var postTitle: String = ""
-    
+
     @State private var comments: [Comment] = []
     @State private var writtenComment: String = ""
     
@@ -46,87 +46,97 @@ struct GalleryDetailView: View {
                             }
                             .resizable()
                             .scaledToFit()
+                            .frame(width: 30.0, height: 30.0)
                             
                         Text(userName)
                             .foregroundColor(Color.aqua)
                         Spacer()
                     }
-//                    KFImage(URL(string: postFile))
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fill)
-//
-//                    HStack {
-//                        if(self.viewModel.showLike){
-//                            Image(systemName: "heart.fill")
-//                                .foregroundColor(Color.white)
-//                        }else{
-//                            Button(action:{
-//                                self.viewModel.makeLike(idPost: galleryItem.id)
-//
-//                            }){
-//                                Image(systemName: "heart")
-//                                    .foregroundColor(Color.white)
-//                            }
-//                        }
-//                        Text(totalLikes)
-//                            .foregroundColor(Color.white)
-//                        Spacer()
-//                    }
-//                    HStack {
-//                        if(!postTitle.isEmpty) {
-//                            Text(postTitle)
-//                                .foregroundColor(Color.white)
-//                        }
-//                        Spacer()
-//                    }
-//                    ScrollView {
-//                        ForEach(comments, id: \.id) { comment in
-//                            GalleryDetailItemView(comment: comment)
-//                        }.listRowBackground(Color.deep_purple_intense)
-//                    }
-//                    HStack {
-//                        TextField("Comentar...", text: self.$writtenComment)
-//                            .textFieldStyle(RoundedBorderTextFieldStyle())
-//                            .keyboardType(.default)
-//                        Button(action: {
-//
-//                            viewModel.addComment(postId: galleryItem.id, comment: writtenComment)
-//
-//                        }) {
-//                            Image(systemName: "paperplane.fill")
-//                                .foregroundColor(Color.white)
-//                                .frame(width: 30.0)
-//                        }
-//                    }
+                    KFImage(URL(string: postFile))
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+
+                    HStack {
+                        if(totalLikes.isEmpty){
+                            Button(action:{
+                                self.viewModel.makeLike(idPost: galleryItem.id)
+                            }){
+                                Image(systemName: "heart")
+                                    .foregroundColor(Color.white)
+                            }
+                        } else {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(Color.white)
+                        }
+                        Text(totalLikes)
+                            .foregroundColor(Color.white)
+                        Spacer()
+                    }
+                    HStack {
+                        if(!postTitle.isEmpty) {
+                            Text(postTitle)
+                                .foregroundColor(Color.white)
+                        }
+                        Spacer()
+                    }
+                    ScrollView {
+                        ForEach(comments, id: \.id) { comment in
+                            GalleryDetailItemView(comment: comment)
+                        }.listRowBackground(Color.deep_purple_intense)
+                    }
+                    HStack {
+                        TextField("Comentar...", text: self.$writtenComment)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.default)
+                        Button(action: {
+
+                            viewModel.addComment(postId: galleryItem.id, comment: writtenComment)
+
+                        }) {
+                            Image(systemName: "paperplane.fill")
+                                .foregroundColor(Color.white)
+                                .frame(width: 30.0)
+                        }
+                    }
                 }
                 .padding(5)
                 .onAppear(perform: {
-//                    viewModel.getComments(postId: galleryItem.id)
+                    viewModel.getComments(postId: galleryItem.id)
                     viewModel.getPostDetail(postId: galleryItem.id)
                 })
                 .onReceive(self.viewModel.$getGalleryDetail, perform: { getGalleryDetail in
                     
-                    guard let galleryNoNull = getGalleryDetail else { return }
+                    guard let getGalleryDetailNoNull = getGalleryDetail else { return }
                     
-                    self.userName = galleryNoNull.userName
-                    self.userImage = galleryNoNull.userImage
-//
-//                    postFile = getGalleryDetail?.postFile ?? ""
-//
-//                    totalLikes = String(getGalleryDetail?.postLikeCount ?? 0)
-//
-//                    postTitle = getGalleryDetail?.postTitle ?? ""
+                    self.userName = getGalleryDetailNoNull.userName
+                    self.userImage = getGalleryDetailNoNull.userImage
+
+                    self.postFile = getGalleryDetailNoNull.postFile
+
+                    self.totalLikes = String(getGalleryDetailNoNull.postLikeCount)
+
+                    self.postTitle = getGalleryDetailNoNull.postTitle
 
                 })
-//                .onReceive(self.viewModel.$comments, perform: { comments in
-//                    self.comments = comments
-//                })
-//                .onReceive(self.viewModel.$comment, perform: { comment in
-//                    self.writtenComment = ""
-//                })
-//                .onReceive(self.viewModel.$totalLikes) { totalLikes in
-//                    self.totalLikes = String(totalLikes)
-//                }
+                .onReceive(self.viewModel.$comments, perform: { comments11 in
+                    
+                    guard let commentsNonNull = comments11 else { return }
+                    
+                    self.comments.append(contentsOf: commentsNonNull)
+                })
+                .onReceive(self.viewModel.$comment, perform: { comment in
+                    
+                    guard let commentNonNull = comment else { return }
+                    
+                    self.comments.append(commentNonNull)
+                    self.writtenComment = ""
+                })
+                .onReceive(self.viewModel.$makeLikeResponse) { makeLikeResponse in
+                    
+                    guard let totalLikesNonNull = makeLikeResponse else { return }
+                    
+                    self.totalLikes = String(totalLikesNonNull.likes)
+                }
                 
             }
         }
@@ -140,16 +150,16 @@ struct GalleryDetailView: View {
     
 }
 
-struct GalleryDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        GalleryDetailView(
-            galleryItem: GalleryItem(
-                id: 0,
-                type: 0,
-                file: "",
-                status: 0,
-                preview: ""
-            )
-        )
-    }
-}
+//struct GalleryDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GalleryDetailView(
+//            galleryItem: GalleryItem(
+//                id: 0,
+//                type: 0,
+//                file: "",
+//                status: 0,
+//                preview: ""
+//            ), getGalleryDetail: GetGalleryDetail(idPost: <#T##Int#>, postType: <#T##Int#>, postFile: <#T##String#>, postTitle: <#T##String#>, postStatus: <#T##Int#>, postLikeCount: <#T##Int#>, postLike: <#T##Bool#>, userName: <#T##String#>, userImage: <#T##String#>)
+//        )
+//    }
+//}

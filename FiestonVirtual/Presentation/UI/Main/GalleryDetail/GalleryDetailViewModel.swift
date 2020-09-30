@@ -17,9 +17,9 @@ class GalleryDetailViewModel: ObservableObject {
     private let makeLikeUseCase: MakeLikeUseCase
     
     @Published var getGalleryDetail: GetGalleryDetail?
-    @Published var comments: [Comment] = []
+    @Published var comments: [Comment]?
     @Published var comment: Comment?
-    @Published var totalLikes = 0
+    @Published var makeLikeResponse: MakeLikeResponse?
     @Published var showLike = false
     
     @Published var isLoading = false
@@ -40,12 +40,12 @@ class GalleryDetailViewModel: ObservableObject {
         self.makeLikeUseCase = makeLikeUseCase
     }
     
+    
+    // TODO - MARK ZIP BOTH REQUEST
     func getComments(postId: Int) {
-        self.isLoading = true
         getCommentsUseCase.invoke(getCommentsRequest: GetCommentsRequest(idPost: postId))
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
-                self.isLoading = false
                 switch completion {
                 case .finished:
                     break
@@ -97,13 +97,12 @@ class GalleryDetailViewModel: ObservableObject {
                     break
                 }
             }, receiveValue: { (comment: Comment) in
-                self.comments.append(comment)
                 self.comment=comment
             })
             .store(in: &disposables)
     }
     
-    func makeLike(idPost: Int){
+    func makeLike(idPost: Int) {
         self.isLoading = true
         makeLikeUseCase.invoke(idPost: idPost)
             .receive(on: DispatchQueue.main)
@@ -118,12 +117,9 @@ class GalleryDetailViewModel: ObservableObject {
                     break
                 }
             }, receiveValue: { (response: MakeLikeResponse) in
-                self.totalLikes = response.likes
-                self.showLike = true
+                self.makeLikeResponse = response
             })
             .store(in: &disposables)
     }
-    
-    
     
 }

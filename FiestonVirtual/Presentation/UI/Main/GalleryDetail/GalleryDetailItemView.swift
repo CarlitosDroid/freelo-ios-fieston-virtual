@@ -24,6 +24,7 @@ struct GalleryDetailItemView: View {
                     .foregroundColor(Color.aqua)
                 Text(comment.text)
                     .padding(2)
+                    .foregroundColor(Color.black)
                     .background(Color.white)
                     .cornerRadius(8)
             }
