@@ -5,19 +5,12 @@ import KingfisherSwiftUI
 struct GalleryItemView: View {
     
     var galleryItem : GalleryItem
-//    var cellWidth : CGFloat
-   
+
     var body: some View {
         
         KFImage(URL(string: getImageOfGalleryItem(galleryItem: galleryItem)))
-        .resizable()
-        .scaledToFit()
-        .clipShape(Circle())
-        .shadow(color: .primary, radius: 5)
-        .padding([.horizontal, .top], 7)
-            
-//            .frame(width: cellWidth, height: cellWidth)
-        
+            .resizable()
+            .scaledToFit()
     }
     
     private func getImageOfGalleryItem(galleryItem:GalleryItem) -> String{
