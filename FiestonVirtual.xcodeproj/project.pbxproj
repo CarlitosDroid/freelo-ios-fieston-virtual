@@ -90,6 +90,7 @@
 		2BDAC59B250ACFB500DA6A74 /* UploadFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */; };
 		54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */; };
+		9A07956B2525704400BB589C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9A07956A2525704400BB589C /* IQKeyboardManagerSwift */; };
 		9A15E9B3251974BF00891B55 /* GetGalleryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */; };
 		9A15E9BB251974E800891B55 /* GetGalleryUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */; };
 		9A15E9C02519753800891B55 /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BF2519753800891B55 /* GalleryRepository.swift */; };
@@ -363,6 +364,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A07956B2525704400BB589C /* IQKeyboardManagerSwift in Frameworks */,
 				2B23A2BB25242CC400A348B9 /* QGrid in Frameworks */,
 				54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */,
 				A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */,
@@ -1092,6 +1094,7 @@
 				2B23A23B252417A600A348B9 /* KingfisherSwiftUI */,
 				2B23A24125241AB200A348B9 /* Grid */,
 				2B23A2BA25242CC400A348B9 /* QGrid */,
+				9A07956A2525704400BB589C /* IQKeyboardManagerSwift */,
 			);
 			productName = FiestonVirtual;
 			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
@@ -1172,6 +1175,7 @@
 				2B23A23A252417A600A348B9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				2B23A24025241AB200A348B9 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
 				2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */,
+				9A0795692525704400BB589C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
 			projectDirPath = "";
@@ -1562,7 +1566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1617,7 +1621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
@@ -1824,6 +1828,14 @@
 				minimumVersion = 0.1.4;
 			};
 		};
+		9A0795692525704400BB589C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1841,6 +1853,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */;
 			productName = QGrid;
+		};
+		9A07956A2525704400BB589C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A0795692525704400BB589C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
