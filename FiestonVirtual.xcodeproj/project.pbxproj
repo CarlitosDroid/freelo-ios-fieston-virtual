@@ -91,6 +91,24 @@
 		54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */; };
 		9A07956B2525704400BB589C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9A07956A2525704400BB589C /* IQKeyboardManagerSwift */; };
+		9A07957125257A3500BB589C /* GetTriviaUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07957025257A3500BB589C /* GetTriviaUseCaseImpl.swift */; };
+		9A07957925257A4300BB589C /* GetTriviaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07957825257A4300BB589C /* GetTriviaUseCase.swift */; };
+		9A07957F25257AFB00BB589C /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07957E25257AFB00BB589C /* Trivia.swift */; };
+		9A07958725257B1D00BB589C /* Alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07958625257B1D00BB589C /* Alternative.swift */; };
+		9A07958C2525808500BB589C /* TriviaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07958B2525808500BB589C /* TriviaRequest.swift */; };
+		9A079591252580BE00BB589C /* AnswerTriviaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A079590252580BE00BB589C /* AnswerTriviaResponse.swift */; };
+		9A079596252581C800BB589C /* AnswerTriviaUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A079595252581C800BB589C /* AnswerTriviaUseCaseImpl.swift */; };
+		9A07959B252581DB00BB589C /* AnswerTriviaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07959A252581DB00BB589C /* AnswerTriviaUseCase.swift */; };
+		9A0795A02525851600BB589C /* TriviaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07959F2525851600BB589C /* TriviaRepository.swift */; };
+		9A0795A52525874B00BB589C /* AnswerTriviaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795A42525874B00BB589C /* AnswerTriviaRequest.swift */; };
+		9A0795AA25258A0500BB589C /* TriviaRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795A925258A0500BB589C /* TriviaRepositoryImpl.swift */; };
+		9A0795AF25258AAD00BB589C /* TriviaDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795AE25258AAD00BB589C /* TriviaDataSource.swift */; };
+		9A0795B425258C4E00BB589C /* TriviaDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795B325258C4E00BB589C /* TriviaDataSourceImpl.swift */; };
+		9A0795B925258CD400BB589C /* TriviaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795B825258CD400BB589C /* TriviaApi.swift */; };
+		9A0795C72525902200BB589C /* AnswerTriviaResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795C62525902200BB589C /* AnswerTriviaResponseEntity.swift */; };
+		9A0795CF25259BBE00BB589C /* AnswerTriviaResponseEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795CE25259BBE00BB589C /* AnswerTriviaResponseEntityMapper.swift */; };
+		9A0795D425259C7300BB589C /* ChildQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795D325259C7300BB589C /* ChildQuestion.swift */; };
+		9A0795DC2525A17500BB589C /* ChildQuestionAlternativeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795DB2525A17500BB589C /* ChildQuestionAlternativeMapper.swift */; };
 		9A15E9B3251974BF00891B55 /* GetGalleryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */; };
 		9A15E9BB251974E800891B55 /* GetGalleryUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */; };
 		9A15E9C02519753800891B55 /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BF2519753800891B55 /* GalleryRepository.swift */; };
@@ -137,6 +155,7 @@
 		9A8145822505F8A0001A012A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145812505F8A0001A012A /* MainViewModel.swift */; };
 		9A8145842505F90C001A012A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145832505F90C001A012A /* WelcomeView.swift */; };
 		9AE641C02521DA3A00365B9E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE641BF2521DA3900365B9E /* ArrayExtension.swift */; };
+		9AE7FAB22525A4FF00F04774 /* TriviaApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FAB12525A4FF00F04774 /* TriviaApiImpl.swift */; };
 		9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0800F8BF50576030F8ED8A5E /* Pods_FiestonVirtual.framework */; };
@@ -157,7 +176,7 @@
 		FB1014F8250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */; };
 		FB1014FA250B2A08002C91ED /* GetRemotePedirCancionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014F9250B2A08002C91ED /* GetRemotePedirCancionRequest.swift */; };
 		FB1014FF250B2B24002C91ED /* LikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014FE250B2B24002C91ED /* LikeResponse.swift */; };
-		FB101501250B2B5A002C91ED /* RespuestaTriviaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */; };
+		FB101501250B2B5A002C91ED /* TriviaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101500250B2B5A002C91ED /* TriviaResponse.swift */; };
 		FB101503250B2B81002C91ED /* PedirCancionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101502250B2B81002C91ED /* PedirCancionResponse.swift */; };
 		FB101518250C70E0002C91ED /* CommentsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101517250C70E0002C91ED /* CommentsApi.swift */; };
 		FB10151A250C730E002C91ED /* CommentsApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB101519250C730E002C91ED /* CommentsApiImpl.swift */; };
@@ -280,6 +299,24 @@
 		5E00F9A42143DA0A2E88BEBD /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		81DC065DED1DF8D5FC710C7D /* Pods-FiestonVirtualTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86D1C4045236C783848B4F61 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtual_FiestonVirtualUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A07957025257A3500BB589C /* GetTriviaUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTriviaUseCaseImpl.swift; sourceTree = "<group>"; };
+		9A07957825257A4300BB589C /* GetTriviaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTriviaUseCase.swift; sourceTree = "<group>"; };
+		9A07957E25257AFB00BB589C /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		9A07958625257B1D00BB589C /* Alternative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alternative.swift; sourceTree = "<group>"; };
+		9A07958B2525808500BB589C /* TriviaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaRequest.swift; sourceTree = "<group>"; };
+		9A079590252580BE00BB589C /* AnswerTriviaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTriviaResponse.swift; sourceTree = "<group>"; };
+		9A079595252581C800BB589C /* AnswerTriviaUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTriviaUseCaseImpl.swift; sourceTree = "<group>"; };
+		9A07959A252581DB00BB589C /* AnswerTriviaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTriviaUseCase.swift; sourceTree = "<group>"; };
+		9A07959F2525851600BB589C /* TriviaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaRepository.swift; sourceTree = "<group>"; };
+		9A0795A42525874B00BB589C /* AnswerTriviaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTriviaRequest.swift; sourceTree = "<group>"; };
+		9A0795A925258A0500BB589C /* TriviaRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaRepositoryImpl.swift; sourceTree = "<group>"; };
+		9A0795AE25258AAD00BB589C /* TriviaDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaDataSource.swift; sourceTree = "<group>"; };
+		9A0795B325258C4E00BB589C /* TriviaDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaDataSourceImpl.swift; sourceTree = "<group>"; };
+		9A0795B825258CD400BB589C /* TriviaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaApi.swift; sourceTree = "<group>"; };
+		9A0795C62525902200BB589C /* AnswerTriviaResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTriviaResponseEntity.swift; sourceTree = "<group>"; };
+		9A0795CE25259BBE00BB589C /* AnswerTriviaResponseEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTriviaResponseEntityMapper.swift; sourceTree = "<group>"; };
+		9A0795D325259C7300BB589C /* ChildQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildQuestion.swift; sourceTree = "<group>"; };
+		9A0795DB2525A17500BB589C /* ChildQuestionAlternativeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildQuestionAlternativeMapper.swift; sourceTree = "<group>"; };
 		9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryUseCase.swift; sourceTree = "<group>"; };
 		9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryUseCaseImpl.swift; sourceTree = "<group>"; };
 		9A15E9BF2519753800891B55 /* GalleryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepository.swift; sourceTree = "<group>"; };
@@ -326,6 +363,7 @@
 		9A8145812505F8A0001A012A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9A8145832505F90C001A012A /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		9AE641BF2521DA3900365B9E /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		9AE7FAB12525A4FF00F04774 /* TriviaApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaApiImpl.swift; sourceTree = "<group>"; };
 		AC9F56DA6C3EAA9D0D05ECA3 /* Pods-FiestonVirtualTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.release.xcconfig"; sourceTree = "<group>"; };
 		D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FiestonVirtualTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD745BE1A3F56DA73475DD2F /* Pods-FiestonVirtual.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtual.debug.xcconfig"; path = "Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual.debug.xcconfig"; sourceTree = "<group>"; };
@@ -344,7 +382,7 @@
 		FB1014F7250B295B002C91ED /* GetRemoteRespuestaTriviaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemoteRespuestaTriviaRequest.swift; sourceTree = "<group>"; };
 		FB1014F9250B2A08002C91ED /* GetRemotePedirCancionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRemotePedirCancionRequest.swift; sourceTree = "<group>"; };
 		FB1014FE250B2B24002C91ED /* LikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeResponse.swift; sourceTree = "<group>"; };
-		FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespuestaTriviaResponse.swift; sourceTree = "<group>"; };
+		FB101500250B2B5A002C91ED /* TriviaResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaResponse.swift; sourceTree = "<group>"; };
 		FB101502250B2B81002C91ED /* PedirCancionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedirCancionResponse.swift; sourceTree = "<group>"; };
 		FB101517250C70E0002C91ED /* CommentsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsApi.swift; sourceTree = "<group>"; };
 		FB101519250C730E002C91ED /* CommentsApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsApiImpl.swift; sourceTree = "<group>"; };
@@ -657,7 +695,7 @@
 			isa = PBXGroup;
 			children = (
 				FB1014FD250B2AD9002C91ED /* PedirCancion */,
-				FB1014FC250B2AD6002C91ED /* RespuestaTrivia */,
+				FB1014FC250B2AD6002C91ED /* Trivia */,
 				FB1014FB250B2AD3002C91ED /* Like */,
 				FB1014E92509B872002C91ED /* Gallery */,
 				FB1014E82509B83E002C91ED /* Comment */,
@@ -704,6 +742,8 @@
 				2BDAC598250AC66300DA6A74 /* GalleryApiImpl.swift */,
 				FBBA41F6250F391B0016ACC6 /* LikeApi.swift */,
 				FBBA41F8250F3A320016ACC6 /* LikeApiImpl.swift */,
+				9A0795B825258CD400BB589C /* TriviaApi.swift */,
+				9AE7FAB12525A4FF00F04774 /* TriviaApiImpl.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -737,6 +777,7 @@
 				9A15E9D32519B88600891B55 /* GalleryDataSourceImpl.swift */,
 				9A656552251DCDBB000C6031 /* CommentsRemoteDataSourceImpl.swift */,
 				9A7001AF2520396B00C942DC /* LikeDataSourceImpl.swift */,
+				9A0795B325258C4E00BB589C /* TriviaDataSourceImpl.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -751,6 +792,7 @@
 				FBBA420425106FB90016ACC6 /* CommentsRemoteDataSource.swift */,
 				9A15E9CE2519B69000891B55 /* GalleryDataSource.swift */,
 				9A7001AA252038DB00C942DC /* LikeDataSource.swift */,
+				9A0795AE25258AAD00BB589C /* TriviaDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -758,6 +800,7 @@
 		2BC2571D2505621700B433CC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9A07957D25257ACA00BB589C /* Trivia */,
 				FB1014F6250B281A002C91ED /* PedirCancion */,
 				FB1014F5250B27E8002C91ED /* RespuestaTrivia */,
 				FB1014F2250B274E002C91ED /* Likes */,
@@ -803,6 +846,9 @@
 				9A656503251DBC60000C6031 /* ChildGetGalleryDetailDataResponseMapper.swift */,
 				9A65655D251DD2C2000C6031 /* ChildGetCommentsResponseMapper.swift */,
 				9A790A2B251EDC19006C5391 /* ChildAddCommentResponseMapper.swift */,
+				9A0795CE25259BBE00BB589C /* AnswerTriviaResponseEntityMapper.swift */,
+				9A0795D325259C7300BB589C /* ChildQuestion.swift */,
+				9A0795DB2525A17500BB589C /* ChildQuestionAlternativeMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -816,6 +862,7 @@
 				9A15E9C92519B64C00891B55 /* GalleryRepositoryImpl.swift */,
 				9A656534251DCB23000C6031 /* CommentsRepositoryImpl.swift */,
 				9A7001A5252036AC00C942DC /* LikeRepositoryImpl.swift */,
+				9A0795A925258A0500BB589C /* TriviaRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -829,6 +876,7 @@
 				9A15E9BF2519753800891B55 /* GalleryRepository.swift */,
 				9A656516251DC3EB000C6031 /* CommentsRepository.swift */,
 				9A7001A02520367A00C942DC /* LikeRepository.swift */,
+				9A07959F2525851600BB589C /* TriviaRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -836,6 +884,7 @@
 		2BC2572F2505A37400B433CC /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				9A07956F25257A2400BB589C /* Trivia */,
 				9A70016F252030BB00C942DC /* Like */,
 				9A656508251DC0B2000C6031 /* Comment */,
 				9A15E9B12519742C00891B55 /* Gallery */,
@@ -887,6 +936,29 @@
 				AC9F56DA6C3EAA9D0D05ECA3 /* Pods-FiestonVirtualTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A07956F25257A2400BB589C /* Trivia */ = {
+			isa = PBXGroup;
+			children = (
+				9A07957025257A3500BB589C /* GetTriviaUseCaseImpl.swift */,
+				9A07957825257A4300BB589C /* GetTriviaUseCase.swift */,
+				9A079595252581C800BB589C /* AnswerTriviaUseCaseImpl.swift */,
+				9A07959A252581DB00BB589C /* AnswerTriviaUseCase.swift */,
+			);
+			path = Trivia;
+			sourceTree = "<group>";
+		};
+		9A07957D25257ACA00BB589C /* Trivia */ = {
+			isa = PBXGroup;
+			children = (
+				9A07957E25257AFB00BB589C /* Trivia.swift */,
+				9A07958625257B1D00BB589C /* Alternative.swift */,
+				9A07958B2525808500BB589C /* TriviaRequest.swift */,
+				9A079590252580BE00BB589C /* AnswerTriviaResponse.swift */,
+				9A0795A42525874B00BB589C /* AnswerTriviaRequest.swift */,
+			);
+			path = Trivia;
 			sourceTree = "<group>";
 		};
 		9A15E9B12519742C00891B55 /* Gallery */ = {
@@ -1056,12 +1128,13 @@
 			path = Like;
 			sourceTree = "<group>";
 		};
-		FB1014FC250B2AD6002C91ED /* RespuestaTrivia */ = {
+		FB1014FC250B2AD6002C91ED /* Trivia */ = {
 			isa = PBXGroup;
 			children = (
-				FB101500250B2B5A002C91ED /* RespuestaTriviaResponse.swift */,
+				FB101500250B2B5A002C91ED /* TriviaResponse.swift */,
+				9A0795C62525902200BB589C /* AnswerTriviaResponseEntity.swift */,
 			);
-			path = RespuestaTrivia;
+			path = Trivia;
 			sourceTree = "<group>";
 		};
 		FB1014FD250B2AD9002C91ED /* PedirCancion */ = {
@@ -1331,6 +1404,7 @@
 				9A15E9CF2519B69000891B55 /* GalleryDataSource.swift in Sources */,
 				2B81FCF12507553100EC9E10 /* UseCaseAssembly.swift in Sources */,
 				2B0981E82509274100C78FFF /* Log.swift in Sources */,
+				9A07958C2525808500BB589C /* TriviaRequest.swift in Sources */,
 				2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */,
 				FBBA41F7250F391B0016ACC6 /* LikeApi.swift in Sources */,
 				2B81FCF52507567800EC9E10 /* DependecyProvider.swift in Sources */,
@@ -1340,6 +1414,7 @@
 				9A656504251DBC60000C6031 /* ChildGetGalleryDetailDataResponseMapper.swift in Sources */,
 				FBBA420325106E400016ACC6 /* Comment.swift in Sources */,
 				FB1014FF250B2B24002C91ED /* LikeResponse.swift in Sources */,
+				9A07957125257A3500BB589C /* GetTriviaUseCaseImpl.swift in Sources */,
 				FBBA41FF251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift in Sources */,
 				9A656553251DCDBB000C6031 /* CommentsRemoteDataSourceImpl.swift in Sources */,
 				FBBA41FB25105A4E0016ACC6 /* Ranking.swift in Sources */,
@@ -1358,15 +1433,23 @@
 				2BC257342505A3B500B433CC /* LoginUseCaseImpl.swift in Sources */,
 				2B4823262506A29600AF312D /* Repository.swift in Sources */,
 				FB1014F12509B9C6002C91ED /* AddCommentResponse.swift in Sources */,
+				9A0795C72525902200BB589C /* AnswerTriviaResponseEntity.swift in Sources */,
 				2B48231C25068AF600AF312D /* UserEntityMapper.swift in Sources */,
+				9A0795B925258CD400BB589C /* TriviaApi.swift in Sources */,
 				FBBA41FD25105F3F0016ACC6 /* RankingRemoteDataSource.swift in Sources */,
 				2BC2573C2505AAE000B433CC /* CodeVerificationViewModel.swift in Sources */,
 				9A7001AB252038DB00C942DC /* LikeDataSource.swift in Sources */,
+				9A0795DC2525A17500BB589C /* ChildQuestionAlternativeMapper.swift in Sources */,
+				9A0795AF25258AAD00BB589C /* TriviaDataSource.swift in Sources */,
 				2B0981E6250925D500C78FFF /* AppDelegateExt.swift in Sources */,
+				9A0795B425258C4E00BB589C /* TriviaDataSourceImpl.swift in Sources */,
 				FB101518250C70E0002C91ED /* CommentsApi.swift in Sources */,
 				2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */,
+				9A079596252581C800BB589C /* AnswerTriviaUseCaseImpl.swift in Sources */,
 				9A7001B02520396B00C942DC /* LikeDataSourceImpl.swift in Sources */,
 				2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */,
+				9A07959B252581DB00BB589C /* AnswerTriviaUseCase.swift in Sources */,
+				9A07958725257B1D00BB589C /* Alternative.swift in Sources */,
 				FBBA420525106FB90016ACC6 /* CommentsRemoteDataSource.swift in Sources */,
 				2B4823282506A32400AF312D /* CoreDataRepository.swift in Sources */,
 				FB1014EB2509B8FC002C91ED /* GetGalleryResponse.swift in Sources */,
@@ -1374,10 +1457,12 @@
 				2BC2572E250564FB00B433CC /* EventCodeRepository.swift in Sources */,
 				FB1014E52509B35E002C91ED /* GetGalleryRequest.swift in Sources */,
 				2BC2571625055F7A00B433CC /* Parsing.swift in Sources */,
+				9A0795AA25258A0500BB589C /* TriviaRepositoryImpl.swift in Sources */,
 				9A7815E1251AD41B006D0BD9 /* GalleryItemView.swift in Sources */,
 				2B1D05722510342B00EA4B56 /* HomeView.swift in Sources */,
 				2BC257202505623000B433CC /* ErrorResponse.swift in Sources */,
 				2B85E8382521373700E3CD9F /* GalleryDetailItemView.swift in Sources */,
+				9A07957F25257AFB00BB589C /* Trivia.swift in Sources */,
 				2B81FCE12507352300EC9E10 /* UserResponse.swift in Sources */,
 				9A70017E2520325600C942DC /* MakeLikeRequest.swift in Sources */,
 				2BC257232505627200B433CC /* EventCode.swift in Sources */,
@@ -1403,6 +1488,7 @@
 				2BC25726250563FB00B433CC /* EventCodeMapper.swift in Sources */,
 				FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */,
 				2BC25729250564A100B433CC /* EventCodeRepositoryImpl.swift in Sources */,
+				9A07957925257A4300BB589C /* GetTriviaUseCase.swift in Sources */,
 				9A15E9C52519790400891B55 /* GalleryItem.swift in Sources */,
 				9A790A0E251EC290006C5391 /* AddCommentUseCaseImpl.swift in Sources */,
 				2B81FCE3250736C800EC9E10 /* UserResponseMapper.swift in Sources */,
@@ -1419,6 +1505,7 @@
 				9A7001862520335000C942DC /* MakeLikeResponse.swift in Sources */,
 				2BDAC595250AC55700DA6A74 /* Photo.swift in Sources */,
 				9A81457D2505F3B8001A012A /* GetWelcomeUseCase.swift in Sources */,
+				9A0795A52525874B00BB589C /* AnswerTriviaRequest.swift in Sources */,
 				9A73CC892508910900D9C310 /* ViewModelAssembly.swift in Sources */,
 				9A65655E251DD2C2000C6031 /* ChildGetCommentsResponseMapper.swift in Sources */,
 				9A7001A12520367A00C942DC /* LikeRepository.swift in Sources */,
@@ -1429,6 +1516,7 @@
 				9A15E9CA2519B64C00891B55 /* GalleryRepositoryImpl.swift in Sources */,
 				9A790A09251EC202006C5391 /* AddCommentUseCase.swift in Sources */,
 				2BA2AFBA250990E000236FDD /* PhotosView.swift in Sources */,
+				9A0795D425259C7300BB589C /* ChildQuestion.swift in Sources */,
 				9A790A2C251EDC19006C5391 /* ChildAddCommentResponseMapper.swift in Sources */,
 				FB10151A250C730E002C91ED /* CommentsApiImpl.swift in Sources */,
 				9A65650A251DC129000C6031 /* GetCommentsUseCase.swift in Sources */,
@@ -1451,15 +1539,18 @@
 				9A7AAFD32510571F00D20A6D /* SignOutUseCaseImpl.swift in Sources */,
 				9A8145822505F8A0001A012A /* MainViewModel.swift in Sources */,
 				9A81456E2505D7B4001A012A /* WelcomeRequest.swift in Sources */,
+				9AE7FAB22525A4FF00F04774 /* TriviaApiImpl.swift in Sources */,
 				2BC257362505A91B00B433CC /* UsersRepository.swift in Sources */,
-				FB101501250B2B5A002C91ED /* RespuestaTriviaResponse.swift in Sources */,
+				FB101501250B2B5A002C91ED /* TriviaResponse.swift in Sources */,
 				2BC256D1250546D100B433CC /* SceneDelegate.swift in Sources */,
+				9A0795A02525851600BB589C /* TriviaRepository.swift in Sources */,
 				9A656535251DCB23000C6031 /* CommentsRepositoryImpl.swift in Sources */,
 				2B81FCDF250734D500EC9E10 /* UserApi.swift in Sources */,
 				9A15E9BB251974E800891B55 /* GetGalleryUseCaseImpl.swift in Sources */,
 				2B81FCEB2507443F00EC9E10 /* DataSourcesAssembly.swift in Sources */,
 				2B83E79825081540004B1BF2 /* ValidateCodeRequest.swift in Sources */,
 				2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */,
+				9A0795CF25259BBE00BB589C /* AnswerTriviaResponseEntityMapper.swift in Sources */,
 				FB101503250B2B81002C91ED /* PedirCancionResponse.swift in Sources */,
 				2BB278E225115AF9002A234E /* HomeViewModel.swift in Sources */,
 				2B81FCDB2507342400EC9E10 /* UserRemoteDataSource.swift in Sources */,
@@ -1467,6 +1558,7 @@
 				2BD9D68E251B08E300188114 /* GalleryCoordinator.swift in Sources */,
 				FBBA4201251068270016ACC6 /* RankingResponseMapper.swift in Sources */,
 				9A6564F4251DA180000C6031 /* GetPostDetailUseCase.swift in Sources */,
+				9A079591252580BE00BB589C /* AnswerTriviaResponse.swift in Sources */,
 				FB1014EF2509B9A4002C91ED /* GetCommentResponse.swift in Sources */,
 				2B83E78F2507F519004B1BF2 /* LoadingView.swift in Sources */,
 				FB1014D725086F1C002C91ED /* RankingApiImpl.swift in Sources */,
