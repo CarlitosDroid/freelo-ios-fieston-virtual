@@ -109,6 +109,7 @@
 		9A0795CF25259BBE00BB589C /* AnswerTriviaResponseEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795CE25259BBE00BB589C /* AnswerTriviaResponseEntityMapper.swift */; };
 		9A0795D425259C7300BB589C /* ChildQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795D325259C7300BB589C /* ChildQuestion.swift */; };
 		9A0795DC2525A17500BB589C /* ChildQuestionAlternativeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0795DB2525A17500BB589C /* ChildQuestionAlternativeMapper.swift */; };
+		9A0FB3232526B0AC000CE6AB /* TriviaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0FB3222526B0AC000CE6AB /* TriviaViewModel.swift */; };
 		9A15E9B3251974BF00891B55 /* GetGalleryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */; };
 		9A15E9BB251974E800891B55 /* GetGalleryUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */; };
 		9A15E9C02519753800891B55 /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BF2519753800891B55 /* GalleryRepository.swift */; };
@@ -317,6 +318,7 @@
 		9A0795CE25259BBE00BB589C /* AnswerTriviaResponseEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTriviaResponseEntityMapper.swift; sourceTree = "<group>"; };
 		9A0795D325259C7300BB589C /* ChildQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildQuestion.swift; sourceTree = "<group>"; };
 		9A0795DB2525A17500BB589C /* ChildQuestionAlternativeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildQuestionAlternativeMapper.swift; sourceTree = "<group>"; };
+		9A0FB3222526B0AC000CE6AB /* TriviaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaViewModel.swift; sourceTree = "<group>"; };
 		9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryUseCase.swift; sourceTree = "<group>"; };
 		9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryUseCaseImpl.swift; sourceTree = "<group>"; };
 		9A15E9BF2519753800891B55 /* GalleryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRepository.swift; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 		2B81FCE625073D5E00EC9E10 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9A0FB3212526B098000CE6AB /* Trivia */,
 				2BA0A0C72520EEA0009C1FC0 /* GalleryDetail */,
 				9A7815D2251AC951006D0BD9 /* Gallery */,
 				2B5A53A6251475BB0036AB9E /* Camera */,
@@ -957,6 +960,14 @@
 				9A07958B2525808500BB589C /* TriviaRequest.swift */,
 				9A079590252580BE00BB589C /* AnswerTriviaResponse.swift */,
 				9A0795A42525874B00BB589C /* AnswerTriviaRequest.swift */,
+			);
+			path = Trivia;
+			sourceTree = "<group>";
+		};
+		9A0FB3212526B098000CE6AB /* Trivia */ = {
+			isa = PBXGroup;
+			children = (
+				9A0FB3222526B0AC000CE6AB /* TriviaViewModel.swift */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -1425,6 +1436,7 @@
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
 				9A7815D4251AC98B006D0BD9 /* GalleryViewModel.swift in Sources */,
 				2B83E79A25081594004B1BF2 /* GetRemoteUserRequest.swift in Sources */,
+				9A0FB3232526B0AC000CE6AB /* TriviaViewModel.swift in Sources */,
 				9AE641C02521DA3A00365B9E /* ArrayExtension.swift in Sources */,
 				2BC2571C250561D800B433CC /* EventCodeRemoteDataSource.swift in Sources */,
 				2BC257312505A38C00B433CC /* LoginUseCase.swift in Sources */,
