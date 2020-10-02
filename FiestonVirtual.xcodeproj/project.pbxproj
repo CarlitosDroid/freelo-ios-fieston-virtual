@@ -12,9 +12,9 @@
 		2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981EC25092F1D00C78FFF /* ContentView.swift */; };
 		2B1D05722510342B00EA4B56 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D05712510342B00EA4B56 /* HomeView.swift */; };
 		2B1D057A25103F4100EA4B56 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D057925103F4100EA4B56 /* UserProfileView.swift */; };
-		2B23A23C252417A600A348B9 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A23B252417A600A348B9 /* KingfisherSwiftUI */; };
-		2B23A24225241AB200A348B9 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A24125241AB200A348B9 /* Grid */; };
-		2B23A2BB25242CC400A348B9 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A2BA25242CC400A348B9 /* QGrid */; };
+		2B23A23C252417A600A348B9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A23B252417A600A348B9 /* SwiftPackageProductDependency */; };
+		2B23A24225241AB200A348B9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A24125241AB200A348B9 /* SwiftPackageProductDependency */; };
+		2B23A2BB25242CC400A348B9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A2BA25242CC400A348B9 /* SwiftPackageProductDependency */; };
 		2B3070EA25089603005198F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3070E925089603005198F7 /* Color.swift */; };
 		2B3070EC25089659005198F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3070EB25089659005198F7 /* Colors.xcassets */; };
 		2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3747F9250C55E200BE13B4 /* VideoView.swift */; };
@@ -47,6 +47,9 @@
 		2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339A2507093B007C3FFC /* DomainModel.swift */; };
 		2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339D250714C4007C3FFC /* VerifySessionUseCase.swift */; };
 		2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339F250714D1007C3FFC /* VerifySessionUseCaseImpl.swift */; };
+		2B9997282526C16F00EC4968 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B9997272526C16F00EC4968 /* SwiftPackageProductDependency */; };
+		2B99972E2526C3A100EC4968 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B99972D2526C3A100EC4968 /* SwiftPackageProductDependency */; };
+		2B9997342526C3CE00EC4968 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B9997332526C3CE00EC4968 /* SwiftPackageProductDependency */; };
 		2BA0A0C92520EEB7009C1FC0 /* GalleryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0A0C82520EEB7009C1FC0 /* GalleryDetailView.swift */; };
 		2BA0A0D1252108E4009C1FC0 /* GalleryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0A0D0252108E4009C1FC0 /* GalleryDetailViewModel.swift */; };
 		2BA2AFBA250990E000236FDD /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AFB9250990E000236FDD /* PhotosView.swift */; };
@@ -88,9 +91,9 @@
 		2BDAC595250AC55700DA6A74 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC594250AC55700DA6A74 /* Photo.swift */; };
 		2BDAC599250AC66300DA6A74 /* GalleryApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC598250AC66300DA6A74 /* GalleryApiImpl.swift */; };
 		2BDAC59B250ACFB500DA6A74 /* UploadFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */; };
-		54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		54CD0F8E25FAE3BF3FC82753 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */; };
-		9A07956B2525704400BB589C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9A07956A2525704400BB589C /* IQKeyboardManagerSwift */; };
+		9A07956B2525704400BB589C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 9A07956A2525704400BB589C /* SwiftPackageProductDependency */; };
 		9A15E9B3251974BF00891B55 /* GetGalleryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */; };
 		9A15E9BB251974E800891B55 /* GetGalleryUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */; };
 		9A15E9C02519753800891B55 /* GalleryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9BF2519753800891B55 /* GalleryRepository.swift */; };
@@ -137,10 +140,10 @@
 		9A8145822505F8A0001A012A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145812505F8A0001A012A /* MainViewModel.swift */; };
 		9A8145842505F90C001A012A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145832505F90C001A012A /* WelcomeView.swift */; };
 		9AE641C02521DA3A00365B9E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE641BF2521DA3900365B9E /* ArrayExtension.swift */; };
-		9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		9C47CD2FB1B46B98065A8A55 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		A16FBA5D98964B10D4D1A8A1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0800F8BF50576030F8ED8A5E /* Pods_FiestonVirtual.framework */; };
-		B616DAB77583261B480DCBA8 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		B616DAB77583261B480DCBA8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		F81E71D303838636895DE080 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D1C4045236C783848B4F61 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
 		FB1014D025086338002C91ED /* RankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014CF25086338002C91ED /* RankingResponse.swift */; };
 		FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */; };
@@ -364,13 +367,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A07956B2525704400BB589C /* IQKeyboardManagerSwift in Frameworks */,
-				2B23A2BB25242CC400A348B9 /* QGrid in Frameworks */,
-				54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */,
-				A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */,
-				2B23A23C252417A600A348B9 /* KingfisherSwiftUI in Frameworks */,
-				2B23A24225241AB200A348B9 /* Grid in Frameworks */,
+				2B99972E2526C3A100EC4968 /* BuildFile in Frameworks */,
+				9A07956B2525704400BB589C /* BuildFile in Frameworks */,
+				2B23A2BB25242CC400A348B9 /* BuildFile in Frameworks */,
+				54CD0F8E25FAE3BF3FC82753 /* BuildFile in Frameworks */,
+				A16FBA5D98964B10D4D1A8A1 /* BuildFile in Frameworks */,
+				2B9997342526C3CE00EC4968 /* BuildFile in Frameworks */,
+				2B23A23C252417A600A348B9 /* BuildFile in Frameworks */,
+				2B23A24225241AB200A348B9 /* BuildFile in Frameworks */,
 				B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */,
+				2B9997282526C16F00EC4968 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +384,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */,
+				9C47CD2FB1B46B98065A8A55 /* BuildFile in Frameworks */,
 				73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B616DAB77583261B480DCBA8 /* (null) in Frameworks */,
+				B616DAB77583261B480DCBA8 /* BuildFile in Frameworks */,
 				F81E71D303838636895DE080 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1083,7 +1089,7 @@
 				2BC256C7250546D100B433CC /* Sources */,
 				2BC256C8250546D100B433CC /* Frameworks */,
 				2BC256C9250546D100B433CC /* Resources */,
-				3E49A9348877B8CE864CD799 /* [CP] Embed Pods Frameworks */,
+				A380372032EB35A6FD42F5F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1091,10 +1097,13 @@
 			);
 			name = FiestonVirtual;
 			packageProductDependencies = (
-				2B23A23B252417A600A348B9 /* KingfisherSwiftUI */,
-				2B23A24125241AB200A348B9 /* Grid */,
-				2B23A2BA25242CC400A348B9 /* QGrid */,
-				9A07956A2525704400BB589C /* IQKeyboardManagerSwift */,
+				2B23A23B252417A600A348B9 /* SwiftPackageProductDependency */,
+				2B23A24125241AB200A348B9 /* SwiftPackageProductDependency */,
+				2B23A2BA25242CC400A348B9 /* SwiftPackageProductDependency */,
+				9A07956A2525704400BB589C /* SwiftPackageProductDependency */,
+				2B9997272526C16F00EC4968 /* SwiftPackageProductDependency */,
+				2B99972D2526C3A100EC4968 /* SwiftPackageProductDependency */,
+				2B9997332526C3CE00EC4968 /* SwiftPackageProductDependency */,
 			);
 			productName = FiestonVirtual;
 			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
@@ -1127,7 +1136,7 @@
 				2BC256EB250546D200B433CC /* Sources */,
 				2BC256EC250546D200B433CC /* Frameworks */,
 				2BC256ED250546D200B433CC /* Resources */,
-				3DE1332FD8DAB9A5DB4B1E7D /* [CP] Embed Pods Frameworks */,
+				728A7C28687FD882094A039F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1172,10 +1181,13 @@
 			);
 			mainGroup = 2BC256C2250546D100B433CC;
 			packageReferences = (
-				2B23A23A252417A600A348B9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				2B23A24025241AB200A348B9 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
-				2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */,
-				9A0795692525704400BB589C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				2B23A23A252417A600A348B9 /* RemoteSwiftPackageReference */,
+				2B23A24025241AB200A348B9 /* RemoteSwiftPackageReference */,
+				2B23A2B925242CC400A348B9 /* RemoteSwiftPackageReference */,
+				9A0795692525704400BB589C /* RemoteSwiftPackageReference */,
+				2B9997262526C16F00EC4968 /* RemoteSwiftPackageReference */,
+				2B99972C2526C3A100EC4968 /* RemoteSwiftPackageReference */,
+				2B9997322526C3CE00EC4968 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
 			projectDirPath = "";
@@ -1240,7 +1252,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3DE1332FD8DAB9A5DB4B1E7D /* [CP] Embed Pods Frameworks */ = {
+		728A7C28687FD882094A039F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1257,7 +1269,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3E49A9348877B8CE864CD799 /* [CP] Embed Pods Frameworks */ = {
+		A380372032EB35A6FD42F5F6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1804,7 +1816,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2B23A23A252417A600A348B9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		2B23A23A252417A600A348B9 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1812,7 +1824,7 @@
 				minimumVersion = 5.15.5;
 			};
 		};
-		2B23A24025241AB200A348B9 /* XCRemoteSwiftPackageReference "swiftui-grid" */ = {
+		2B23A24025241AB200A348B9 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/swift-extensions/swiftui-grid.git";
 			requirement = {
@@ -1820,7 +1832,7 @@
 				minimumVersion = 1.0.4;
 			};
 		};
-		2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+		2B23A2B925242CC400A348B9 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Q-Mobile/QGrid.git";
 			requirement = {
@@ -1828,7 +1840,31 @@
 				minimumVersion = 0.1.4;
 			};
 		};
-		9A0795692525704400BB589C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		2B9997262526C16F00EC4968 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+		2B99972C2526C3A100EC4968 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2B9997322526C3CE00EC4968 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+		9A0795692525704400BB589C /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -1839,24 +1875,39 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2B23A23B252417A600A348B9 /* KingfisherSwiftUI */ = {
+		2B23A23B252417A600A348B9 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B23A23A252417A600A348B9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 2B23A23A252417A600A348B9 /* RemoteSwiftPackageReference */;
 			productName = KingfisherSwiftUI;
 		};
-		2B23A24125241AB200A348B9 /* Grid */ = {
+		2B23A24125241AB200A348B9 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B23A24025241AB200A348B9 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
+			package = 2B23A24025241AB200A348B9 /* RemoteSwiftPackageReference */;
 			productName = Grid;
 		};
-		2B23A2BA25242CC400A348B9 /* QGrid */ = {
+		2B23A2BA25242CC400A348B9 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */;
+			package = 2B23A2B925242CC400A348B9 /* RemoteSwiftPackageReference */;
 			productName = QGrid;
 		};
-		9A07956A2525704400BB589C /* IQKeyboardManagerSwift */ = {
+		2B9997272526C16F00EC4968 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9A0795692525704400BB589C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 2B9997262526C16F00EC4968 /* RemoteSwiftPackageReference */;
+			productName = Swinject;
+		};
+		2B99972D2526C3A100EC4968 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B99972C2526C3A100EC4968 /* RemoteSwiftPackageReference */;
+			productName = SwiftyJSON;
+		};
+		2B9997332526C3CE00EC4968 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B9997322526C3CE00EC4968 /* RemoteSwiftPackageReference */;
+			productName = Alamofire;
+		};
+		9A07956A2525704400BB589C /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9A0795692525704400BB589C /* RemoteSwiftPackageReference */;
 			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
