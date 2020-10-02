@@ -57,7 +57,7 @@ struct GalleryDetailView: View {
                         .aspectRatio(contentMode: .fill)
 
                     HStack {
-                        if(totalLikes.isEmpty){
+                        if(totalLikes == "0"){
                             Button(action:{
                                 self.viewModel.makeLike(idPost: galleryItem.id)
                             }){
