@@ -1089,7 +1089,7 @@
 				2BC256C7250546D100B433CC /* Sources */,
 				2BC256C8250546D100B433CC /* Frameworks */,
 				2BC256C9250546D100B433CC /* Resources */,
-				A380372032EB35A6FD42F5F6 /* [CP] Embed Pods Frameworks */,
+				9FB8B8E106A84CF35BF9AC8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1136,7 +1136,7 @@
 				2BC256EB250546D200B433CC /* Sources */,
 				2BC256EC250546D200B433CC /* Frameworks */,
 				2BC256ED250546D200B433CC /* Resources */,
-				728A7C28687FD882094A039F /* [CP] Embed Pods Frameworks */,
+				09735B21AFE7716380F15400 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1230,6 +1230,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		09735B21AFE7716380F15400 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		115CE5F1559ECE4F6C6F3A10 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1252,24 +1269,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		728A7C28687FD882094A039F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A380372032EB35A6FD42F5F6 /* [CP] Embed Pods Frameworks */ = {
+		9FB8B8E106A84CF35BF9AC8E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
