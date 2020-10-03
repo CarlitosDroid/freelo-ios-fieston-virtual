@@ -25,8 +25,8 @@ struct GalleryView: View {
                         GalleryItemView(galleryItem: item)
                     }.buttonStyle(PlainButtonStyle())
                 }
-            }else {
-                LoadingView(isShowing: self.$viewModel.isLoading) {
+            } else {
+                LoadingView(isShowing: .constant(true)) {
                     EmptyView()
                 }
             }
@@ -38,11 +38,11 @@ struct GalleryView: View {
                 onlyFirstTime = false
             }
             
-        }.onReceive(viewModel.$galleryItems, perform: { gitems in
+        }.onReceive(viewModel.$galleryItems, perform: { nullGalleryItems in
             
-            guard let getGalleryDetai = gitems else { return }
+            guard let nonNullGalleryItems = nullGalleryItems else { return }
             
-            self.galleryItems.append(contentsOf: getGalleryDetai)
+            self.galleryItems.append(contentsOf: nonNullGalleryItems)
             
         })
     }
