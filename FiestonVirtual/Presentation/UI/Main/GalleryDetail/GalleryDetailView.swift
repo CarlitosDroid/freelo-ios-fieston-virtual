@@ -15,8 +15,6 @@ struct GalleryDetailView: View {
     
     var galleryItem: GalleryItem
     
-    @State var text: String = ""
-    
     //User
     @State private var userName: String = ""
     @State private var userImage: String = ""
@@ -62,7 +60,7 @@ struct GalleryDetailView: View {
                             VideoView(videoUrl: postFile)
                         }
                     }
-                    
+
                     HStack {
                         if(totalLikes == "0"){
                             Button(action:{
@@ -126,22 +124,22 @@ struct GalleryDetailView: View {
                     
                 })
                 .onReceive(self.viewModel.$comments, perform: { comments11 in
-                    
+
                     guard let commentsNonNull = comments11 else { return }
-                    
+
                     self.comments.append(contentsOf: commentsNonNull)
                 })
                 .onReceive(self.viewModel.$comment, perform: { comment in
-                    
+
                     guard let commentNonNull = comment else { return }
-                    
+
                     self.comments.append(commentNonNull)
                     self.writtenComment = ""
                 })
                 .onReceive(self.viewModel.$makeLikeResponse) { makeLikeResponse in
-                    
+
                     guard let totalLikesNonNull = makeLikeResponse else { return }
-                    
+
                     self.totalLikes = String(totalLikesNonNull.likes)
                 }
                 
@@ -156,17 +154,3 @@ struct GalleryDetailView: View {
     }
     
 }
-
-//struct GalleryDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GalleryDetailView(
-//            galleryItem: GalleryItem(
-//                id: 0,
-//                type: 0,
-//                file: "",
-//                status: 0,
-//                preview: ""
-//            ), getGalleryDetail: GetGalleryDetail(idPost: <#T##Int#>, postType: <#T##Int#>, postFile: <#T##String#>, postTitle: <#T##String#>, postStatus: <#T##Int#>, postLikeCount: <#T##Int#>, postLike: <#T##Bool#>, userName: <#T##String#>, userImage: <#T##String#>)
-//        )
-//    }
-//}
