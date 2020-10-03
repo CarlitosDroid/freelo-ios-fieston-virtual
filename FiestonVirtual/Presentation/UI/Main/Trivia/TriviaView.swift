@@ -27,6 +27,12 @@ struct TriviaView: View {
                             self.page = 0
                             self.viewModel.getTrivia()
                         }
+                        .alert(isPresented: self.$viewModel.showErrorMessage, content: {
+                            Alert(
+                                title: Text(self.viewModel.errorMessage),
+                                dismissButton: .default(Text("Aceptar"))
+                            )
+                        })
                     }else{
                         Pager(page: self.$page,
                               data: self.trivias,
@@ -39,6 +45,18 @@ struct TriviaView: View {
                         .alignment(.center)
                         .allowsDragging(false)
                         .horizontal(.leftToRight)
+                        .alert(isPresented: self.$viewModel.showAnswerAlert, content: {
+                            Alert(
+                                title: Text(self.messageAnswerAlert),
+                                dismissButton: .cancel(Text("Aceptar"), action: {
+                                    if(self.page == self.trivias.count - 1 ){
+                                        self.showWelcomeTrivia = true
+                                    }else{
+                                        self.page = page + 1
+                                    }
+                                })
+                            )
+                        })
                     }
                     
                 }
@@ -58,24 +76,6 @@ struct TriviaView: View {
             self.messageAnswerAlert = answerTriviaResponse!.message
             
         }
-        .alert(isPresented: self.$viewModel.showErrorMessage, content: {
-            Alert(
-                title: Text(self.viewModel.errorMessage),
-                dismissButton: .default(Text("Aceptar"))
-            )
-        })
-        .alert(isPresented: self.$viewModel.showAnswerAlert, content: {
-            Alert(
-                title: Text(self.messageAnswerAlert),
-                dismissButton: .cancel(Text("Aceptar"), action: {
-                    if(self.page == self.trivias.count - 1 ){
-                        self.showWelcomeTrivia = true
-                    }else{
-                        self.page = page + 1
-                    }
-                })
-            )
-        })
         
     }
     

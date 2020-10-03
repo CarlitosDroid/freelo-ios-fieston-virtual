@@ -21,7 +21,8 @@ struct TriviaPageView: View {
                 .font(.system(size: 26))
                 .bold()
                 .foregroundColor(Color.aqua)
-                .frame(maxWidth: .infinity,alignment: .trailing)
+                .frame(maxWidth: .infinity,alignment: .center)
+                .fixedSize(horizontal: false, vertical: true)
                 .padding(.top, 15)
                 .padding(.bottom, 15)
 
