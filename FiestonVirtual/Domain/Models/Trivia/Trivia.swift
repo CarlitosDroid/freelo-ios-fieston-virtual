@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct Trivia : Encodable {
+struct Trivia : Encodable,Equatable,Hashable  {
     let questionId: Int
     let questionType: String
     let questionName: String

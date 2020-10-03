@@ -34,5 +34,10 @@ class RepositoriesAssembly: Assembly {
         container.register(LikeRepository.self) { resolver in
             LikeRepositoryImpl(likeDataSource: resolver.resolve(LikeDataSource.self)!)
         }
+        
+        container.register(TriviaRepository.self) { resolver in
+            TriviaRepositoryImpl(triviaDataSource: resolver.resolve(TriviaDataSource.self)!)
+        }
+        
     }
 }

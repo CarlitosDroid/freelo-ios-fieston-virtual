@@ -12,9 +12,9 @@
 		2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0981EC25092F1D00C78FFF /* ContentView.swift */; };
 		2B1D05722510342B00EA4B56 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D05712510342B00EA4B56 /* HomeView.swift */; };
 		2B1D057A25103F4100EA4B56 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D057925103F4100EA4B56 /* UserProfileView.swift */; };
-		2B23A23C252417A600A348B9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A23B252417A600A348B9 /* SwiftPackageProductDependency */; };
-		2B23A24225241AB200A348B9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A24125241AB200A348B9 /* SwiftPackageProductDependency */; };
-		2B23A2BB25242CC400A348B9 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A2BA25242CC400A348B9 /* SwiftPackageProductDependency */; };
+		2B23A23C252417A600A348B9 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A23B252417A600A348B9 /* KingfisherSwiftUI */; };
+		2B23A24225241AB200A348B9 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A24125241AB200A348B9 /* Grid */; };
+		2B23A2BB25242CC400A348B9 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A2BA25242CC400A348B9 /* QGrid */; };
 		2B3070EA25089603005198F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3070E925089603005198F7 /* Color.swift */; };
 		2B3070EC25089659005198F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3070EB25089659005198F7 /* Colors.xcassets */; };
 		2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3747F9250C55E200BE13B4 /* VideoView.swift */; };
@@ -47,9 +47,9 @@
 		2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339A2507093B007C3FFC /* DomainModel.swift */; };
 		2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339D250714C4007C3FFC /* VerifySessionUseCase.swift */; };
 		2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B339F250714D1007C3FFC /* VerifySessionUseCaseImpl.swift */; };
-		2B9997282526C16F00EC4968 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B9997272526C16F00EC4968 /* SwiftPackageProductDependency */; };
-		2B99972E2526C3A100EC4968 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B99972D2526C3A100EC4968 /* SwiftPackageProductDependency */; };
-		2B9997342526C3CE00EC4968 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 2B9997332526C3CE00EC4968 /* SwiftPackageProductDependency */; };
+		2B9997282526C16F00EC4968 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 2B9997272526C16F00EC4968 /* Swinject */; };
+		2B99972E2526C3A100EC4968 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2B99972D2526C3A100EC4968 /* SwiftyJSON */; };
+		2B9997342526C3CE00EC4968 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2B9997332526C3CE00EC4968 /* Alamofire */; };
 		2BA0A0C92520EEB7009C1FC0 /* GalleryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0A0C82520EEB7009C1FC0 /* GalleryDetailView.swift */; };
 		2BA0A0D1252108E4009C1FC0 /* GalleryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0A0D0252108E4009C1FC0 /* GalleryDetailViewModel.swift */; };
 		2BA2AFBA250990E000236FDD /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2AFB9250990E000236FDD /* PhotosView.swift */; };
@@ -91,9 +91,8 @@
 		2BDAC595250AC55700DA6A74 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC594250AC55700DA6A74 /* Photo.swift */; };
 		2BDAC599250AC66300DA6A74 /* GalleryApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC598250AC66300DA6A74 /* GalleryApiImpl.swift */; };
 		2BDAC59B250ACFB500DA6A74 /* UploadFileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAC59A250ACFB500DA6A74 /* UploadFileResponse.swift */; };
-		54CD0F8E25FAE3BF3FC82753 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */; };
-		9A07956B2525704400BB589C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 9A07956A2525704400BB589C /* SwiftPackageProductDependency */; };
 		9A07956B2525704400BB589C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9A07956A2525704400BB589C /* IQKeyboardManagerSwift */; };
 		9A07957125257A3500BB589C /* GetTriviaUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07957025257A3500BB589C /* GetTriviaUseCaseImpl.swift */; };
 		9A07957925257A4300BB589C /* GetTriviaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07957825257A4300BB589C /* GetTriviaUseCase.swift */; };
@@ -122,6 +121,7 @@
 		9A15E9CF2519B69000891B55 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9CE2519B69000891B55 /* GalleryDataSource.swift */; };
 		9A15E9D42519B88600891B55 /* GalleryDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9D32519B88600891B55 /* GalleryDataSourceImpl.swift */; };
 		9A15E9D92519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9D82519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift */; };
+		9A379C4D25285AD200F07194 /* WelcomeTriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A379C4C25285AD200F07194 /* WelcomeTriviaView.swift */; };
 		9A6564EF251DA176000C6031 /* GetPostDetailUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6564EE251DA175000C6031 /* GetPostDetailUseCaseImpl.swift */; };
 		9A6564F4251DA180000C6031 /* GetPostDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6564F3251DA180000C6031 /* GetPostDetailUseCase.swift */; };
 		9A6564F9251DA5A6000C6031 /* GetGalleryDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6564F8251DA5A6000C6031 /* GetGalleryDetailRequest.swift */; };
@@ -159,14 +159,15 @@
 		9A81457F2505F420001A012A /* GetWelcomeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81457E2505F420001A012A /* GetWelcomeUseCaseImpl.swift */; };
 		9A8145822505F8A0001A012A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145812505F8A0001A012A /* MainViewModel.swift */; };
 		9A8145842505F90C001A012A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145832505F90C001A012A /* WelcomeView.swift */; };
+		9AD491452526E9900038A593 /* TriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD491442526E9900038A593 /* TriviaView.swift */; };
+		9AD4914A2526EB640038A593 /* TriviaPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD491492526EB640038A593 /* TriviaPageView.swift */; };
+		9AD491532526F39E0038A593 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 9AD491522526F39E0038A593 /* SwiftUIPager */; };
 		9AE641C02521DA3A00365B9E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE641BF2521DA3900365B9E /* ArrayExtension.swift */; };
-		9C47CD2FB1B46B98065A8A55 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
-		A16FBA5D98964B10D4D1A8A1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		9AE7FAB22525A4FF00F04774 /* TriviaApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FAB12525A4FF00F04774 /* TriviaApiImpl.swift */; };
 		9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0800F8BF50576030F8ED8A5E /* Pods_FiestonVirtual.framework */; };
-		B616DAB77583261B480DCBA8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		B616DAB77583261B480DCBA8 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		F81E71D303838636895DE080 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D1C4045236C783848B4F61 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
 		FB1014D025086338002C91ED /* RankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014CF25086338002C91ED /* RankingResponse.swift */; };
 		FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */; };
@@ -333,6 +334,7 @@
 		9A15E9CE2519B69000891B55 /* GalleryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
 		9A15E9D32519B88600891B55 /* GalleryDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSourceImpl.swift; sourceTree = "<group>"; };
 		9A15E9D82519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildGetGalleryPostsResponseMapper.swift; sourceTree = "<group>"; };
+		9A379C4C25285AD200F07194 /* WelcomeTriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTriviaView.swift; sourceTree = "<group>"; };
 		9A6564EE251DA175000C6031 /* GetPostDetailUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostDetailUseCaseImpl.swift; sourceTree = "<group>"; };
 		9A6564F3251DA180000C6031 /* GetPostDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostDetailUseCase.swift; sourceTree = "<group>"; };
 		9A6564F8251DA5A6000C6031 /* GetGalleryDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGalleryDetailRequest.swift; sourceTree = "<group>"; };
@@ -370,6 +372,8 @@
 		9A81457E2505F420001A012A /* GetWelcomeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWelcomeUseCaseImpl.swift; sourceTree = "<group>"; };
 		9A8145812505F8A0001A012A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9A8145832505F90C001A012A /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		9AD491442526E9900038A593 /* TriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaView.swift; sourceTree = "<group>"; };
+		9AD491492526EB640038A593 /* TriviaPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaPageView.swift; sourceTree = "<group>"; };
 		9AE641BF2521DA3900365B9E /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		9AE7FAB12525A4FF00F04774 /* TriviaApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaApiImpl.swift; sourceTree = "<group>"; };
 		AC9F56DA6C3EAA9D0D05ECA3 /* Pods-FiestonVirtualTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FiestonVirtualTests.release.xcconfig"; path = "Target Support Files/Pods-FiestonVirtualTests/Pods-FiestonVirtualTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -410,16 +414,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B99972E2526C3A100EC4968 /* BuildFile in Frameworks */,
-				9A07956B2525704400BB589C /* BuildFile in Frameworks */,
-				2B23A2BB25242CC400A348B9 /* BuildFile in Frameworks */,
-				54CD0F8E25FAE3BF3FC82753 /* BuildFile in Frameworks */,
-				A16FBA5D98964B10D4D1A8A1 /* BuildFile in Frameworks */,
-				2B9997342526C3CE00EC4968 /* BuildFile in Frameworks */,
-				2B23A23C252417A600A348B9 /* BuildFile in Frameworks */,
-				2B23A24225241AB200A348B9 /* BuildFile in Frameworks */,
+				2B99972E2526C3A100EC4968 /* SwiftyJSON in Frameworks */,
+				9A07956B2525704400BB589C /* IQKeyboardManagerSwift in Frameworks */,
+				9AD491532526F39E0038A593 /* SwiftUIPager in Frameworks */,
+				2B23A2BB25242CC400A348B9 /* QGrid in Frameworks */,
+				54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */,
+				A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */,
+				2B9997342526C3CE00EC4968 /* Alamofire in Frameworks */,
+				2B23A23C252417A600A348B9 /* KingfisherSwiftUI in Frameworks */,
+				2B23A24225241AB200A348B9 /* Grid in Frameworks */,
 				B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */,
-				2B9997282526C16F00EC4968 /* BuildFile in Frameworks */,
+				2B9997282526C16F00EC4968 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +432,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C47CD2FB1B46B98065A8A55 /* BuildFile in Frameworks */,
+				9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */,
 				73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,7 +441,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B616DAB77583261B480DCBA8 /* BuildFile in Frameworks */,
+				B616DAB77583261B480DCBA8 /* (null) in Frameworks */,
 				F81E71D303838636895DE080 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -977,6 +982,9 @@
 			isa = PBXGroup;
 			children = (
 				9A0FB3222526B0AC000CE6AB /* TriviaViewModel.swift */,
+				9AD491442526E9900038A593 /* TriviaView.swift */,
+				9AD491492526EB640038A593 /* TriviaPageView.swift */,
+				9A379C4C25285AD200F07194 /* WelcomeTriviaView.swift */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -1184,13 +1192,14 @@
 			);
 			name = FiestonVirtual;
 			packageProductDependencies = (
-				2B23A23B252417A600A348B9 /* SwiftPackageProductDependency */,
-				2B23A24125241AB200A348B9 /* SwiftPackageProductDependency */,
-				2B23A2BA25242CC400A348B9 /* SwiftPackageProductDependency */,
-				9A07956A2525704400BB589C /* SwiftPackageProductDependency */,
-				2B9997272526C16F00EC4968 /* SwiftPackageProductDependency */,
-				2B99972D2526C3A100EC4968 /* SwiftPackageProductDependency */,
-				2B9997332526C3CE00EC4968 /* SwiftPackageProductDependency */,
+				2B23A23B252417A600A348B9 /* KingfisherSwiftUI */,
+				2B23A24125241AB200A348B9 /* Grid */,
+				2B23A2BA25242CC400A348B9 /* QGrid */,
+				9A07956A2525704400BB589C /* IQKeyboardManagerSwift */,
+				2B9997272526C16F00EC4968 /* Swinject */,
+				2B99972D2526C3A100EC4968 /* SwiftyJSON */,
+				2B9997332526C3CE00EC4968 /* Alamofire */,
+				9AD491522526F39E0038A593 /* SwiftUIPager */,
 			);
 			productName = FiestonVirtual;
 			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
@@ -1268,13 +1277,14 @@
 			);
 			mainGroup = 2BC256C2250546D100B433CC;
 			packageReferences = (
-				2B23A23A252417A600A348B9 /* RemoteSwiftPackageReference */,
-				2B23A24025241AB200A348B9 /* RemoteSwiftPackageReference */,
-				2B23A2B925242CC400A348B9 /* RemoteSwiftPackageReference */,
-				9A0795692525704400BB589C /* RemoteSwiftPackageReference */,
-				2B9997262526C16F00EC4968 /* RemoteSwiftPackageReference */,
-				2B99972C2526C3A100EC4968 /* RemoteSwiftPackageReference */,
-				2B9997322526C3CE00EC4968 /* RemoteSwiftPackageReference */,
+				2B23A23A252417A600A348B9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2B23A24025241AB200A348B9 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
+				2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */,
+				9A0795692525704400BB589C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				2B9997262526C16F00EC4968 /* XCRemoteSwiftPackageReference "Swinject" */,
+				2B99972C2526C3A100EC4968 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				2B9997322526C3CE00EC4968 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9AD491512526F39E0038A593 /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
 			);
 			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
 			projectDirPath = "";
@@ -1442,6 +1452,7 @@
 				FB1014FF250B2B24002C91ED /* LikeResponse.swift in Sources */,
 				9A07957125257A3500BB589C /* GetTriviaUseCaseImpl.swift in Sources */,
 				FBBA41FF251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift in Sources */,
+				9AD4914A2526EB640038A593 /* TriviaPageView.swift in Sources */,
 				9A656553251DCDBB000C6031 /* CommentsRemoteDataSourceImpl.swift in Sources */,
 				FBBA41FB25105A4E0016ACC6 /* Ranking.swift in Sources */,
 				9A7AAFD12510568B00D20A6D /* SignOutUseCase.swift in Sources */,
@@ -1548,6 +1559,7 @@
 				FB10151A250C730E002C91ED /* CommentsApiImpl.swift in Sources */,
 				9A65650A251DC129000C6031 /* GetCommentsUseCase.swift in Sources */,
 				9A8145762505E898001A012A /* WelcomeResponseEntityMapper.swift in Sources */,
+				9A379C4D25285AD200F07194 /* WelcomeTriviaView.swift in Sources */,
 				FB1014E72509B394002C91ED /* GetGalleryDetail.swift in Sources */,
 				FBBA41F9250F3A320016ACC6 /* LikeApiImpl.swift in Sources */,
 				2BC2570E25055CAB00B433CC /* EventCodeApi.swift in Sources */,
@@ -1555,6 +1567,7 @@
 				2BA0A0C92520EEB7009C1FC0 /* GalleryDetailView.swift in Sources */,
 				2B8B339B2507093B007C3FFC /* DomainModel.swift in Sources */,
 				2B5A53A8251475D80036AB9E /* Coordinator.swift in Sources */,
+				9AD491452526E9900038A593 /* TriviaView.swift in Sources */,
 				9A15E9B3251974BF00891B55 /* GetGalleryUseCase.swift in Sources */,
 				2B3070EA25089603005198F7 /* Color.swift in Sources */,
 				2B83E7912507F584004B1BF2 /* LoadingIndicator.swift in Sources */,
@@ -1923,7 +1936,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2B23A23A252417A600A348B9 /* RemoteSwiftPackageReference */ = {
+		2B23A23A252417A600A348B9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1931,7 +1944,7 @@
 				minimumVersion = 5.15.5;
 			};
 		};
-		2B23A24025241AB200A348B9 /* RemoteSwiftPackageReference */ = {
+		2B23A24025241AB200A348B9 /* XCRemoteSwiftPackageReference "swiftui-grid" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/swift-extensions/swiftui-grid.git";
 			requirement = {
@@ -1939,7 +1952,7 @@
 				minimumVersion = 1.0.4;
 			};
 		};
-		2B23A2B925242CC400A348B9 /* RemoteSwiftPackageReference */ = {
+		2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Q-Mobile/QGrid.git";
 			requirement = {
@@ -1947,7 +1960,7 @@
 				minimumVersion = 0.1.4;
 			};
 		};
-		2B9997262526C16F00EC4968 /* RemoteSwiftPackageReference */ = {
+		2B9997262526C16F00EC4968 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -1955,7 +1968,7 @@
 				minimumVersion = 2.7.1;
 			};
 		};
-		2B99972C2526C3A100EC4968 /* RemoteSwiftPackageReference */ = {
+		2B99972C2526C3A100EC4968 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
 			requirement = {
@@ -1963,7 +1976,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		2B9997322526C3CE00EC4968 /* RemoteSwiftPackageReference */ = {
+		2B9997322526C3CE00EC4968 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1971,7 +1984,7 @@
 				minimumVersion = 5.2.2;
 			};
 		};
-		9A0795692525704400BB589C /* RemoteSwiftPackageReference */ = {
+		9A0795692525704400BB589C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -1979,43 +1992,56 @@
 				minimumVersion = 6.5.6;
 			};
 		};
+		9AD491512526F39E0038A593 /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.11.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2B23A23B252417A600A348B9 /* SwiftPackageProductDependency */ = {
+		2B23A23B252417A600A348B9 /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B23A23A252417A600A348B9 /* RemoteSwiftPackageReference */;
+			package = 2B23A23A252417A600A348B9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = KingfisherSwiftUI;
 		};
-		2B23A24125241AB200A348B9 /* SwiftPackageProductDependency */ = {
+		2B23A24125241AB200A348B9 /* Grid */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B23A24025241AB200A348B9 /* RemoteSwiftPackageReference */;
+			package = 2B23A24025241AB200A348B9 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
 			productName = Grid;
 		};
-		2B23A2BA25242CC400A348B9 /* SwiftPackageProductDependency */ = {
+		2B23A2BA25242CC400A348B9 /* QGrid */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B23A2B925242CC400A348B9 /* RemoteSwiftPackageReference */;
+			package = 2B23A2B925242CC400A348B9 /* XCRemoteSwiftPackageReference "QGrid" */;
 			productName = QGrid;
 		};
-		2B9997272526C16F00EC4968 /* SwiftPackageProductDependency */ = {
+		2B9997272526C16F00EC4968 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B9997262526C16F00EC4968 /* RemoteSwiftPackageReference */;
+			package = 2B9997262526C16F00EC4968 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
-		2B99972D2526C3A100EC4968 /* SwiftPackageProductDependency */ = {
+		2B99972D2526C3A100EC4968 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B99972C2526C3A100EC4968 /* RemoteSwiftPackageReference */;
+			package = 2B99972C2526C3A100EC4968 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		2B9997332526C3CE00EC4968 /* SwiftPackageProductDependency */ = {
+		2B9997332526C3CE00EC4968 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2B9997322526C3CE00EC4968 /* RemoteSwiftPackageReference */;
+			package = 2B9997322526C3CE00EC4968 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		9A07956A2525704400BB589C /* SwiftPackageProductDependency */ = {
+		9A07956A2525704400BB589C /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9A0795692525704400BB589C /* RemoteSwiftPackageReference */;
+			package = 9A0795692525704400BB589C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		9AD491522526F39E0038A593 /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AD491512526F39E0038A593 /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
 		};
 /* End XCSwiftPackageProductDependency section */
 

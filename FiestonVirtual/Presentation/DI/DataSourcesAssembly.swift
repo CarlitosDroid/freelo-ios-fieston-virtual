@@ -37,6 +37,11 @@ class DataSourcesAssembly: Assembly {
         container.register(LikeDataSource.self) { (resolver: Resolver) in
             LikeDataSourceImpl(likeApi: resolver.resolve(LikeApi.self)!)
         }
+        
+        container.register(TriviaDataSource.self) { (resolver: Resolver) in
+            TriviaDataSourceImpl(triviaApi: resolver.resolve(TriviaApi.self)!)
+        }
+        
     }
     
 }

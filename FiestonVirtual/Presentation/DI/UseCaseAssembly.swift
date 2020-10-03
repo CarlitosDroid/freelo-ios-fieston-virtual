@@ -68,5 +68,19 @@ class UseCasesAssembly: Assembly {
             )
         }
         
+        container.register(GetTriviaUseCase.self) { resolver in
+            GetTriviaUseCaseImpl(
+                triviaRepository: resolver.resolve(TriviaRepository.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
+        
+        container.register(AnswerTriviaUseCase.self) { resolver in
+            AnswerTriviaUseCaseImpl(
+                triviaRepository: resolver.resolve(TriviaRepository.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
+        
     }
 }

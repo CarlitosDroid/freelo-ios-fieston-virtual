@@ -47,6 +47,15 @@
         }
       },
       {
+        "package": "SwiftUIPager",
+        "repositoryURL": "https://github.com/fermoya/SwiftUIPager.git",
+        "state": {
+          "branch": null,
+          "revision": "c70dd348ee4bbdfc5af3b26c85309d4198db4f87",
+          "version": "1.11.0"
+        }
+      },
+      {
         "package": "SwiftyJSON",
         "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON.git",
         "state": {
