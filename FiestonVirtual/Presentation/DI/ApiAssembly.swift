@@ -31,6 +31,11 @@ class ApiAssembly: Assembly {
         container.register(LikeApi.self) { _ in
             LikeApiImpl()
         }
+        
+        container.register(TriviaApi.self) { _ in
+            TriviaApiImpl()
+        }
+        
     }
     
 }

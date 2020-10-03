@@ -73,7 +73,7 @@ struct MainView: View {
                                     Text("Chat")
                                 }.tag(3).foregroundColor(Color.red)
                             
-                            Text("TRIVIA")
+                            TriviaView()
                                 .tabItem {
                                     Image(systemName: "cube.box")
                                     Text("Trivia")

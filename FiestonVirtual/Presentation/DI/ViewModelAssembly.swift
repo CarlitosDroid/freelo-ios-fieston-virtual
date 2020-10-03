@@ -38,6 +38,13 @@ class ViewModelAssembly: Assembly {
                 makeLikeUseCase: resolver.resolve(MakeLikeUseCase.self)!
             )
         }
+        
+        container.register(TriviaViewModel.self) { resolver in
+            TriviaViewModel(
+                getTriviaUseCase: resolver.resolve(GetTriviaUseCase.self)!,
+                answerTriviaUseCase: resolver.resolve(AnswerTriviaUseCase.self)!
+            )
+        }
     
     }
 }

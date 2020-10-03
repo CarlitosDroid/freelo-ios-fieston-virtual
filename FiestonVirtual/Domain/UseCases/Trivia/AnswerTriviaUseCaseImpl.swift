@@ -26,7 +26,10 @@ class AnswerTriviaUseCaseImpl : AnswerTriviaUseCase{
             
         case .failure(let error):
             return Just(
-                AnswerTriviaResponse(userTotalScore: 0)
+                AnswerTriviaResponse(
+                    message: "",
+                    userTotalScore: 0
+                )
             )
             .mapError({ (_) in
                 ErrorResponse(code: 1, title: "", message: error.localizedDescription)
