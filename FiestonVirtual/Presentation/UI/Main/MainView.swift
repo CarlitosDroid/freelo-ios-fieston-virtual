@@ -102,7 +102,8 @@ struct MainView: View {
                             EmptyView()
                         })
                     
-                }.navigationBarTitle("Fieston Virtual", displayMode: .inline)
+                }
+                .navigationBarTitle("Fieston Virtual", displayMode: .inline)
                 .navigationBarItems(
                     leading: Button(action: {
                         
