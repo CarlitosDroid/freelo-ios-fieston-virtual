@@ -26,7 +26,7 @@ struct GalleryView: View {
                     }.buttonStyle(PlainButtonStyle())
                 }
             } else {
-                LoadingView(isShowing: .constant(true)) {
+                LoadingView(isShowing: self.$viewModel.isLoading) {
                     EmptyView()
                 }
             }

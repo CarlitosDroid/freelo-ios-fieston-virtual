@@ -104,9 +104,11 @@ struct GalleryDetailView: View {
                 .padding(5)
                 
             } else {
-                LoadingView(isShowing: .constant(true)) {
-                    EmptyView()
-                }
+                Text("Loading...")
+                    .foregroundColor(.white)
+//                LoadingView(isShowing: self.$viewModel.isLoading) {
+//                    EmptyView()
+//                }
             }
             
         }.onAppear(perform: {
