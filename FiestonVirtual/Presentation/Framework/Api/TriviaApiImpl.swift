@@ -2,6 +2,7 @@
  import Foundation
  import Combine
  import Alamofire
+ import SwiftyJSON
  
  class TriviaApiImpl : TriviaApi{
     
@@ -36,7 +37,14 @@
             .flatMap({(dataResponse:
                         DataResponse<TriviaResponse,AFError>)-> AnyPublisher<TriviaResponse, ExternalError> in Future<TriviaResponse, ExternalError> {
                             promise in switch dataResponse.result {
-                            case .failure(let afError): promise( .failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
+                            case .failure(let afError):
+                                if let data = dataResponse.data {
+                                    if let json = try? JSON(data: data) {
+                                        let message = json["message"].stringValue
+                                        promise(.failure(ExternalError.NetworkError(description: "\(message)")))
+                                    }
+                                }
+                                promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
                                 break
                                 
                             case .success(let likesResponse): promise( .success(likesResponse))
@@ -73,7 +81,14 @@
             .flatMap({(dataResponse:
                         DataResponse<AnswerTriviaResponseEntity,AFError>)-> AnyPublisher<AnswerTriviaResponseEntity, ExternalError> in Future<AnswerTriviaResponseEntity, ExternalError> {
                             promise in switch dataResponse.result {
-                            case .failure(let afError): promise( .failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
+                            case .failure(let afError):
+                                if let data = dataResponse.data {
+                                    if let json = try? JSON(data: data) {
+                                        let message = json["message"].stringValue
+                                        promise(.failure(ExternalError.NetworkError(description: "\(message)")))
+                                    }
+                                }
+                                promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
                                 break
                                 
                             case .success(let likesResponse): promise( .success(likesResponse))
