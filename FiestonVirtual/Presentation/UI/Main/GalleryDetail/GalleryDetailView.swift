@@ -15,8 +15,6 @@ struct GalleryDetailView: View {
     
     var galleryItem: GalleryItem
     
-    @State var text: String = ""
-    
     //User
     @State private var userName: String = ""
     @State private var userImage: String = ""
@@ -31,12 +29,11 @@ struct GalleryDetailView: View {
     
     var body: some View {
         
-        LoadingView(isShowing: self.$viewModel.isLoading) {
+        ZStack {
             
-            ZStack {
-                
-                Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
-                
+            Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
+            
+            if(!self.userName.isEmpty) {
                 VStack(spacing: 5) {
                     HStack {
                         KFImage(URL(string: userImage))
@@ -53,14 +50,12 @@ struct GalleryDetailView: View {
                         Spacer()
                     }
                     
-                    if(!postFile.isEmpty) {
-                        if(galleryItem.type == 1) {
-                            KFImage(URL(string: postFile))
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                        } else {
-                            VideoView(videoUrl: postFile)
-                        }
+                    if(galleryItem.type == 1) {
+                        KFImage(URL(string: postFile))
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    } else {
+                        VideoView(videoUrl: postFile)
                     }
                     
                     HStack {
@@ -107,46 +102,51 @@ struct GalleryDetailView: View {
                     }
                 }
                 .padding(5)
-                .onAppear(perform: {
-                    viewModel.getComments(postId: galleryItem.id)
-                    viewModel.getPostDetail(postId: galleryItem.id)
-                })
-                .onReceive(self.viewModel.$getGalleryDetail, perform: { getGalleryDetail in
-                    
-                    guard let getGalleryDetailNoNull = getGalleryDetail else { return }
-                    
-                    self.userName = getGalleryDetailNoNull.userName
-                    self.userImage = getGalleryDetailNoNull.userImage
-                    
-                    self.postFile = getGalleryDetailNoNull.postFile
-                    
-                    self.totalLikes = String(getGalleryDetailNoNull.postLikeCount)
-                    
-                    self.postTitle = getGalleryDetailNoNull.postTitle
-                    
-                })
-                .onReceive(self.viewModel.$comments, perform: { comments11 in
-                    
-                    guard let commentsNonNull = comments11 else { return }
-                    
-                    self.comments.append(contentsOf: commentsNonNull)
-                })
-                .onReceive(self.viewModel.$comment, perform: { comment in
-                    
-                    guard let commentNonNull = comment else { return }
-                    
-                    self.comments.append(commentNonNull)
-                    self.writtenComment = ""
-                })
-                .onReceive(self.viewModel.$makeLikeResponse) { makeLikeResponse in
-                    
-                    guard let totalLikesNonNull = makeLikeResponse else { return }
-                    
-                    self.totalLikes = String(totalLikesNonNull.likes)
-                }
                 
+            } else {
+                LoadingView(isShowing: .constant(true)) {
+                    EmptyView()
+                }
             }
+            
+        }.onAppear(perform: {
+            viewModel.getComments(postId: galleryItem.id)
+            viewModel.getPostDetail(postId: galleryItem.id)
+        })
+        .onReceive(self.viewModel.$getGalleryDetail, perform: { getGalleryDetail in
+            
+            guard let getGalleryDetailNoNull = getGalleryDetail else { return }
+            
+            self.userName = getGalleryDetailNoNull.userName
+            self.userImage = getGalleryDetailNoNull.userImage
+            
+            self.postFile = getGalleryDetailNoNull.postFile
+            
+            self.totalLikes = String(getGalleryDetailNoNull.postLikeCount)
+            
+            self.postTitle = getGalleryDetailNoNull.postTitle
+            
+        })
+        .onReceive(self.viewModel.$comments, perform: { comments11 in
+            
+            guard let commentsNonNull = comments11 else { return }
+            
+            self.comments.append(contentsOf: commentsNonNull)
+        })
+        .onReceive(self.viewModel.$comment, perform: { comment in
+            
+            guard let commentNonNull = comment else { return }
+            
+            self.comments.append(commentNonNull)
+            self.writtenComment = ""
+        })
+        .onReceive(self.viewModel.$makeLikeResponse) { makeLikeResponse in
+            
+            guard let totalLikesNonNull = makeLikeResponse else { return }
+            
+            self.totalLikes = String(totalLikesNonNull.likes)
         }
+        
         .alert(isPresented: .constant(self.viewModel.isError), content:{
             Alert(
                 title: Text(self.viewModel.errorMessage),
@@ -156,17 +156,3 @@ struct GalleryDetailView: View {
     }
     
 }
-
-//struct GalleryDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GalleryDetailView(
-//            galleryItem: GalleryItem(
-//                id: 0,
-//                type: 0,
-//                file: "",
-//                status: 0,
-//                preview: ""
-//            ), getGalleryDetail: GetGalleryDetail(idPost: <#T##Int#>, postType: <#T##Int#>, postFile: <#T##String#>, postTitle: <#T##String#>, postStatus: <#T##Int#>, postLikeCount: <#T##Int#>, postLike: <#T##Bool#>, userName: <#T##String#>, userImage: <#T##String#>)
-//        )
-//    }
-//}

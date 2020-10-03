@@ -12,27 +12,39 @@ struct GalleryView: View {
     @State private var showGalleryDetail = false
     @State private var onlyFirstTime = true
     
+    @State var galleryItems: [GalleryItem] = []
+    
     var body: some View {
         
         ZStack{
             Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
-            LoadingView(isShowing: self.$viewModel.isLoading) {
-                QGrid(viewModel.galleryItems, columns: 3) { item in
+            
+            if(!galleryItems.isEmpty) {
+                QGrid(galleryItems, columns: 3) { item in
                     NavigationLink(destination: GalleryDetailView(galleryItem: item)) {
                         GalleryItemView(galleryItem: item)
                     }.buttonStyle(PlainButtonStyle())
                 }
+            } else {
+                LoadingView(isShowing: .constant(true)) {
+                    EmptyView()
+                }
             }
-        }
-        .onAppear {
-            viewModel.getGallery()
-            /*scrollViewID = UUID()
-             if(onlyFirstTime) {
-             viewModel.getGallery()
-             onlyFirstTime = false
-             }*/
             
         }
+        .onAppear {
+            if(onlyFirstTime){
+                viewModel.getGallery()
+                onlyFirstTime = false
+            }
+            
+        }.onReceive(viewModel.$galleryItems, perform: { nullGalleryItems in
+            
+            guard let nonNullGalleryItems = nullGalleryItems else { return }
+            
+            self.galleryItems.append(contentsOf: nonNullGalleryItems)
+            
+        })
     }
     
 }
