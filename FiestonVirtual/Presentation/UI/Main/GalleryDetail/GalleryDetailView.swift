@@ -20,12 +20,12 @@ struct GalleryDetailView: View {
     //User
     @State private var userName: String = ""
     @State private var userImage: String = ""
-
+    
     @State private var postFile: String = ""
-
+    
     @State private var totalLikes: String = ""
     @State private var postTitle: String = ""
-
+    
     @State private var comments: [Comment] = []
     @State private var writtenComment: String = ""
     
@@ -47,15 +47,22 @@ struct GalleryDetailView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 30.0, height: 30.0)
-                            
+                        
                         Text(userName)
                             .foregroundColor(Color.aqua)
                         Spacer()
                     }
-                    KFImage(URL(string: postFile))
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-
+                    
+                    if(!postFile.isEmpty) {
+                        if(galleryItem.type == 1) {
+                            KFImage(URL(string: postFile))
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                        } else {
+                            VideoView(videoUrl: postFile)
+                        }
+                    }
+                    
                     HStack {
                         if(totalLikes == "0"){
                             Button(action:{
@@ -89,9 +96,9 @@ struct GalleryDetailView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .keyboardType(.default)
                         Button(action: {
-
+                            
                             viewModel.addComment(postId: galleryItem.id, comment: writtenComment)
-
+                            
                         }) {
                             Image(systemName: "paperplane.fill")
                                 .foregroundColor(Color.white)
@@ -110,13 +117,13 @@ struct GalleryDetailView: View {
                     
                     self.userName = getGalleryDetailNoNull.userName
                     self.userImage = getGalleryDetailNoNull.userImage
-
+                    
                     self.postFile = getGalleryDetailNoNull.postFile
-
+                    
                     self.totalLikes = String(getGalleryDetailNoNull.postLikeCount)
-
+                    
                     self.postTitle = getGalleryDetailNoNull.postTitle
-
+                    
                 })
                 .onReceive(self.viewModel.$comments, perform: { comments11 in
                     

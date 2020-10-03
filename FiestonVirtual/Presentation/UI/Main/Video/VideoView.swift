@@ -11,11 +11,11 @@ import AVKit
 
 struct VideoView: View {
  
+    var videoUrl = ""
+    
     var body: some View {
         VStack {
-            PlayerPickerView().frame(
-                height: UIScreen.main.bounds.height / 3
-            )
+            PlayerPickerView(videoUrl: videoUrl)
             Spacer()
         }
     }
@@ -23,10 +23,15 @@ struct VideoView: View {
 
 struct PlayerPickerView : UIViewControllerRepresentable {
     
+    private var videoUrl = ""
+    
+    init(videoUrl: String) {
+        self.videoUrl = videoUrl
+    }
+    
     func makeUIViewController(context: Context) -> UIViewController {
         let controller = AVPlayerViewController()
-        let url = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-        let player1 = AVPlayer(url: URL(string: url)!)
+        let player1 = AVPlayer(url: URL(string: self.videoUrl)!)
         controller.player = player1
         return controller
     }
