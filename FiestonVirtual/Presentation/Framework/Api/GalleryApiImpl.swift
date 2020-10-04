@@ -65,7 +65,7 @@ class GalleryApiImpl: GalleryApi {
             multipartFormData.append(String(postTitle).data(using: .utf8)!, withName: "postTitle")
             multipartFormData.append(data,
                                      withName: "file",
-                                     fileName: "\(self.getCurrentTimeStamp()).\(data.pathExtension)",
+                                     fileName: "\(getCurrentTimeStamp()).\(data.pathExtension)",
                                      mimeType: mimeType)
         },
         to: "http://fiestonvirtual.com/app/api/publicaciones.php",
@@ -103,7 +103,7 @@ class GalleryApiImpl: GalleryApi {
             multipartFormData.append(String(postTitle).data(using: .utf8)!, withName: "postTitle")
             multipartFormData.append(data,
                                      withName: "file",
-                                     fileName: "\(self.getCurrentTimeStamp()).jpeg",
+                                     fileName: "\(getCurrentTimeStamp()).jpeg",
                                      mimeType: "image/jpeg")
         },
         to: "http://fiestonvirtual.com/app/api/publicaciones.php",
@@ -219,14 +219,6 @@ class GalleryApiImpl: GalleryApi {
                     
                 }.eraseToAnyPublisher()
             }).eraseToAnyPublisher()
-    }
-    
-    private func getCurrentTimeStamp() -> String {
-        let now = Date()
-        let formatter = DateFormatter()
-        formatter.timeZone = TimeZone.current
-        formatter.dateFormat = "yyyyMMddHHmmss"
-        return formatter.string(from: now)
     }
     
 }

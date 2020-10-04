@@ -12,4 +12,5 @@ import Combine
 protocol UserApi {
     func getUserData(idUser: Int) -> AnyPublisher<UserResponse, ExternalError>
     func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<SignOutResponse, ExternalError>
+    func uploadProfileImage(data: URL, idUser: Int) -> AnyPublisher<UploadImageProfileResponse, ExternalError>
 }

@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Grid
+import KingfisherSwiftUI
 
 struct HomeView: View {
     
@@ -15,22 +16,50 @@ struct HomeView: View {
     
     var onCategorySelected: (_ categoryIndex: Int) -> Void
     
+    @State var isShowingImagePicker = false
+    @State var imageInBlackBox: UIImage?
+    @State var fileURL: URL?
+    @State var fileType = ""
+    @State private var isImageSelected = false
+    
+    @State private var userProfileImageUrl: String = ""
+    
     var body: some View {
+        
         ZStack {
             
             Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
             
-            ScrollView {
-                UserProfileView()
-                
-                Grid(viewModel.categories) { category in
-                    self.categoryView(category: category)
-                }.gridStyle(
-                    StaggeredGridStyle(.vertical, tracks:2, spacing: 10)
-                )
-                
+            LoadingView(isShowing: self.$viewModel.isLoading) {
+                ScrollView {
+                    UserProfileView(imageUrl: $userProfileImageUrl) {
+                        self.isShowingImagePicker.toggle()
+                    }.sheet(isPresented: $isShowingImagePicker) {
+                        ImagePickerView(
+                            isPresented: self.$isShowingImagePicker,
+                            selectedImage: self.$imageInBlackBox,
+                            fileURL: self.$fileURL,
+                            fileType: self.$fileType
+                        ) { isImageSelected, fileURL in
+                            self.isImageSelected = isImageSelected
+                            self.viewModel.uploadProfileImageFile(data: fileURL)
+                        }
+                    }
+                    
+                    Grid(viewModel.categories) { category in
+                        self.categoryView(category: category)
+                    }.gridStyle(
+                        StaggeredGridStyle(.vertical, tracks:2, spacing: 10)
+                    )
+                    
+                }
+                .padding(.all, 10)
             }
-            .padding(.all, 10)
+        
+        }.onReceive(viewModel.$uploadImageProfileResponse) { (nullUploadImageResponse) in
+            guard let nonNullUploadImageResponse = nullUploadImageResponse else { return }
+            
+            userProfileImageUrl = nonNullUploadImageResponse.data.post.postFile
         }
         
     }

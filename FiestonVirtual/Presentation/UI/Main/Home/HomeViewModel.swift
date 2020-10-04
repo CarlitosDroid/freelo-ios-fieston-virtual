@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 
 class HomeViewModel: ObservableObject {
     
@@ -32,6 +33,65 @@ class HomeViewModel: ObservableObject {
             description: "PARTICIPA DE LA FIESTA",
             subDescription: "PIDE UNA CANCIÓN")
     ]
+    
+    
+    @Published var isLoading = false
+    @Published var uploadPhotoMessage = ""
+    @Published var uploadImageProfileResponse: UploadImageProfileResponse?
+    
+    private let usersRepository: UsersRepository
+    
+    private var disposables = Set<AnyCancellable>()
+    
+    init(
+         usersRepository: UsersRepository
+    ){
+        self.usersRepository = usersRepository
+    }
+    
+    // TODO - USE THE SELFIE WEB SERVICE
+    func uploadProfileImageFile(data: URL) {
+        
+        switch usersRepository.getLocalUser() {
+        
+        case .success(let user):
+            
+            isLoading = true
+            let userApi = UserApiImpl()
+            userApi.uploadProfileImage(
+                data: data,
+                idUser: user.id)
+                .subscribe(on: DispatchQueue.global())
+                .receive(on: DispatchQueue.main)
+                .sink(receiveCompletion: { (completion: Subscribers.Completion<ExternalError>) in
+                    self.isLoading = false
+                    switch completion {
+                    case .finished:
+                        print("finish")
+                        break
+                    case .failure(let errorResponse):
+                        self.uploadPhotoMessage = errorResponse.localizedDescription
+                        break
+                    }
+                }, receiveValue: { (uploadImageProfileResponse: UploadImageProfileResponse) in
+                    print(uploadImageProfileResponse)
+                    self.uploadImageProfileResponse = uploadImageProfileResponse
+                })
+                .store(in: &disposables)
+            
+
+            break
+        case .failure( let error):
+//            return Just([]).mapError({ (_) in
+//                ErrorResponse(code: 1, title: "", message: error.localizedDescription)
+//            }).eraseToAnyPublisher()
+        
+            break
+        }
+        
+        
+    }
+    
     
 }
 

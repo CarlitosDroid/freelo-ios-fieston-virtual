@@ -95,6 +95,42 @@ class UserApiImpl: UserApi {
         
     }
     
+    func uploadProfileImage(data: URL, idUser: Int) -> AnyPublisher<UploadImageProfileResponse, ExternalError> {
+        return AF.upload(multipartFormData: { (multipartFormData: MultipartFormData) in
+            multipartFormData.append(String(idUser).data(using: .utf8)!, withName: "idUser")
+            multipartFormData.append("1".data(using: .utf8)!, withName: "postType")
+            multipartFormData.append(data,
+                                     withName: "file",
+                                     fileName: "\(getCurrentTimeStamp()).\(data.pathExtension)",
+                                     mimeType: "image/jpeg")
+        },
+        to: "http://fiestonvirtual.com/app/api/selfie.php",
+        method: .post,
+        interceptor: nil,
+        requestModifier: nil)
+        .validate()
+        .publishDecodable(type: UploadImageProfileResponse.self)
+        .mapError({ (never : Never) -> ExternalError in
+            ExternalError.UnknowError(description: never.localizedDescription)
+        })
+        .flatMap({ (dataResponse: DataResponse<UploadImageProfileResponse, AFError>)-> AnyPublisher<UploadImageProfileResponse, ExternalError> in
+            Future<UploadImageProfileResponse, ExternalError> { promise in
+                switch dataResponse.result {
+                
+                case .failure(let afError):
+                    guard let errorDescription = afError.errorDescription else { return }
+                    promise(.failure(ExternalError.NetworkError(description: "\(errorDescription)")))
+                    break
+                    
+                case .success(let uploadImageResponse):
+                    promise(.success(uploadImageResponse))
+                    break
+                }
+                
+            }.eraseToAnyPublisher()
+        }).eraseToAnyPublisher()
+    }
+    
 }
 
 private extension UserApiImpl {

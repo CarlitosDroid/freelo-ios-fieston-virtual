@@ -73,8 +73,9 @@ struct PhotosView: View {
                                 .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
                                 .background(Color.deep_purple_500.cornerRadius(8))
                                 .foregroundColor(Color.white)
-                        }.sheet(isPresented: $isShowingImagePicker) {
-                            ImagePickerView(
+                        }
+                        .sheet(isPresented: $isShowingImagePicker) {
+                            ImageAndVideoPickerView(
                                 isPresented: self.$isShowingImagePicker,
                                 selectedImage: self.$imageInBlackBox,
                                 fileURL: self.$fileURL,
@@ -114,63 +115,8 @@ struct PhotosView: View {
     }
 }
 
-struct ImagePickerView: UIViewControllerRepresentable {
-    
-    @Binding var isPresented: Bool
-    @Binding var selectedImage: UIImage?
-    @Binding var fileURL: URL?
-    @Binding var fileType: String
-    
-    var onImageFromPickerSelected: (_ isImageSelected: Bool, _ fileURL: URL) -> Void
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerView>) -> UIViewController {
-        let pickerController = UIImagePickerController()
-        pickerController.delegate = context.coordinator
-        pickerController.allowsEditing = false
-        pickerController.mediaTypes = ["public.image", "public.movie"]
-        pickerController.sourceType = .photoLibrary
-        return pickerController
-    }
-    
-    func makeCoordinator() -> GalleryCoordinator {
-        return GalleryCoordinator(parent: self) { isImageSelected, fileURL in
-            self.onImageFromPickerSelected(isImageSelected, fileURL)
-        }
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        
-    }
-    
-}
-
 struct PhotosView_Previews: PreviewProvider {
     static var previews: some View {
         PhotosView(selectedTab: .constant(1))
     }
 }
-
-//struct ActivityIndicator: UIViewRepresentable {
-//    @Binding var animate: Bool
-//
-//    func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
-//        return UIActivityIndicatorView(style: .large)
-//    }
-//
-//    func updateUIView(_ uiView: UIActivityIndicatorView, context: UIViewRepresentableContext<ActivityIndicator>) {
-//        if animate {
-//            uiView.startAnimating()
-//        } else {
-//            uiView.stopAnimating()
-//        }
-//    }
-//}
-//
-//VStack{
-//    ActivityIndicator(animate: .constant(true))
-//
-//}
-//.frame(width: 200, height: 200)
-//.background(Color.white)
-//.cornerRadius(10)
-//.shadow(radius: 3)
