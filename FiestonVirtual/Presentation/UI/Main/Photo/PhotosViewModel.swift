@@ -21,12 +21,12 @@ class PhotosViewModel : ObservableObject{
     
     func uploadFile(data: URL, postTitle: String) {
         isLoading = true
+        //TODO refactor upload file
         let galleryApi = GalleryApiImpl()
         galleryApi.uploadFile(
             data: data,
             idUser: 17,
             idEvent: 3,
-     
             postTitle: postTitle)
             .subscribe(on: DispatchQueue.global())
             .sink(receiveCompletion: { (completion: Subscribers.Completion<ExternalError>) in
