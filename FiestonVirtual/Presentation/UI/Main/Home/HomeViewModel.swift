@@ -39,12 +39,14 @@ class HomeViewModel: ObservableObject {
     @Published var uploadPhotoMessage = ""
     @Published var uploadImageProfileResponse: UploadImageProfileResponse?
     
+    @Published var user: User?
+    
     private let usersRepository: UsersRepository
     
     private var disposables = Set<AnyCancellable>()
     
     init(
-         usersRepository: UsersRepository
+        usersRepository: UsersRepository
     ){
         self.usersRepository = usersRepository
     }
@@ -79,19 +81,29 @@ class HomeViewModel: ObservableObject {
                 })
                 .store(in: &disposables)
             
-
+            
             break
         case .failure( let error):
-//            return Just([]).mapError({ (_) in
-//                ErrorResponse(code: 1, title: "", message: error.localizedDescription)
-//            }).eraseToAnyPublisher()
-        
+            //            return Just([]).mapError({ (_) in
+            //                ErrorResponse(code: 1, title: "", message: error.localizedDescription)
+            //            }).eraseToAnyPublisher()
+            
             break
         }
         
         
     }
     
+    func getUser() {
+        switch usersRepository.getLocalUser() {
+        case .success(let user):
+            self.user = user
+            return
+        case .failure( _):
+            return
+        }
+        
+    }
     
 }
 
