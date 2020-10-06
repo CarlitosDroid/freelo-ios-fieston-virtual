@@ -11,7 +11,7 @@ import SwiftUI
 struct PhotosView: View {
     
     @Binding var selectedTab: Int
-
+    
     @State var isShowingImagePicker = false
     @State var imageInBlackBox: UIImage?
     @State var fileURL: URL?
@@ -65,6 +65,7 @@ struct PhotosView: View {
                         }
                         
                     } else {
+                        Image("alert")
                         informationView()
                         Button(action: {
                             self.isShowingImagePicker.toggle()
@@ -104,14 +105,37 @@ struct PhotosView: View {
     }
     
     func informationView() -> some View {
-        VStack {
-            Text("1 - Presiona el botón ELEGIR para publicar una\n foto o video de la galería de tu celular.")
+        VStack(spacing: 10) {
+            
+            Text("1 - Presiona el botón ELEGIR para publicar una foto o video de la galería de tu celular.")
                 .foregroundColor(Color.white)
-            Text("2 - Presiona el botón SUBIR y espera a que se\n publique tu foto o video.")
+                .fixedSize(
+                    horizontal: false,
+                    vertical: true
+                )
+                .multilineTextAlignment(.center)
+            
+            
+            Text("2 - Presiona el botón SUBIR y espera a que se publique tu foto o video.")
                 .foregroundColor(Color.white)
-            Text("El video debe durar como\n máximo 40 segundos")
+                .fixedSize(
+                    horizontal: false,
+                    vertical: true
+                )
+                .multilineTextAlignment(.center)
+            
+            
+            Text("El video debe durar como máximo 40 segundos")
                 .foregroundColor(Color.amber_600)
+                .fixedSize(
+                    horizontal: false,
+                    vertical: true
+                )
+                .multilineTextAlignment(.center)
+            
         }
+        .padding(20)
+        
     }
 }
 
