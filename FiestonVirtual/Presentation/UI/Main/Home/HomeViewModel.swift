@@ -78,6 +78,7 @@ class HomeViewModel: ObservableObject {
                 }, receiveValue: { (uploadImageProfileResponse: UploadImageProfileResponse) in
                     print(uploadImageProfileResponse)
                     self.uploadImageProfileResponse = uploadImageProfileResponse
+                    self.usersRepository.update(avatarName: uploadImageProfileResponse.data.post.postFile)
                 })
                 .store(in: &disposables)
             

@@ -35,6 +35,11 @@ extension UsersRepositoryImpl: UsersRepository {
         return self.userRemoteDataSource.getUsers(idUser: idUser)
     }
     
+    func update(avatarName: String) {
+        let result = repository.update(entityName: "UserEntity", avatarName: avatarName)
+        print(result)
+    }
+    
     
     // MARK: - LOCAL DATABASE
     @discardableResult func create(user: User) -> Result<Bool, Error> {

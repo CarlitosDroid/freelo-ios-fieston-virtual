@@ -20,4 +20,6 @@ protocol UsersRepository {
     func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse>
     
     func deleteLocalAllUsers()-> Result<Bool,Error>
+    
+    func update(avatarName: String)
 }

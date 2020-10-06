@@ -71,6 +71,21 @@ class CoreDataRepository<T: NSManagedObject>: Repository {
         return .success(true)
     }
     
+    func update(entityName: String, avatarName: String) {
+        let updateRequest = NSBatchUpdateRequest(entityName: entityName)
+        updateRequest.propertiesToUpdate = ["avatar": avatarName]
+        updateRequest.resultType = .updatedObjectsCountResultType
+        
+        do {
+            let result = try managedObjectContext.execute(updateRequest)
+            print(result)
+            //Will print the number of rows affected/updated
+        } catch {
+            
+        }
+        
+    }
+    
     func deleteAllData(entityName: String)-> Result<Bool, Error> {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
         
