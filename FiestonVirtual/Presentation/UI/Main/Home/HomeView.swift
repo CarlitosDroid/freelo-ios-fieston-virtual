@@ -24,6 +24,8 @@ struct HomeView: View {
     
     @State private var userProfileImageUrl: String = ""
     
+    @State private var user: User?
+    
     var body: some View {
         
         ZStack {
@@ -32,7 +34,10 @@ struct HomeView: View {
             
             LoadingView(isShowing: self.$viewModel.isLoading) {
                 ScrollView {
-                    UserProfileView(imageUrl: $userProfileImageUrl) {
+                    UserProfileView(
+                        user: self.$user,
+                        imageUrl: $userProfileImageUrl
+                    ) {
                         self.isShowingImagePicker.toggle()
                     }.sheet(isPresented: $isShowingImagePicker) {
                         ImagePickerView(
@@ -55,12 +60,20 @@ struct HomeView: View {
                 }
                 .padding(.all, 10)
             }
-        
-        }.onReceive(viewModel.$uploadImageProfileResponse) { (nullUploadImageResponse) in
+            
+        }
+        .onAppear{
+            self.viewModel.getUser()
+        }
+        .onReceive(viewModel.$uploadImageProfileResponse) { (nullUploadImageResponse) in
             guard let nonNullUploadImageResponse = nullUploadImageResponse else { return }
             
-            userProfileImageUrl = nonNullUploadImageResponse.data.post.postFile
-        }
+            self.userProfileImageUrl = nonNullUploadImageResponse.data.post.postFile
+        }.onReceive(viewModel.$user, perform: { user in
+            if (user == nil){ return }
+            self.user = user!
+            self.userProfileImageUrl = user!.avatar
+        })
         
     }
     
@@ -132,12 +145,4 @@ struct Category: Identifiable {
 struct Color1 : Identifiable {
     var id: String = UUID().uuidString
     var name: Color = Color.orange_500
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView { (categorIndex: Int) in
-            
-        }
-    }
 }

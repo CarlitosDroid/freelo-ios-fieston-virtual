@@ -13,7 +13,10 @@ struct UserProfileView: View {
     
     @State var showCaptureImageView: Bool = false
     
+    @Binding var user: User?
+    
     @Binding var imageUrl: String
+    
     var onUserProfileClicked: () -> Void
     
     var body: some View {
@@ -22,7 +25,7 @@ struct UserProfileView: View {
             
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Andres Ramires")
+                    Text(user?.name ?? "")
                         .foregroundColor(Color.black)
                         .fontWeight(.bold)
                         .font(.system(size: 20))
@@ -33,10 +36,10 @@ struct UserProfileView: View {
                         Text("Puntos")
                             .fontWeight(.bold)
                         
-                        Text("177")
+                        Text(String(user?.totalScore ?? 0))
                         Text("Ranking")
                             .fontWeight(.bold)
-                        Text("2")
+                        Text(String(user?.ranking ?? 0))
                     }
                 }
                 Spacer()
@@ -60,14 +63,6 @@ struct UserProfileView: View {
             .background(Color.white)
             .cornerRadius(10)
             .shadow(radius: 3)
-        }
-    }
-}
-
-struct UserProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserProfileView(imageUrl: .constant("")) {
-            
         }
     }
 }
