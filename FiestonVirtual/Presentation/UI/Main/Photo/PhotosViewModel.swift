@@ -11,6 +11,7 @@ import Combine
 
 class PhotosViewModel : ObservableObject{
     
+    private let uploadFileUseCase : UploadFileUseCase
     
     @Published var isLoading = false
     
@@ -19,36 +20,29 @@ class PhotosViewModel : ObservableObject{
     
     private var disposables = Set<AnyCancellable>()
     
+    init(uploadFileUseCase : UploadFileUseCase){
+        self.uploadFileUseCase = uploadFileUseCase
+    }
+    
     func uploadFile(data: URL, postTitle: String) {
         isLoading = true
-        //TODO refactor upload file
-        let galleryApi = GalleryApiImpl()
-        galleryApi.uploadFile(
-            data: data,
-            idUser: 17,
-            idEvent: 3,
-            postTitle: postTitle)
-            .subscribe(on: DispatchQueue.global())
-            .sink(receiveCompletion: { (completion: Subscribers.Completion<ExternalError>) in
+        self.uploadFileUseCase.invoke(data: data, postTitle: postTitle)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
                 self.isLoading = false
                 switch completion {
                 case .finished:
-                    print("finish")
                     break
                 case .failure(let errorResponse):
-                    
                     self.uploadPhotoHasFinished = true
                     self.uploadPhotoMessage = errorResponse.localizedDescription
-                    
                     break
                 }
-            }, receiveValue: { (uploadImageResponse: UploadImageResponse) in
-                print("\(uploadImageResponse)")
+            }, receiveValue: { (message: String) in
                 self.uploadPhotoHasFinished = true
-                self.uploadPhotoMessage = uploadImageResponse.message
+                self.uploadPhotoMessage = message
             })
             .store(in: &disposables)
-        
     }
     
 }
