@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private var loginObserver: Any?
     private var codeVerificationObserver: Any?
     
+    var userSettings = UserSettings()
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -39,7 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.rootViewController = UIHostingController(rootView: contentView)
             
             loginObserver = NotificationCenter.default.addObserver(forName: loginRootViewNotification, object: nil, queue: nil, using: { _ in
-                let anotherRootView = MainView()
+                let anotherRootView = MainView().environmentObject(self.userSettings)
                 // create another view on notification and replace
                 window.rootViewController = UIHostingController(rootView: anotherRootView)
             })

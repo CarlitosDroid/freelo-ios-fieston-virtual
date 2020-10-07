@@ -15,6 +15,7 @@ struct MainView: View {
     @State var showAlert = false
     
     @State private var selectedTab = 0
+    @State private var notifyGallery = false
     
     @State var showPlayListView: Bool = false
     
@@ -42,42 +43,31 @@ struct MainView: View {
                             .tabItem {
                                 Image(systemName: "house.fill")
                                 Text("Home")
-                            }.tag(0)
+                            }.tag(TAB_HOME_ID)
                             
                             GalleryView()
-//                            {
-//                                (galleryItem:GalleryItem) in
-//                                switch galleryItem.type {
-//                                case GalleryItemType.photo.rawValue:
-//                                    ""
-//                                case GalleryItemType.video.rawValue:
-//                                    ""
-//                                default:
-//                                    ""
-//                                }
-//                            }
-                            .tabItem {
-                                Image(systemName: "photo.fill.on.rectangle.fill")
-                                Text("Galeria")
-                            }.tag(1)
+                                .tabItem {
+                                    Image(systemName: "photo.fill.on.rectangle.fill")
+                                    Text("Galeria")
+                                }.tag(TAB_GALLERY_ID)
                             
-                            PhotosView(selectedTab: $selectedTab)
+                            PhotosView(selectedTab: $selectedTab, notifyGallery: $notifyGallery)
                                 .tabItem {
                                     Image(systemName: "plus.app.fill")
                                     Text("Foto")
-                                }.tag(2)
+                                }.tag(TAB_PHOTO_ID)
                             
                             Text("CHAT")
                                 .tabItem {
                                     Image(systemName: "bubble.left.and.bubble.right.fill")
                                     Text("Chat")
-                                }.tag(3).foregroundColor(Color.red)
+                                }.tag(TAB_CHAT_ID).foregroundColor(Color.red)
                             
                             TriviaView()
                                 .tabItem {
                                     Image(systemName: "cube.box")
                                     Text("Trivia")
-                                }.tag(4)
+                                }.tag(TAB_TRIVIA_ID)
                             
                         }
                         

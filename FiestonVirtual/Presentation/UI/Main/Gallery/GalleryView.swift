@@ -6,11 +6,11 @@ import QGrid
 
 struct GalleryView: View {
     
+    @EnvironmentObject var settings: UserSettings
     @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(GalleryViewModel.self)!
     
     @State private var scrollViewID = UUID()
     @State private var showGalleryDetail = false
-    @State private var onlyFirstTime = true
     
     @State var galleryItems: [GalleryItem] = []
     
@@ -33,15 +33,15 @@ struct GalleryView: View {
             
         }
         .onAppear {
-            if(onlyFirstTime){
+            if(self.settings.refreshGallery) {
                 viewModel.getGallery()
-                onlyFirstTime = false
+                settings.refreshGallery = false
             }
             
         }.onReceive(viewModel.$galleryItems, perform: { nullGalleryItems in
             
             guard let nonNullGalleryItems = nullGalleryItems else { return }
-            
+            self.galleryItems.removeAll()
             self.galleryItems.append(contentsOf: nonNullGalleryItems)
             
         })

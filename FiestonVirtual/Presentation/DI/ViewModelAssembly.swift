@@ -21,7 +21,9 @@ class ViewModelAssembly: Assembly {
         }
         
         container.register(HomeViewModel.self) { resolver in
-            HomeViewModel(usersRepository: resolver.resolve(UsersRepository.self)!)
+            HomeViewModel(
+                uploadProfileImageUseCase: resolver.resolve(UploadProfileImageUseCase.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!)
         }
         
         container.register(GalleryViewModel.self) { resolver in

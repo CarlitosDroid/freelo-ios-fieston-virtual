@@ -9,6 +9,7 @@
 import SwiftUI
 import Grid
 import KingfisherSwiftUI
+import QGrid
 
 struct HomeView: View {
     
@@ -65,10 +66,10 @@ struct HomeView: View {
         .onAppear{
             self.viewModel.getUser()
         }
-        .onReceive(viewModel.$uploadImageProfileResponse) { (nullUploadImageResponse) in
-            guard let nonNullUploadImageResponse = nullUploadImageResponse else { return }
+        .onReceive(viewModel.$profileImage) { (nullProfileImage) in
+            guard let nonNullProfileImage = nullProfileImage else { return }
             
-            self.userProfileImageUrl = nonNullUploadImageResponse.data.post.postFile
+            self.userProfileImageUrl = nonNullProfileImage.imageUrl
         }.onReceive(viewModel.$user, perform: { user in
             if (user == nil){ return }
             self.user = user!

@@ -10,16 +10,17 @@ import Foundation
 import Combine
 
 protocol UsersRepository {
+    
+    // LOCAL DATA BASE OPERATIONS
     func getLocalUsers(predicate: NSPredicate?) -> Result<[User], Error>
-    func create(user: User) -> Result<Bool, Error>
-    
-    func getRemoteUser(idUser: Int) -> AnyPublisher<User, ErrorResponse>
-    
+    func createLocalUser(user: User) -> Result<Bool, Error>
     func getLocalUser() -> Result<User, Error>
-    
-    func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse>
-    
+    func updateLocalUserBy(avatarName: String)
     func deleteLocalAllUsers()-> Result<Bool,Error>
     
-    func update(avatarName: String)
+    // REMOTE OPERATIONS
+    func getRemoteUser(idUser: Int) -> AnyPublisher<User, ErrorResponse>
+    func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse>
+    func uploadProfileImage(profileImageURL: URL, userId: Int) -> AnyPublisher<ProfileImage, ErrorResponse>
+    
 }

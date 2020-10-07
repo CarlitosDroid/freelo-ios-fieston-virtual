@@ -36,8 +36,8 @@ class UserRemoteDataSourceImpl: UserRemoteDataSource {
     
     func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse> {
         return userApi.signOut(signOutRequest: signOutRequest)
-            .mapError { (ExternalError: ExternalError) -> ErrorResponse in
-                switch ExternalError{
+            .mapError { (externalError: ExternalError) -> ErrorResponse in
+                switch externalError{
                 case .NetworkError(let description):
                     return ErrorResponse(title: "Error en la red", message: description)
                 case .Parsing(let description):
@@ -46,8 +46,24 @@ class UserRemoteDataSourceImpl: UserRemoteDataSource {
                     return ErrorResponse(title: "Error Desconocido", message: description)
                 }
         }
-        .map{(signOutResponse:SignOutResponse)-> Bool in
+        .map{(signOutResponse: SignOutResponse)-> Bool in
             return signOutResponse.data.rpta
         }.eraseToAnyPublisher()
+    }
+    
+    func uploadProfileImage(profileImageURL: URL, userId: Int) -> AnyPublisher<ProfileImage, ErrorResponse> {
+        return userApi.uploadProfileImage(data: profileImageURL, idUser: userId)
+            .mapError { (externalError: ExternalError) -> ErrorResponse in
+                switch externalError{
+                case .NetworkError(let description):
+                    return ErrorResponse(title: "Error en la red", message: description)
+                case .Parsing(let description):
+                    return ErrorResponse(title: "Error al parsear", message: description)
+                case .UnknowError(let description):
+                    return ErrorResponse(title: "Error Desconocido", message: description)
+                }
+            }.map { (response: UploadImageProfileResponse) -> ProfileImage in
+                return response.toDomainModel()
+            }.eraseToAnyPublisher()
     }
 }

@@ -89,5 +89,11 @@ class UseCasesAssembly: Assembly {
             )
         }
         
+        container.register(UploadProfileImageUseCase.self) { resolver in
+            UploadProfileImageUseCaseImpl(
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
+        
     }
 }

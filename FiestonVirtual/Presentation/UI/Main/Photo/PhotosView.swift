@@ -10,9 +10,11 @@ import SwiftUI
 
 struct PhotosView: View {
     
+    @EnvironmentObject var settings: UserSettings
     @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(PhotosViewModel.self)!
     
     @Binding var selectedTab: Int
+    @Binding var notifyGallery: Bool
     
     @State var isShowingImagePicker = false
     @State var imageInBlackBox: UIImage?
@@ -98,7 +100,8 @@ struct PhotosView: View {
             Alert(
                 title: Text(self.viewModel.uploadPhotoMessage),
                 dismissButton: .default(Text("Aceptar"), action: {
-                    selectedTab = 1
+                    selectedTab = TAB_GALLERY_ID
+                    settings.refreshGallery = true
                 })
             )
         })
@@ -142,6 +145,6 @@ struct PhotosView: View {
 
 struct PhotosView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotosView(selectedTab: .constant(1))
+        PhotosView(selectedTab: .constant(1), notifyGallery: .constant(false))
     }
 }

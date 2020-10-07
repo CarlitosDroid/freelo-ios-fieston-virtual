@@ -10,8 +10,9 @@ import Foundation
 import Combine
 
 protocol UserRemoteDataSource {
-    func getUsers(idUser: Int) -> AnyPublisher<User, ErrorResponse>
     
+    func getUsers(idUser: Int) -> AnyPublisher<User, ErrorResponse>
     func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse>
-
+    func uploadProfileImage(profileImageURL: URL, userId: Int) -> AnyPublisher<ProfileImage, ErrorResponse>
+    
 }

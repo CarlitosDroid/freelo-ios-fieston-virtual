@@ -31,18 +31,21 @@ class UsersRepositoryImpl {
 
 extension UsersRepositoryImpl: UsersRepository {
     
+    // MARK: - REMOTE OPERATIONS
     func getRemoteUser(idUser: Int) -> AnyPublisher<User, ErrorResponse> {
         return self.userRemoteDataSource.getUsers(idUser: idUser)
     }
     
-    func update(avatarName: String) {
-        let result = repository.update(entityName: "UserEntity", avatarName: avatarName)
-        print(result)
+    func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse> {
+        return self.userRemoteDataSource.signOut(signOutRequest: signOutRequest)
     }
     
+    func uploadProfileImage(profileImageURL: URL, userId: Int) -> AnyPublisher<ProfileImage, ErrorResponse> {
+        return self.userRemoteDataSource.uploadProfileImage(profileImageURL: profileImageURL, userId: userId)
+    }
     
     // MARK: - LOCAL DATABASE
-    @discardableResult func create(user: User) -> Result<Bool, Error> {
+    @discardableResult func createLocalUser(user: User) -> Result<Bool, Error> {
         let result = repository.create()
         switch result {
         case .success(let userEntity):
@@ -97,12 +100,13 @@ extension UsersRepositoryImpl: UsersRepository {
         }
     }
     
-    func signOut(signOutRequest: SignOutRequest) -> AnyPublisher<Bool, ErrorResponse> {
-        return self.userRemoteDataSource.signOut(signOutRequest: signOutRequest)
-    }
-    
     func deleteLocalAllUsers()-> Result<Bool,Error>{
         return self.repository.deleteAllData(entityName: "UserEntity")
+    }
+    
+    func updateLocalUserBy(avatarName: String) {
+        let result = repository.update(entityName: "UserEntity", avatarName: avatarName)
+        print(result)
     }
     
 }

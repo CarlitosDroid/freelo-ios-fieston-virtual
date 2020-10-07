@@ -129,10 +129,11 @@ struct GalleryDetailView: View {
             self.postTitle = getGalleryDetailNoNull.postTitle
             
         })
-        .onReceive(self.viewModel.$comments, perform: { comments11 in
+        .onReceive(self.viewModel.$comments, perform: { nullComments in
             
-            guard let commentsNonNull = comments11 else { return }
+            guard let commentsNonNull = nullComments else { return }
             
+            self.comments.removeAll()
             self.comments.append(contentsOf: commentsNonNull)
         })
         .onReceive(self.viewModel.$comment, perform: { comment in

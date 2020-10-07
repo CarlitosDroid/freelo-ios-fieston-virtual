@@ -32,7 +32,7 @@ class LoginUseCaseImpl: LoginUseCase {
                 return self.usersRepository.getRemoteUser(idUser: eventCode.idUser).flatMap { (user: User) -> AnyPublisher<Bool, ErrorResponse> in
                     
                     //save to disk
-                    let result = self.usersRepository.create(user: user)
+                    let result = self.usersRepository.createLocalUser(user: user)
                     switch result {
                     case .success( _):
                         return Just(true).mapError({ (_) in

@@ -25,7 +25,7 @@ class GalleryViewModel: ObservableObject {
                 self.isLoading = false
                 switch completion {
                 case .finished:
-                    
+                    print("finished")
                     break
                 case .failure(let errorResponse):
                     self.errorMessage = errorResponse.localizedDescription
