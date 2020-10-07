@@ -46,5 +46,10 @@ class ViewModelAssembly: Assembly {
             )
         }
     
+        container.register(PhotosViewModel.self) { resolver in
+            PhotosViewModel(
+                uploadFileUseCase: resolver.resolve(UploadFileUseCase.self)!
+            )
+        }
     }
 }

@@ -10,6 +10,8 @@ import SwiftUI
 
 struct PhotosView: View {
     
+    @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(PhotosViewModel.self)!
+    
     @Binding var selectedTab: Int
     
     @State var isShowingImagePicker = false
@@ -18,8 +20,6 @@ struct PhotosView: View {
     @State private var postTitle: String = ""
     @State private var isImageSelected = false
     @State var fileType = ""
-    
-    @ObservedObject var viewModel = PhotosViewModel()
     
     var body: some View {
         LoadingView(isShowing: self.$viewModel.isLoading) {
@@ -92,6 +92,7 @@ struct PhotosView: View {
             }
         }.onAppear(perform: {
             isImageSelected = false
+            postTitle = ""
         })
         .alert(isPresented: self.$viewModel.uploadPhotoHasFinished, content: {
             Alert(

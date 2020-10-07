@@ -12,4 +12,11 @@ protocol GalleryRepository {
         getGalleryDetailRequest: GetGalleryDetailRequest
     ) -> AnyPublisher<GetGalleryDetail, ErrorResponse>
     
+    func uploadFile(
+        data: URL,
+        idUser: Int,
+        idEvent: Int,
+        postTitle: String
+    ) -> AnyPublisher<String, ErrorResponse>
+    
 }

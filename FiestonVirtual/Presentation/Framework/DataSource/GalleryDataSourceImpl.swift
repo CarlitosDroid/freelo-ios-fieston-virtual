@@ -49,4 +49,31 @@ class GalleryDataSourceImpl : GalleryDataSource{
             }.eraseToAnyPublisher()
     }
     
+    func uploadFile(
+        data: URL,
+        idUser: Int,
+        idEvent: Int,
+        postTitle: String
+    ) -> AnyPublisher<String, ErrorResponse> {
+        self.galleryApi.uploadFile(
+            data: data,
+            idUser: idUser,
+            idEvent: idEvent,
+            postTitle: postTitle
+        )
+        .mapError{ (externalError:ExternalError) -> ErrorResponse in
+            switch externalError {
+            case .NetworkError(let description):
+                return ErrorResponse(title: "Error en la red", message: description)
+            case .Parsing(let description):
+                return ErrorResponse(title: "Error al parsear", message: description)
+            case .UnknowError(let description):
+                return ErrorResponse(title: "Error Desconocido", message: description)
+            }
+        }
+        .map{ (uploadImageResponse : UploadImageResponse) -> String in
+            return uploadImageResponse.message
+        }.eraseToAnyPublisher()
+    }
+    
 }

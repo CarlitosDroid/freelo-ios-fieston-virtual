@@ -164,6 +164,8 @@
 		9A81457F2505F420001A012A /* GetWelcomeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A81457E2505F420001A012A /* GetWelcomeUseCaseImpl.swift */; };
 		9A8145822505F8A0001A012A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145812505F8A0001A012A /* MainViewModel.swift */; };
 		9A8145842505F90C001A012A /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8145832505F90C001A012A /* WelcomeView.swift */; };
+		9ACB55B3252D392100DEEE49 /* UploadFileUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACB55B2252D392100DEEE49 /* UploadFileUseCaseImpl.swift */; };
+		9ACB55BB252D392C00DEEE49 /* UploadFileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACB55BA252D392C00DEEE49 /* UploadFileUseCase.swift */; };
 		9AD491452526E9900038A593 /* TriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD491442526E9900038A593 /* TriviaView.swift */; };
 		9AD4914A2526EB640038A593 /* TriviaPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD491492526EB640038A593 /* TriviaPageView.swift */; };
 		9AD491532526F39E0038A593 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 9AD491522526F39E0038A593 /* SwiftUIPager */; };
@@ -382,6 +384,8 @@
 		9A81457E2505F420001A012A /* GetWelcomeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWelcomeUseCaseImpl.swift; sourceTree = "<group>"; };
 		9A8145812505F8A0001A012A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9A8145832505F90C001A012A /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		9ACB55B2252D392100DEEE49 /* UploadFileUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileUseCaseImpl.swift; sourceTree = "<group>"; };
+		9ACB55BA252D392C00DEEE49 /* UploadFileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFileUseCase.swift; sourceTree = "<group>"; };
 		9AD491442526E9900038A593 /* TriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaView.swift; sourceTree = "<group>"; };
 		9AD491492526EB640038A593 /* TriviaPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaPageView.swift; sourceTree = "<group>"; };
 		9AE641BF2521DA3900365B9E /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
@@ -1024,6 +1028,8 @@
 			isa = PBXGroup;
 			children = (
 				9A15E9B2251974BF00891B55 /* GetGalleryUseCase.swift */,
+				9ACB55BA252D392C00DEEE49 /* UploadFileUseCase.swift */,
+				9ACB55B2252D392100DEEE49 /* UploadFileUseCaseImpl.swift */,
 				9A15E9BA251974E800891B55 /* GetGalleryUseCaseImpl.swift */,
 				9A6564EE251DA175000C6031 /* GetPostDetailUseCaseImpl.swift */,
 				9A6564F3251DA180000C6031 /* GetPostDetailUseCase.swift */,
@@ -1493,6 +1499,7 @@
 				2B5A53B0251476050036AB9E /* CaptureImageView.swift in Sources */,
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
 				9A7815D4251AC98B006D0BD9 /* GalleryViewModel.swift in Sources */,
+				9ACB55B3252D392100DEEE49 /* UploadFileUseCaseImpl.swift in Sources */,
 				2B83E79A25081594004B1BF2 /* GetRemoteUserRequest.swift in Sources */,
 				9A0FB3232526B0AC000CE6AB /* TriviaViewModel.swift in Sources */,
 				9AE641C02521DA3A00365B9E /* ArrayExtension.swift in Sources */,
@@ -1515,6 +1522,7 @@
 				2B0981E6250925D500C78FFF /* AppDelegateExt.swift in Sources */,
 				9A0795B425258C4E00BB589C /* TriviaDataSourceImpl.swift in Sources */,
 				FB101518250C70E0002C91ED /* CommentsApi.swift in Sources */,
+				9ACB55BB252D392C00DEEE49 /* UploadFileUseCase.swift in Sources */,
 				2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */,
 				9A079596252581C800BB589C /* AnswerTriviaUseCaseImpl.swift in Sources */,
 				9A7001B02520396B00C942DC /* LikeDataSourceImpl.swift in Sources */,

@@ -22,4 +22,18 @@ class GalleryRepositoryImpl : GalleryRepository{
         return self.galleryDataSource.getGalleryDetail(getGalleryDetailRequest: getGalleryDetailRequest)
     }
     
+    func uploadFile(
+        data: URL,
+        idUser: Int,
+        idEvent: Int,
+        postTitle: String
+    ) -> AnyPublisher<String, ErrorResponse> {
+        return self.galleryDataSource.uploadFile(
+            data: data,
+            idUser: idUser,
+            idEvent: idEvent,
+            postTitle: postTitle
+        )
+    }
+    
 }
