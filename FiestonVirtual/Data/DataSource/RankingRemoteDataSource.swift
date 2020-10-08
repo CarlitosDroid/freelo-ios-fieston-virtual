@@ -10,5 +10,5 @@ import Foundation
 import Combine
 
 protocol RankingRemoteDataSource {
-    func getRanking(getRemoteRankingRequest: GetRemoteRankingRequest) -> AnyPublisher<[Ranking],ErrorResponse>
+    func getRanking(getRemoteRankingRequest: GetRemoteRankingRequest) -> AnyPublisher<GetRankingResponse,ErrorResponse>
 }

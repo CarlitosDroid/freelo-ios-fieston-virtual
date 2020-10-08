@@ -17,8 +17,8 @@ class RankingRemoteDataSourceImpl: RankingRemoteDataSource {
         self.rankingApi = rankingApi
     }
     
-    func getRanking(getRemoteRankingRequest: GetRemoteRankingRequest) -> AnyPublisher<[Ranking], ErrorResponse> {
-        return rankingApi.getRankingData(idUser: 0, idEvent: 0)
+    func getRanking(getRemoteRankingRequest: GetRemoteRankingRequest) -> AnyPublisher<GetRankingResponse, ErrorResponse> {
+        return rankingApi.getRankingData(getRemoteRankingRequest: getRemoteRankingRequest)
             .mapError { (externalError: ExternalError) -> ErrorResponse in
                 switch externalError {
                 case .NetworkError(let description):
@@ -29,8 +29,13 @@ class RankingRemoteDataSourceImpl: RankingRemoteDataSource {
                     return ErrorResponse(title: "Error Desconocido", message: description)
                 }
             }
-            .map { (rankingResponseEntity: RankingResponse) -> [Ranking] in
-                return rankingResponseEntity.toDomainModel()
+            .map { (rankingResponseEntity: RankingResponse) -> GetRankingResponse in
+                return GetRankingResponse(
+                    ranking : rankingResponseEntity.data.raking.map{ ranking in
+                        ranking.toRanking()
+                    } ,
+                    userTotalScore: rankingResponseEntity.data.userTotalScore
+                )
             }.eraseToAnyPublisher()
         
     }

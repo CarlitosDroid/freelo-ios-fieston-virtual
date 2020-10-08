@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 import Alamofire
+import SwiftyJSON
 
 class RankingApiImpl: RankingApi {
     
@@ -19,8 +20,7 @@ class RankingApiImpl: RankingApi {
         self.session = session
     }
     
-    func getRankingData(idUser: Int, idEvent: Int ) -> AnyPublisher<RankingResponse, ExternalError> {
-        let getRemoteRankingRequest = GetRemoteRankingRequest(idUser: idUser, idEvent: idEvent)
+    func getRankingData(getRemoteRankingRequest: GetRemoteRankingRequest) -> AnyPublisher<RankingResponse, ExternalError> {
         
         guard let url = makeRankinglComponents().url else{
             let error = ExternalError.NetworkError(description: "Couldn't create URL")
@@ -44,8 +44,13 @@ class RankingApiImpl: RankingApi {
                     switch dataResponse.result {
                         
                     case .failure(let afError):
-                        promise(.failure(ExternalError.NetworkError(description:
-                            "\(afError.localizedDescription)")))
+                        if let data = dataResponse.data {
+                            if let json = try? JSON(data: data) {
+                                let message = json["message"].stringValue
+                                promise(.failure(ExternalError.NetworkError(description: "\(message)")))
+                            }
+                        }
+                        promise(.failure(ExternalError.NetworkError(description: "\(afError.localizedDescription)")))
                         break
                         
                     case .success(let rankingResponse):

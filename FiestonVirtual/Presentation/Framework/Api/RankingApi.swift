@@ -10,6 +10,6 @@ import Foundation
 import Combine
 
 protocol RankingApi {
-    func getRankingData(idUser: Int, idEvent: Int ) ->
+    func getRankingData(getRemoteRankingRequest: GetRemoteRankingRequest) ->
     AnyPublisher<RankingResponse,ExternalError>
 }
