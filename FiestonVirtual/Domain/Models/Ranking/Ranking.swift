@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Ranking {
+struct Ranking : Encodable{
     let id: Int
     let userName: String
     let totalScore: Int

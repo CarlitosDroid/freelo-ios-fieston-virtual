@@ -137,6 +137,12 @@
 		9A15E9CF2519B69000891B55 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9CE2519B69000891B55 /* GalleryDataSource.swift */; };
 		9A15E9D42519B88600891B55 /* GalleryDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9D32519B88600891B55 /* GalleryDataSourceImpl.swift */; };
 		9A15E9D92519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A15E9D82519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift */; };
+		9A2DB9A4252EB70F00D4214F /* GetRankingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9A3252EB70F00D4214F /* GetRankingUseCase.swift */; };
+		9A2DB9AC252EB71B00D4214F /* GetRankingUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9AB252EB71B00D4214F /* GetRankingUseCaseImpl.swift */; };
+		9A2DB9B1252EB81100D4214F /* GetRankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9B0252EB81100D4214F /* GetRankingResponse.swift */; };
+		9A2DB9B6252EB9F300D4214F /* RankingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9B5252EB9F300D4214F /* RankingRepository.swift */; };
+		9A2DB9BC252EBBD400D4214F /* RankingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9BB252EBBD400D4214F /* RankingRepositoryImpl.swift */; };
+		9A2DB9C4252EBF4C00D4214F /* ChildRankingResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9C3252EBF4C00D4214F /* ChildRankingResponseMapper.swift */; };
 		9A379C4D25285AD200F07194 /* WelcomeTriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A379C4C25285AD200F07194 /* WelcomeTriviaView.swift */; };
 		9A6564EF251DA176000C6031 /* GetPostDetailUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6564EE251DA175000C6031 /* GetPostDetailUseCaseImpl.swift */; };
 		9A6564F4251DA180000C6031 /* GetPostDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6564F3251DA180000C6031 /* GetPostDetailUseCase.swift */; };
@@ -367,6 +373,12 @@
 		9A15E9CE2519B69000891B55 /* GalleryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
 		9A15E9D32519B88600891B55 /* GalleryDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSourceImpl.swift; sourceTree = "<group>"; };
 		9A15E9D82519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildGetGalleryPostsResponseMapper.swift; sourceTree = "<group>"; };
+		9A2DB9A3252EB70F00D4214F /* GetRankingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingUseCase.swift; sourceTree = "<group>"; };
+		9A2DB9AB252EB71B00D4214F /* GetRankingUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingUseCaseImpl.swift; sourceTree = "<group>"; };
+		9A2DB9B0252EB81100D4214F /* GetRankingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankingResponse.swift; sourceTree = "<group>"; };
+		9A2DB9B5252EB9F300D4214F /* RankingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRepository.swift; sourceTree = "<group>"; };
+		9A2DB9BB252EBBD400D4214F /* RankingRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRepositoryImpl.swift; sourceTree = "<group>"; };
+		9A2DB9C3252EBF4C00D4214F /* ChildRankingResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRankingResponseMapper.swift; sourceTree = "<group>"; };
 		9A379C4C25285AD200F07194 /* WelcomeTriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTriviaView.swift; sourceTree = "<group>"; };
 		9A6564EE251DA175000C6031 /* GetPostDetailUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostDetailUseCaseImpl.swift; sourceTree = "<group>"; };
 		9A6564F3251DA180000C6031 /* GetPostDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostDetailUseCase.swift; sourceTree = "<group>"; };
@@ -938,6 +950,7 @@
 				9A0795D325259C7300BB589C /* ChildQuestion.swift */,
 				9A0795DB2525A17500BB589C /* ChildQuestionAlternativeMapper.swift */,
 				2BA2D8C6252D8EE80061B52A /* UploadImageResponseMapper.swift */,
+				9A2DB9C3252EBF4C00D4214F /* ChildRankingResponseMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -952,6 +965,7 @@
 				9A656534251DCB23000C6031 /* CommentsRepositoryImpl.swift */,
 				9A7001A5252036AC00C942DC /* LikeRepositoryImpl.swift */,
 				9A0795A925258A0500BB589C /* TriviaRepositoryImpl.swift */,
+				9A2DB9BB252EBBD400D4214F /* RankingRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -966,6 +980,7 @@
 				9A656516251DC3EB000C6031 /* CommentsRepository.swift */,
 				9A7001A02520367A00C942DC /* LikeRepository.swift */,
 				9A07959F2525851600BB589C /* TriviaRepository.swift */,
+				9A2DB9B5252EB9F300D4214F /* RankingRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -973,6 +988,7 @@
 		2BC2572F2505A37400B433CC /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				9A2DB9A2252EB69E00D4214F /* Ranking */,
 				2BA2D8B3252D88500061B52A /* User */,
 				9A07956F25257A2400BB589C /* Trivia */,
 				9A70016F252030BB00C942DC /* Like */,
@@ -1085,6 +1101,15 @@
 			path = Gallery;
 			sourceTree = "<group>";
 		};
+		9A2DB9A2252EB69E00D4214F /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				9A2DB9A3252EB70F00D4214F /* GetRankingUseCase.swift */,
+				9A2DB9AB252EB71B00D4214F /* GetRankingUseCaseImpl.swift */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
 		9A656508251DC0B2000C6031 /* Comment */ = {
 			isa = PBXGroup;
 			children = (
@@ -1165,6 +1190,7 @@
 			children = (
 				FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */,
 				FBBA41FA25105A4E0016ACC6 /* Ranking.swift */,
+				9A2DB9B0252EB81100D4214F /* GetRankingResponse.swift */,
 			);
 			path = Ranking;
 			sourceTree = "<group>";
@@ -1541,6 +1567,7 @@
 				FBBA420325106E400016ACC6 /* Comment.swift in Sources */,
 				FB1014FF250B2B24002C91ED /* LikeResponse.swift in Sources */,
 				9A07957125257A3500BB589C /* GetTriviaUseCaseImpl.swift in Sources */,
+				9A2DB9C4252EBF4C00D4214F /* ChildRankingResponseMapper.swift in Sources */,
 				FBBA41FF251063F20016ACC6 /* RankingRemoteDataSourceImpl.swift in Sources */,
 				9AD4914A2526EB640038A593 /* TriviaPageView.swift in Sources */,
 				9A656553251DCDBB000C6031 /* CommentsRemoteDataSourceImpl.swift in Sources */,
@@ -1610,8 +1637,10 @@
 				9A81457F2505F420001A012A /* GetWelcomeUseCaseImpl.swift in Sources */,
 				2BB278E52511637C002A234E /* PlayListView.swift in Sources */,
 				9A656512251DC134000C6031 /* GetCommentsUseCaseImpl.swift in Sources */,
+				9A2DB9A4252EB70F00D4214F /* GetRankingUseCase.swift in Sources */,
 				9A6564F9251DA5A6000C6031 /* GetGalleryDetailRequest.swift in Sources */,
 				2BC257402505FF7500B433CC /* UserLocalDataSourceImpl.swift in Sources */,
+				9A2DB9BC252EBBD400D4214F /* RankingRepositoryImpl.swift in Sources */,
 				FB1014E32509B321002C91ED /* AddCommentRequest.swift in Sources */,
 				2BA0A0D1252108E4009C1FC0 /* GalleryDetailViewModel.swift in Sources */,
 				2B46E70C252A3BE100F2872C /* ImagePickerView.swift in Sources */,
@@ -1647,6 +1676,7 @@
 				9A0795A52525874B00BB589C /* AnswerTriviaRequest.swift in Sources */,
 				9A73CC892508910900D9C310 /* ViewModelAssembly.swift in Sources */,
 				9A65655E251DD2C2000C6031 /* ChildGetCommentsResponseMapper.swift in Sources */,
+				9A2DB9B6252EB9F300D4214F /* RankingRepository.swift in Sources */,
 				9A7001A12520367A00C942DC /* LikeRepository.swift in Sources */,
 				2BC2573E2505AEF100B433CC /* UsersRepositoryImpl.swift in Sources */,
 				2B8B339E250714C4007C3FFC /* VerifySessionUseCase.swift in Sources */,
@@ -1690,11 +1720,13 @@
 				9A0795A02525851600BB589C /* TriviaRepository.swift in Sources */,
 				9A656535251DCB23000C6031 /* CommentsRepositoryImpl.swift in Sources */,
 				2B81FCDF250734D500EC9E10 /* UserApi.swift in Sources */,
+				9A2DB9AC252EB71B00D4214F /* GetRankingUseCaseImpl.swift in Sources */,
 				9A15E9BB251974E800891B55 /* GetGalleryUseCaseImpl.swift in Sources */,
 				2B81FCEB2507443F00EC9E10 /* DataSourcesAssembly.swift in Sources */,
 				2B83E79825081540004B1BF2 /* ValidateCodeRequest.swift in Sources */,
 				2B8B33A0250714D1007C3FFC /* VerifySessionUseCaseImpl.swift in Sources */,
 				9A0795CF25259BBE00BB589C /* AnswerTriviaResponseEntityMapper.swift in Sources */,
+				9A2DB9B1252EB81100D4214F /* GetRankingResponse.swift in Sources */,
 				FB101503250B2B81002C91ED /* PedirCancionResponse.swift in Sources */,
 				2BB278E225115AF9002A234E /* HomeViewModel.swift in Sources */,
 				2B81FCDB2507342400EC9E10 /* UserRemoteDataSource.swift in Sources */,
