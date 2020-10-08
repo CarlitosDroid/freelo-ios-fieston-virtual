@@ -9,6 +9,8 @@ struct GalleryView: View {
     @EnvironmentObject var settings: UserSettings
     @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(GalleryViewModel.self)!
     
+    @Binding var notifyGalleryFromMain: Bool
+    
     @State private var scrollViewID = UUID()
     @State private var showGalleryDetail = false
     
@@ -33,10 +35,16 @@ struct GalleryView: View {
             
         }
         .onAppear {
+            print(self.settings.refreshGallery)
             if(self.settings.refreshGallery) {
                 viewModel.getGallery()
                 settings.refreshGallery = false
             }
+            if(self.notifyGalleryFromMain) {
+                viewModel.getGallery()
+                notifyGalleryFromMain = false
+            }
+            
             
         }.onReceive(viewModel.$galleryItems, perform: { nullGalleryItems in
             
@@ -51,6 +59,6 @@ struct GalleryView: View {
 
 struct GalleryView_Previews: PreviewProvider {
     static var previews: some View {
-        GalleryView()
+        GalleryView(notifyGalleryFromMain: .constant(false))
     }
 }

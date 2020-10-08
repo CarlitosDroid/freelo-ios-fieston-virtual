@@ -12,6 +12,8 @@ struct MainView: View {
     
     @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(MainViewModel.self)!
     
+    @State var notifyGalleryFromMain = false
+    
     @State var showAlert = false
     
     @State private var selectedTab = 0
@@ -44,7 +46,7 @@ struct MainView: View {
                                 Text("Home")
                             }.tag(TAB_HOME_ID)
                             
-                            GalleryView()
+                            GalleryView(notifyGalleryFromMain: $notifyGalleryFromMain)
                                 .tabItem {
                                     Image(systemName: "photo.fill.on.rectangle.fill")
                                     Text("Galeria")
@@ -131,10 +133,13 @@ struct MainView: View {
                 self.viewModel.getWelcome()
                 self.showWelcomeOnlyOnce = false
             }
-        }.alert(isPresented: self.$viewModel.uploadPhotoHasFinished, content: {
+        }
+        .alert(isPresented: self.$viewModel.uploadPhotoHasFinished, content: {
             Alert(
                 title: Text(self.viewModel.uploadPhotoMessage),
-                dismissButton: .default(Text("Aceptar"))
+                dismissButton: .default(Text("Aceptar"), action: {
+                    notifyGalleryFromMain = true
+                })
             )
         })
     }
