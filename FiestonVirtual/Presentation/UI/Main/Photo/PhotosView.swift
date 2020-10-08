@@ -14,7 +14,6 @@ struct PhotosView: View {
     @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(PhotosViewModel.self)!
     
     @Binding var selectedTab: Int
-    @Binding var notifyGallery: Bool
     
     @State var isShowingImagePicker = false
     @State var imageInBlackBox: UIImage?
@@ -145,6 +144,6 @@ struct PhotosView: View {
 
 struct PhotosView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotosView(selectedTab: .constant(1), notifyGallery: .constant(false))
+        PhotosView(selectedTab: .constant(1))
     }
 }

@@ -16,6 +16,7 @@ class DependencyProvider {
     
     init() {
         assembler = Assembler([
+            SocketsAssembly(),
             ApiAssembly(),
             DataSourcesAssembly(),
             DataSourcesAssembly(),

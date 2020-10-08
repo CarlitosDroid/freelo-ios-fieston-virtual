@@ -53,5 +53,11 @@ class ViewModelAssembly: Assembly {
                 uploadFileUseCase: resolver.resolve(UploadFileUseCase.self)!
             )
         }
+        
+        container.register(SocketIOViewModel.self) { resolver in
+            SocketIOViewModel(
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
     }
 }

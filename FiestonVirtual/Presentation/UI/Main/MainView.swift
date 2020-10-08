@@ -15,7 +15,6 @@ struct MainView: View {
     @State var showAlert = false
     
     @State private var selectedTab = 0
-    @State private var notifyGallery = false
     
     @State var showPlayListView: Bool = false
     
@@ -51,13 +50,13 @@ struct MainView: View {
                                     Text("Galeria")
                                 }.tag(TAB_GALLERY_ID)
                             
-                            PhotosView(selectedTab: $selectedTab, notifyGallery: $notifyGallery)
+                            PhotosView(selectedTab: $selectedTab)
                                 .tabItem {
                                     Image(systemName: "plus.app.fill")
                                     Text("Foto")
                                 }.tag(TAB_PHOTO_ID)
                             
-                            Text("CHAT")
+                            ChatView()
                                 .tabItem {
                                     Image(systemName: "bubble.left.and.bubble.right.fill")
                                     Text("Chat")
