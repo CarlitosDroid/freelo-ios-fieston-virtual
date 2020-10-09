@@ -22,7 +22,14 @@ class AnswerTriviaUseCaseImpl : AnswerTriviaUseCase{
                     idAlternative : idAlternative ,
                     idUserSession: user.id
                 )
-            )            
+            ).flatMap { (answerTriviaResponse: AnswerTriviaResponse) ->
+                AnyPublisher<AnswerTriviaResponse, ErrorResponse> in
+                self.usersRepository.updateLocalTotalScoreOfUser(totalScore: answerTriviaResponse.userTotalScore)
+                return Just(answerTriviaResponse)
+                    .mapError({ (_) in
+                        ErrorResponse(code: 1, title: "", message: "")
+                    }).eraseToAnyPublisher()
+            }.eraseToAnyPublisher()
             
         case .failure(let error):
             return Just(
