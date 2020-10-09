@@ -109,4 +109,8 @@ extension UsersRepositoryImpl: UsersRepository {
         print(result)
     }
     
+    func updateLocalTotalScoreOfUser(totalScore: Int) {
+        repository.updateLocalTotalScoreOfUser(entityName: "UserEntity", totalScore: totalScore)
+    }
+    
 }

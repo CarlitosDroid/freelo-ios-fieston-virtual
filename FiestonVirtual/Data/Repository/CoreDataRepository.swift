@@ -86,6 +86,21 @@ class CoreDataRepository<T: NSManagedObject>: Repository {
         
     }
     
+    func updateLocalTotalScoreOfUser(entityName: String,totalScore: Int) {
+        let updateRequest = NSBatchUpdateRequest(entityName: entityName)
+        updateRequest.propertiesToUpdate = ["totalScore": totalScore]
+        updateRequest.resultType = .updatedObjectsCountResultType
+        
+        do {
+            let result = try managedObjectContext.execute(updateRequest)
+            print(result)
+            //Will print the number of rows affected/updated
+        } catch {
+            
+        }
+        
+    }
+    
     func deleteAllData(entityName: String)-> Result<Bool, Error> {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
         
