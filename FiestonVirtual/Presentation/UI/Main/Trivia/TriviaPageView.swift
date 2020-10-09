@@ -15,6 +15,7 @@ struct TriviaPageView: View {
                 .bold()
                 .foregroundColor(Color.amber_600)
                 .frame(maxWidth: .infinity,alignment: .center)
+                .multilineTextAlignment(.center)
                 .padding(.top, 15)
 
             Text(self.trivia.question)
@@ -22,6 +23,7 @@ struct TriviaPageView: View {
                 .bold()
                 .foregroundColor(Color.aqua)
                 .frame(maxWidth: .infinity,alignment: .center)
+                .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.top, 15)
                 .padding(.bottom, 15)

@@ -56,6 +56,8 @@ struct UserProfileView: View {
                         .onTapGesture(perform: {
                             onUserProfileClicked()
                         })
+                    Text("Cambiar foto")
+                        .font(.system(size: 12))
                     
                 }
             }
