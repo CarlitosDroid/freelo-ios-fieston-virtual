@@ -95,5 +95,12 @@ class UseCasesAssembly: Assembly {
             )
         }
         
+        container.register(GetRankingUseCase.self) { resolver in
+            GetRankingUseCaseImpl(
+                rankingRepository: resolver.resolve(RankingRepository.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
+        
     }
 }

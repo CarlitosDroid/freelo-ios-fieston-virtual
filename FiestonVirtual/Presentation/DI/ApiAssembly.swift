@@ -36,6 +36,10 @@ class ApiAssembly: Assembly {
             TriviaApiImpl()
         }
         
+        container.register(RankingApi.self) { _ in
+            RankingApiImpl()
+        }
+        
     }
     
 }

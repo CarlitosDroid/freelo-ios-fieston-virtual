@@ -39,5 +39,11 @@ class RepositoriesAssembly: Assembly {
             TriviaRepositoryImpl(triviaDataSource: resolver.resolve(TriviaDataSource.self)!)
         }
         
+        container.register(RankingRepository.self) { resolver in
+            RankingRepositoryImpl(
+                rankingRemoteDataSource: resolver.resolve(RankingRemoteDataSource.self)!
+            )
+        }
+        
     }
 }

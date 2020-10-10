@@ -59,5 +59,12 @@ class ViewModelAssembly: Assembly {
                 usersRepository: resolver.resolve(UsersRepository.self)!
             )
         }
+        
+        container.register(RankingViewModel.self) { resolver in
+            RankingViewModel(
+                getRankingUseCase: resolver.resolve(GetRankingUseCase.self)!
+            )
+        }
+        
     }
 }

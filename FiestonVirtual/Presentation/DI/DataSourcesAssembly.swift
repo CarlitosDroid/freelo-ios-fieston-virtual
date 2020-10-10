@@ -42,6 +42,10 @@ class DataSourcesAssembly: Assembly {
             TriviaDataSourceImpl(triviaApi: resolver.resolve(TriviaApi.self)!)
         }
         
+        container.register(RankingRemoteDataSource.self) { (resolver: Resolver) in
+            RankingRemoteDataSourceImpl(rankingApi: resolver.resolve(RankingApi.self)!)
+        }
+        
     }
     
 }
