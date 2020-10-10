@@ -105,22 +105,35 @@ struct MainView: View {
                             .imageScale(.large)
                     },
                     
-                    trailing: Button(action: {
-                        self.showAlert.toggle()
-                    }){
-                        Image(systemName: "arrow.right.square")
-                            .foregroundColor(Color.deep_purple_500)
-                            .imageScale(.large)
-                    }.foregroundColor(Color.deep_purple_500)
-                    .alert(isPresented: $showAlert) {
-                        Alert(
-                            title: Text("¿Cerrar sesión?"),
-                            primaryButton: .cancel(Text("No"), action: {}),
-                            secondaryButton: .destructive(Text("Si"), action: {
-                                self.viewModel.signOut()
-                            })
-                        )
+                    trailing : HStack{
+                        
+                        NavigationLink(destination: RankingView()){
+                            Image("main_ranking_icon")
+                                .resizable()
+                                .frame(width: 25.0, height: 23.0)
+                        }
+                        
+                        Button(action: {
+                            self.showAlert.toggle()
+                        }){
+                            Image(systemName: "arrow.right.square")
+                                .foregroundColor(Color.deep_purple_500)
+                                .imageScale(.large)
+                        }
+                        .foregroundColor(Color.deep_purple_500)
+                        .alert(isPresented: $showAlert) {
+                            Alert(
+                                title: Text("¿Cerrar sesión?"),
+                                primaryButton: .cancel(Text("No"), action: {}),
+                                secondaryButton: .destructive(Text("Si"), action: {
+                                    self.viewModel.signOut()
+                                })
+                            )
+                        }
                     }
+                    
+                    
+                    
                 )
             }.accentColor(Color.deep_purple_500)
             
