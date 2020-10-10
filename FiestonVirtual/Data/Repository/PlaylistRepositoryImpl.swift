@@ -21,7 +21,7 @@ class PlaylistRepositoryImpl : PlaylistRepository {
     func getRemotePlaylist(
         getPlaylistRequest : GetPlaylistRequest
     ) -> AnyPublisher<[Song], ErrorResponse> {
-        self.getRemotePlaylist(getPlaylistRequest: getPlaylistRequest)
+        return self.playlistDataSource.getRemotePlaylist(getPlaylistRequest: getPlaylistRequest)
     }
     
 }

@@ -99,6 +99,7 @@ struct RankingView: View {
             }
             
         }
+        .navigationBarTitle("Ranking")
         .onAppear{
             self.viewModel.getRanking()
         }
@@ -108,8 +109,6 @@ struct RankingView: View {
             self.userTotalScore = getRankingResponse!.userTotalScore
             
         })
-        
-        
         
     }
     

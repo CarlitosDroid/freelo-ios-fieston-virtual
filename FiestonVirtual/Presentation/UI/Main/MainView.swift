@@ -79,7 +79,7 @@ struct MainView: View {
                         
                     }
                     
-                    NavigationLink(destination: PlayListView(), isActive: $showPlayListView){
+                    NavigationLink(destination: PlaylistView(), isActive: $showPlayListView){
                         EmptyView()
                     }
                     
