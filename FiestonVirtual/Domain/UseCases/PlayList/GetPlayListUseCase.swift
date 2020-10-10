@@ -2,8 +2,8 @@
 import Foundation
 import Combine
 
-protocol GetPlayListUseCase {
-
+protocol GetPlaylistUseCase {
+    
     func invoke()-> AnyPublisher<[Song], ErrorResponse>
     
 }

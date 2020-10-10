@@ -2,7 +2,7 @@
 import Foundation
 import Combine
 
-class GetPlayListUseCaseImpl : GetPlaylistUseCase {
+class RequestSongUseCaseImpl : RequestSongUseCase {
     
     private let playlistRepository : PlaylistRepository
     private let usersRepository : UsersRepository
@@ -15,28 +15,26 @@ class GetPlayListUseCaseImpl : GetPlaylistUseCase {
         self.usersRepository = usersRepository
     }
     
-    func invoke()-> AnyPublisher<[Song], ErrorResponse>{
-        
+    func invoke(idPlaylist: Int) -> AnyPublisher<Song, ErrorResponse> {
         switch self.usersRepository.getLocalUser(){
         
         case .success( let user):
-            return self.playlistRepository.getRemotePlaylist(
-                getPlaylistRequest: GetPlaylistRequest(
-                    idEvent: user.idEvent,
-                    search: ""
+            return self.playlistRepository.requestSong(
+                getRemotePedirCancionRequest: GetRemotePedirCancionRequest(
+                    idUser: user.id,
+                    idPlaylist: idPlaylist
                 )
             )
             
         case .failure(let error):
             return Just(
-                [Song]()
+                Song(id: 0, title: "", band: "", requested: false)
             )
             .mapError({ (_) in
                 ErrorResponse(code: 1, title: "", message: error.localizedDescription)
             }).eraseToAnyPublisher()
             
         }
-        
     }
     
 }

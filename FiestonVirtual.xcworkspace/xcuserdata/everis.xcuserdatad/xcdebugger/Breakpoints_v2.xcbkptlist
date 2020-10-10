@@ -1400,8 +1400,424 @@
             filePath = "FiestonVirtual/Presentation/UI/Ranking/RankingView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63039E4F-4EF4-4C3A-A77C-FF983D94FAA2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Domain/Repository/PlaylistRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "PlaylistRepository"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FB32F94-B0AA-4BC1-87CB-367E07058D74"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlayListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getSongs()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E99D6D0F-CCF0-4661-8F07-C2A72CF7A4D1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Domain/UseCases/PlayList/GetPlaylistUseCaseImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "invoke()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "024597A6-681B-4CD9-8406-72395CEC5D9F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Domain/UseCases/PlayList/GetPlaylistUseCaseImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "invoke()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FEC96857-2B78-470F-814F-48FADD3C47A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Data/Repository/PlaylistRepositoryImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getRemotePlaylist(getPlaylistRequest:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2782A355-6F57-4268-BD4B-CA88B0389724"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C289C723-DF69-4066-B4E1-3A13D119CE30"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCD48440-33DC-4C30-9820-E79EDEDFC343"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2617508F-B890-430C-AF7A-FB65E209C1DF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getSongs()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31B9F7F0-E967-46B0-8E7B-5627160A76E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getSongs()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "31B9F7F0-E967-46B0-8E7B-5627160A76E0 - b9271f2958201ee0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FiestonVirtual.PlaylistViewModel.getSongs() -&gt; ()"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "31B9F7F0-E967-46B0-8E7B-5627160A76E0 - 3ad1c3746460918c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;FiestonVirtual.ErrorResponse&gt;) -&gt; () in FiestonVirtual.PlaylistViewModel.getSongs() -&gt; ()"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "111">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8BD448D2-20A6-4B36-B9DF-060176764CFB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getSongs()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8BD448D2-20A6-4B36-B9DF-060176764CFB - 3ad1c374646091ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;FiestonVirtual.ErrorResponse&gt;) -&gt; () in FiestonVirtual.PlaylistViewModel.getSongs() -&gt; ()"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "153">
+               </Location>
+               <Location
+                  uuid = "8BD448D2-20A6-4B36-B9DF-060176764CFB - 3ad1c374646091ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;FiestonVirtual.ErrorResponse&gt;) -&gt; () in FiestonVirtual.PlaylistViewModel.getSongs() -&gt; ()"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "174">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5B1F0ED-C61F-4B77-85AB-79FE9F081F15"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getSongs()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0806B412-8C33-4DC4-986C-FDCD95342DF6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getSongs()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0806B412-8C33-4DC4-986C-FDCD95342DF6 - 3ad1c374646091ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;FiestonVirtual.ErrorResponse&gt;) -&gt; () in FiestonVirtual.PlaylistViewModel.getSongs() -&gt; ()"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "153">
+               </Location>
+               <Location
+                  uuid = "0806B412-8C33-4DC4-986C-FDCD95342DF6 - 3ad1c374646091ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;FiestonVirtual.ErrorResponse&gt;) -&gt; () in FiestonVirtual.PlaylistViewModel.getSongs() -&gt; ()"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "174">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28E204C5-7A3F-475D-B1B0-B724D398C452"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getSongs()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C9CC9A0-6EBB-45A5-A8F4-68BEE7EB43E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/Framework/DataSource/PlaylistDataSourceImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getRemotePlaylist(getPlaylistRequest:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7C9CC9A0-6EBB-45A5-A8F4-68BEE7EB43E4 - b031361e78606000"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (FiestonVirtual.GetPlaylistResponseEntity) -&gt; Swift.Array&lt;FiestonVirtual.Song&gt; in FiestonVirtual.PlaylistDataSourceImpl.getRemotePlaylist(getPlaylistRequest: FiestonVirtual.GetPlaylistRequest) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;FiestonVirtual.Song&gt;, FiestonVirtual.ErrorResponse&gt;"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/DataSource/PlaylistDataSourceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  uuid = "7C9CC9A0-6EBB-45A5-A8F4-68BEE7EB43E4 - f4bccc4be9c9e7a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (FiestonVirtual.PlayList) -&gt; FiestonVirtual.Song in closure #2 (FiestonVirtual.GetPlaylistResponseEntity) -&gt; Swift.Array&lt;FiestonVirtual.Song&gt; in FiestonVirtual.PlaylistDataSourceImpl.getRemotePlaylist(getPlaylistRequest: FiestonVirtual.GetPlaylistRequest) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;FiestonVirtual.Song&gt;, FiestonVirtual.ErrorResponse&gt;"
+                  moduleName = "FiestonVirtual"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/everis/Documents/ios-project/freelo-ios-fieston-virtual/FiestonVirtual/Presentation/Framework/DataSource/PlaylistDataSourceImpl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C72B999-CD08-46DC-A853-5F8827B089A3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF673D9E-B764-464C-A654-1B05A6863429"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E73390CA-26AC-46EA-BD38-B99DAA77B80D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FiestonVirtual/Presentation/UI/PlayList/PlaylistView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
