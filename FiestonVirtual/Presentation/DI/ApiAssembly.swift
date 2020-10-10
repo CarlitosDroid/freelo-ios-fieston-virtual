@@ -40,6 +40,10 @@ class ApiAssembly: Assembly {
             RankingApiImpl()
         }
         
+        container.register(PlayListApi.self) { _ in
+            PlayListApiImpl()
+        }
+        
     }
     
 }

@@ -102,5 +102,20 @@ class UseCasesAssembly: Assembly {
             )
         }
         
+        
+        container.register(GetPlaylistUseCase.self) { resolver in
+            GetPlayListUseCaseImpl(
+                playlistRepository: resolver.resolve(PlaylistRepository.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
+        
+        container.register(RequestSongUseCase.self) { resolver in
+            RequestSongUseCaseImpl(
+                playlistRepository: resolver.resolve(PlaylistRepository.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
+        
     }
 }

@@ -45,5 +45,11 @@ class RepositoriesAssembly: Assembly {
             )
         }
         
+        container.register(PlaylistRepository.self) { resolver in
+            PlaylistRepositoryImpl(
+                playlistDataSource: resolver.resolve(PlaylistDataSource.self)!
+            )
+        }
+        
     }
 }

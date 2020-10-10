@@ -66,5 +66,12 @@ class ViewModelAssembly: Assembly {
             )
         }
         
+        container.register(PlaylistViewModel.self) { resolver in
+            PlaylistViewModel(
+                getPlayListUseCase: resolver.resolve(GetPlaylistUseCase.self)!,
+                requestSongUseCase:  resolver.resolve(RequestSongUseCase.self)!
+            )
+        }
+        
     }
 }

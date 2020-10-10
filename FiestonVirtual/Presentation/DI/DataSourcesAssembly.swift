@@ -46,6 +46,10 @@ class DataSourcesAssembly: Assembly {
             RankingRemoteDataSourceImpl(rankingApi: resolver.resolve(RankingApi.self)!)
         }
         
+        container.register(PlaylistDataSource.self) { (resolver: Resolver) in
+            PlaylistDataSourceImpl(playListApi: resolver.resolve(PlayListApi.self)!)
+        }
+        
     }
     
 }

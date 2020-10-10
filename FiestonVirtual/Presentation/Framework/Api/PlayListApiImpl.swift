@@ -56,7 +56,7 @@ class PlayListApiImpl : PlayListApi {
         getPlaylistRequest: GetPlaylistRequest
     ) -> AnyPublisher<GetPlaylistResponseEntity, ExternalError> {
         
-        guard let url = requestSongComponents().url
+        guard let url = getRemotePlaylistComponents().url
         else {
             let error =
                 ExternalError
