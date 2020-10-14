@@ -18,6 +18,7 @@
 		2B3070EA25089603005198F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3070E925089603005198F7 /* Color.swift */; };
 		2B3070EC25089659005198F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3070EB25089659005198F7 /* Colors.xcassets */; };
 		2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3747F9250C55E200BE13B4 /* VideoView.swift */; };
+		2B457A4F2537916E00B5B55E /* ChatMessageRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B457A4E2537916E00B5B55E /* ChatMessageRepositoryImpl.swift */; };
 		2B46E6FC252A338C00F2872C /* ImageAndVideoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46E6FB252A338C00F2872C /* ImageAndVideoPickerView.swift */; };
 		2B46E70C252A3BE100F2872C /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46E70B252A3BE100F2872C /* ImagePickerView.swift */; };
 		2B46E714252A3E1700F2872C /* ImageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46E713252A3E1700F2872C /* ImageCoordinator.swift */; };
@@ -39,7 +40,6 @@
 		2B695A312536AF710094C385 /* ChatMessageViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B695A302536AF710094C385 /* ChatMessageViewType.swift */; };
 		2B695A362536B0810094C385 /* ChatMessageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B695A352536B0810094C385 /* ChatMessageRepository.swift */; };
 		2B695A3B2536B1130094C385 /* MessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B695A3A2536B1130094C385 /* MessageRequest.swift */; };
-		2B695A402536B17F0094C385 /* ChatMessageRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B695A3F2536B17F0094C385 /* ChatMessageRepositoryImpl.swift */; };
 		2B695A452536B2080094C385 /* ChatMessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B695A442536B2080094C385 /* ChatMessageDataSource.swift */; };
 		2B695A4A2536B2660094C385 /* ChatMessageDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B695A492536B2660094C385 /* ChatMessageDataSourceImpl.swift */; };
 		2B695A4F2536B2CB0094C385 /* ChatMessagesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B695A4E2536B2CB0094C385 /* ChatMessagesApi.swift */; };
@@ -290,6 +290,7 @@
 		2B3070E925089603005198F7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2B3070EB25089659005198F7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B3747F9250C55E200BE13B4 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		2B457A4E2537916E00B5B55E /* ChatMessageRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageRepositoryImpl.swift; sourceTree = "<group>"; };
 		2B46E6FB252A338C00F2872C /* ImageAndVideoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndVideoPickerView.swift; sourceTree = "<group>"; };
 		2B46E70B252A3BE100F2872C /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		2B46E713252A3E1700F2872C /* ImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCoordinator.swift; sourceTree = "<group>"; };
@@ -311,7 +312,6 @@
 		2B695A302536AF710094C385 /* ChatMessageViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewType.swift; sourceTree = "<group>"; };
 		2B695A352536B0810094C385 /* ChatMessageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageRepository.swift; sourceTree = "<group>"; };
 		2B695A3A2536B1130094C385 /* MessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRequest.swift; sourceTree = "<group>"; };
-		2B695A3F2536B17F0094C385 /* ChatMessageRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageRepositoryImpl.swift; sourceTree = "<group>"; };
 		2B695A442536B2080094C385 /* ChatMessageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageDataSource.swift; sourceTree = "<group>"; };
 		2B695A492536B2660094C385 /* ChatMessageDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageDataSourceImpl.swift; sourceTree = "<group>"; };
 		2B695A4E2536B2CB0094C385 /* ChatMessagesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesApi.swift; sourceTree = "<group>"; };
@@ -1086,7 +1086,7 @@
 				9A0795A925258A0500BB589C /* TriviaRepositoryImpl.swift */,
 				9A2DB9BB252EBBD400D4214F /* RankingRepositoryImpl.swift */,
 				9A2DB9E9252ED08E00D4214F /* PlaylistRepositoryImpl.swift */,
-				2B695A3F2536B17F0094C385 /* ChatMessageRepositoryImpl.swift */,
+				2B457A4E2537916E00B5B55E /* ChatMessageRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1731,6 +1731,7 @@
 				FBBA41FB25105A4E0016ACC6 /* Ranking.swift in Sources */,
 				9A7AAFD12510568B00D20A6D /* SignOutUseCase.swift in Sources */,
 				9A7AAFD525105F6C00D20A6D /* SignOutRequest.swift in Sources */,
+				2B457A4F2537916E00B5B55E /* ChatMessageRepositoryImpl.swift in Sources */,
 				2BB6E7EC250AE25A0074B6DB /* Data.swift in Sources */,
 				2B5A53B0251476050036AB9E /* CaptureImageView.swift in Sources */,
 				2BC257422505FF9500B433CC /* UserLocalDataSource.swift in Sources */,
@@ -1768,7 +1769,6 @@
 				9ACB55BB252D392C00DEEE49 /* UploadFileUseCase.swift in Sources */,
 				2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */,
 				9A079596252581C800BB589C /* AnswerTriviaUseCaseImpl.swift in Sources */,
-				2B695A402536B17F0094C385 /* ChatMessageRepositoryImpl.swift in Sources */,
 				9A7001B02520396B00C942DC /* LikeDataSourceImpl.swift in Sources */,
 				9A2DB9D8252EC8FB00D4214F /* Song.swift in Sources */,
 				2B81FCDD2507349300EC9E10 /* UserRemoteDataSourceImpl.swift in Sources */,
