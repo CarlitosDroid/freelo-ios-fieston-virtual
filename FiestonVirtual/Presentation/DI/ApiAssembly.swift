@@ -44,6 +44,10 @@ class ApiAssembly: Assembly {
             PlayListApiImpl()
         }
         
+        container.register(ChatMessagesApi.self) { _ in
+            ChatMessagesApiImpl()
+        }
+        
     }
     
 }

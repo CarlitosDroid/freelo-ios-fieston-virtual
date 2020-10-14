@@ -51,5 +51,10 @@ class RepositoriesAssembly: Assembly {
             )
         }
         
+        container.register(ChatMessageRepository.self) { resolver in
+            ChatMessageRepositoryImpl(
+                chatMessageDataSource: resolver.resolve(ChatMessageDataSource.self)!
+            )
+        }
     }
 }

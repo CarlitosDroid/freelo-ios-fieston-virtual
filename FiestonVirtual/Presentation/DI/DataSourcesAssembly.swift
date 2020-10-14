@@ -50,6 +50,13 @@ class DataSourcesAssembly: Assembly {
             PlaylistDataSourceImpl(playListApi: resolver.resolve(PlayListApi.self)!)
         }
         
+        container.register(ChatMessageDataSource.self) { (resolver: Resolver) in
+            ChatMessageDataSourceImpl(
+                chatMessagesApi: resolver.resolve(ChatMessagesApi.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
+        
     }
     
 }

@@ -73,5 +73,12 @@ class ViewModelAssembly: Assembly {
             )
         }
         
+        container.register(ChatViewModel.self) { resolver in
+            ChatViewModel(
+                getMessagesUseCase: resolver.resolve(GetChatMessagesUseCase.self)!,
+                sendChatMessageUseCase:  resolver.resolve(SendChatMessageUseCase.self)!
+            )
+        }
+        
     }
 }

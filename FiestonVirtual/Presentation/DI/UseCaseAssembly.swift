@@ -117,5 +117,18 @@ class UseCasesAssembly: Assembly {
             )
         }
         
+        container.register(GetChatMessagesUseCase.self) { resolver in
+            GetChatMessagesUseCaseImpl(
+                chatMessageRepository: resolver.resolve(ChatMessageRepository.self)!,
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
+        
+        container.register(SendChatMessageUseCase.self) { resolver in
+            SendChatMessageUseCaseImpl(
+                usersRepository: resolver.resolve(UsersRepository.self)!
+            )
+        }
+        
     }
 }

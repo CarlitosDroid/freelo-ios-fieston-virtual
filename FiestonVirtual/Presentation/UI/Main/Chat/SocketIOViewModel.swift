@@ -8,6 +8,7 @@
 
 import Foundation
 import SocketIO
+import SwiftyJSON
 
 class SocketIOViewModel : ObservableObject {
     
@@ -16,7 +17,7 @@ class SocketIOViewModel : ObservableObject {
     let usersRepository: UsersRepository
     private var isUserConnected = false
     
-    @Published var statusMessage = ""
+    @Published var socketIOResult: SocketIOResult?
     
     init(usersRepository: UsersRepository) {
         self.socket = socketManager?.defaultSocket
@@ -25,7 +26,10 @@ class SocketIOViewModel : ObservableObject {
     
     func startListeners() {
         self.socket?.on(clientEvent: .error, callback: { (data: [Any], ack: SocketAckEmitter) in
-            self.statusMessage = "Error"
+            
+            print(data)
+            self.socketIOResult = SocketIOResult.ConnectionError(true)
+            
         })
         self.socket?.on(clientEvent: .connect, callback: { (data: [Any], ack: SocketAckEmitter) in
             
@@ -40,17 +44,40 @@ class SocketIOViewModel : ObservableObject {
                 }
                 self.isUserConnected = true
             }
-            self.statusMessage = "Connected"
+            self.socketIOResult = SocketIOResult.ConnectionSuccess(true)
             
         })
         self.socket?.on(clientEvent: .disconnect, callback: { (data: [Any], ack: SocketAckEmitter) in
             self.isUserConnected = false
-            self.statusMessage = "Disconnected"
+            
+            self.socketIOResult = SocketIOResult.ConnectionDisconnect(true)
+            
         })
         
         self.socket?.on(MESSAGE_EVENT, callback: { (data: [Any], ack: SocketAckEmitter) in
-            print(data)
             
+            let json = JSON(data[0])
+            
+            print(json)
+            
+            let idUserMessage = json[ID_USER_KEY].intValue
+            let messageText = json[MESSAGE_KEY].stringValue
+            let userImage = json[USER_IMAGE_KEY].stringValue
+            let userName = json[USERNAME_KEY].stringValue
+            
+            // TODO - Web service must return idMessage too
+            let chatMessage =
+                ChatMessage(
+                    idMessage: UUID().uuidString,
+                    messageText: messageText,
+                    userName: userName,
+                    userId: idUserMessage,
+                    userImage: userImage,
+                    viewType: ChatMessageViewType.INCOMING(value: 1)
+                )
+            self.socketIOResult = SocketIOResult.ReceiveIncomingMessageSuccess(chatMessage)
+            
+        
         })
         
         self.socket?.connect()
@@ -60,7 +87,6 @@ class SocketIOViewModel : ObservableObject {
         self.socket?.disconnect()
         self.socket?.off(clientEvent: .connect)
         self.socket?.off(clientEvent: .disconnect)
-        self.socket?.off(MESSAGE_EVENT)
     }
     
     func sendMessage(message: String) {
