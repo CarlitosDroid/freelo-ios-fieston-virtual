@@ -36,21 +36,26 @@ struct ChatView: View {
                             }
                         }
                     }
+                    
                     HStack {
-                        TextField("Message...", text: $typingMessage)
+                        TextField("Mensaje...", text: self.$typingMessage)
+                            .foregroundColor(Color.black)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(minHeight: CGFloat(30))
-                        Button("Send") {
+                            .keyboardType(.default)
+                        Button(action: {
                             sendMessage(typingMessage: typingMessage)
+                        }) {
+                            Image(systemName: "paperplane.fill")
+                                .foregroundColor(Color.white)
                         }
-                    }.frame(minHeight: CGFloat(50)).padding()
+                    }.padding(.all, 10)
+                    
                 } else {
                     LoadingView(isShowing: .constant(true)) {
                         EmptyView()
                     }
                 }
-               
-                
+
             }
         }
         .onAppear {
