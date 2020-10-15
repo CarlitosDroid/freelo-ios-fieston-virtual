@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>265599899286-u9onf7jgkb39nki7p64jkv8ue9g6g64a.apps.googleusercontent.com</string>
+	<string>265599899286-6u4l0uftcsksfaks075m6a760clj7mml.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.265599899286-u9onf7jgkb39nki7p64jkv8ue9g6g64a</string>
+	<string>com.googleusercontent.apps.265599899286-6u4l0uftcsksfaks075m6a760clj7mml</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAPIUQe0Of0XO9vwbz8S3qTVRojoNR57mI</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.spydevs.FiestonVirtual</string>
+	<string>com.arpanet.fiestonvirtual</string>
 	<key>PROJECT_ID</key>
 	<string>fiestonvirtual-7d3a0</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:265599899286:ios:d80b138322935f48b1d4b7</string>
+	<string>1:265599899286:ios:8356cf3885562493b1d4b7</string>
 	<key>DATABASE_URL</key>
 	<string>https://fiestonvirtual-7d3a0.firebaseio.com</string>
 </dict>

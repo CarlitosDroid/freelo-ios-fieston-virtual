@@ -18,6 +18,7 @@
 		2B3070EA25089603005198F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3070E925089603005198F7 /* Color.swift */; };
 		2B3070EC25089659005198F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3070EB25089659005198F7 /* Colors.xcassets */; };
 		2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3747F9250C55E200BE13B4 /* VideoView.swift */; };
+		2B3A6DD72537FD910037E42A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A6DD62537FD900037E42A /* GoogleService-Info.plist */; };
 		2B457A4F2537916E00B5B55E /* ChatMessageRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B457A4E2537916E00B5B55E /* ChatMessageRepositoryImpl.swift */; };
 		2B46E6FC252A338C00F2872C /* ImageAndVideoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46E6FB252A338C00F2872C /* ImageAndVideoPickerView.swift */; };
 		2B46E70C252A3BE100F2872C /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B46E70B252A3BE100F2872C /* ImagePickerView.swift */; };
@@ -83,7 +84,6 @@
 		2BA2D8C7252D8EE80061B52A /* UploadImageResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2D8C6252D8EE80061B52A /* UploadImageResponseMapper.swift */; };
 		2BA2D8CC252D963B0061B52A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2D8CB252D963B0061B52A /* Constants.swift */; };
 		2BA2D8D1252D9B2C0061B52A /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA2D8D0252D9B2C0061B52A /* UserSettings.swift */; };
-		2BA67BCE251436E700BAD228 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BA67BCD251436E700BAD228 /* GoogleService-Info.plist */; };
 		2BB278E225115AF9002A234E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB278E125115AF9002A234E /* HomeViewModel.swift */; };
 		2BB278E52511637C002A234E /* PlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB278E42511637C002A234E /* PlaylistView.swift */; };
 		2BB6E7EA250AD3990074B6DB /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB6E7E9250AD3990074B6DB /* PhotosViewModel.swift */; };
@@ -290,6 +290,8 @@
 		2B3070E925089603005198F7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2B3070EB25089659005198F7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B3747F9250C55E200BE13B4 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		2B3A6DD62537FD900037E42A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2B3A6DEE2537FE6F0037E42A /* FiestonVirtual.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FiestonVirtual.entitlements; sourceTree = "<group>"; };
 		2B457A4E2537916E00B5B55E /* ChatMessageRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageRepositoryImpl.swift; sourceTree = "<group>"; };
 		2B46E6FB252A338C00F2872C /* ImageAndVideoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndVideoPickerView.swift; sourceTree = "<group>"; };
 		2B46E70B252A3BE100F2872C /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
@@ -352,7 +354,6 @@
 		2BA2D8C6252D8EE80061B52A /* UploadImageResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageResponseMapper.swift; sourceTree = "<group>"; };
 		2BA2D8CB252D963B0061B52A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2BA2D8D0252D9B2C0061B52A /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		2BA67BCD251436E700BAD228 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BB278E125115AF9002A234E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2BB278E42511637C002A234E /* PlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistView.swift; sourceTree = "<group>"; };
 		2BB6E7E9250AD3990074B6DB /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
@@ -793,6 +794,7 @@
 		2BC256CD250546D100B433CC /* FiestonVirtual */ = {
 			isa = PBXGroup;
 			children = (
+				2B3A6DEE2537FE6F0037E42A /* FiestonVirtual.entitlements */,
 				2BC257062505489400B433CC /* DataBase */,
 				2BC257052505487500B433CC /* Resources */,
 				2BC257012505473300B433CC /* Data */,
@@ -855,7 +857,7 @@
 		2BC257032505478200B433CC /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				2BA67BCD251436E700BAD228 /* GoogleService-Info.plist */,
+				2B3A6DD62537FD900037E42A /* GoogleService-Info.plist */,
 				2BC256DC250546D200B433CC /* LaunchScreen.storyboard */,
 				2BC256DF250546D200B433CC /* Info.plist */,
 				2BC256D0250546D100B433CC /* SceneDelegate.swift */,
@@ -1571,7 +1573,7 @@
 			files = (
 				2BC256DE250546D200B433CC /* LaunchScreen.storyboard in Resources */,
 				2B3070EC25089659005198F7 /* Colors.xcassets in Resources */,
-				2BA67BCE251436E700BAD228 /* GoogleService-Info.plist in Resources */,
+				2B3A6DD72537FD910037E42A /* GoogleService-Info.plist in Resources */,
 				2BC256DB250546D200B433CC /* Preview Assets.xcassets in Resources */,
 				2BC256D8250546D200B433CC /* Assets.xcassets in Resources */,
 			);
@@ -2097,6 +2099,7 @@
 			baseConfigurationReference = DD745BE1A3F56DA73475DD2F /* Pods-FiestonVirtual.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FiestonVirtual/FiestonVirtual.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
@@ -2120,6 +2123,7 @@
 			baseConfigurationReference = 24C1D1A72B0920D76C09E23C /* Pods-FiestonVirtual.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FiestonVirtual/FiestonVirtual.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
