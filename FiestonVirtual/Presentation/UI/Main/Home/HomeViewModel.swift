@@ -14,22 +14,22 @@ class HomeViewModel: ObservableObject {
     let categories = [
         Category(
             name: CATEGORY_NAME_PHOTO,
-            image: "home_fotos",
+            image: "HomeFotos",
             description: "GALERÍA DE FOTOS Y",
             subDescription: "VIDEOS"),
         Category(
             name: CATEGORY_NAME_CHAT,
-            image: "home_chat",
+            image: "HomeChat",
             description: "CHATEAR AHORA",
             subDescription: "ARMA LA CONVERSA"),
         Category(
             name: CATEGORY_NAME_TRIVIA,
-            image: "home_trivia",
+            image: "HomeTrivia",
             description: "GANA PUNTOS",
             subDescription: "JUGAR AHORA"),
         Category(
             name: CATEGORY_NAME_PLAY_LIST,
-            image: "home_playlist",
+            image: "HomePlaylist",
             description: "PARTICIPA DE LA FIESTA",
             subDescription: "PIDE UNA CANCIÓN")
     ]

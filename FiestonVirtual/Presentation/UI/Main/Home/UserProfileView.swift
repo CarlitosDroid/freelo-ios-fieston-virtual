@@ -26,7 +26,6 @@ struct UserProfileView: View {
             HStack {
                 VStack(alignment: .leading) {
                     Text(user?.name ?? "")
-                        .foregroundColor(Color.black)
                         .fontWeight(.bold)
                         .font(.system(size: 20))
                     Text("Bienvenido")
@@ -62,7 +61,7 @@ struct UserProfileView: View {
                 }
             }
             .padding(.all, 20)
-            .background(Color.white)
+            .background(Color.material_white)
             .cornerRadius(10)
             .shadow(radius: 3)
         }

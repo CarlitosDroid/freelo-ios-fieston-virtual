@@ -46,7 +46,7 @@ struct GalleryDetailView: View {
                             .frame(width: 30.0, height: 30.0)
                         
                         Text(userName)
-                            .foregroundColor(Color.aqua)
+                            .foregroundColor(Color.aquamarine)
                         Spacer()
                     }
                     

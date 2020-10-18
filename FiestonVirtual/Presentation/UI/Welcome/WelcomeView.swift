@@ -27,7 +27,7 @@ struct WelcomeView: View {
                 
                 Text(self.welcome.title).font(.title).bold().foregroundColor(Color.amber_600).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
                 
-                Text( self.welcome.description).font(.body).bold().foregroundColor(Color.aqua).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
+                Text( self.welcome.description).font(.body).bold().foregroundColor(Color.aquamarine).multilineTextAlignment(.center).fixedSize(horizontal: false, vertical: true)
                 
                 Spacer()
                 

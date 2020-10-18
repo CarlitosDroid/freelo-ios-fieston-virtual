@@ -62,7 +62,7 @@ struct MainView: View {
                                 .tabItem {
                                     Image(systemName: "bubble.left.and.bubble.right.fill")
                                     Text("Chat")
-                                }.tag(TAB_CHAT_ID).foregroundColor(Color.red)
+                                }.tag(TAB_CHAT_ID)
                             
                             TriviaView()
                                 .tabItem {
@@ -97,18 +97,16 @@ struct MainView: View {
                 .navigationBarTitle("Fieston Virtual", displayMode: .inline)
                 .navigationBarItems(
                     leading: Button(action: {
-                        
                         self.showCaptureImageView.toggle()
                     }) {
                         Image(systemName: "camera")
-                            .foregroundColor(Color.deep_purple_500)
                             .imageScale(.large)
                     },
                     
                     trailing : HStack{
                         
                         NavigationLink(destination: RankingView()){
-                            Image("main_ranking_icon")
+                            Image("MainRankingIcon")
                                 .resizable()
                                 .frame(width: 25.0, height: 23.0)
                         }
@@ -117,10 +115,9 @@ struct MainView: View {
                             self.showAlert.toggle()
                         }){
                             Image(systemName: "arrow.right.square")
-                                .foregroundColor(Color.deep_purple_500)
                                 .imageScale(.large)
                         }
-                        .foregroundColor(Color.deep_purple_500)
+                    
                         .alert(isPresented: $showAlert) {
                             Alert(
                                 title: Text("¿Cerrar sesión?"),

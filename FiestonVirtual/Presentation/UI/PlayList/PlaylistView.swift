@@ -34,7 +34,7 @@ struct PlaylistView: View {
                                 .frame(maxWidth: .infinity,alignment: .leading)
                             
                             Text(song.band)
-                                .foregroundColor(Color.aqua)
+                                .foregroundColor(Color.aquamarine)
                                 .font(.system(size: 16))
                                 .frame(maxWidth: .infinity,alignment: .leading)
                             

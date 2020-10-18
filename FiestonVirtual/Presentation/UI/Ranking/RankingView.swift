@@ -19,7 +19,7 @@ struct RankingView: View {
                 VStack(spacing: 0){
                     
                     HStack{
-                        Image("main_ranking")
+                        Image("MainRanking")
                         
                         Text("Ranking")
                             .foregroundColor(Color.amber_600)
@@ -30,13 +30,13 @@ struct RankingView: View {
                     .padding(.top,20)
                     
                     Text("Tienes "+userTotalScore+" pts.")
-                        .foregroundColor(Color.aqua)
+                        .foregroundColor(Color.aquamarine)
                         .padding(.top,20)
-                    
-                    
+
+
                     QGrid(ranking, columns: 1) { ranking in
                         HStack(spacing: 10){
-                            
+
                             KFImage(URL(string: ranking.userLogo))
                                 .placeholder{
                                     Image(systemName: "person.fill")
@@ -46,29 +46,29 @@ struct RankingView: View {
                                 .scaledToFit()
                                 .frame(width: 40.0, height: 40.0)
                                 .clipShape(Circle())
-                            
+
                             Spacer()
-                            
+
                             VStack{
                                 Text(ranking.userName)
-                                    .foregroundColor(Color.aqua)
+                                    .foregroundColor(Color.aquamarine)
                                     .font(.system(size: 16))
                                     .frame(maxWidth: .infinity,alignment: .leading)
-                                
-                                
-                                
+
+
+
                                 Text(String(ranking.totalScore)+" pts")
-                                    .foregroundColor(Color.aqua)
+                                    .foregroundColor(Color.aquamarine)
                                     .font(.system(size: 16))
                                     .frame(maxWidth: .infinity,alignment: .leading)
-                                
+
                             }
-                            
+
                             Spacer()
-                            
+
                             if(ranking.position == 1){
                                 VStack {
-                                    
+
                                     Text(String(ranking.position))
                                         .font(.system(size: 20))
                                         .bold()
@@ -77,7 +77,7 @@ struct RankingView: View {
                                 .background(Color.amber_600)
                             }else{
                                 VStack {
-                                    
+
                                     Text(String(ranking.position))
                                         .font(.system(size: 20))
                                         .bold()
@@ -85,15 +85,12 @@ struct RankingView: View {
                                 .frame(width: 40.0, height: 40.0)
                                 .background(Color.purple)
                             }
-                            
-                            
                         }
-                        
+
                     }
                     .padding(.leading,20)
                     .padding(.trailing,20)
                     .padding(.top,20)
-                    
                     
                 }
             }

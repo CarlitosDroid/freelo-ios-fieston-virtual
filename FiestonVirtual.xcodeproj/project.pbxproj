@@ -16,7 +16,6 @@
 		2B23A24225241AB200A348B9 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A24125241AB200A348B9 /* Grid */; };
 		2B23A2BB25242CC400A348B9 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 2B23A2BA25242CC400A348B9 /* QGrid */; };
 		2B3070EA25089603005198F7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3070E925089603005198F7 /* Color.swift */; };
-		2B3070EC25089659005198F7 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B3070EB25089659005198F7 /* Colors.xcassets */; };
 		2B3747FA250C55E200BE13B4 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3747F9250C55E200BE13B4 /* VideoView.swift */; };
 		2B3A6DD72537FD910037E42A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B3A6DD62537FD900037E42A /* GoogleService-Info.plist */; };
 		2B457A4F2537916E00B5B55E /* ChatMessageRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B457A4E2537916E00B5B55E /* ChatMessageRepositoryImpl.swift */; };
@@ -288,7 +287,6 @@
 		2B1D05712510342B00EA4B56 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2B1D057925103F4100EA4B56 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		2B3070E925089603005198F7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		2B3070EB25089659005198F7 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2B3747F9250C55E200BE13B4 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		2B3A6DD62537FD900037E42A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B3A6DEE2537FE6F0037E42A /* FiestonVirtual.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FiestonVirtual.entitlements; sourceTree = "<group>"; };
@@ -810,7 +808,6 @@
 			isa = PBXGroup;
 			children = (
 				2BC256DA250546D200B433CC /* Preview Assets.xcassets */,
-				2B3070EB25089659005198F7 /* Colors.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -1572,7 +1569,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC256DE250546D200B433CC /* LaunchScreen.storyboard in Resources */,
-				2B3070EC25089659005198F7 /* Colors.xcassets in Resources */,
 				2B3A6DD72537FD910037E42A /* GoogleService-Info.plist in Resources */,
 				2BC256DB250546D200B433CC /* Preview Assets.xcassets in Resources */,
 				2BC256D8250546D200B433CC /* Assets.xcassets in Resources */,
@@ -2102,7 +2098,7 @@
 				CODE_SIGN_ENTITLEMENTS = FiestonVirtual/FiestonVirtual.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
 				DEVELOPMENT_TEAM = 9G3QVVB9C5;
 				ENABLE_PREVIEWS = YES;
@@ -2111,12 +2107,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arpanet.fiestonvirtual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2128,7 +2124,7 @@
 				CODE_SIGN_ENTITLEMENTS = FiestonVirtual/FiestonVirtual.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
 				DEVELOPMENT_TEAM = 9G3QVVB9C5;
 				ENABLE_PREVIEWS = YES;
@@ -2137,12 +2133,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arpanet.fiestonvirtual;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -30,7 +30,7 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Usar la camara y foto para compartir en el evento y ganaer puntos</string>
+	<string>Usar la camara y foto para compartir en el evento y ganar puntos</string>
 	<key>NSTrans</key>
 	<string></string>
 	<key>UIApplicationSceneManifest</key>

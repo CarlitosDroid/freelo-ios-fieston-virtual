@@ -21,7 +21,7 @@ struct GalleryDetailItemView: View {
                 .frame(width: 30.0, height: 30.0)
             VStack(alignment: .leading) {
                 Text(comment.userName)
-                    .foregroundColor(Color.aqua)
+                    .foregroundColor(Color.aquamarine)
                 Text(comment.text)
                     .padding(2)
                     .foregroundColor(Color.black)

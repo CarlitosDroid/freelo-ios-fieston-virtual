@@ -61,20 +61,21 @@ struct PhotosView: View {
                                 Text("Publicar")
                                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
                                     .background(Color.orange_500.cornerRadius(8))
-                                    .foregroundColor(Color.white)
+                                    .foregroundColor(Color.material_white)
                             }
                         }
                         
                     } else {
-                        Image("alert")
+                        Image("Alert")
                         informationView()
                         Button(action: {
                             self.isShowingImagePicker.toggle()
                         }) {
                             Text("Elegir")
                                 .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-                                .background(Color.deep_purple_500.cornerRadius(8))
-                                .foregroundColor(Color.white)
+                                .background(Color.deep_purple_500)
+                                .cornerRadius(8)
+                                .foregroundColor(Color.material_white)
                         }
                         .sheet(isPresented: $isShowingImagePicker) {
                             ImageAndVideoPickerView(

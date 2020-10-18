@@ -21,7 +21,7 @@ struct TriviaPageView: View {
             Text(self.trivia.question)
                 .font(.system(size: 26))
                 .bold()
-                .foregroundColor(Color.aqua)
+                .foregroundColor(Color.aquamarine)
                 .frame(maxWidth: .infinity,alignment: .center)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)

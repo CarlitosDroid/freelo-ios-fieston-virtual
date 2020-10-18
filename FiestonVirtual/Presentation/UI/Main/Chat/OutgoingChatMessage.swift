@@ -24,7 +24,6 @@ struct OutgoingChatMessage: View {
                 Text(chatMessage.messageText)
             }
             .padding(10)
-            .foregroundColor(Color.black)
             .background(Color.green)
             .cornerRadius(10)
             

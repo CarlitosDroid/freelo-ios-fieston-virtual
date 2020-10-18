@@ -11,12 +11,12 @@ struct WelcomeTriviaView: View {
             Text("Trivia")
                 .font(.system(size: 40))
                 .bold()
-                .foregroundColor(Color.aqua)
+                .foregroundColor(Color.aquamarine)
                 .padding(.top, 30)
             
             Spacer()
             
-            Image("welcome_trivia")
+            Image("WelcomeTrivia")
             
             Spacer()
             

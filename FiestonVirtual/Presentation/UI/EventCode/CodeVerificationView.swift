@@ -30,7 +30,8 @@ struct CodeVerificationView: View {
                         Text("Entrar")
                             .frame(maxWidth: .infinity)
                             .frame(height: 50, alignment: .center)
-                            .background(Color.aqua.cornerRadius(8))
+                            .background(Color.aquamarine)
+                            .cornerRadius(8)
                             .foregroundColor(Color.white)
                     }
                     

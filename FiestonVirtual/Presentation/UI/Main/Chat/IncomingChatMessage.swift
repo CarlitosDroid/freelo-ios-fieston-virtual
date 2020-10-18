@@ -26,8 +26,8 @@ struct IncomingChatMessage: View {
                 Text(chatMessage.messageText)
             }
             .padding(10)
-            .foregroundColor(Color.black)
-            .background(Color.white)
+            
+            .background(Color.material_white)
             .cornerRadius(10)
             
             Spacer()
