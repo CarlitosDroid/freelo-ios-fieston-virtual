@@ -113,4 +113,17 @@ class CoreDataRepository<T: NSManagedObject>: Repository {
         }
         return .success(true)
     }
+    
+    func updateLocalToken(entityName: String, token: String) {
+        let updateRequest = NSBatchUpdateRequest(entityName: entityName)
+        updateRequest.propertiesToUpdate = ["token": token]
+        updateRequest.resultType = .updatedObjectsCountResultType
+        
+        do {
+         try managedObjectContext.execute(updateRequest)
+        } catch {
+            
+        }
+    }
+
 }
