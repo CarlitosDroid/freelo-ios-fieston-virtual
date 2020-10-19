@@ -56,5 +56,12 @@ class RepositoriesAssembly: Assembly {
                 chatMessageDataSource: resolver.resolve(ChatMessageDataSource.self)!
             )
         }
+        
+        container.register(FcmRepository.self) { resolver in
+            FcmRepositoryImpl(
+                fcmDataSource: resolver.resolve(FcmDataSource.self)!
+            )
+        }
+    
     }
 }

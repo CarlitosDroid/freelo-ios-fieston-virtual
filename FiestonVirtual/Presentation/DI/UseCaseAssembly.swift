@@ -130,5 +130,12 @@ class UseCasesAssembly: Assembly {
             )
         }
         
+        container.register(SendTokenUseCase.self) { resolver in
+            SendTokenUseCaseImpl(
+                fcmRepository:  resolver.resolve(FcmRepository.self)!,
+                usersRepository:  resolver.resolve(UsersRepository.self)!
+            )
+        }
+        
     }
 }
