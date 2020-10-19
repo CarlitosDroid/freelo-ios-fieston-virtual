@@ -57,6 +57,12 @@ class DataSourcesAssembly: Assembly {
             )
         }
         
+        container.register(FcmDataSource.self) { (resolver: Resolver) in
+            FcmDataSourceImpl(
+                fcmApi: resolver.resolve(FcmApi.self)!
+            )
+        }
+        
     }
     
 }

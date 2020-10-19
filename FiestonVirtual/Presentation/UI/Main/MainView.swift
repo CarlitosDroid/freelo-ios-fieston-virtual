@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct MainView: View {
     
@@ -143,6 +144,7 @@ struct MainView: View {
                 self.viewModel.getWelcome()
                 self.showWelcomeOnlyOnce = false
             }
+            self.viewModel.sendToken(token: Messaging.messaging().fcmToken ?? "")
         }
         .alert(isPresented: self.$viewModel.uploadPhotoHasFinished, content: {
             Alert(

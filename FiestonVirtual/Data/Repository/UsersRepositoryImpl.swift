@@ -113,4 +113,8 @@ extension UsersRepositoryImpl: UsersRepository {
         repository.updateLocalTotalScoreOfUser(entityName: "UserEntity", totalScore: totalScore)
     }
     
+    func updateLocalToken(token: String) {
+        repository.updateLocalToken(entityName: "UserEntity", token: token)
+    }
+    
 }

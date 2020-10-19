@@ -9,7 +9,8 @@ class ViewModelAssembly: Assembly {
         container.register(MainViewModel.self) { resolver in
             MainViewModel(
                 getWelcomeUseCase: resolver.resolve(GetWelcomeUseCase.self)!,
-                signOutUseCase: resolver.resolve(SignOutUseCase.self)!
+                signOutUseCase: resolver.resolve(SignOutUseCase.self)!,
+                sendTokenUseCase: resolver.resolve(SendTokenUseCase.self)!
             )
         }
         

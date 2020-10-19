@@ -18,6 +18,7 @@ protocol UsersRepository {
     func updateLocalUserBy(avatarName: String)
     func deleteLocalAllUsers()-> Result<Bool,Error>
     func updateLocalTotalScoreOfUser(totalScore : Int)
+    func updateLocalToken(token : String)
     
     // REMOTE OPERATIONS
     func getRemoteUser(idUser: Int) -> AnyPublisher<User, ErrorResponse>

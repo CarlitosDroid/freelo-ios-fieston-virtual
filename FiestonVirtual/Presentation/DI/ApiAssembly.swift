@@ -48,6 +48,10 @@ class ApiAssembly: Assembly {
             ChatMessagesApiImpl()
         }
         
+        container.register(FcmApi.self) { _ in
+            FcmApiImpl()
+        }
+        
     }
     
 }

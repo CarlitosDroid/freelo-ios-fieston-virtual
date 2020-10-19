@@ -6,6 +6,7 @@ class MainViewModel: ObservableObject {
     
     let getWelcomeUseCase: GetWelcomeUseCase
     let signOutUseCase: SignOutUseCase
+    let sendTokenUseCase: SendTokenUseCase
     
     @Published var welcome = Welcome(title: "", description: "", subtitle: "", imageUrl: "")
     @Published var isLoading = false
@@ -19,10 +20,15 @@ class MainViewModel: ObservableObject {
     
     private var disposables = Set<AnyCancellable>()
     
-    init(getWelcomeUseCase: GetWelcomeUseCase,
-         signOutUseCase: SignOutUseCase ) {
+    init(
+        getWelcomeUseCase: GetWelcomeUseCase,
+        signOutUseCase: SignOutUseCase,
+        sendTokenUseCase: SendTokenUseCase
+    ) {
         self.getWelcomeUseCase = getWelcomeUseCase
         self.signOutUseCase = signOutUseCase
+        self.sendTokenUseCase = sendTokenUseCase
+
     }
     
     func getWelcome() {
@@ -93,6 +99,23 @@ class MainViewModel: ObservableObject {
                 self.isClosedSession = isClosedSession
             })
             .store(in: &disposables)
+    }
+    
+    func sendToken(token : String) {
+        if(!token.isEmpty){
+            self.sendTokenUseCase.invoke(token : token)
+                .receive(on: DispatchQueue.global())
+                .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure( _):
+                        break
+                    }
+                }, receiveValue: { (sended: Bool) in
+                })
+                .store(in: &disposables)
+        }
     }
     
 }
