@@ -6,7 +6,6 @@ class GalleryViewModel: ObservableObject {
     
     let getGalleryUseCase: GetGalleryUseCase
     
-    @Published var isLoading = false
     @Published var errorMessage = ""
     @Published var galleryItems: [GalleryItem]?
     
@@ -17,12 +16,10 @@ class GalleryViewModel: ObservableObject {
     }
     
     func getGallery() {
-        self.isLoading = true
         getGalleryUseCase.invoke()
             .receive(on: DispatchQueue.main)
             
             .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
-                self.isLoading = false
                 switch completion {
                 case .finished:
                     print("finished")
@@ -36,6 +33,5 @@ class GalleryViewModel: ObservableObject {
             })
             .store(in: &disposables)
     }
-    
     
 }

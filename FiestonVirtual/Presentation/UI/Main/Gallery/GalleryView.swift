@@ -28,14 +28,12 @@ struct GalleryView: View {
                     }.buttonStyle(PlainButtonStyle())
                 }
             } else {
-                LoadingView(isShowing: self.$viewModel.isLoading) {
-                    EmptyView()
-                }
+                Text("Loading...")
+                    .foregroundColor(.white)
             }
             
         }
         .onAppear {
-            print(self.settings.refreshGallery)
             if(self.settings.refreshGallery) {
                 viewModel.getGallery()
                 settings.refreshGallery = false
@@ -44,8 +42,6 @@ struct GalleryView: View {
                 viewModel.getGallery()
                 notifyGalleryFromMain = false
             }
-            
-            
         }.onReceive(viewModel.$galleryItems, perform: { nullGalleryItems in
             
             guard let nonNullGalleryItems = nullGalleryItems else { return }
