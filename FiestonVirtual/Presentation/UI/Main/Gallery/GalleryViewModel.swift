@@ -7,6 +7,7 @@ class GalleryViewModel: ObservableObject {
     let getGalleryUseCase: GetGalleryUseCase
     
     @Published var errorMessage = ""
+    @Published var showErrorMessage = false
     @Published var galleryItems: [GalleryItem]?
     
     private var disposables = Set<AnyCancellable>()
@@ -25,6 +26,7 @@ class GalleryViewModel: ObservableObject {
                     print("finished")
                     break
                 case .failure(let errorResponse):
+                    self.showErrorMessage = true
                     self.errorMessage = errorResponse.localizedDescription
                     break
                 }

@@ -48,7 +48,13 @@ struct GalleryView: View {
             self.galleryItems.removeAll()
             self.galleryItems.append(contentsOf: nonNullGalleryItems)
             
+        }).alert(isPresented: self.$viewModel.showErrorMessage, content: {
+            Alert(
+                title: Text(self.viewModel.errorMessage),
+                dismissButton: .default(Text("Aceptar"))
+            )
         })
+        
     }
     
 }
