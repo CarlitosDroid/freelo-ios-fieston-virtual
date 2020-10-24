@@ -30,15 +30,23 @@ class SendTokenUseCaseImpl : SendTokenUseCase{
                     )
                 )
                 .flatMap {
-                    (_) -> AnyPublisher<Bool, ErrorResponse> in
-                    
-                    self.usersRepository.updateLocalToken(token: token)
-                    return Just(
-                        true
-                    )
-                    .mapError({ (_) in
-                        ErrorResponse(code: 1, title: "", message: "")
-                    }).eraseToAnyPublisher()
+                    (answer) -> AnyPublisher<Bool, ErrorResponse> in
+                    if(answer == true){
+                        self.usersRepository.updateLocalToken(token: token)
+                        return Just(
+                            true
+                        )
+                        .mapError({ (_) in
+                            ErrorResponse(code: 1, title: "", message: "")
+                        }).eraseToAnyPublisher()
+                    }else{
+                        return Just(
+                            false
+                        )
+                        .mapError({ (_) in
+                            ErrorResponse(code: 1, title: "", message: "")
+                        }).eraseToAnyPublisher()
+                    }
                     
                 }.eraseToAnyPublisher()
                 
