@@ -57,6 +57,7 @@ struct GalleryDetailView: View {
                         KFImage(URL(string: postFile))
                             .resizable()
                             .aspectRatio(contentMode: .fill)
+                            .frame(width: 300.0)
                     } else {
                         VideoView(videoUrl: postFile)
                     }
