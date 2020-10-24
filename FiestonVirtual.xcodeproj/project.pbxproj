@@ -233,6 +233,7 @@
 		9AD491452526E9900038A593 /* TriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD491442526E9900038A593 /* TriviaView.swift */; };
 		9AD4914A2526EB640038A593 /* TriviaPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD491492526EB640038A593 /* TriviaPageView.swift */; };
 		9AD491532526F39E0038A593 /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 9AD491522526F39E0038A593 /* SwiftUIPager */; };
+		9ADCB3C92544005D0005E32A /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 9ADCB3C82544005D0005E32A /* Introspect */; };
 		9AE641C02521DA3A00365B9E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE641BF2521DA3900365B9E /* ArrayExtension.swift */; };
 		9AE7FAB22525A4FF00F04774 /* TriviaApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FAB12525A4FF00F04774 /* TriviaApiImpl.swift */; };
 		9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
@@ -557,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B99972E2526C3A100EC4968 /* SwiftyJSON in Frameworks */,
+				9ADCB3C92544005D0005E32A /* Introspect in Frameworks */,
 				9A07956B2525704400BB589C /* IQKeyboardManagerSwift in Frameworks */,
 				9AD491532526F39E0038A593 /* SwiftUIPager in Frameworks */,
 				2B23A2BB25242CC400A348B9 /* QGrid in Frameworks */,
@@ -1519,6 +1521,7 @@
 				2B9997332526C3CE00EC4968 /* Alamofire */,
 				9AD491522526F39E0038A593 /* SwiftUIPager */,
 				2BED8C8E252E620900B365B2 /* SocketIO */,
+				9ADCB3C82544005D0005E32A /* Introspect */,
 			);
 			productName = FiestonVirtual;
 			productReference = 2BC256CB250546D100B433CC /* FiestonVirtual.app */;
@@ -1605,6 +1608,7 @@
 				2B9997322526C3CE00EC4968 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9AD491512526F39E0038A593 /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
 				2BED8C8D252E620800B365B2 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+				9ADCB3C72544005D0005E32A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 2BC256CC250546D100B433CC /* Products */;
 			projectDirPath = "";
@@ -2404,6 +2408,14 @@
 				minimumVersion = 1.11.0;
 			};
 		};
+		9ADCB3C72544005D0005E32A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -2451,6 +2463,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9AD491512526F39E0038A593 /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
 			productName = SwiftUIPager;
+		};
+		9ADCB3C82544005D0005E32A /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ADCB3C72544005D0005E32A /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 
