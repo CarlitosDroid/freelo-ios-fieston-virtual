@@ -8,6 +8,7 @@
 
 import SwiftUI
 import KingfisherSwiftUI
+import Introspect
 
 struct GalleryDetailView: View {
     
@@ -26,6 +27,8 @@ struct GalleryDetailView: View {
     
     @State private var comments: [Comment] = []
     @State private var writtenComment: String = ""
+    
+    @State var scrollView: UIScrollView? = nil
     
     var body: some View {
         
@@ -84,7 +87,11 @@ struct GalleryDetailView: View {
                     ScrollView {
                         ForEach(comments, id: \.id) { comment in
                             GalleryDetailItemView(comment: comment)
-                        }.listRowBackground(Color.deep_purple_intense)
+                        }
+                        .introspectScrollView { scrollView in
+                            scrollView.scrollToBottom()
+                            self.scrollView=scrollView
+                        }
                     }
                     HStack {
                         TextField("Comentar...", text: self.$writtenComment)
@@ -93,6 +100,7 @@ struct GalleryDetailView: View {
                         Button(action: {
                             
                             viewModel.addComment(postId: galleryItem.id, comment: writtenComment)
+                            self.scrollView?.scrollToBottom()
                             
                         }) {
                             Image(systemName: "paperplane.fill")
@@ -106,9 +114,6 @@ struct GalleryDetailView: View {
             } else {
                 Text("Loading...")
                     .foregroundColor(.white)
-//                LoadingView(isShowing: self.$viewModel.isLoading) {
-//                    EmptyView()
-//                }
             }
             
         }.onAppear(perform: {
