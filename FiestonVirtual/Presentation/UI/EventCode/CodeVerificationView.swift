@@ -50,6 +50,17 @@ struct CodeVerificationView: View {
                         Spacer()
                             .frame(height: 100)
                     }
+                    
+                    VStack {
+                        Spacer()
+                        Button(action: {
+                            self.viewModel.verifyCode(code:"719299")
+                        }) {
+                            Text("Entrar como invitado")
+                                .frame(height: 50, alignment: .center)
+                                .foregroundColor(Color.yellow)
+                        }
+                    }
                 }.padding(.all, 20)
             }
             
