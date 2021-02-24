@@ -19,50 +19,49 @@ struct CodeVerificationView: View {
     var body: some View {
         
         ZStack {
-            Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
+                Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
             
-            LoadingView(isShowing: self.$viewModel.isLoading) {
-                ZStack{
-                    
-                    Button(action: {
-                        self.viewModel.verifyCode(code: self.eventCode)
-                    }) {
-                        Text("Entrar")
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 50, alignment: .center)
-                            .background(Color.aquamarine)
-                            .cornerRadius(8)
-                            .foregroundColor(Color.white)
-                    }
-                    
-                    VStack {
+                    VStack{
                         Image("Fieston")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .padding(.all, 40)
                         Spacer()
-                    }
-                    
-                    VStack {
+                        
                         TextField("Coloque su código", text: self.$eventCode)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .keyboardType(.numberPad)
-                        Spacer()
-                            .frame(height: 100)
-                    }
-                    
-                    VStack {
-                        Spacer()
+                            .frame(height: 30)
+                        
+                        VStack{
+                        Button(action: {
+                            self.viewModel.verifyCode(code: self.eventCode)
+                        }) {
+                            Text("Entrar")
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 50, alignment: .center)
+                                .background(Color.aquamarine)
+                                .cornerRadius(8)
+                                .foregroundColor(Color.white)
+                            
+                        }
                         Button(action: {
                             self.viewModel.verifyCode(code:"719299")
                         }) {
                             Text("Entrar como invitado")
-                                .frame(height: 50, alignment: .center)
-                                .foregroundColor(Color.yellow)
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(width: 350, height: 60, alignment: .center)
+                                .background(Color.amber_600)
+                                .cornerRadius(15.0)
                         }
+                        }
+                        Spacer()
+                        Spacer()
+                        Spacer()
                     }
-                }.padding(.all, 20)
-            }
+                .padding(.all, 20)
             
         }.onReceive(self.viewModel.$inSession) { inSession in
             if(inSession) {
@@ -80,6 +79,7 @@ struct CodeVerificationView: View {
             print("ContentView appeared!")
         }.onDisappear {
             print("ContentView disappeared!")
+            
         }
         
     }
