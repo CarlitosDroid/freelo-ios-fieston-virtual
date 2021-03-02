@@ -12,12 +12,15 @@ struct CodeVerificationView: View {
     
     @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(CodeVerificationViewModel.self)!
     
+    @State private var nombre: String = ""
+    
     @State private var eventCode: String = ""
     
     @State var showOneLevelIn = false
     
     @State private var showingAlert = false
-    @State private var errorType = 0
+    
+    @State private var showRegister = false
     
     var body: some View {
         
@@ -34,7 +37,12 @@ struct CodeVerificationView: View {
             
             VStack(alignment: .center, spacing: 10) {
                 
-                TextField("Coloque su código", text: self.$eventCode)
+                TextField("Nombre", text: self.$nombre)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
+                    .frame(height: 30)
+                
+                SecureField("Contraseña", text: self.$eventCode)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numberPad)
                     .frame(height: 30)
@@ -42,30 +50,29 @@ struct CodeVerificationView: View {
                 Button(action: {
                     self.viewModel.verifyCode(code: self.eventCode)
                 }) {
-                    Text("Entrar")
+                    Text("Iniciar sesión")
                         .frame(maxWidth: .infinity)
                         .frame(height: 50, alignment: .center)
                         .background(Color.aquamarine)
                         .cornerRadius(8)
                         .foregroundColor(Color.white)
-                    
                 }
+                
                 Button(action: {
-                    errorType = 1
-                    showingAlert = true
+                    showRegister = true
                 }) {
-                    Text("Obtener Código")
+                    Text("Registrar")
                         .font(.headline)
                         .foregroundColor(.white)
-                        .padding()
-                        .frame(width: 150, alignment: .center)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 50, alignment: .center)
                         .background(Color.amber_600)
-                        .cornerRadius(8.0)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.center)
+                        .cornerRadius(8)
                 }
             }
             .padding(10)
+            
+            RegisterView(viewMode: self.viewModel, showRegister: $showRegister)
             
         }
         .onReceive(self.viewModel.$inSession) { inSession in
@@ -76,30 +83,16 @@ struct CodeVerificationView: View {
         }
         .onReceive(self.viewModel.$isError, perform: { isError in
             if(isError) {
-                errorType = 0
                 self.showingAlert = true
             }
         })
         .navigationBarHidden(true)
         .alert(isPresented: $showingAlert, content: {
             
-            if(errorType == 0) {
-                return Alert(
-                    title: Text(self.viewModel.errorMessage),
-                    dismissButton: .default(Text("Aceptar"))
-                )
-            } else {
-                return Alert(
-                    title: Text("Obtener Código"),
-                    message: Text("Para obtener información de como obtener un código de invitación, visite nuesrta página web"),
-                    primaryButton: .cancel(Text("Cancel")),
-                    secondaryButton: .default(Text("Visitar"), action: {
-                        if let url = URL(string: "http://www.fiestonvirtual.com/codigos-app.php") {
-                            UIApplication.shared.open(url)
-                        }
-                    })
-                )
-            }
+            return Alert(
+                title: Text(self.viewModel.errorMessage),
+                dismissButton: .default(Text("Aceptar"))
+            )
             
         })
         .onAppear {
