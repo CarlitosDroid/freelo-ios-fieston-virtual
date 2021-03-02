@@ -62,6 +62,7 @@
 		2B81FCEF25074CE900EC9E10 /* RepositoriesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCEE25074CE900EC9E10 /* RepositoriesAssembly.swift */; };
 		2B81FCF12507553100EC9E10 /* UseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCF02507553100EC9E10 /* UseCaseAssembly.swift */; };
 		2B81FCF52507567800EC9E10 /* DependecyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81FCF42507567800EC9E10 /* DependecyProvider.swift */; };
+		2B83884F25EDD1D100A530FC /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83884E25EDD1D100A530FC /* RegisterView.swift */; };
 		2B83E78F2507F519004B1BF2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83E78E2507F519004B1BF2 /* LoadingView.swift */; };
 		2B83E7912507F584004B1BF2 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83E7902507F584004B1BF2 /* LoadingIndicator.swift */; };
 		2B83E7932507F6E4004B1BF2 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B83E7922507F6E4004B1BF2 /* TextFields.swift */; };
@@ -345,6 +346,7 @@
 		2B81FCEE25074CE900EC9E10 /* RepositoriesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesAssembly.swift; sourceTree = "<group>"; };
 		2B81FCF02507553100EC9E10 /* UseCaseAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseAssembly.swift; sourceTree = "<group>"; };
 		2B81FCF42507567800EC9E10 /* DependecyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependecyProvider.swift; sourceTree = "<group>"; };
+		2B83884E25EDD1D100A530FC /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		2B83E78E2507F519004B1BF2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		2B83E7902507F584004B1BF2 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		2B83E7922507F6E4004B1BF2 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
@@ -731,6 +733,14 @@
 				2BED8CA4252E7B2E00B365B2 /* SocketsAssembly.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		2B83884D25EDD1BD00A530FC /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				2B83884E25EDD1D100A530FC /* RegisterView.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		2B83E78D2507F4FD004B1BF2 /* CommonViews */ = {
@@ -1169,6 +1179,7 @@
 		2BC257372505AA7700B433CC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2B83884D25EDD1BD00A530FC /* Register */,
 				9AC115812531240200A826CD /* Ranking */,
 				2BB278E325116371002A234E /* PlayList */,
 				2B81FCE625073D5E00EC9E10 /* Main */,
@@ -1898,6 +1909,7 @@
 				9A15E9C52519790400891B55 /* GalleryItem.swift in Sources */,
 				9AC1158B253125A800A826CD /* RankingView.swift in Sources */,
 				2B695A4F2536B2CB0094C385 /* ChatMessagesApi.swift in Sources */,
+				2B83884F25EDD1D100A530FC /* RegisterView.swift in Sources */,
 				9A790A0E251EC290006C5391 /* AddCommentUseCaseImpl.swift in Sources */,
 				2BED8CAF252E7ECE00B365B2 /* SocketIOViewModel.swift in Sources */,
 				9A546563253D0FBE00EB241C /* SendTokenRequest.swift in Sources */,
@@ -2166,7 +2178,7 @@
 				CODE_SIGN_ENTITLEMENTS = FiestonVirtual/FiestonVirtual.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
 				DEVELOPMENT_TEAM = 9G3QVVB9C5;
 				ENABLE_PREVIEWS = YES;
@@ -2192,7 +2204,7 @@
 				CODE_SIGN_ENTITLEMENTS = FiestonVirtual/FiestonVirtual.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
 				DEVELOPMENT_TEAM = 9G3QVVB9C5;
 				ENABLE_PREVIEWS = YES;
