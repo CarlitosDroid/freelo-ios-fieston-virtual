@@ -30,12 +30,11 @@ struct RegisterView: View {
                 
                 TextField("Nombre", text: self.$email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
                     .frame(height: 30)
                 
-                TextField("Constraseña", text: self.$name)
+                TextField("Email", text: self.$name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
+                    .keyboardType(.emailAddress)
                     .frame(height: 30)
                 
                 Button(action: {

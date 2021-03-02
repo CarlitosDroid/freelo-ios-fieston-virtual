@@ -39,7 +39,6 @@ struct CodeVerificationView: View {
                 
                 TextField("Nombre", text: self.$nombre)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
                     .frame(height: 30)
                 
                 SecureField("Contraseña", text: self.$eventCode)
@@ -61,12 +60,13 @@ struct CodeVerificationView: View {
                 Button(action: {
                     showRegister = true
                 }) {
-                    Text("Registrar")
+                    Text("Regístrate")
+                        .font(.system(size: 20))
+                        .bold()
                         .font(.headline)
-                        .foregroundColor(.white)
+                        .foregroundColor(.yellow)
                         .frame(maxWidth: .infinity)
                         .frame(height: 50, alignment: .center)
-                        .background(Color.amber_600)
                         .cornerRadius(8)
                 }
             }
