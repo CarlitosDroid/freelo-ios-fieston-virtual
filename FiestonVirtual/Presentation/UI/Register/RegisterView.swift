@@ -32,9 +32,8 @@ struct RegisterView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(height: 30)
                 
-                TextField("Email", text: self.$name)
+                SecureField("Contraseña", text: self.$name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.emailAddress)
                     .frame(height: 30)
                 
                 Button(action: {
