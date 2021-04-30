@@ -22,6 +22,7 @@ struct GalleryDetailView: View {
     
     @State private var postFile: String = ""
     
+    @State private var showlike: Bool = false
     @State private var totalLikes: String = ""
     @State private var postTitle: String = ""
     
@@ -63,16 +64,16 @@ struct GalleryDetailView: View {
                     }
                     
                     HStack {
-                        if(totalLikes == "0"){
+                        if(showlike) {
+                            Image(systemName: "heart.fill")
+                                .foregroundColor(Color.white)
+                        } else {
                             Button(action:{
                                 self.viewModel.makeLike(idPost: galleryItem.id)
                             }){
                                 Image(systemName: "heart")
                                     .foregroundColor(Color.white)
                             }
-                        } else {
-                            Image(systemName: "heart.fill")
-                                .foregroundColor(Color.white)
                         }
                         Text(totalLikes)
                             .foregroundColor(Color.white)
@@ -130,6 +131,7 @@ struct GalleryDetailView: View {
             
             self.postFile = getGalleryDetailNoNull.postFile
             
+            self.showlike = getGalleryDetailNoNull.postLike
             self.totalLikes = String(getGalleryDetailNoNull.postLikeCount)
             
             self.postTitle = getGalleryDetailNoNull.postTitle
@@ -153,6 +155,7 @@ struct GalleryDetailView: View {
             
             guard let totalLikesNonNull = makeLikeResponse else { return }
             
+            self.showlike = true
             self.totalLikes = String(totalLikesNonNull.likes)
         }
         
