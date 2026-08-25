@@ -27,3 +27,12 @@ DerivedData/
 ## Gcc Patch
 /*.gcno
 .idea
+
+# macOS
+.DS_Store
+
+# Xcode user state
+*.xcuserstate
+
+# CocoaPods
+Pods/
