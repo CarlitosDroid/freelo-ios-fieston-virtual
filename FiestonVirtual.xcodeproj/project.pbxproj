@@ -162,8 +162,8 @@
 		9A2DB9B6252EB9F300D4214F /* RankingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9B5252EB9F300D4214F /* RankingRepository.swift */; };
 		9A2DB9BC252EBBD400D4214F /* RankingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9BB252EBBD400D4214F /* RankingRepositoryImpl.swift */; };
 		9A2DB9C4252EBF4C00D4214F /* ChildRankingResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9C3252EBF4C00D4214F /* ChildRankingResponseMapper.swift */; };
-			9A2DB9CA252EC7AD00D4214F /* GetPlaylistUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9C9252EC7AD00D4214F /* GetPlaylistUseCaseImpl.swift */; };
-			9A2DB9D2252EC7C000D4214F /* GetPlayListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9D1252EC7C000D4214F /* GetPlayListUseCase.swift */; };
+		9A2DB9CA252EC7AD00D4214F /* GetPlayListUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9C9252EC7AD00D4214F /* GetPlayListUseCaseImpl.swift */; };
+		9A2DB9D2252EC7C000D4214F /* GetPlaylistUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9D1252EC7C000D4214F /* GetPlaylistUseCase.swift */; };
 		9A2DB9D8252EC8FB00D4214F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9D7252EC8FB00D4214F /* Song.swift */; };
 		9A2DB9E0252ECAC300D4214F /* GetPlaylistRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9DF252ECAC300D4214F /* GetPlaylistRequest.swift */; };
 		9A2DB9E5252ECB3C00D4214F /* PlaylistRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9E4252ECB3C00D4214F /* PlaylistRepository.swift */; };
@@ -448,8 +448,8 @@
 		9A2DB9B5252EB9F300D4214F /* RankingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRepository.swift; sourceTree = "<group>"; };
 		9A2DB9BB252EBBD400D4214F /* RankingRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRepositoryImpl.swift; sourceTree = "<group>"; };
 		9A2DB9C3252EBF4C00D4214F /* ChildRankingResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRankingResponseMapper.swift; sourceTree = "<group>"; };
-			9A2DB9C9252EC7AD00D4214F /* GetPlaylistUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistUseCaseImpl.swift; sourceTree = "<group>"; };
-			9A2DB9D1252EC7C000D4214F /* GetPlayListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlayListUseCase.swift; sourceTree = "<group>"; };
+		9A2DB9C9252EC7AD00D4214F /* GetPlayListUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlayListUseCaseImpl.swift; sourceTree = "<group>"; };
+		9A2DB9D1252EC7C000D4214F /* GetPlaylistUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistUseCase.swift; sourceTree = "<group>"; };
 		9A2DB9D7252EC8FB00D4214F /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		9A2DB9DF252ECAC300D4214F /* GetPlaylistRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistRequest.swift; sourceTree = "<group>"; };
 		9A2DB9E4252ECB3C00D4214F /* PlaylistRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistRepository.swift; sourceTree = "<group>"; };
@@ -1284,8 +1284,8 @@
 		9A2DB9C8252EC76300D4214F /* Playlist */ = {
 			isa = PBXGroup;
 			children = (
-							9A2DB9C9252EC7AD00D4214F /* GetPlaylistUseCaseImpl.swift */,
-							9A2DB9D1252EC7C000D4214F /* GetPlayListUseCase.swift */,
+				9A2DB9C9252EC7AD00D4214F /* GetPlayListUseCaseImpl.swift */,
+				9A2DB9D1252EC7C000D4214F /* GetPlaylistUseCase.swift */,
 				9AC115C92531737600A826CD /* RequestSongUseCase.swift */,
 				9AC115CE2531737F00A826CD /* RequestSongUseCaseImpl.swift */,
 			);
@@ -1781,7 +1781,7 @@
 				9A07958C2525808500BB589C /* TriviaRequest.swift in Sources */,
 				2B0981ED25092F1D00C78FFF /* ContentView.swift in Sources */,
 				FBBA41F7250F391B0016ACC6 /* LikeApi.swift in Sources */,
-							9A2DB9D2252EC7C000D4214F /* GetPlayListUseCase.swift in Sources */,
+				9A2DB9D2252EC7C000D4214F /* GetPlaylistUseCase.swift in Sources */,
 				2B81FCF52507567800EC9E10 /* DependecyProvider.swift in Sources */,
 				2B48232425069FA100AF312D /* TextingData.swift in Sources */,
 				2BA2D8B8252D886A0061B52A /* UploadProfileImageUseCase.swift in Sources */,
@@ -1894,7 +1894,7 @@
 				9A7815DC251AC9A9006D0BD9 /* GalleryView.swift in Sources */,
 				9AC115832531242500A826CD /* RankingViewModel.swift in Sources */,
 				FB1014FA250B2A08002C91ED /* GetRemotePedirCancionRequest.swift in Sources */,
-							9A2DB9CA252EC7AD00D4214F /* GetPlaylistUseCaseImpl.swift in Sources */,
+				9A2DB9CA252EC7AD00D4214F /* GetPlayListUseCaseImpl.swift in Sources */,
 				9A15E9D92519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift in Sources */,
 				2BED8CAA252E7EA100B365B2 /* ChatViewModel.swift in Sources */,
 				9A546525253CFF6E00EB241C /* SendTokenUseCase.swift in Sources */,
@@ -2104,7 +2104,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-								IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2159,7 +2159,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-								IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
@@ -2226,11 +2226,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81DC065DED1DF8D5FC710C7D /* Pods-FiestonVirtualTests.debug.xcconfig */;
 			buildSettings = {
-							ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FiestonVirtualTests/Info.plist;
-								IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2248,11 +2248,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC9F56DA6C3EAA9D0D05ECA3 /* Pods-FiestonVirtualTests.release.xcconfig */;
 			buildSettings = {
-							ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FiestonVirtualTests/Info.plist;
-								IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2270,7 +2270,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E00F9A42143DA0A2E88BEBD /* Pods-FiestonVirtual-FiestonVirtualUITests.debug.xcconfig */;
 			buildSettings = {
-							ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FiestonVirtualUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2290,7 +2290,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04AFFEC59CFFF933C5C7F517 /* Pods-FiestonVirtual-FiestonVirtualUITests.release.xcconfig */;
 			buildSettings = {
-							ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FiestonVirtualUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
