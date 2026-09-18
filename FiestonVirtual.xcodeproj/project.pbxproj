@@ -126,7 +126,7 @@
 		2BED8CA5252E7B2E00B365B2 /* SocketsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8CA4252E7B2E00B365B2 /* SocketsAssembly.swift */; };
 		2BED8CAA252E7EA100B365B2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8CA9252E7EA100B365B2 /* ChatViewModel.swift */; };
 		2BED8CAF252E7ECE00B365B2 /* SocketIOViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8CAE252E7ECE00B365B2 /* SocketIOViewModel.swift */; };
-		54CD0F8E25FAE3BF3FC82753 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E22EE48F2CA7E618773B3C /* Pods_FiestonVirtualTests.framework */; };
 		9A07956B2525704400BB589C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9A07956A2525704400BB589C /* IQKeyboardManagerSwift */; };
 		9A07957125257A3500BB589C /* GetTriviaUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A07957025257A3500BB589C /* GetTriviaUseCaseImpl.swift */; };
@@ -162,7 +162,7 @@
 		9A2DB9B6252EB9F300D4214F /* RankingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9B5252EB9F300D4214F /* RankingRepository.swift */; };
 		9A2DB9BC252EBBD400D4214F /* RankingRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9BB252EBBD400D4214F /* RankingRepositoryImpl.swift */; };
 		9A2DB9C4252EBF4C00D4214F /* ChildRankingResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9C3252EBF4C00D4214F /* ChildRankingResponseMapper.swift */; };
-		9A2DB9CA252EC7AD00D4214F /* GetPlayListUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9C9252EC7AD00D4214F /* GetPlayListUseCaseImpl.swift */; };
+		9A2DB9CA252EC7AD00D4214F /* GetPlaylistUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9C9252EC7AD00D4214F /* GetPlaylistUseCaseImpl.swift */; };
 		9A2DB9D2252EC7C000D4214F /* GetPlaylistUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9D1252EC7C000D4214F /* GetPlaylistUseCase.swift */; };
 		9A2DB9D8252EC8FB00D4214F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9D7252EC8FB00D4214F /* Song.swift */; };
 		9A2DB9E0252ECAC300D4214F /* GetPlaylistRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2DB9DF252ECAC300D4214F /* GetPlaylistRequest.swift */; };
@@ -237,10 +237,10 @@
 		9ADCB3C92544005D0005E32A /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 9ADCB3C82544005D0005E32A /* Introspect */; };
 		9AE641C02521DA3A00365B9E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE641BF2521DA3900365B9E /* ArrayExtension.swift */; };
 		9AE7FAB22525A4FF00F04774 /* TriviaApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FAB12525A4FF00F04774 /* TriviaApiImpl.swift */; };
-		9C47CD2FB1B46B98065A8A55 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
-		A16FBA5D98964B10D4D1A8A1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		B0F1D9C94A5BD893A48DD530 /* Pods_FiestonVirtual.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0800F8BF50576030F8ED8A5E /* Pods_FiestonVirtual.framework */; };
-		B616DAB77583261B480DCBA8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		B616DAB77583261B480DCBA8 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		F81E71D303838636895DE080 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D1C4045236C783848B4F61 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework */; };
 		FB1014D025086338002C91ED /* RankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014CF25086338002C91ED /* RankingResponse.swift */; };
 		FB1014D325086D59002C91ED /* GetRemoteRankingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1014D225086D59002C91ED /* GetRemoteRankingRequest.swift */; };
@@ -448,7 +448,7 @@
 		9A2DB9B5252EB9F300D4214F /* RankingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRepository.swift; sourceTree = "<group>"; };
 		9A2DB9BB252EBBD400D4214F /* RankingRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingRepositoryImpl.swift; sourceTree = "<group>"; };
 		9A2DB9C3252EBF4C00D4214F /* ChildRankingResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildRankingResponseMapper.swift; sourceTree = "<group>"; };
-		9A2DB9C9252EC7AD00D4214F /* GetPlayListUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlayListUseCaseImpl.swift; sourceTree = "<group>"; };
+		9A2DB9C9252EC7AD00D4214F /* GetPlaylistUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistUseCaseImpl.swift; sourceTree = "<group>"; };
 		9A2DB9D1252EC7C000D4214F /* GetPlaylistUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistUseCase.swift; sourceTree = "<group>"; };
 		9A2DB9D7252EC8FB00D4214F /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		9A2DB9DF252ECAC300D4214F /* GetPlaylistRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPlaylistRequest.swift; sourceTree = "<group>"; };
@@ -564,9 +564,9 @@
 				9A07956B2525704400BB589C /* IQKeyboardManagerSwift in Frameworks */,
 				9AD491532526F39E0038A593 /* SwiftUIPager in Frameworks */,
 				2B23A2BB25242CC400A348B9 /* QGrid in Frameworks */,
-				54CD0F8E25FAE3BF3FC82753 /* BuildFile in Frameworks */,
+				54CD0F8E25FAE3BF3FC82753 /* (null) in Frameworks */,
 				2BED8C8F252E620900B365B2 /* SocketIO in Frameworks */,
-				A16FBA5D98964B10D4D1A8A1 /* BuildFile in Frameworks */,
+				A16FBA5D98964B10D4D1A8A1 /* (null) in Frameworks */,
 				2B9997342526C3CE00EC4968 /* Alamofire in Frameworks */,
 				2B23A23C252417A600A348B9 /* KingfisherSwiftUI in Frameworks */,
 				2B23A24225241AB200A348B9 /* Grid in Frameworks */,
@@ -579,7 +579,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C47CD2FB1B46B98065A8A55 /* BuildFile in Frameworks */,
+				9C47CD2FB1B46B98065A8A55 /* (null) in Frameworks */,
 				73C77C2E4D7B4F84D4C2F2F1 /* Pods_FiestonVirtualTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,7 +588,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B616DAB77583261B480DCBA8 /* BuildFile in Frameworks */,
+				B616DAB77583261B480DCBA8 /* (null) in Frameworks */,
 				F81E71D303838636895DE080 /* Pods_FiestonVirtual_FiestonVirtualUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1284,7 +1284,7 @@
 		9A2DB9C8252EC76300D4214F /* Playlist */ = {
 			isa = PBXGroup;
 			children = (
-				9A2DB9C9252EC7AD00D4214F /* GetPlayListUseCaseImpl.swift */,
+				9A2DB9C9252EC7AD00D4214F /* GetPlaylistUseCaseImpl.swift */,
 				9A2DB9D1252EC7C000D4214F /* GetPlaylistUseCase.swift */,
 				9AC115C92531737600A826CD /* RequestSongUseCase.swift */,
 				9AC115CE2531737F00A826CD /* RequestSongUseCaseImpl.swift */,
@@ -1669,9 +1669,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual-FiestonVirtualUITests/Pods-FiestonVirtual-FiestonVirtualUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1708,9 +1712,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FiestonVirtual/Pods-FiestonVirtual-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1894,7 +1902,7 @@
 				9A7815DC251AC9A9006D0BD9 /* GalleryView.swift in Sources */,
 				9AC115832531242500A826CD /* RankingViewModel.swift in Sources */,
 				FB1014FA250B2A08002C91ED /* GetRemotePedirCancionRequest.swift in Sources */,
-				9A2DB9CA252EC7AD00D4214F /* GetPlayListUseCaseImpl.swift in Sources */,
+				9A2DB9CA252EC7AD00D4214F /* GetPlaylistUseCaseImpl.swift in Sources */,
 				9A15E9D92519C36F00891B55 /* ChildGetGalleryPostsResponseMapper.swift in Sources */,
 				2BED8CAA252E7EA100B365B2 /* ChatViewModel.swift in Sources */,
 				9A546525253CFF6E00EB241C /* SendTokenUseCase.swift in Sources */,
@@ -2180,9 +2188,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
-				DEVELOPMENT_TEAM = 9G3QVVB9C5;
+				DEVELOPMENT_TEAM = H9JXH336V5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FiestonVirtual/Main/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2206,9 +2215,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_ASSET_PATHS = "\"FiestonVirtual/Preview Content\"";
-				DEVELOPMENT_TEAM = 9G3QVVB9C5;
+				DEVELOPMENT_TEAM = H9JXH336V5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FiestonVirtual/Main/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
