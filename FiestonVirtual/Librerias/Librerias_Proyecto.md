@@ -5,14 +5,14 @@
 El proyecto utiliza CocoaPods como gestor de dependencias.
 
 ### Dependencias directas
+Son las librerias, declaradas explicitamente (uno mismo escribe esta dependencia) en el podfile del proyecto.
 
 | Librería | Versión |
 | Firebase/Analytics | 11.15.0 |
 | Firebase/Messaging | 11.15.0 |
 
 ### Dependencias transitivas
-
-Las siguientes dependencias son instaladas por CocoaPods como parte de las dependencias de Firebase:
+Son las librerias requqeridas internamente por las dependecias directas. No se declaran directamente en el podfile sino que cocoapods las resuelve e instala de manera automatica.
 
 | Librería | Versión |
 | Firebase | 11.15.0 |
