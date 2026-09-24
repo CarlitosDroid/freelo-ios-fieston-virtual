@@ -9,18 +9,32 @@ let project = Project(
             product: .app,
             bundleId: "com.arpanet.fiestonvirtual",
             deploymentTargets: .iOS("15.0"),
+            infoPlist: .file(
+                path: "../FiestonVirtual/Info.plist"
+            ),
             sources: [
-                "FiestonVirtual/Sources/**"
+                "../FiestonVirtual/Sources/**"
             ],
             resources: [
-                "FiestonVirtual/Resources/**"
+                "../FiestonVirtual/Resources/**"
             ],
-            infoPlist: .file(
-                path: "FiestonVirtual/Info.plist"
-            ),
             entitlements: .file(
-                path: "FiestonVirtual/Configs/FiestonVirtual.entitlements"
-            )
+                path: "../FiestonVirtual/Configs/FiestonVirtual.entitlements"
+            ),
+            dependencies: [
+                .external(name: "FirebaseCore"),
+                .external(name: "FirebaseMessaging"),
+                .external(name: "IQKeyboardManagerSwift"),
+                .external(name: "Alamofire"),
+                .external(name: "KingfisherSwiftUI"),
+                .external(name: "QGrid"),
+                .external(name: "SocketIO"),
+                .external(name: "ExyteGrid"),
+                .external(name: "Introspect"),
+                .external(name: "SwiftUIPager"),
+                .external(name: "SwiftyJSON"),
+                .external(name: "Swinject")
+            ]
         ),
 
         .target(
@@ -30,7 +44,7 @@ let project = Project(
             bundleId: "com.arpanet.fiestonvirtualTests",
             deploymentTargets: .iOS("13.7"),
             sources: [
-                "FiestonVirtualTests/**"
+                "../FiestonVirtualTests/**"
             ]
         ),
 
@@ -41,7 +55,7 @@ let project = Project(
             bundleId: "com.arpanet.fiestonvirtualUITests",
             deploymentTargets: .iOS("13.5"),
             sources: [
-                "FiestonVirtualUITests/**"
+                "../FiestonVirtualUITests/**"
             ]
         )
     ]

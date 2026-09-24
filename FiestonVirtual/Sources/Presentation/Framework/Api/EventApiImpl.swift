@@ -1,5 +1,6 @@
 
 import Foundation
+import Combine
 
 class EventApiImpl: EventApi {
     
@@ -37,7 +38,7 @@ class EventApiImpl: EventApi {
     
 }
 
-private extension EventCodeApiImpl {
+private extension EventApiImpl {
     struct FiestonVirtualAPI {
         static let scheme = "http"
         static let host = "fiestonvirtual.com"

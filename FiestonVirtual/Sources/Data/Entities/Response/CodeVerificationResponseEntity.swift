@@ -21,7 +21,7 @@ struct CodeVerificationResponseEntity: Decodable {
 
 // MARK: - DataClass
 struct DataClass: Decodable {
-    let user: UserResponse
+    let user: VerificationUserResponse
     let event: EventResponse
     enum CodingKeys: String, CodingKey {
         case user = "user"
@@ -37,8 +37,8 @@ struct EventResponse: Decodable {
     }
 }
 
-// MARK: - UserResponse
-struct UserResponse: Decodable {
+// MARK: - VerificationUserResponse
+struct VerificationUserResponse: Decodable {
     let idUser: Int
     enum CodingKeys: String, CodingKey {
         case idUser = "idUser"

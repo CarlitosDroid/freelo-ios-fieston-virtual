@@ -20,7 +20,21 @@ let project = Project(
             ],
             entitlements: .file(
                 path: "FiestonVirtual/Configs/FiestonVirtual.entitlements"
-            )
+            ),
+            dependencies: [
+                .external(name: "FirebaseCore"),
+                .external(name: "FirebaseMessaging"),
+                .external(name: "IQKeyboardManagerSwift"),
+                .external(name: "Alamofire"),
+                .external(name: "KingfisherSwiftUI"),
+                .external(name: "QGrid"),
+                .external(name: "SocketIO"),
+                .external(name: "ExyteGrid"),
+                .external(name: "Introspect"),
+                .external(name: "SwiftUIPager"),
+                .external(name: "SwiftyJSON"),
+                .external(name: "Swinject")
+            ]
         ),
 
         .target(

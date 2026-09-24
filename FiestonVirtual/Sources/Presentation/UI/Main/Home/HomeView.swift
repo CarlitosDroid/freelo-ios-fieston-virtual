@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import Grid
+import ExyteGrid
 import KingfisherSwiftUI
 import QGrid
 
@@ -52,11 +52,16 @@ struct HomeView: View {
                         }
                     }
                     
-                    Grid(viewModel.categories) { category in
-                        self.categoryView(category: category)
-                    }.gridStyle(
-                        StaggeredGridStyle(.vertical, tracks:2, spacing: 10)
-                    )
+                    Grid(
+                        tracks: 2,
+                        flow: .rows,
+                        packing: .dense,
+                        spacing: 10
+                    ) {
+                        ForEach(viewModel.categories) { category in
+                            self.categoryView(category: category)
+                        }
+                    }
                     
                 }
                 .padding(.all, 10)
