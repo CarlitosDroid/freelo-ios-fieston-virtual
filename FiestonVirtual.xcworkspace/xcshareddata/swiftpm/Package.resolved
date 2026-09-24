@@ -1,0 +1,114 @@
+{
+  "originHash" : "fdffc2c4224faf96bbb53359576b1535b7f77c9a967ccdea4a3836cd106d2135",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "becd9a729a37bdbef5bc39dc3c702b99f9e3d046",
+        "version" : "5.2.2"
+      }
+    },
+    {
+      "identity" : "iqkeyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
+      "state" : {
+        "revision" : "4dc6bc7d1c9747bd0c261c8c055903f9fdef91f7",
+        "version" : "6.5.6"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "746c773e0acc777b22f48c02900eace56260686c",
+        "version" : "5.15.5"
+      }
+    },
+    {
+      "identity" : "qgrid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Q-Mobile/QGrid.git",
+      "state" : {
+        "revision" : "804e59f8cb9f66b226685e9369fb82029742b83a",
+        "version" : "0.1.4"
+      }
+    },
+    {
+      "identity" : "socket.io-client-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/socketio/socket.io-client-swift.git",
+      "state" : {
+        "revision" : "36db2ff0ebc7239187f9b382fd318e122da71caa",
+        "version" : "15.2.0"
+      }
+    },
+    {
+      "identity" : "starscream",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/daltoniam/Starscream",
+      "state" : {
+        "revision" : "e6b65c6d9077ea48b4a7bdda8994a1d3c6969c8d",
+        "version" : "3.1.1"
+      }
+    },
+    {
+      "identity" : "swift-nio-zlib-support",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-nio-zlib-support.git",
+      "state" : {
+        "revision" : "37760e9a52030bb9011972c5213c3350fa9d41fd",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftui-grid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swift-extensions/swiftui-grid.git",
+      "state" : {
+        "revision" : "a3441f80bd01029507bc19e463e7c7208ffcf3f9",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "swiftui-introspect",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/siteline/SwiftUI-Introspect",
+      "state" : {
+        "revision" : "f1ec9da347a7fbe53c520d35434f6c2295650bd5",
+        "version" : "0.1.1"
+      }
+    },
+    {
+      "identity" : "swiftuipager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fermoya/SwiftUIPager.git",
+      "state" : {
+        "revision" : "c70dd348ee4bbdfc5af3b26c85309d4198db4f87",
+        "version" : "1.11.0"
+      }
+    },
+    {
+      "identity" : "swiftyjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyJSON/SwiftyJSON.git",
+      "state" : {
+        "revision" : "2b6054efa051565954e1d2b9da831680026cd768",
+        "version" : "5.0.0"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "revision" : "8a76d2c74bafbb455763487cc6a08e91bad1f78b",
+        "version" : "2.7.1"
+      }
+    }
+  ],
+  "version" : 3
+}
