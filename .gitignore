@@ -48,15 +48,20 @@ DerivedData/
 
 Pods/
 
-# Tuist
+
 
 graph.dot
-Tuist/.build/
 /Derived/
-/Project.xcworkspace/
-/Project.xcodeproj/
+/FiestonVirtual.xcodeproj/
+/FiestonVirtual.xcworkspace/
+
+
+# Tuist
+/Tuist/.build/
 /Tuist/Dependencies/
 /Tuist/Cache/
 /.tuist-version
+
+
 /Manifest.lock
 /Setup.swift
