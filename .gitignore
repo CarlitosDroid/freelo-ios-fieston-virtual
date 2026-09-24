@@ -52,6 +52,8 @@ Pods/
 
 graph.dot
 .build/
+/FiestonVirtual.xcodeproj/
+/FiestonVirtual.xcworkspace/
 /Derived/
 /Project.xcworkspace/
 /Project.xcodeproj/
