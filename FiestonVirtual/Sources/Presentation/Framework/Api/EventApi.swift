@@ -1,6 +1,7 @@
 
 import Foundation
+import Combine
 
-struct EventApi {
-    func getEventWelcome(welcomeRequest: WelcomeRequest) -> AnyPublisher<WelcomeResponseEntity,ExternalError>
+protocol EventApi {
+    func validateCode(userInvitationCode: Int) -> AnyPublisher<CodeVerificationResponseEntity, ExternalError>
 }
