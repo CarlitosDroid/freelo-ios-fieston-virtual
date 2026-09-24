@@ -20,6 +20,34 @@
                ReferencedContainer = "container:FiestonVirtual.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DFCE98678FE1DD4BA93E3C0E"
+               BuildableName = "FiestonVirtualTests.xctest"
+               BlueprintName = "FiestonVirtualTests"
+               ReferencedContainer = "container:FiestonVirtual.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B4092E485D6776FDF9101D27"
+               BuildableName = "FiestonVirtualUITests.xctest"
+               BlueprintName = "FiestonVirtualUITests"
+               ReferencedContainer = "container:FiestonVirtual.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

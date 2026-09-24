@@ -9,18 +9,17 @@ let project = Project(
             product: .app,
             bundleId: "com.arpanet.fiestonvirtual",
             deploymentTargets: .iOS("15.0"),
+            infoPlist: .file(
+                path: "FiestonVirtual/Info.plist"
+            ),
             sources: [
-                "FiestonVirtual/**"
+                "FiestonVirtual/Sources/**"
             ],
             resources: [
-                "FiestonVirtual/Resources/**",
-                "FiestonVirtual/Preview Content/**"
+                "FiestonVirtual/Resources/**"
             ],
-            infoPlist: .file(
-                path: "FiestonVirtual/Main/Info.plist"
-            ),
             entitlements: .file(
-                path: "FiestonVirtual/FiestonVirtual.entitlements"
+                path: "FiestonVirtual/Configs/FiestonVirtual.entitlements"
             )
         ),
 
