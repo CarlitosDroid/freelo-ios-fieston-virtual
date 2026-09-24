@@ -51,10 +51,12 @@ Pods/
 # Tuist
 
 graph.dot
-Tuist/.build/
+
 /Derived/
-/Project.xcworkspace/
-/Project.xcodeproj/
+/FiestonVirtual.xcworkspace/
+/FiestonVirtual.xcodeproj/
+
+/Tuist/.build/
 /Tuist/Dependencies/
 /Tuist/Cache/
 /.tuist-version
