@@ -18,7 +18,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/hackiftekhar/IQKeyboardManager.git",
-            from: "6.5.6"
+            from: "7.2.0"
         ),
         .package(
             url: "https://github.com/onevcat/Kingfisher.git",

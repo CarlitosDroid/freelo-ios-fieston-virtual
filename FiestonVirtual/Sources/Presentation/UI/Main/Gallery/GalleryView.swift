@@ -1,6 +1,6 @@
 
 import SwiftUI
-import Grid
+import ExyteGrid
 import KingfisherSwiftUI
 import QGrid
 

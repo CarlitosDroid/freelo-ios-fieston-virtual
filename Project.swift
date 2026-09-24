@@ -34,7 +34,10 @@ let project = Project(
                 .external(name: "SwiftUIPager"),
                 .external(name: "SwiftyJSON"),
                 .external(name: "Swinject")
-            ]
+            ],
+            coreDataModels: [
+                .coreDataModel("FiestonVirtual/Sources/DataBase/FiestonVirtual.xcdatamodeld")
+            ],
         ),
 
         .target(
