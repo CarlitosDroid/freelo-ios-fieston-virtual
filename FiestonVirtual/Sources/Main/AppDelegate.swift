@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // MARK: - Firebase Configuration
         FirebaseApp.configure()
-        
+                
         // MARK: - Set messaging delegate
         Messaging.messaging().delegate = self
         
