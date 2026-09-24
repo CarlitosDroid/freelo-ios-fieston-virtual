@@ -51,7 +51,7 @@ Pods/
 # Tuist
 
 graph.dot
-/.build/
+Tuist/.build/
 /Derived/
 /Project.xcworkspace/
 /Project.xcodeproj/
