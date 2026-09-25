@@ -44,10 +44,6 @@ DerivedData/
 
 *.xcuserstate
 
-# CocoaPods
-
-Pods/
-
 # Tuist
 
 graph.dot
