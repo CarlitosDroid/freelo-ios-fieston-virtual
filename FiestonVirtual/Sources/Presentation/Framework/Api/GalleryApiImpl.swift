@@ -68,7 +68,7 @@ class GalleryApiImpl: GalleryApi {
                                      fileName: "\(getCurrentTimeStamp()).\(data.pathExtension)",
                                      mimeType: mimeType)
         },
-        to: "http://fiestonvirtual.com/app/api/publicaciones.php",
+        to: APIConfiguration.url(path: APIConfiguration.path + "/publicaciones.php"),
         method: .post,
         interceptor: nil,
         requestModifier: nil)
@@ -106,7 +106,7 @@ class GalleryApiImpl: GalleryApi {
                                      fileName: "\(getCurrentTimeStamp()).jpeg",
                                      mimeType: "image/jpeg")
         },
-        to: "http://fiestonvirtual.com/app/api/publicaciones.php",
+        to: APIConfiguration.url(path: APIConfiguration.path + "/publicaciones.php"),
         method: .post,
         interceptor: nil,
         requestModifier: nil)
@@ -226,9 +226,9 @@ class GalleryApiImpl: GalleryApi {
 private extension GalleryApiImpl {
     
     struct FiestonVirtualAPI {
-        static let scheme = "http"
-        static let host = "fiestonvirtual.com"
-        static let path = "/app/api"
+        static let scheme = APIConfiguration.scheme
+        static let host = APIConfiguration.host
+        static let path = APIConfiguration.path
     }
     
     func getGalleryComponents() -> URLComponents {

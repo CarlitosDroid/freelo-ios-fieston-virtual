@@ -35,6 +35,18 @@ let project = Project(
                 .external(name: "SwiftyJSON"),
                 .external(name: "Swinject")
             ],
+            settings: .settings(
+                configurations: [
+                    .debug(
+                        name: "Debug",
+                        xcconfig: "FiestonVirtual/Configs/Secrets.xcconfig"
+                    ),
+                    .release(
+                        name: "Release",
+                        xcconfig: "FiestonVirtual/Configs/Secrets.xcconfig"
+                    )
+                ]
+            ),
             coreDataModels: [
                 .coreDataModel("FiestonVirtual/Sources/DataBase/FiestonVirtual.xcdatamodeld")
             ],

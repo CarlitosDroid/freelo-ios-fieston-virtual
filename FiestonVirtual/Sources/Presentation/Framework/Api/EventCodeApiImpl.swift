@@ -100,9 +100,9 @@ class EventCodeApiImpl: EventCodeApi {
 
 private extension EventCodeApiImpl {
     struct FiestonVirtualAPI {
-        static let scheme = "http"
-        static let host = "fiestonvirtual.com"
-        static let path = "/app/api"
+        static let scheme = APIConfiguration.scheme
+        static let host = APIConfiguration.host
+        static let path = APIConfiguration.path
         static let key = "<your key>"
     }
     

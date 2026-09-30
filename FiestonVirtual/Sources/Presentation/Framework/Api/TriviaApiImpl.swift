@@ -106,9 +106,9 @@
  private extension TriviaApiImpl{
     
     struct FiestonVirtualAPI {
-        static let scheme = "http"
-        static let host = "fiestonvirtual.com"
-        static let path = "/app/api"
+        static let scheme = APIConfiguration.scheme
+        static let host = APIConfiguration.host
+        static let path = APIConfiguration.path
     }
     
     func getTriviaComponents() -> URLComponents {

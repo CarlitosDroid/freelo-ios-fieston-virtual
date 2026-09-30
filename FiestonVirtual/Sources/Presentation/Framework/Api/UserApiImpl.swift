@@ -104,7 +104,7 @@ class UserApiImpl: UserApi {
                                      fileName: "\(getCurrentTimeStamp()).\(data.pathExtension)",
                                      mimeType: "image/jpeg")
         },
-        to: "http://fiestonvirtual.com/app/api/selfie.php",
+        to: APIConfiguration.url(path: APIConfiguration.path + "/selfie.php"),
         method: .post,
         interceptor: nil,
         requestModifier: nil)
@@ -135,9 +135,9 @@ class UserApiImpl: UserApi {
 
 private extension UserApiImpl {
     struct FiestonVirtualAPI {
-        static let scheme = "http"
-        static let host = "fiestonvirtual.com"
-        static let path = "/app/api"
+        static let scheme = APIConfiguration.scheme
+        static let host = APIConfiguration.host
+        static let path = APIConfiguration.path
         static let key = "<your key>"
     }
     
