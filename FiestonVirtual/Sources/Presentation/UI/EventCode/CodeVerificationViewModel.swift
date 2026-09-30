@@ -29,28 +29,30 @@ class CodeVerificationViewModel: ObservableObject {
     
     
     func verifyCode(code: String) {
-        if (!code.isEmpty) {
-            self.isLoading = true
-            self.isError=false
-            loginUseCase.invoke(userInvitationCode: Int(code)!)
-                .receive(on: DispatchQueue.main)
-                .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
-                    switch completion {
-                    case .finished:
-                        print("finished")
-                        break
-                    case .failure(let errorResponse):
-                        self.isLoading = false
-                        self.isError=true
-                        self.errorMessage = errorResponse.localizedDescription
-                        break
-                    }
-                }, receiveValue: { (eventCode: Bool) in
-                    self.isLoading = false
-                    self.inSession = true
-                })
-                .store(in: &disposables)
+        guard let invitationCode = Int(code), !code.isEmpty else {
+            self.isError = true
+            self.errorMessage = "La contraseña debe ser un código numérico válido."
+            return
         }
+
+        self.isLoading = true
+        self.isError = false
+        loginUseCase.invoke(userInvitationCode: invitationCode)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { (completion: Subscribers.Completion<ErrorResponse>) in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let errorResponse):
+                    self.isLoading = false
+                    self.isError = true
+                    self.errorMessage = errorResponse.errorDescription ?? "No se pudo iniciar sesión."
+                }
+            }, receiveValue: { (_: Bool) in
+                self.isLoading = false
+                self.inSession = true
+            })
+            .store(in: &disposables)
     }
     
     func verifySession() {
