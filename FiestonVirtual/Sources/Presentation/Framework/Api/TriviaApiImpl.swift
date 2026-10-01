@@ -106,15 +106,16 @@
  private extension TriviaApiImpl{
     
     struct FiestonVirtualAPI {
-        static let scheme = "http"
-        static let host = "fiestonvirtual.com"
-        static let path = "/app/api"
+        static let scheme = APIConfiguration.scheme
+        static let host = APIConfiguration.host
+        static let path = APIConfiguration.path
     }
     
     func getTriviaComponents() -> URLComponents {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/trivias.php"
         return urlComponents
     }
@@ -123,6 +124,7 @@
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/respuesta_trivia.php"
         return urlComponents
     }

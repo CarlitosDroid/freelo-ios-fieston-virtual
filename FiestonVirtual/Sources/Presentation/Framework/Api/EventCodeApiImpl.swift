@@ -100,9 +100,9 @@ class EventCodeApiImpl: EventCodeApi {
 
 private extension EventCodeApiImpl {
     struct FiestonVirtualAPI {
-        static let scheme = "http"
-        static let host = "fiestonvirtual.com"
-        static let path = "/app/api"
+        static let scheme = APIConfiguration.scheme
+        static let host = APIConfiguration.host
+        static let path = APIConfiguration.path
         static let key = "<your key>"
     }
     
@@ -110,6 +110,7 @@ private extension EventCodeApiImpl {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/consulta_codigo.php"
         return urlComponents
     }
@@ -118,6 +119,7 @@ private extension EventCodeApiImpl {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/detalle_evento.php"
         return urlComponents
     }

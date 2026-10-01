@@ -68,15 +68,16 @@ class LikeApiImpl: LikeApi {
 private extension LikeApiImpl {
     
     struct FiestonVirtualAPI {
-        static let scheme = "http"
-        static let host = "fiestonvirtual.com"
-        static let path = "/app/api"
+        static let scheme = APIConfiguration.scheme
+        static let host = APIConfiguration.host
+        static let path = APIConfiguration.path
     }
     
     func makeLikeComponents() -> URLComponents {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/likes.php"
         return urlComponents
     }

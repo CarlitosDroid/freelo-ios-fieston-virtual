@@ -54,15 +54,16 @@ class FcmApiImpl : FcmApi{
 private extension FcmApiImpl{
    
    struct FiestonVirtualAPI {
-       static let scheme = "http"
-       static let host = "fiestonvirtual.com"
-       static let path = "/app/api"
+       static let scheme = APIConfiguration.scheme
+       static let host = APIConfiguration.host
+       static let path = APIConfiguration.path
    }
    
    func sendTokenComponents() -> URLComponents {
        var urlComponents = URLComponents()
        urlComponents.scheme = FiestonVirtualAPI.scheme
        urlComponents.host = FiestonVirtualAPI.host
+         urlComponents.port = APIConfiguration.port
        urlComponents.path = FiestonVirtualAPI.path + "/registrar_tokens.php"
        return urlComponents
    }

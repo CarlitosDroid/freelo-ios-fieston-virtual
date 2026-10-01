@@ -14,7 +14,11 @@ class SocketsAssembly: Assembly {
     
     func assemble(container: Container) {
         container.register(SocketManager.self) { resolver in
-            return SocketManager(socketURL: URL(string: "http://www.fiestonvirtual.com:8090")!, config: [.log(true), .compress])
+            var components = URLComponents()
+            components.scheme = "http"
+            components.host = APIConfiguration.host
+            components.port = 8090
+            return SocketManager(socketURL: components.url!, config: [.log(true), .compress])
         }
     }
     

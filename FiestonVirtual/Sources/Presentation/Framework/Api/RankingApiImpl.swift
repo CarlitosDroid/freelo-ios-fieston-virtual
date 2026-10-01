@@ -65,9 +65,9 @@ class RankingApiImpl: RankingApi {
 
 private extension RankingApiImpl {
     struct FiestonVirtualAPI {
-        static let scheme = "http"
-        static let host = "fiestonvirtual.com"
-        static let path = "/app/api"
+        static let scheme = APIConfiguration.scheme
+        static let host = APIConfiguration.host
+        static let path = APIConfiguration.path
         static let key = "<your key>"
     }
     
@@ -75,6 +75,7 @@ private extension RankingApiImpl {
     var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/ranking.php"
         return urlComponents
 

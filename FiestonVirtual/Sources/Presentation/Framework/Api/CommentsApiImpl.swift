@@ -91,9 +91,9 @@ class CommentsApiImpl: CommentsApi {
 
 private extension CommentsApiImpl {
     struct FiestonVirtualAPI {
-        static let scheme = "http"
-        static let host = "fiestonvirtual.com"
-        static let path = "/app/api"
+        static let scheme = APIConfiguration.scheme
+        static let host = APIConfiguration.host
+        static let path = APIConfiguration.path
         static let key = "<your key>"
     }
     
@@ -101,6 +101,7 @@ private extension CommentsApiImpl {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/comentarios.php"
         return urlComponents
     }
@@ -109,6 +110,7 @@ private extension CommentsApiImpl {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/agregar_comentarios.php"
         return urlComponents
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ErrorResponse: Error {
+struct ErrorResponse: LocalizedError {
     var code: Int = 0
     var title: String
     var message: String
@@ -16,5 +16,12 @@ struct ErrorResponse: Error {
         self.code = code
         self.title = title
         self.message = message
+    }
+
+    var errorDescription: String? {
+        if message.isEmpty {
+            return title
+        }
+        return title.isEmpty ? message : "\(title): \(message)"
     }
 }
