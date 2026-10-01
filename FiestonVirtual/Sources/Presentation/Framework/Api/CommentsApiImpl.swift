@@ -101,6 +101,7 @@ private extension CommentsApiImpl {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/comentarios.php"
         return urlComponents
     }
@@ -109,6 +110,7 @@ private extension CommentsApiImpl {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/agregar_comentarios.php"
         return urlComponents
     }

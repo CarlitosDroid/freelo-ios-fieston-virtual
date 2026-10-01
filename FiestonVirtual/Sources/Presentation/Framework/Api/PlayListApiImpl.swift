@@ -112,6 +112,7 @@ private extension PlayListApiImpl{
        var urlComponents = URLComponents()
        urlComponents.scheme = FiestonVirtualAPI.scheme
        urlComponents.host = FiestonVirtualAPI.host
+         urlComponents.port = APIConfiguration.port
        urlComponents.path = FiestonVirtualAPI.path + "/pedir_cancion.php"
        return urlComponents
    }
@@ -120,6 +121,7 @@ private extension PlayListApiImpl{
        var urlComponents = URLComponents()
        urlComponents.scheme = FiestonVirtualAPI.scheme
        urlComponents.host = FiestonVirtualAPI.host
+         urlComponents.port = APIConfiguration.port
        urlComponents.path = FiestonVirtualAPI.path + "/lista_playlist.php"
        return urlComponents
    }

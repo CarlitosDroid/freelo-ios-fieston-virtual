@@ -72,6 +72,7 @@ private extension ChatMessagesApiImpl{
        var urlComponents = URLComponents()
        urlComponents.scheme = FiestonVirtualAPI.scheme
        urlComponents.host = FiestonVirtualAPI.host
+         urlComponents.port = APIConfiguration.port
        urlComponents.path = FiestonVirtualAPI.path + "/mensajes_chat.php"
        return urlComponents
    }

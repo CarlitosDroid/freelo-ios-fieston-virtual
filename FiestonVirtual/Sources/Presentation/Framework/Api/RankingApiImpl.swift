@@ -75,6 +75,7 @@ private extension RankingApiImpl {
     var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/ranking.php"
         return urlComponents
 

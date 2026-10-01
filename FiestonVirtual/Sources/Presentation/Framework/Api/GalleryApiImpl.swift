@@ -235,6 +235,7 @@ private extension GalleryApiImpl {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/galeria.php"
         return urlComponents
     }
@@ -243,6 +244,7 @@ private extension GalleryApiImpl {
         var urlComponents = URLComponents()
         urlComponents.scheme = FiestonVirtualAPI.scheme
         urlComponents.host = FiestonVirtualAPI.host
+        urlComponents.port = APIConfiguration.port
         urlComponents.path = FiestonVirtualAPI.path + "/detalle_publicacion.php"
         return urlComponents
     }
