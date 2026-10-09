@@ -7,7 +7,7 @@ let project = Project(
             name: "FiestonVirtual",
             destinations: .iOS,
             product: .app,
-            bundleId: "com.arpanet.fiestonvirtual",
+            bundleId: "com.ronaldoandre.fiestonvirtual",
             deploymentTargets: .iOS("15.0"),
             infoPlist: .file(
                 path: "FiestonVirtual/Info.plist"
@@ -18,9 +18,6 @@ let project = Project(
             resources: [
                 "FiestonVirtual/Resources/**"
             ],
-            entitlements: .file(
-                path: "FiestonVirtual/Configs/FiestonVirtual.entitlements"
-            ),
             dependencies: [
                 .external(name: "FirebaseCore"),
                 .external(name: "FirebaseMessaging"),
@@ -56,7 +53,7 @@ let project = Project(
             name: "FiestonVirtualTests",
             destinations: .iOS,
             product: .unitTests,
-            bundleId: "com.arpanet.fiestonvirtualTests",
+            bundleId: "com.ronaldoandre.fiestonvirtualTests",
             deploymentTargets: .iOS("13.7"),
             sources: [
                 "FiestonVirtualTests/**"
@@ -67,7 +64,7 @@ let project = Project(
             name: "FiestonVirtualUITests",
             destinations: .iOS,
             product: .uiTests,
-            bundleId: "com.arpanet.fiestonvirtualUITests",
+            bundleId: "com.ronaldoandre.fiestonvirtualUITests",
             deploymentTargets: .iOS("13.5"),
             sources: [
                 "FiestonVirtualUITests/**"
