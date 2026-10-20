@@ -13,7 +13,7 @@ platform :ios do
     prepare_project
 
     run_tests(
-      scheme: "FiestonVirtual-Workspace",
+      scheme: "FiestonVirtual",
       destination: "platform=iOS Simulator,OS=latest,name=iPhone 16 Pro",
       result_bundle: true,
       output_directory: "./test_output",
@@ -26,7 +26,7 @@ platform :ios do
     prepare_project
 
     gym(
-      scheme: "FiestonVirtual-Workspace",
+      scheme: "FiestonVirtual",
       configuration: "Debug",
       export_method: "development",
       skip_codesigning: true,

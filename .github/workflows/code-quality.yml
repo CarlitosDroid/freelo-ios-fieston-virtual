@@ -1,0 +1,27 @@
+
+name: Code Quality
+
+on:
+  workflow_call:
+
+jobs:
+  SwiftLint:
+    name: SwiftLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run SwiftLint
+        uses: norio-nomura/action-swiftlint@3.2.1
+        with:
+          args: --strict
+
+      - name: Upload SwiftLint reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: swiftlint-reports
+          path: |
+            swiftlint-report.html
+            swiftlint-report.json
