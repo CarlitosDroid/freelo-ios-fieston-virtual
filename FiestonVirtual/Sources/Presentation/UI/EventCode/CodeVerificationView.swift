@@ -12,156 +12,185 @@ struct CodeVerificationView: View {
     
     @ObservedObject var viewModel = DependencyProvider().assembler.resolver.resolve(CodeVerificationViewModel.self)!
     
-    @State private var nombre: String = ""
     @State private var eventCode: String = ""
-    @State private var showPassword = false
     @State private var showingAlert = false
     @State private var showRegister = false
     
     var body: some View {
         ZStack {
-            Color(hex: "060D36")
-                .ignoresSafeArea()
+            LinearGradient(
+                colors: [
+                    Color(hex: "123B46"),
+                    Color(hex: "0E172F"),
+                    Color(hex: "180B2D")
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
 
             GeometryReader { geometry in
-                VStack(spacing: 0) {
-                    VStack(spacing: 8) {
-                        Image("Fieston")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 230, height: 105)
+                let compact = geometry.size.height < 700
 
-                        Rectangle()
-                            .fill(Color(hex: "FFD43B"))
-                            .frame(width: 26, height: 4)
-                            .cornerRadius(2)
+                VStack(spacing: compact ? 12 : 18) {
+                    VStack(spacing: compact ? 12 : 16) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(Color(hex: "30445B").opacity(0.8))
+                                .frame(width: compact ? 64 : 80, height: compact ? 64 : 80)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .stroke(Color(hex: "6673B4").opacity(0.7), lineWidth: 1)
+                                )
 
-                        Text("F I E S T O N")
-                            .font(.system(size: 28, weight: .bold, design: .rounded))
-                            .tracking(7)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.7)
-                            .foregroundColor(Color(hex: "FFD15B"))
-
-                        Text("V I R T U A L .COM")
-                            .font(.system(size: 22, weight: .bold, design: .rounded))
-                            .tracking(5)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.7)
-                            .foregroundColor(Color(hex: "36D5F4"))
-
-                        Text("Tu evento digital, llevado a otro nivel")
-                            .font(.system(size: 16, weight: .medium, design: .rounded))
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.7)
-                            .foregroundColor(Color(hex: "A9B3D2"))
-                            .padding(.top, 8)
-                    }
-                    .padding(.top, 28)
-                    .padding(.bottom, 38)
-
-                    VStack(alignment: .leading, spacing: 22) {
-                        LoginField(
-                            title: "NOMBRE O USUARIO",
-                            placeholder: "Ingresa tu nombre o email",
-                            text: $nombre,
-                            icon: "person"
-                        )
-
-                        LoginField(
-                            title: "CONTRASEÑA",
-                            placeholder: "••••••••••••",
-                            text: $eventCode,
-                            icon: "lock",
-                            isSecure: !showPassword,
-                            keyboardType: .numberPad,
-                            trailingIcon: showPassword ? "eye.slash" : "eye",
-                            trailingAction: { showPassword.toggle() }
-                        )
-
-                        Button("¿Olvidaste tu contraseña?") {
-                            // Recuperación aún no forma parte del flujo existente.
+                            Image("IconoFieston")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: compact ? 64 : 80, height: compact ? 64 : 80)
                         }
-                        .font(.system(size: 16, weight: .medium, design: .rounded))
-                        .foregroundColor(Color(hex: "1ED7F2"))
-                        .frame(maxWidth: .infinity, alignment: .trailing)
+
+                        HStack(spacing: compact ? 5 : 7) {
+                            ForEach(Array("FIEST"), id: \.self) { letter in
+                                Text(String(letter))
+                            }
+
+                            ZStack(alignment: .top) {
+                                Text("O")
+
+                                Capsule()
+                                    .fill(Color(hex: "FFD533"))
+                                    .frame(width: compact ? 15 : 18, height: 3)
+                                    .offset(y: compact ? -5 : -6)
+                            }
+
+                            Text("N")
+                        }
+                        .font(.system(size: compact ? 28 : 31, weight: .bold, design: .rounded))
+                        .foregroundColor(Color(hex: "FFD84D"))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+
+                        (
+                            Text("VIRTUAL  •  ")
+                                .foregroundColor(Color(hex: "2DE5BF"))
+                            + Text(".COM")
+                                .foregroundColor(Color(hex: "9358F7"))
+                        )
+                        .font(.system(size: compact ? 12 : 13, weight: .bold, design: .rounded))
+                        .tracking(3)
+                        .lineLimit(1)
+                    }
+
+                    Text("•  PASE DE ENTRADA · EVENTO EXCLUSIVO")
+                        .font(.system(size: 11, weight: .medium, design: .rounded))
+                        .foregroundColor(Color(hex: "D3D4E2"))
+                        .padding(.horizontal, 14)
+                        .padding(.vertical, 6)
+                        .background(Color(hex: "31334D").opacity(0.75))
+                        .overlay(
+                            Capsule()
+                                .stroke(Color(hex: "5A547B").opacity(0.8), lineWidth: 1)
+                        )
+                        .clipShape(Capsule())
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+
+                    VStack(alignment: .leading, spacing: compact ? 16 : 20) {
+                        Label("CÓDIGO DE INVITACIÓN", systemImage: "ticket.fill")
+                            .font(.system(size: 16, weight: .bold, design: .rounded))
+                            .foregroundColor(Color(hex: "D8D5E6"))
+                            .labelStyle(InvitationLabelStyle())
+
+                        HStack(spacing: 13) {
+                            Image(systemName: "key")
+                                .font(.system(size: 18, weight: .semibold))
+                                .foregroundColor(Color(hex: "9BA0B8"))
+
+                            TextField("Ingresa tu código (ej. GA-2025)", text: $eventCode)
+                                .font(.system(size: 16, weight: .semibold, design: .rounded))
+                                .foregroundColor(Color(hex: "F3F1F8"))
+                                .keyboardType(.numberPad)
+                                .textInputAutocapitalization(.characters)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.7)
+                        }
+                        .padding(.horizontal, 16)
+                        .frame(height: compact ? 58 : 64)
+                        .background(Color(hex: "0E0A1B").opacity(0.8))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color(hex: "4A415E"), lineWidth: 1)
+                        )
+                        .cornerRadius(16)
 
                         Button(action: {
                             viewModel.verifyCode(code: eventCode)
                         }) {
                             HStack(spacing: 12) {
-                                Text("Iniciar Sesión")
+                                Text("ENTRAR AL EVENTO")
                                 Image(systemName: "arrow.right")
-                                    .font(.system(size: 22, weight: .bold))
+                                    .font(.system(size: 19, weight: .bold))
                             }
-                            .font(.system(size: 23, weight: .bold, design: .rounded))
-                            .foregroundColor(.white)
+                            .font(.system(size: 17, weight: .bold, design: .rounded))
+                            .foregroundColor(Color(hex: "071A25"))
                             .frame(maxWidth: .infinity)
-                            .frame(height: 70)
-                            .background(
-                                LinearGradient(
-                                    colors: [Color(hex: "16C39F"), Color(hex: "0FB6D2")],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                            )
-                            .cornerRadius(25)
+                            .frame(height: compact ? 56 : 58)
+                            .background(Color(hex: "10D7AF"))
+                            .cornerRadius(15)
                         }
 
-                        HStack(spacing: 10) {
-                            Rectangle().fill(Color(hex: "364269")).frame(height: 1)
-                            Text("C O N É C T A T E\nC O N")
-                                .font(.system(size: 15, weight: .medium, design: .rounded))
-                                .foregroundColor(Color(hex: "AAB5D4"))
-                                .multilineTextAlignment(.center)
-                                .fixedSize()
-                            Rectangle().fill(Color(hex: "364269")).frame(height: 1)
-                        }
-                        .padding(.top, 4)
+                        Divider()
+                            .overlay(Color(hex: "453C57"))
 
-                        HStack(spacing: 18) {
-                            SocialButton(title: "Google", icon: "G")
-                            SocialButton(title: "Apple", icon: "apple.logo")
-                        }
+                        Label("Acceso cifrado y verificado en tiempo real", systemImage: "lock.fill")
+                            .font(.system(size: 13, weight: .regular, design: .rounded))
+                            .foregroundColor(Color(hex: "AAA8BB"))
+                            .labelStyle(InvitationLabelStyle())
+                            .frame(maxWidth: .infinity, alignment: .center)
                     }
-                    .padding(.horizontal, 36)
-                    .padding(.vertical, 32)
-                    .background(Color(hex: "0C1945").opacity(0.9))
+                    .padding(.horizontal, compact ? 20 : 24)
+                    .padding(.vertical, compact ? 20 : 24)
+                    .background(Color(hex: "211A31").opacity(0.82))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 34)
-                            .stroke(Color(hex: "273665"), lineWidth: 1.5)
+                        RoundedRectangle(cornerRadius: 24)
+                            .stroke(Color(hex: "524663").opacity(0.8), lineWidth: 1)
                     )
-                    .cornerRadius(34)
+                    .cornerRadius(24)
 
-                    Button(action: {
-                        showRegister = true
-                    }) {
-                        HStack(spacing: 5) {
-                            Text("¿No tienes una cuenta?")
-                            Text("Regístrate")
-                                .foregroundColor(Color(hex: "FFD43B"))
-                                .fontWeight(.bold)
-                                .underline()
+                    VStack(spacing: compact ? 14 : 18) {
+                        HStack(spacing: 4) {
+                            Image(systemName: "questionmark.circle")
+                                .foregroundColor(Color(hex: "9358F7"))
+                            Text("¿No tienes un código?")
+                            Button(action: {
+                                showRegister = true
+                            }) {
+                                Text("Solicita acceso")
+                                    .font(.system(size: 14, weight: .bold, design: .rounded))
+                                    .foregroundColor(Color(hex: "1FE7BF"))
+                                    .overlay(
+                                        Rectangle()
+                                            .fill(Color(hex: "1FE7BF"))
+                                            .frame(height: 1)
+                                            .offset(y: 2),
+                                        alignment: .bottom
+                                    )
+                            }
+                            .buttonStyle(.plain)
                         }
-                        .font(.system(size: 17, design: .rounded))
+                        .font(.system(size: 14, design: .rounded))
+                        .foregroundColor(Color(hex: "D5D1E0"))
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
-                        .foregroundColor(Color(hex: "D4D9ED"))
+
+                        Label("Centro de Soporte y Ayuda", systemImage: "headphones")
+                            .font(.system(size: 13, design: .rounded))
+                            .foregroundColor(Color(hex: "ACA9BB"))
+                            .labelStyle(InvitationLabelStyle())
                     }
-                    .padding(.top, 34)
-                    .padding(.bottom, 22)
                 }
-                .padding(.horizontal, 22)
+                .padding(.horizontal, compact ? 18 : 28)
                 .frame(width: geometry.size.width, height: geometry.size.height)
-                .scaleEffect(
-                min(
-                    1,
-                    min(
-                        geometry.size.width / 390,
-                        geometry.size.height / 850
-                    )
-                )
-                )
             }
 
             RegisterView(viewMode: self.viewModel, showRegister: $showRegister)
@@ -189,93 +218,12 @@ struct CodeVerificationView: View {
     }
 }
 
-private struct LoginField: View {
-    let title: String
-    let placeholder: String
-    @Binding var text: String
-    let icon: String
-    var isSecure = false
-    var keyboardType: UIKeyboardType = .default
-    var trailingIcon: String?
-    var trailingAction: (() -> Void)?
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text(title)
-                .font(.system(size: 16, weight: .semibold, design: .rounded))
-                .lineLimit(1)
-                .minimumScaleFactor(0.75)
-                .foregroundColor(Color(hex: "D9DDF0"))
-
-            HStack(spacing: 16) {
-                Image(systemName: icon)
-                    .font(.system(size: 23))
-                    .foregroundColor(Color(hex: "AAB5D4"))
-                    .frame(width: 26)
-
-                Group {
-                    if isSecure {
-                        SecureField(placeholder, text: $text)
-                    } else {
-                        TextField(placeholder, text: $text)
-                    }
-                }
-                .keyboardType(keyboardType)
-                .font(.system(size: 18, design: .rounded))
-                .lineLimit(1)
-                .minimumScaleFactor(0.75)
-                .foregroundColor(Color(hex: "D9DDF0"))
-
-                if let trailingIcon = trailingIcon, let trailingAction = trailingAction {
-                    Button(action: trailingAction) {
-                        Image(systemName: trailingIcon)
-                            .font(.system(size: 21))
-                            .foregroundColor(Color(hex: "AAB5D4"))
-                    }
-                }
-            }
-            .padding(.horizontal, 18)
-            .frame(height: 72)
-            .background(Color(hex: "080F38").opacity(0.65))
-            .overlay(
-                RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color(hex: "273665"), lineWidth: 1.5)
-            )
-            .cornerRadius(25)
-        }
-    }
-}
-
-private struct SocialButton: View {
-    let title: String
-    let icon: String
-
-    var body: some View {
-        Button(action: {}) {
-            HStack(spacing: 12) {
-                if icon == "G" {
-                    Text(icon)
-                        .font(.system(size: 23, weight: .bold, design: .rounded))
-                        .foregroundColor(Color(hex: "4285F4"))
-                } else {
-                    Image(systemName: icon)
-                        .font(.system(size: 22, weight: .semibold))
-                        .foregroundColor(.white)
-                }
-                Text(title)
-                    .font(.system(size: 17, weight: .medium, design: .rounded))
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
-                    .foregroundColor(Color(hex: "D9DDF0"))
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 58)
-            .background(Color(hex: "202A55"))
-            .overlay(
-                RoundedRectangle(cornerRadius: 18)
-                    .stroke(Color(hex: "364269"), lineWidth: 1.5)
-            )
-            .cornerRadius(18)
+private struct InvitationLabelStyle: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack(spacing: 8) {
+            configuration.icon
+                .foregroundColor(Color(hex: "25E5C1"))
+            configuration.title
         }
     }
 }
