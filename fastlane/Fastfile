@@ -1,0 +1,38 @@
+default_platform(:ios)
+
+platform :ios do
+  private_lane :prepare_project do
+    Dir.chdir(File.expand_path("..", __dir__)) do
+      sh("tuist", "install")
+      sh("tuist", "generate")
+    end
+  end
+
+  desc "Run unit tests"
+  lane :test do
+    prepare_project
+
+    run_tests(
+      scheme: "FiestonVirtual",
+      destination: "platform=iOS Simulator,OS=latest,name=iPhone 16 Pro",
+      result_bundle: true,
+      output_directory: "./test_output",
+      fail_build: true
+    )
+  end
+
+  desc "Build unsigned Debug archive"
+  lane :build_debug do
+    prepare_project
+
+    gym(
+      scheme: "FiestonVirtual",
+      configuration: "Debug",
+      export_method: "development",
+      skip_codesigning: true,
+      archive_path: "./build/FiestonVirtual-Debug.xcarchive",
+      skip_package_ipa: true,
+      clean: true
+    )
+  end
+end

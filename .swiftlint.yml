@@ -1,0 +1,79 @@
+# SwiftLint configuration for FiestonVirtual
+# Reglas útiles para mantener un código más claro, consistente y mantenible.
+
+excluded:
+  - Derived
+  - Tuist/.build
+  - .build
+  - Pods
+  - Carthage
+  - FiestonVirtual.xcodeproj
+  - FiestonVirtual.xcworkspace
+
+included:
+  - FiestonVirtual
+  - FiestonVirtualTests
+  - FiestonVirtualUITests
+
+disabled_rules:
+  - identifier_name
+  - line_length
+  - trailing_whitespace
+  - force_cast
+  - force_try
+  - type_name
+  - nesting
+  - sorted_imports
+  - opening_brace
+  - trailing_newline
+
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - private_action
+  - redundant_nil_coalescing
+  - sorted_imports
+  - weak_delegate
+  - yoda_condition
+
+# Limitaciones de complejidad y tamaño
+cyclomatic_complexity:
+  warning: 12
+  error: 20
+  ignores_case_statements: true
+
+file_length:
+  warning: 400
+  error: 600
+
+function_body_length:
+  warning: 200
+  error: 300
+
+function_parameter_count:
+  warning: 6
+  error: 8
+
+type_body_length:
+  warning: 250
+  error: 400
+
+# Reglas de estilo por proyecto
+colon:
+  severity: warning
+
+comma:
+  severity: warning
+
+comment_spacing:
+  severity: warning
+
+return_arrow_whitespace:
+  severity: warning
+
+vertical_whitespace:
+  severity: warning
+
+warning_threshold: 20
