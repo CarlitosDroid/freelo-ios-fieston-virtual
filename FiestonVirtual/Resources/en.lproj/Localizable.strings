@@ -1,0 +1,11 @@
+"login.brand.virtual" = "VIRTUAL  •  ";
+"login.brand.domain" = ".COM";
+"login.entry_pass.badge" = "•  ENTRY PASS · EXCLUSIVE EVENT";
+"login.invitation_code.title" = "INVITATION CODE";
+"login.invitation_code.placeholder" = "Enter your code (e.g. GA-2025)";
+"login.invitation_code.submit" = "ENTER EVENT";
+"login.invitation_code.security_message" = "Encrypted access verified in real time";
+"login.access_request.question" = "Don't have a code?";
+"login.access_request.action" = "Request access";
+"login.support.title" = "Support and Help Center";
+"common.accept" = "Accept";

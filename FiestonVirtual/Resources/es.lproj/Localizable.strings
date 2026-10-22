@@ -1,0 +1,11 @@
+"login.brand.virtual" = "VIRTUAL  •  ";
+"login.brand.domain" = ".COM";
+"login.entry_pass.badge" = "•  PASE DE ENTRADA · EVENTO EXCLUSIVO";
+"login.invitation_code.title" = "CÓDIGO DE INVITACIÓN";
+"login.invitation_code.placeholder" = "Ingresa tu código (ej. GA-2025)";
+"login.invitation_code.submit" = "ENTRAR AL EVENTO";
+"login.invitation_code.security_message" = "Acceso cifrado y verificado en tiempo real";
+"login.access_request.question" = "¿No tienes un código?";
+"login.access_request.action" = "Solicita acceso";
+"login.support.title" = "Centro de Soporte y Ayuda";
+"common.accept" = "Aceptar";
