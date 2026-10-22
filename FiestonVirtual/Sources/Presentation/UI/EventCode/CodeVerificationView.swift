@@ -20,9 +20,9 @@ struct CodeVerificationView: View {
         ZStack {
             LinearGradient(
                 colors: [
-                    Color(hex: "123B46"),
-                    Color(hex: "0E172F"),
-                    Color(hex: "180B2D")
+                    Color.loginGradientStart,
+                    Color.loginGradientMiddle,
+                    Color.loginGradientEnd
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
@@ -36,11 +36,11 @@ struct CodeVerificationView: View {
                     VStack(spacing: compact ? 12 : 16) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 16)
-                                .fill(Color(hex: "30445B").opacity(0.8))
+                                .fill(Color.loginLogoPanel.opacity(0.8))
                                 .frame(width: compact ? 64 : 80, height: compact ? 64 : 80)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 16)
-                                        .stroke(Color(hex: "6673B4").opacity(0.7), lineWidth: 1)
+                                        .stroke(Color.loginLogoBorder.opacity(0.7), lineWidth: 1)
                                 )
 
                             Image("IconoFieston")
@@ -58,7 +58,7 @@ struct CodeVerificationView: View {
                                 Text("O")
 
                                 Capsule()
-                                    .fill(Color(hex: "FFD533"))
+                                    .fill(Color.loginAccentYellow)
                                     .frame(width: compact ? 15 : 18, height: 3)
                                     .offset(y: compact ? -5 : -6)
                             }
@@ -66,49 +66,58 @@ struct CodeVerificationView: View {
                             Text("N")
                         }
                         .font(.system(size: compact ? 28 : 31, weight: .bold, design: .rounded))
-                        .foregroundColor(Color(hex: "FFD84D"))
+                        .foregroundColor(Color.loginBrandYellow)
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
 
                         (
-                            Text("VIRTUAL  •  ")
-                                .foregroundColor(Color(hex: "2DE5BF"))
-                            + Text(".COM")
-                                .foregroundColor(Color(hex: "9358F7"))
+                            Text(NSLocalizedString("login.brand.virtual", comment: "Virtual brand name"))
+                                .foregroundColor(Color.loginBrandTurquoise)
+                            + Text(NSLocalizedString("login.brand.domain", comment: "Brand domain"))
+                                .foregroundColor(Color.loginBrandPurple)
                         )
                         .font(.system(size: compact ? 12 : 13, weight: .bold, design: .rounded))
                         .tracking(3)
                         .lineLimit(1)
                     }
 
-                    Text("•  PASE DE ENTRADA · EVENTO EXCLUSIVO")
+                    Text(NSLocalizedString("login.entry_pass.badge", comment: "Exclusive event entry badge"))
                         .font(.system(size: 11, weight: .medium, design: .rounded))
-                        .foregroundColor(Color(hex: "D3D4E2"))
+                        .foregroundColor(Color.loginTextPrimary)
                         .padding(.horizontal, 14)
                         .padding(.vertical, 6)
-                        .background(Color(hex: "31334D").opacity(0.75))
+                        .background(Color.loginBadgeBackground.opacity(0.75))
                         .overlay(
                             Capsule()
-                                .stroke(Color(hex: "5A547B").opacity(0.8), lineWidth: 1)
+                                .stroke(Color.loginBadgeBorder.opacity(0.8), lineWidth: 1)
                         )
                         .clipShape(Capsule())
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
 
                     VStack(alignment: .leading, spacing: compact ? 16 : 20) {
-                        Label("CÓDIGO DE INVITACIÓN", systemImage: "ticket.fill")
+                        Label(
+                            NSLocalizedString("login.invitation_code.title", comment: "Invitation code title"),
+                            systemImage: "ticket.fill"
+                        )
                             .font(.system(size: 16, weight: .bold, design: .rounded))
-                            .foregroundColor(Color(hex: "D8D5E6"))
+                            .foregroundColor(Color.loginTextPrimary)
                             .labelStyle(InvitationLabelStyle())
 
                         HStack(spacing: 13) {
                             Image(systemName: "key")
                                 .font(.system(size: 18, weight: .semibold))
-                                .foregroundColor(Color(hex: "9BA0B8"))
+                                .foregroundColor(Color.loginIconMuted)
 
-                            TextField("Ingresa tu código (ej. GA-2025)", text: $eventCode)
+                            TextField(
+                                NSLocalizedString(
+                                    "login.invitation_code.placeholder",
+                                    comment: "Invitation code placeholder"
+                                ),
+                                text: $eventCode
+                            )
                                 .font(.system(size: 16, weight: .semibold, design: .rounded))
-                                .foregroundColor(Color(hex: "F3F1F8"))
+                                .foregroundColor(Color.loginTextPrimary)
                                 .keyboardType(.numberPad)
                                 .textInputAutocapitalization(.characters)
                                 .lineLimit(1)
@@ -116,10 +125,10 @@ struct CodeVerificationView: View {
                         }
                         .padding(.horizontal, 16)
                         .frame(height: compact ? 58 : 64)
-                        .background(Color(hex: "0E0A1B").opacity(0.8))
+                        .background(Color.loginFieldBackground.opacity(0.8))
                         .overlay(
                             RoundedRectangle(cornerRadius: 16)
-                                .stroke(Color(hex: "4A415E"), lineWidth: 1)
+                                .stroke(Color.loginFieldBorder, lineWidth: 1)
                         )
                         .cornerRadius(16)
 
@@ -127,50 +136,56 @@ struct CodeVerificationView: View {
                             viewModel.verifyCode(code: eventCode)
                         }) {
                             HStack(spacing: 12) {
-                                Text("ENTRAR AL EVENTO")
+                                Text(NSLocalizedString("login.invitation_code.submit", comment: "Enter event button"))
                                 Image(systemName: "arrow.right")
                                     .font(.system(size: 19, weight: .bold))
                             }
                             .font(.system(size: 17, weight: .bold, design: .rounded))
-                            .foregroundColor(Color(hex: "071A25"))
+                            .foregroundColor(Color.loginButtonText)
                             .frame(maxWidth: .infinity)
                             .frame(height: compact ? 56 : 58)
-                            .background(Color(hex: "10D7AF"))
+                            .background(Color.loginButtonBackground)
                             .cornerRadius(15)
                         }
 
                         Divider()
-                            .overlay(Color(hex: "453C57"))
+                            .overlay(Color.loginDivider)
 
-                        Label("Acceso cifrado y verificado en tiempo real", systemImage: "lock.fill")
+                        Label(
+                            NSLocalizedString(
+                                "login.invitation_code.security_message",
+                                comment: "Invitation code security message"
+                            ),
+                            systemImage: "lock.fill"
+                        )
                             .font(.system(size: 13, weight: .regular, design: .rounded))
-                            .foregroundColor(Color(hex: "AAA8BB"))
+                            .foregroundColor(Color.loginMutedText)
                             .labelStyle(InvitationLabelStyle())
                             .frame(maxWidth: .infinity, alignment: .center)
                     }
                     .padding(.horizontal, compact ? 20 : 24)
                     .padding(.vertical, compact ? 20 : 24)
-                    .background(Color(hex: "211A31").opacity(0.82))
+                    .background(Color.loginCardBackground.opacity(0.82))
                     .overlay(
                         RoundedRectangle(cornerRadius: 24)
-                            .stroke(Color(hex: "524663").opacity(0.8), lineWidth: 1)
+                            .stroke(Color.loginCardBorder.opacity(0.8), lineWidth: 1)
                     )
                     .cornerRadius(24)
 
                     VStack(spacing: compact ? 14 : 18) {
                         HStack(spacing: 4) {
                             Image(systemName: "questionmark.circle")
-                                .foregroundColor(Color(hex: "9358F7"))
-                            Text("¿No tienes un código?")
+                                .foregroundColor(Color.loginBrandPurple)
+                            Text(NSLocalizedString("login.access_request.question", comment: "Access request question"))
                             Button(action: {
                                 showRegister = true
                             }) {
-                                Text("Solicita acceso")
+                                Text(NSLocalizedString("login.access_request.action", comment: "Access request action"))
                                     .font(.system(size: 14, weight: .bold, design: .rounded))
-                                    .foregroundColor(Color(hex: "1FE7BF"))
+                                    .foregroundColor(Color.loginLink)
                                     .overlay(
                                         Rectangle()
-                                            .fill(Color(hex: "1FE7BF"))
+                                            .fill(Color.loginLink)
                                             .frame(height: 1)
                                             .offset(y: 2),
                                         alignment: .bottom
@@ -179,13 +194,16 @@ struct CodeVerificationView: View {
                             .buttonStyle(.plain)
                         }
                         .font(.system(size: 14, design: .rounded))
-                        .foregroundColor(Color(hex: "D5D1E0"))
+                        .foregroundColor(Color.loginTextPrimary)
                         .lineLimit(1)
                         .minimumScaleFactor(0.7)
 
-                        Label("Centro de Soporte y Ayuda", systemImage: "headphones")
+                        Label(
+                            NSLocalizedString("login.support.title", comment: "Support center title"),
+                            systemImage: "headphones"
+                        )
                             .font(.system(size: 13, design: .rounded))
-                            .foregroundColor(Color(hex: "ACA9BB"))
+                            .foregroundColor(Color.loginMutedText)
                             .labelStyle(InvitationLabelStyle())
                     }
                 }
@@ -209,7 +227,9 @@ struct CodeVerificationView: View {
         .alert(isPresented: $showingAlert) {
             Alert(
                 title: Text(self.viewModel.errorMessage),
-                dismissButton: .default(Text("Aceptar"))
+                dismissButton: .default(
+                    Text(NSLocalizedString("common.accept", comment: "Accept button"))
+                )
             )
         }
         .onAppear {
@@ -222,7 +242,7 @@ private struct InvitationLabelStyle: LabelStyle {
     func makeBody(configuration: Configuration) -> some View {
         HStack(spacing: 8) {
             configuration.icon
-                .foregroundColor(Color(hex: "25E5C1"))
+                .foregroundColor(Color.loginBrandTurquoise)
             configuration.title
         }
     }
