@@ -109,7 +109,7 @@ struct CodeVerificationView: View {
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(Color.loginIconMuted)
 
-                            TextField(
+                            SecureField(
                                 NSLocalizedString(
                                     "login.invitation_code.placeholder",
                                     comment: "Invitation code placeholder"
