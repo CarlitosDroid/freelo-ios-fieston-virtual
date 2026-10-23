@@ -19,3 +19,6 @@
 "register.submit" = "REGISTRARME";
 "register.terms" = "Al registrarte aceptas los términos y condiciones del evento.";
 "register.back_to_login" = "Volver al inicio de sesión";
+
+
+"welcome.continue" = "CONTINUAR";
