@@ -19,3 +19,6 @@
 "register.submit" = "REGISTER";
 "register.terms" = "By registering, you accept the event terms and conditions.";
 "register.back_to_login" = "Back to sign in";
+
+
+"welcome.continue" = "CONTINUE";
