@@ -9,3 +9,13 @@
 "login.access_request.action" = "Solicita acceso";
 "login.support.title" = "Centro de Soporte y Ayuda";
 "common.accept" = "Aceptar";
+
+
+"register.title" = "SOLICITA TU ACCESO";
+"register.email.title" = "CORREO ELECTRÓNICO";
+"register.email.placeholder" = "Ingresa tu correo electrónico";
+"register.password.title" = "CONTRASEÑA";
+"register.password.placeholder" = "Crea una contraseña";
+"register.submit" = "REGISTRARME";
+"register.terms" = "Al registrarte aceptas los términos y condiciones del evento.";
+"register.back_to_login" = "Volver al inicio de sesión";
