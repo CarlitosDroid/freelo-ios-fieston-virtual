@@ -106,19 +106,30 @@ struct WelcomeView: View {
                                     .lineLimit(5)
                                     .minimumScaleFactor(0.75)
 
-                                KFImage(URL(string: welcome.imageUrl))
-                                    .resizable()
-                                    .renderingMode(.original)
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(
-                                        maxWidth: compact ? 145 : 180,
-                                        maxHeight: compact ? 145 : 180
-                                    )
-                                    .clipShape(RoundedRectangle(cornerRadius: 18))
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 18)
-                                            .stroke(Color.loginCardBorder, lineWidth: 1)
-                                    )
+                                Group {
+                                    if let imageURL = URL(string: welcome.imageUrl),
+                                       !welcome.imageUrl.isEmpty {
+                                        KFImage(imageURL)
+                                            .resizable()
+                                            .renderingMode(.original)
+                                            .aspectRatio(contentMode: .fit)
+                                    } else {
+                                        Image("IconoFieston")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .padding(20)
+                                    }
+                                }
+                                .frame(
+                                    maxWidth: compact ? 145 : 180,
+                                    maxHeight: compact ? 145 : 180
+                                )
+                                .background(Color.loginLogoPanel.opacity(0.65))
+                                .clipShape(RoundedRectangle(cornerRadius: 18))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 18)
+                                        .stroke(Color.loginCardBorder, lineWidth: 1)
+                                )
 
                                 Text(welcome.subtitle)
                                     .font(

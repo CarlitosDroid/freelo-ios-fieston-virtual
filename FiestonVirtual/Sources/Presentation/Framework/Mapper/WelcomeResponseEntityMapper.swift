@@ -4,13 +4,15 @@ import Foundation
 extension WelcomeResponseEntity {
     
     func toWelcome() -> Welcome {
+        let event = self.data.event
+        let imageUrl = event.eventLogo.isEmpty ? event.eventImagePrize : event.eventLogo
+
         return Welcome(
-            title: self.data.event.eventName,
-            description: self.data.event.eventWelcomeText,
-            subtitle: self.data.event.eventPrize,
-            imageUrl: self.data.event.eventImagePrize
+            title: event.eventName,
+            description: event.eventWelcomeText,
+            subtitle: event.eventPrize,
+            imageUrl: imageUrl
         )
     }
     
 }
-
