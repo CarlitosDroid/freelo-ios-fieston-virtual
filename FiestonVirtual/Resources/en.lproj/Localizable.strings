@@ -9,3 +9,13 @@
 "login.access_request.action" = "Request access";
 "login.support.title" = "Support and Help Center";
 "common.accept" = "Accept";
+
+
+"register.title" = "REQUEST YOUR ACCESS";
+"register.email.title" = "EMAIL ADDRESS";
+"register.email.placeholder" = "Enter your email address";
+"register.password.title" = "PASSWORD";
+"register.password.placeholder" = "Create a password";
+"register.submit" = "REGISTER";
+"register.terms" = "By registering, you accept the event terms and conditions.";
+"register.back_to_login" = "Back to sign in";
