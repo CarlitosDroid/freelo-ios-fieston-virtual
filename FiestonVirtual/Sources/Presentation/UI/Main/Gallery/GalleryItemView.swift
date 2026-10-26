@@ -10,7 +10,27 @@ struct GalleryItemView: View {
         
         KFImage(URL(string: getImageOfGalleryItem(galleryItem: galleryItem)))
             .resizable()
+            .placeholder {
+                Color.loginCardBackground
+            }
             .scaledToFit()
+            .frame(maxWidth: .infinity)
+            .overlay(alignment: .center) {
+                if galleryItem.type == GalleryItemType.video.rawValue {
+                    Image(systemName: "play.fill")
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundColor(.white)
+                        .frame(width: 42, height: 42)
+                        .background(Color.black.opacity(0.55))
+                        .clipShape(Circle())
+                }
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .overlay(
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color.loginCardBorder.opacity(0.8), lineWidth: 1)
+            )
+            .padding(.horizontal, 1)
     }
     
     private func getImageOfGalleryItem(galleryItem:GalleryItem) -> String{

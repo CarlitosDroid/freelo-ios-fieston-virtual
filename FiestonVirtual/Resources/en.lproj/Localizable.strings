@@ -11,6 +11,13 @@
 "common.accept" = "Accept";
 
 
+"gallery.filter.all" = "All Media";
+"gallery.filter.photos" = "Photos";
+"gallery.filter.videos" = "Videos";
+"gallery.loading" = "Loading...";
+"gallery.empty" = "No media available";
+
+
 "register.title" = "REQUEST YOUR ACCESS";
 "register.email.title" = "EMAIL ADDRESS";
 "register.email.placeholder" = "Enter your email address";
