@@ -13,10 +13,8 @@ struct GalleryItemView: View {
             .placeholder {
                 Color.loginCardBackground
             }
-            .scaledToFill()
+            .scaledToFit()
             .frame(maxWidth: .infinity)
-            .frame(height: galleryItem.type == GalleryItemType.video.rawValue ? 220 : 170)
-            .clipped()
             .overlay(alignment: .center) {
                 if galleryItem.type == GalleryItemType.video.rawValue {
                     Image(systemName: "play.fill")

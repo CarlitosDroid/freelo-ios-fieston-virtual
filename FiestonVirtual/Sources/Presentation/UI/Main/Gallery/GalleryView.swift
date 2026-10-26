@@ -72,21 +72,12 @@ struct GalleryView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     ScrollView(showsIndicators: false) {
-                        GeometryReader { proxy in
-                            HStack(alignment: .top, spacing: 16) {
-                                galleryColumn(
-                                    items: leftColumnItems,
-                                    width: (proxy.size.width - 16) / 2
-                                )
-                                galleryColumn(
-                                    items: rightColumnItems,
-                                    width: (proxy.size.width - 16) / 2
-                                )
-                            }
+                        HStack(alignment: .top, spacing: 20) {
+                            galleryColumn(items: leftColumnItems)
+                            galleryColumn(items: rightColumnItems)
                         }
-                        .frame(height: galleryContentHeight)
                         .padding(.horizontal, 20)
-                        .padding(.top, 2)
+                        .padding(.top, 8)
                         .padding(.bottom, 20)
                     }
                 }
@@ -140,8 +131,8 @@ struct GalleryView: View {
     }
 
     @ViewBuilder
-    private func galleryColumn(items: [GalleryItem], width: CGFloat) -> some View {
-        LazyVStack(spacing: 24) {
+    private func galleryColumn(items: [GalleryItem]) -> some View {
+        VStack(spacing: 22) {
             ForEach(items) { item in
                 NavigationLink(destination: GalleryDetailView(galleryItem: item)) {
                     GalleryItemView(galleryItem: item)
@@ -152,16 +143,7 @@ struct GalleryView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 16))
             }
         }
-        .frame(width: width)
-    }
-
-    private var galleryContentHeight: CGFloat {
-        let rows = max(leftColumnItems.count, rightColumnItems.count)
-        let cardHeight: CGFloat = 170
-        let videoExtraHeight: CGFloat = 50
-        let height = CGFloat(rows) * cardHeight + CGFloat(max(rows - 1, 0)) * 24
-        let videoCount = filteredItems.filter { $0.type == GalleryItemType.video.rawValue }.count
-        return height + CGFloat(videoCount) * videoExtraHeight
+        .frame(maxWidth: .infinity)
     }
 }
 
