@@ -93,6 +93,15 @@ struct MainView: View {
                         label: {
                             EmptyView()
                         })
+
+                    if showAlert {
+                        LogoutConfirmationView(
+                            isPresented: $showAlert,
+                            onConfirm: {
+                                self.viewModel.signOut()
+                            }
+                        )
+                    }
                     
                 }
                 .navigationBarTitle("Fieston Virtual", displayMode: .inline)
@@ -117,16 +126,6 @@ struct MainView: View {
                         }){
                             Image(systemName: "arrow.right.square")
                                 .imageScale(.large)
-                        }
-                    
-                        .alert(isPresented: $showAlert) {
-                            Alert(
-                                title: Text("¿Cerrar sesión?"),
-                                primaryButton: .cancel(Text("No"), action: {}),
-                                secondaryButton: .destructive(Text("Si"), action: {
-                                    self.viewModel.signOut()
-                                })
-                            )
                         }
                     }
                     
@@ -154,6 +153,78 @@ struct MainView: View {
                 })
             )
         })
+    }
+}
+
+private struct LogoutConfirmationView: View {
+    @Binding var isPresented: Bool
+    let onConfirm: () -> Void
+
+    var body: some View {
+        ZStack {
+            Color.black.opacity(0.7)
+                .ignoresSafeArea()
+
+            VStack(spacing: 0) {
+                HStack(alignment: .top, spacing: 16) {
+                    Image(systemName: "arrow.right.square")
+                        .font(.system(size: 24, weight: .semibold))
+                        .foregroundColor(Color.chatPink)
+                        .frame(width: 48, height: 48)
+                        .background(Color.chatPink.opacity(0.12))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.chatPink.opacity(0.65), lineWidth: 1)
+                        )
+                        .cornerRadius(15)
+
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("¿Cerrar sesión?")
+                            .font(.system(size: 20, weight: .bold, design: .rounded))
+                            .foregroundColor(Color.loginTextPrimary)
+
+                        Text("¿Estás seguro de que quieres salir de la fiesta? Perderás las trivias activas.")
+                            .font(.system(size: 15, weight: .medium, design: .rounded))
+                            .foregroundColor(Color.loginMutedText)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+
+                HStack(spacing: 16) {
+                    Spacer()
+
+                    Button("CANCELAR") {
+                        isPresented = false
+                    }
+                    .font(.system(size: 13, weight: .bold, design: .rounded))
+                    .foregroundColor(Color.loginMutedText)
+                    .buttonStyle(.plain)
+
+                    Button("ACEPTAR") {
+                        isPresented = false
+                        onConfirm()
+                    }
+                    .font(.system(size: 13, weight: .bold, design: .rounded))
+                    .foregroundColor(Color.loginButtonText)
+                    .padding(.horizontal, 22)
+                    .frame(height: 40)
+                    .background(Color.loginButtonBackground)
+                    .cornerRadius(13)
+                    .shadow(color: Color.loginButtonBackground.opacity(0.55), radius: 9)
+                    .buttonStyle(.plain)
+                }
+                .padding(.top, 26)
+            }
+            .padding(24)
+            .frame(maxWidth: 358)
+            .background(Color.loginCardBackground.opacity(0.96))
+            .overlay(
+                RoundedRectangle(cornerRadius: 23)
+                    .stroke(Color.loginCardBorder, lineWidth: 1)
+            )
+            .cornerRadius(23)
+        }
+        .zIndex(1)
     }
 }
 
