@@ -11,6 +11,13 @@
 "common.accept" = "Aceptar";
 
 
+"gallery.filter.all" = "Todo";
+"gallery.filter.photos" = "Fotos";
+"gallery.filter.videos" = "Videos";
+"gallery.loading" = "Cargando...";
+"gallery.empty" = "No hay contenido disponible";
+
+
 "register.title" = "SOLICITA TU ACCESO";
 "register.email.title" = "CORREO ELECTRÓNICO";
 "register.email.placeholder" = "Ingresa tu correo electrónico";
