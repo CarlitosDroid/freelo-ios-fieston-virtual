@@ -11,6 +11,19 @@
 "common.accept" = "Aceptar";
 
 
+"photos.title_placeholder" = "Ingresa un título (opcional)";
+"photos.publish" = "Publicar";
+"photos.live_badge" = "EN VIVO EN LA PANTALLA";
+"photos.share_title" = "¡Comparte la Fiesta!";
+"photos.choose_button" = "ELEGIR FOTO O VIDEO";
+"photos.supported_formats" = "Formatos compatibles: JPG, PNG, MP4";
+"photos.ready" = "Foto lista";
+"photos.resolution" = "1080p";
+"photos.tag_party" = "🎉 #ModoFiesta";
+"photos.tag_health" = "🥂 #Salud";
+"photos.tag_dance" = "🕺 #PistaDeBaile";
+
+
 "gallery.filter.all" = "Todo";
 "gallery.filter.photos" = "Fotos";
 "gallery.filter.videos" = "Videos";
