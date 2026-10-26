@@ -41,37 +41,66 @@ struct PhotosView: View {
                 VStack(spacing: 0) {
                     
                     if(isImageSelected) {
-                        VStack {
-                            
-                            ZStack {
-                                
-                                Image(uiImage: self.imageInBlackBox ?? UIImage())
-                                    .resizable()
-                                    .scaledToFit()
-                                    .aspectRatio(contentMode: .fit)
-                                
-                                VStack {
-                                    Spacer()
-                                    Text(self.fileType)
-                                        .foregroundColor(.white)
-                                    
+                        ScrollView(showsIndicators: false) {
+                            VStack(spacing: 0) {
+                                previewCard()
+
+                                HStack(spacing: 10) {
+                                    Image(systemName: "pencil")
+                                        .font(.system(size: 16, weight: .semibold))
+                                        .foregroundColor(Color(hex: "6F7278"))
+
+                                    TextField("photos.title_placeholder", text: self.$postTitle)
+                                        .font(.system(size: 15))
+                                        .foregroundColor(Color(hex: "D8D8DC"))
+                                        .accentColor(Color(hex: "36FFC4"))
                                 }
-                                
-                            }.frame(height: 280)
-                            TextField("photos.title_placeholder", text: self.$postTitle)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                            
-                            Button(action: {
-                                guard let fileURL = fileURL else { return }
-                                print(fileURL)
-                                self.viewModel.uploadFile(data: fileURL, postTitle: postTitle)
-                                
-                            }) {
-                                Text("photos.publish")
-                                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-                                    .background(Color.orange_500.cornerRadius(8))
-                                    .foregroundColor(Color.material_white)
+                                .padding(.horizontal, 16)
+                                .frame(height: 51)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .fill(Color(hex: "202426").opacity(0.9))
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 16)
+                                                .stroke(Color.white.opacity(0.12), lineWidth: 1)
+                                        )
+                                )
+                                .padding(.top, 20)
+
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    HStack(spacing: 8) {
+                                        tagView("photos.tag_party")
+                                        tagView("photos.tag_health")
+                                        tagView("photos.tag_dance")
+                                    }
+                                    .padding(.horizontal, 1)
+                                }
+                                .padding(.top, 12)
+
+                                Button(action: {
+                                    guard let fileURL = fileURL else { return }
+                                    self.viewModel.uploadFile(data: fileURL, postTitle: postTitle)
+                                }) {
+                                    HStack(spacing: 10) {
+                                        Image(systemName: "paperplane.fill")
+                                            .font(.system(size: 18, weight: .bold))
+                                        Text("photos.publish")
+                                            .font(.system(size: 18, weight: .bold))
+                                    }
+                                    .foregroundColor(Color(hex: "071413"))
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 62)
+                                    .background(
+                                        Capsule()
+                                            .fill(Color(hex: "36FFC4"))
+                                    )
+                                    .shadow(color: Color(hex: "36FFC4").opacity(0.45), radius: 18)
+                                }
+                                .padding(.top, 26)
                             }
+                            .padding(.horizontal, 16)
+                            .padding(.top, 80)
+                            .padding(.bottom, 30)
                         }
                         
                     } else {
@@ -181,9 +210,9 @@ struct PhotosView: View {
 
                         Spacer()
                     }
-                    
-                }
-                .padding(.horizontal, 16)
+
+                                }
+                                .padding(.horizontal, 16)
                 
             }
         }.onAppear(perform: {
@@ -200,6 +229,96 @@ struct PhotosView: View {
             )
         })
         
+    }
+
+    @ViewBuilder
+    private func previewCard() -> some View {
+        VStack(spacing: 0) {
+            ZStack(alignment: .top) {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(
+                        LinearGradient(
+                            colors: [Color(hex: "2A3032"), Color(hex: "111516")],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                    )
+
+                if let image = imageInBlackBox {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
+                }
+
+                HStack {
+                    HStack(spacing: 6) {
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.system(size: 12, weight: .semibold))
+                        Text("photos.ready")
+                            .font(.system(size: 12, weight: .semibold))
+                    }
+                    .foregroundColor(Color(hex: "36FFC4"))
+                    .padding(.horizontal, 13)
+                    .frame(height: 31)
+                    .background(Capsule().fill(Color(hex: "202426")))
+
+                    Spacer()
+
+                    Image(systemName: "slider.horizontal.3")
+                        .font(.system(size: 16, weight: .bold))
+                        .foregroundColor(.white)
+                        .frame(width: 35, height: 35)
+                        .background(Circle().fill(Color(hex: "383B3C")))
+                }
+                .padding(.horizontal, 12)
+                .padding(.top, 13)
+            }
+            .aspectRatio(3 / 4, contentMode: .fit)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
+
+            HStack(spacing: 6) {
+                Image(systemName: "photo")
+                    .font(.system(size: 11, weight: .medium))
+                    .foregroundColor(Color(hex: "36FFC4"))
+                Text("photos.resolution")
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundColor(.white)
+            }
+            .padding(.horizontal, 10)
+            .frame(height: 27)
+            .background(Capsule().fill(Color(hex: "202426")))
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            .padding(.top, -39)
+            .padding(.trailing, 13)
+            .padding(.bottom, 12)
+        }
+        .padding(21)
+        .background(
+            RoundedRectangle(cornerRadius: 23)
+                .fill(Color(hex: "172020").opacity(0.82))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 23)
+                        .stroke(Color.white.opacity(0.14), lineWidth: 1)
+                )
+        )
+    }
+
+    private func tagView(_ title: LocalizedStringKey) -> some View {
+        Text(title)
+            .font(.system(size: 12, weight: .medium))
+            .foregroundColor(Color(hex: "D8D8DC"))
+            .padding(.horizontal, 12)
+            .frame(height: 31)
+            .background(
+                Capsule()
+                    .fill(Color(hex: "292D2E").opacity(0.9))
+                    .overlay(
+                        Capsule()
+                            .stroke(Color.white.opacity(0.12), lineWidth: 1)
+                    )
+            )
     }
     
 }

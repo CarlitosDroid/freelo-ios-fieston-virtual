@@ -17,6 +17,11 @@
 "photos.share_title" = "Share the Party!";
 "photos.choose_button" = "CHOOSE PHOTO OR VIDEO";
 "photos.supported_formats" = "Supported formats: JPG, PNG, MP4";
+"photos.ready" = "Photo ready";
+"photos.resolution" = "1080p";
+"photos.tag_party" = "🎉 #PartyMode";
+"photos.tag_health" = "🥂 #Cheers";
+"photos.tag_dance" = "🕺 #DanceFloor";
 
 
 "gallery.filter.all" = "All Media";
