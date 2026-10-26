@@ -18,6 +18,7 @@ struct MainView: View {
     @State var showAlert = false
     
     @State private var selectedTab = 0
+    @State private var showRankingView = false
     
     @State var showPlayListView: Bool = false
     
@@ -83,6 +84,10 @@ struct MainView: View {
                     NavigationLink(destination: PlaylistView(), isActive: $showPlayListView){
                         EmptyView()
                     }
+
+                    NavigationLink(destination: RankingView(), isActive: $showRankingView) {
+                        EmptyView()
+                    }
                     
                     NavigationLink(
                         destination: CaptureImageView(isShown: $showCaptureImageView) { image in
@@ -113,20 +118,29 @@ struct MainView: View {
                             .imageScale(.large)
                     },
                     
-                    trailing : HStack{
+                    trailing: HStack(spacing: 14) {
                         
-                        NavigationLink(destination: RankingView()){
+                        Button(action: {
+                            self.showRankingView = true
+                        }) {
                             Image("MainRankingIcon")
                                 .resizable()
                                 .frame(width: 25.0, height: 23.0)
+                                .contentShape(Rectangle())
                         }
+                        .frame(width: 30, height: 32)
+                        .contentShape(Rectangle())
+                        .buttonStyle(.plain)
                         
                         Button(action: {
                             self.showAlert.toggle()
-                        }){
+                        }) {
                             Image(systemName: "arrow.right.square")
                                 .imageScale(.large)
+                                .frame(width: 30, height: 32)
+                                .contentShape(Rectangle())
                         }
+                        .buttonStyle(.plain)
                     }
                     
                     
