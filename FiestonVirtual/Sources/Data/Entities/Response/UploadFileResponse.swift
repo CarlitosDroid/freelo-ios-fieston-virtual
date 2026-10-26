@@ -11,7 +11,7 @@ import Foundation
 // MARK: - UploadImageResponse
 struct UploadImageResponse: Decodable {
     let message: String
-    let data: ChildUploadImageDataResponse
+    let data: ChildUploadImageDataResponse?
     enum CodingKeys: String, CodingKey {
         case message = "message"
         case data = "data"

@@ -41,8 +41,7 @@ struct PhotosView: View {
                 VStack(spacing: 0) {
                     
                     if(isImageSelected) {
-                        ScrollView(showsIndicators: false) {
-                            VStack(spacing: 0) {
+                        VStack(spacing: 0) {
                                 previewCard()
 
                                 HStack(spacing: 10) {
@@ -65,17 +64,15 @@ struct PhotosView: View {
                                                 .stroke(Color.white.opacity(0.12), lineWidth: 1)
                                         )
                                 )
-                                .padding(.top, 20)
-
-                                ScrollView(.horizontal, showsIndicators: false) {
-                                    HStack(spacing: 8) {
-                                        tagView("photos.tag_party")
-                                        tagView("photos.tag_health")
-                                        tagView("photos.tag_dance")
-                                    }
-                                    .padding(.horizontal, 1)
-                                }
                                 .padding(.top, 12)
+
+                                HStack(spacing: 8) {
+                                    tagView("photos.tag_party")
+                                    tagView("photos.tag_health")
+                                    tagView("photos.tag_dance")
+                                }
+                                .frame(maxWidth: .infinity)
+                                .padding(.top, 10)
 
                                 Button(action: {
                                     guard let fileURL = fileURL else { return }
@@ -96,12 +93,11 @@ struct PhotosView: View {
                                     )
                                     .shadow(color: Color(hex: "36FFC4").opacity(0.45), radius: 18)
                                 }
-                                .padding(.top, 26)
-                            }
-                            .padding(.horizontal, 16)
-                            .padding(.top, 80)
-                            .padding(.bottom, 30)
+                                .padding(.top, 18)
                         }
+                        .padding(.horizontal, 16)
+                        .padding(.top, 42)
+                        .padding(.bottom, 12)
                         
                     } else {
                         Spacer(minLength: 145)
