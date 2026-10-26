@@ -7,9 +7,7 @@
 //
 
 import SwiftUI
-import ExyteGrid
 import KingfisherSwiftUI
-import QGrid
 
 struct HomeView: View {
     
@@ -31,16 +29,29 @@ struct HomeView: View {
         
         ZStack {
             
-            Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
+            LinearGradient(
+                colors: [
+                    Color.loginGradientStart,
+                    Color.loginGradientMiddle,
+                    Color.loginGradientEnd
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .edgesIgnoringSafeArea(.all)
             
             LoadingView(isShowing: self.$viewModel.isLoading) {
                 ScrollView {
-                    UserProfileView(
+                    HomeNowPlayingView()
+                        .padding(.bottom, 10)
+
+                    HomeWelcomeCard(
                         user: self.$user,
                         imageUrl: $userProfileImageUrl
                     ) {
                         self.isShowingImagePicker.toggle()
-                    }.sheet(isPresented: $isShowingImagePicker) {
+                    }
+                    .sheet(isPresented: $isShowingImagePicker) {
                         ImagePickerView(
                             isPresented: self.$isShowingImagePicker,
                             selectedImage: self.$imageInBlackBox,
@@ -52,9 +63,19 @@ struct HomeView: View {
                         }
                     }
                     
-                    Grid(viewModel.categories, tracks: 2, spacing: 10) { category in
-                        self.categoryView(category: category)
-                    }.gridContentAlignment(.center)
+                    LazyVGrid(
+                        columns: [
+                            GridItem(.flexible(), spacing: 12),
+                            GridItem(.flexible(), spacing: 12)
+                        ],
+                        spacing: 14
+                    ) {
+                        ForEach(viewModel.categories) { category in
+                            HomeFeatureCard(category: category) {
+                                self.onCategorySelected(category.destinationIndex)
+                            }
+                        }
+                    }
                     
                 }
                 .padding(.all, 10)
@@ -76,72 +97,4 @@ struct HomeView: View {
         
     }
     
-    func categoryView(category: Category) -> some View {
-        VStack {
-            Image(category.image)
-                .resizable()
-                .scaledToFit()
-                .background(Color.red)
-            
-            VStack(spacing: 0, content: {
-                
-                Text(category.name)
-                    .foregroundColor(.deep_purple_500)
-                    .bold()
-                    .font(.system(size:20))
-                    .frame(maxWidth: .infinity,alignment: .leading)
-                
-                Text(category.description)
-                    .foregroundColor(.gray)
-                    .font(.system(size:14))
-                    .frame(maxWidth: .infinity,alignment: .leading)
-                
-                Text(category.subDescription)
-                    .foregroundColor(.deep_purple_500)
-                    .bold()
-                    .font(.system(size:14))
-                    .frame(maxWidth: .infinity,alignment: .leading)
-                
-            })
-            .padding(.leading, 10)
-            .padding(.trailing, 10)
-            .padding(.bottom, 10)
-            
-        }
-        .background(Color.material_white)
-        .cornerRadius(10)
-        .shadow(radius: 3)
-        .onTapGesture {
-            switch (category.name) {
-            case CATEGORY_NAME_PHOTO:
-                self.onCategorySelected(1)
-                break
-            case CATEGORY_NAME_CHAT:
-                self.onCategorySelected(3)
-                break
-            case CATEGORY_NAME_PLAY_LIST:
-                self.onCategorySelected(8)
-                break
-            case CATEGORY_NAME_TRIVIA:
-                self.onCategorySelected(4)
-                break
-            default:
-                print("Not supported")
-            }
-        }
-    }
-}
-
-
-struct Category: Identifiable {
-    var id: UUID = UUID()
-    let name: String
-    let image: String
-    let description: String
-    let subDescription: String
-}
-
-struct Color1 : Identifiable {
-    var id: String = UUID().uuidString
-    var name: Color = Color.orange_500
 }

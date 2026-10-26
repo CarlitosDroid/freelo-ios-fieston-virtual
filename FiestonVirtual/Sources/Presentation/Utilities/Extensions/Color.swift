@@ -52,4 +52,5 @@ extension Color {
     static let loginCardBorder = Color("LoginCardBorder")
     static let loginMutedText = Color("LoginMutedText")
     static let loginLink = Color("LoginLink")
+    static let chatPink = Color("ChatPink")
 }
