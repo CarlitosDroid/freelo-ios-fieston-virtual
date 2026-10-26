@@ -13,25 +13,33 @@ class HomeViewModel: ObservableObject {
     
     let categories = [
         Category(
-            name: CATEGORY_NAME_PHOTO,
-            image: "HomeFotos",
-            description: "GALERÍA DE FOTOS Y",
-            subDescription: "VIDEOS"),
+            titleKey: "home.card.photos.title",
+            subtitleKey: "home.card.photos.subtitle",
+            badgeKey: "home.card.photos.badge",
+            icon: "photo.on.rectangle",
+            accentColor: .aquamarine,
+            destinationIndex: 1),
         Category(
-            name: CATEGORY_NAME_CHAT,
-            image: "HomeChat",
-            description: "CHATEAR AHORA",
-            subDescription: "ARMA LA CONVERSA"),
+            titleKey: "home.card.chat.title",
+            subtitleKey: "home.card.chat.subtitle",
+            badgeKey: "home.card.chat.badge",
+            icon: "bubble.left",
+            accentColor: .chatPink,
+            destinationIndex: 3),
         Category(
-            name: CATEGORY_NAME_TRIVIA,
-            image: "HomeTrivia",
-            description: "GANA PUNTOS",
-            subDescription: "JUGAR AHORA"),
+            titleKey: "home.card.playlist.title",
+            subtitleKey: "home.card.playlist.subtitle",
+            badgeKey: "home.card.playlist.badge",
+            icon: "music.note",
+            accentColor: .loginBrandPurple,
+            destinationIndex: 8),
         Category(
-            name: CATEGORY_NAME_PLAY_LIST,
-            image: "HomePlaylist",
-            description: "PARTICIPA DE LA FIESTA",
-            subDescription: "PIDE UNA CANCIÓN")
+            titleKey: "home.card.trivia.title",
+            subtitleKey: "home.card.trivia.subtitle",
+            badgeKey: "home.card.trivia.badge",
+            icon: "questionmark.square.fill",
+            accentColor: .loginAccentYellow,
+            destinationIndex: 4)
     ]
     
     
@@ -89,8 +97,3 @@ class HomeViewModel: ObservableObject {
     }
     
 }
-
-let CATEGORY_NAME_PHOTO = "FOTOS"
-let CATEGORY_NAME_CHAT = "CHAT"
-let CATEGORY_NAME_PLAY_LIST = "PLAY LIST"
-let CATEGORY_NAME_TRIVIA = "TRIVIAS"

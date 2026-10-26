@@ -22,3 +22,24 @@
 
 
 "welcome.continue" = "CONTINUE";
+
+
+"home.now_playing.title" = "Playing: Titi Me Preguntó - Bad Bunny";
+"home.now_playing.badge" = "48 live";
+"home.profile.greeting" = "WELCOME BACK!";
+"home.profile.rank" = "Rank #%d";
+"home.profile.points" = "%d pts";
+"home.profile.level" = "Platinum Fiesta Level";
+"home.profile.progress" = "150 pts to Rank #2";
+"home.card.photos.title" = "PHOTOS";
+"home.card.photos.subtitle" = "Gallery and videos";
+"home.card.photos.badge" = "12 new";
+"home.card.chat.title" = "CHAT";
+"home.card.chat.subtitle" = "Start the conversation";
+"home.card.chat.badge" = "Live";
+"home.card.playlist.title" = "PLAYLIST";
+"home.card.playlist.subtitle" = "Request your song";
+"home.card.playlist.badge" = "DJ playing";
+"home.card.trivia.title" = "TRIVIA";
+"home.card.trivia.subtitle" = "Earn points";
+"home.card.trivia.badge" = "Active question";

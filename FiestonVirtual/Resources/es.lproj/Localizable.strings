@@ -22,3 +22,24 @@
 
 
 "welcome.continue" = "CONTINUAR";
+
+
+"home.now_playing.title" = "Sonando: Titi Me Preguntó - Bad Bunny";
+"home.now_playing.badge" = "48 en vivo";
+"home.profile.greeting" = "¡HOLA DE NUEVO!";
+"home.profile.rank" = "Puesto #%d";
+"home.profile.points" = "%d pts";
+"home.profile.level" = "Nivel Fiesta Platino";
+"home.profile.progress" = "150 pts para Puesto #2";
+"home.card.photos.title" = "FOTOS";
+"home.card.photos.subtitle" = "Galería y videos";
+"home.card.photos.badge" = "12 nuevos";
+"home.card.chat.title" = "CHAT";
+"home.card.chat.subtitle" = "Arma la conversa";
+"home.card.chat.badge" = "En vivo";
+"home.card.playlist.title" = "PLAYLIST";
+"home.card.playlist.subtitle" = "Pide tu canción";
+"home.card.playlist.badge" = "Sonando DJ";
+"home.card.trivia.title" = "TRIVIAS";
+"home.card.trivia.subtitle" = "Gana puntos";
+"home.card.trivia.badge" = "Pregunta activa";
