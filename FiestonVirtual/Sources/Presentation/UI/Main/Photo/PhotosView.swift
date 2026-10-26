@@ -26,10 +26,19 @@ struct PhotosView: View {
         LoadingView(isShowing: self.$viewModel.isLoading) {
             
             ZStack {
-                
-                Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
-                
-                VStack {
+
+                LinearGradient(
+                    colors: [
+                        Color.loginGradientStart,
+                        Color.loginGradientMiddle,
+                        Color.loginGradientEnd
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .edgesIgnoringSafeArea(.all)
+
+                VStack(spacing: 0) {
                     
                     if(isImageSelected) {
                         VStack {
@@ -49,7 +58,7 @@ struct PhotosView: View {
                                 }
                                 
                             }.frame(height: 280)
-                            TextField("Ingrese un título (opcional)", text: self.$postTitle)
+                            TextField("photos.title_placeholder", text: self.$postTitle)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                             
                             Button(action: {
@@ -58,7 +67,7 @@ struct PhotosView: View {
                                 self.viewModel.uploadFile(data: fileURL, postTitle: postTitle)
                                 
                             }) {
-                                Text("Publicar")
+                                Text("photos.publish")
                                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
                                     .background(Color.orange_500.cornerRadius(8))
                                     .foregroundColor(Color.material_white)
@@ -66,16 +75,88 @@ struct PhotosView: View {
                         }
                         
                     } else {
-                        Image("Alert")
-                        informationView()
+                        Spacer(minLength: 145)
+
+                        VStack(spacing: 12) {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 23)
+                                    .fill(Color(hex: "202A29"))
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 23)
+                                            .stroke(Color.white.opacity(0.18), lineWidth: 1)
+                                    )
+
+                                Image(systemName: "photo.badge.plus")
+                                    .font(.system(size: 34, weight: .semibold))
+                                    .foregroundColor(Color(hex: "36FFC4"))
+                            }
+                            .frame(width: 96, height: 96)
+                            .shadow(color: Color(hex: "36FFC4").opacity(0.16), radius: 26)
+
+                            HStack(spacing: 6) {
+                                Image(systemName: "sparkles")
+                                    .font(.system(size: 11, weight: .bold))
+                                Text("photos.live_badge")
+                                    .font(.system(size: 12, weight: .semibold))
+                                    .tracking(0.3)
+                            }
+                            .foregroundColor(Color(hex: "36FFC4"))
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 5)
+                            .background(
+                                Capsule()
+                                    .fill(Color(hex: "1A302A"))
+                                    .overlay(
+                                        Capsule()
+                                            .stroke(Color(hex: "36FFC4").opacity(0.55), lineWidth: 1)
+                                    )
+                            )
+                        }
+
+                        Spacer().frame(height: 24)
+
+                        Text("photos.share_title")
+                            .font(.system(size: 24, weight: .bold, design: .rounded))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 80)
+                            .background(
+                                RoundedRectangle(cornerRadius: 22)
+                                    .fill(
+                                        LinearGradient(
+                                            gradient: Gradient(colors: [
+                                                Color(hex: "171C1C"),
+                                                Color(hex: "282833")
+                                            ]),
+                                            startPoint: .leading,
+                                            endPoint: .trailing
+                                        )
+                                    )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 22)
+                                            .stroke(Color.white.opacity(0.14), lineWidth: 1)
+                                    )
+                            )
+
+                        Spacer().frame(height: 34)
+
                         Button(action: {
                             self.isShowingImagePicker.toggle()
                         }) {
-                            Text("Elegir")
-                                .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-                                .background(Color.deep_purple_500)
-                                .cornerRadius(8)
-                                .foregroundColor(Color.material_white)
+                            HStack(spacing: 14) {
+                                Image(systemName: "photo.badge.plus")
+                                    .font(.system(size: 21, weight: .semibold))
+                                Text("photos.choose_button")
+                                    .font(.system(size: 16, weight: .bold))
+                            }
+                            .foregroundColor(Color(hex: "071413"))
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 62)
+                            .background(
+                                Capsule()
+                                    .fill(Color(hex: "36FFC4"))
+                            )
+                            .shadow(color: Color(hex: "36FFC4").opacity(0.48), radius: 18)
                         }
                         .sheet(isPresented: $isShowingImagePicker) {
                             ImageAndVideoPickerView(
@@ -87,9 +168,22 @@ struct PhotosView: View {
                                 self.isImageSelected = isImageSelected
                             }
                         }
+
+                        HStack(spacing: 5) {
+                            Image(systemName: "checkmark.circle")
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(Color(hex: "36FFC4"))
+                            Text("photos.supported_formats")
+                                .font(.system(size: 12, weight: .regular))
+                                .foregroundColor(Color(hex: "A7A7AD"))
+                        }
+                        .padding(.top, 13)
+
+                        Spacer()
                     }
                     
-                }.padding(.all, 10)
+                }
+                .padding(.horizontal, 16)
                 
             }
         }.onAppear(perform: {
@@ -99,7 +193,7 @@ struct PhotosView: View {
         .alert(isPresented: self.$viewModel.uploadPhotoHasFinished, content: {
             Alert(
                 title: Text(self.viewModel.uploadPhotoMessage),
-                dismissButton: .default(Text("Aceptar"), action: {
+                dismissButton: .default(Text("common.accept"), action: {
                     selectedTab = TAB_GALLERY_ID
                     settings.refreshGallery = true
                 })
@@ -108,39 +202,6 @@ struct PhotosView: View {
         
     }
     
-    func informationView() -> some View {
-        VStack(spacing: 10) {
-            
-            Text("1 - Presiona el botón ELEGIR para publicar una foto o video de la galería de tu celular.")
-                .foregroundColor(Color.white)
-                .fixedSize(
-                    horizontal: false,
-                    vertical: true
-                )
-                .multilineTextAlignment(.center)
-            
-            
-            Text("2 - Presiona el botón SUBIR y espera a que se publique tu foto o video.")
-                .foregroundColor(Color.white)
-                .fixedSize(
-                    horizontal: false,
-                    vertical: true
-                )
-                .multilineTextAlignment(.center)
-            
-            
-            Text("El video debe durar como máximo 40 segundos")
-                .foregroundColor(Color.amber_600)
-                .fixedSize(
-                    horizontal: false,
-                    vertical: true
-                )
-                .multilineTextAlignment(.center)
-            
-        }
-        .padding(20)
-        
-    }
 }
 
 struct PhotosView_Previews: PreviewProvider {

@@ -11,6 +11,14 @@
 "common.accept" = "Accept";
 
 
+"photos.title_placeholder" = "Enter a title (optional)";
+"photos.publish" = "Publish";
+"photos.live_badge" = "LIVE ON SCREEN";
+"photos.share_title" = "Share the Party!";
+"photos.choose_button" = "CHOOSE PHOTO OR VIDEO";
+"photos.supported_formats" = "Supported formats: JPG, PNG, MP4";
+
+
 "gallery.filter.all" = "All Media";
 "gallery.filter.photos" = "Photos";
 "gallery.filter.videos" = "Videos";
