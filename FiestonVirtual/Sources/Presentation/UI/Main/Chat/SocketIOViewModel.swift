@@ -37,9 +37,11 @@ class SocketIOViewModel : ObservableObject {
                 
                 switch self.usersRepository.getLocalUser() {
                 case .success(let user):
-                    self.socket?.emit(JOIN_EVENT, user.id)
+                    print("Socket.IO join event: \(user.idEvent)")
+                    self.socket?.emit(JOIN_EVENT, user.idEvent)
                     break
-                case .failure( _):
+                case .failure(let error):
+                    print("Socket.IO join failed: \(error.localizedDescription)")
                     break
                 }
                 self.isUserConnected = true
@@ -58,7 +60,7 @@ class SocketIOViewModel : ObservableObject {
             
             let json = JSON(data[0])
             
-            print(json)
+            print("Socket.IO message received: \(json)")
             
             let idUserMessage = json[ID_USER_KEY].intValue
             let messageText = json[MESSAGE_KEY].stringValue
@@ -90,6 +92,7 @@ class SocketIOViewModel : ObservableObject {
     }
     
     func sendMessage(message: String) {
+        print("Socket.IO message sent: \(message)")
         self.socket?.emit(MESSAGE_EVENT, message)
     }
     
