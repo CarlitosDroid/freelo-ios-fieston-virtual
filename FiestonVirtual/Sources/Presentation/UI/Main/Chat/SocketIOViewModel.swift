@@ -12,84 +12,119 @@ import SwiftyJSON
 
 class SocketIOViewModel : ObservableObject {
     
-    let socketManager = DependencyProvider().assembler.resolver.resolve(SocketManager.self)
+    let socketManager: SocketManager?
     let socket: SocketIOClient?
     let usersRepository: UsersRepository
-    private var isUserConnected = false
+    private var isListening = false
+    private var currentUserID: Int?
     
     @Published var socketIOResult: SocketIOResult?
     
-    init(usersRepository: UsersRepository) {
+    init(
+        usersRepository: UsersRepository,
+        socketManager: SocketManager? = DependencyProvider().assembler.resolver.resolve(SocketManager.self)
+    ) {
+        self.socketManager = socketManager
         self.socket = socketManager?.defaultSocket
         self.usersRepository = usersRepository
     }
     
     func startListeners() {
-        self.socket?.on(clientEvent: .error, callback: { (data: [Any], ack: SocketAckEmitter) in
+        guard !isListening else { return }
+        guard let socket = socket else {
+            print("Socket.IO start failed: socket is unavailable")
+            socketIOResult = .ConnectionError(true)
+            return
+        }
+        isListening = true
+        socket.on(clientEvent: .error, callback: { [weak self] data, ack in
+            guard let self = self else { return }
             
             print(data)
             self.socketIOResult = SocketIOResult.ConnectionError(true)
             
         })
-        self.socket?.on(clientEvent: .connect, callback: { (data: [Any], ack: SocketAckEmitter) in
-            
-            if (!self.isUserConnected) {
-                
-                switch self.usersRepository.getLocalUser() {
-                case .success(let user):
-                    self.socket?.emit(JOIN_EVENT, user.id)
-                    break
-                case .failure( _):
-                    break
-                }
-                self.isUserConnected = true
+        socket.on(clientEvent: .connect, callback: { [weak self] data, ack in
+            guard let self = self else { return }
+            switch self.usersRepository.getLocalUser() {
+            case .success(let user):
+                self.currentUserID = user.id
+                print("Socket.IO join event: \(user.idEvent), user: \(user.id)")
+                self.socket?.emit(JOIN_EVENT, [
+                    "idEvent": user.idEvent,
+                    "idUser": user.id,
+                    "userName": "\(user.name) \(user.lastName)",
+                    "userImage": user.avatar
+                ])
+            case .failure(let error):
+                print("Socket.IO join failed: \(error.localizedDescription)")
+                self.socketIOResult = .ConnectionError(true)
+                return
             }
             self.socketIOResult = SocketIOResult.ConnectionSuccess(true)
             
         })
-        self.socket?.on(clientEvent: .disconnect, callback: { (data: [Any], ack: SocketAckEmitter) in
-            self.isUserConnected = false
+        socket.on(clientEvent: .disconnect, callback: { [weak self] data, ack in
+            guard let self = self else { return }
+            self.currentUserID = nil
             
             self.socketIOResult = SocketIOResult.ConnectionDisconnect(true)
             
         })
         
-        self.socket?.on(MESSAGE_EVENT, callback: { (data: [Any], ack: SocketAckEmitter) in
-            
-            let json = JSON(data[0])
-            
-            print(json)
-            
-            let idUserMessage = json[ID_USER_KEY].intValue
-            let messageText = json[MESSAGE_KEY].stringValue
+        socket.on(MESSAGE_EVENT, callback: { [weak self] data, ack in
+            guard let self = self else { return }
+            guard let payload = data.first else {
+                print("Socket.IO message rejected: missing payload")
+                self.socketIOResult = .ConnectionError(true)
+                return
+            }
+            let json = JSON(payload)
+            guard let idMessage = json["idMessage"].string, !idMessage.isEmpty,
+                  let idUserMessage = json[ID_USER_KEY].int,
+                  let messageText = json[MESSAGE_KEY].string,
+                  let currentUserID = self.currentUserID else {
+                print("Socket.IO message rejected: invalid message or missing user session")
+                self.socketIOResult = .ConnectionError(true)
+                return
+            }
+            print("Socket.IO message received: id=\(idMessage), user=\(idUserMessage)")
             let userImage = json[USER_IMAGE_KEY].stringValue
             let userName = json[USERNAME_KEY].stringValue
             
-            // TODO - Web service must return idMessage too
             let chatMessage =
                 ChatMessage(
-                    idMessage: UUID().uuidString,
+                    idMessage: idMessage,
                     messageText: messageText,
                     userName: userName,
                     userId: idUserMessage,
                     userImage: userImage,
-                    viewType: ChatMessageViewType.INCOMING(value: 1)
+                    viewType: idUserMessage == currentUserID
+                        ? .OUTGOING(value: 2)
+                        : .INCOMING(value: 1)
                 )
             self.socketIOResult = SocketIOResult.ReceiveIncomingMessageSuccess(chatMessage)
             
         
         })
         
-        self.socket?.connect()
+        socket.connect()
     }
     
     func stopListeners() {
-        self.socket?.disconnect()
+        guard isListening else { return }
+        isListening = false
         self.socket?.off(clientEvent: .connect)
         self.socket?.off(clientEvent: .disconnect)
+        self.socket?.off(clientEvent: .error)
+        self.socket?.off(MESSAGE_EVENT)
+        self.socket?.disconnect()
+        currentUserID = nil
+        socketIOResult = nil
     }
     
     func sendMessage(message: String) {
+        print("Socket.IO sending message")
         self.socket?.emit(MESSAGE_EVENT, message)
     }
     

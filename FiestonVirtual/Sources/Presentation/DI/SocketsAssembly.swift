@@ -17,8 +17,11 @@ class SocketsAssembly: Assembly {
             var components = URLComponents()
             components.scheme = "http"
             components.host = APIConfiguration.host
-            components.port = 8090
-            return SocketManager(socketURL: components.url!, config: [.log(true), .compress])
+            components.port = APIConfiguration.port
+            return SocketManager(
+                socketURL: components.url!,
+                config: [.log(true), .compress, .forcePolling(true), .version(.three)]
+            )
         }
     }
     

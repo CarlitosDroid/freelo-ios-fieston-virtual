@@ -30,7 +30,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/socketio/socket.io-client-swift.git",
-            from: "15.2.0"
+            exact: "16.1.1"
         ),
         .package(
             url: "https://github.com/exyte/Grid.git",
