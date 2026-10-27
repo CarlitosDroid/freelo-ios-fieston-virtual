@@ -20,7 +20,7 @@ class SocketsAssembly: Assembly {
             components.port = APIConfiguration.port
             return SocketManager(
                 socketURL: components.url!,
-                config: [.log(true), .compress, .forcePolling(true)]
+                config: [.log(true), .compress, .forcePolling(true), .version(.three)]
             )
         }
     }
