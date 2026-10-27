@@ -3,8 +3,8 @@ import Introspect
 
 struct ChatView: View {
     
-    @ObservedObject var socketIOViewModel = DependencyProvider().assembler.resolver.resolve(SocketIOViewModel.self)!
-    @ObservedObject var chatViewModel = DependencyProvider().assembler.resolver.resolve(ChatViewModel.self)!
+    @StateObject var socketIOViewModel = DependencyProvider().assembler.resolver.resolve(SocketIOViewModel.self)!
+    @StateObject var chatViewModel = DependencyProvider().assembler.resolver.resolve(ChatViewModel.self)!
     
     @State private var chatMessages: [ChatMessage] = []
     
@@ -141,7 +141,6 @@ struct ChatView: View {
             case .SendOutgoingMessageSuccess(let chatMessage):
                 
                 self.typingMessage = ""
-                self.chatMessages.append(chatMessage)
                 self.socketIOViewModel.sendMessage(message: chatMessage.messageText)
                 self.scrollView?.scrollToBottom()
                 break
@@ -169,7 +168,10 @@ struct ChatView: View {
                 break
                 
             case .ReceiveIncomingMessageSuccess(let chatMessage):
-                self.chatMessages.append(chatMessage)
+                if !self.chatMessages.contains(where: { $0.idMessage == chatMessage.idMessage }) {
+                    self.chatMessages.append(chatMessage)
+                    self.scrollView?.scrollToBottom()
+                }
                 break
             }
         }

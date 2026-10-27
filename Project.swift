@@ -54,9 +54,13 @@ let project = Project(
             destinations: .iOS,
             product: .unitTests,
             bundleId: "com.ronaldoandre.fiestonvirtualTests",
-            deploymentTargets: .iOS("13.7"),
+            deploymentTargets: .iOS("15.0"),
             sources: [
                 "FiestonVirtualTests/**"
+            ],
+            dependencies: [
+                .target(name: "FiestonVirtual"),
+                .external(name: "SocketIO")
             ]
         ),
 
