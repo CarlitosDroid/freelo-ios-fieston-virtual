@@ -14,23 +14,26 @@ struct OutgoingChatMessage: View {
     var chatMessage: ChatMessage
     
     var body: some View {
-        
-        HStack(alignment: .bottom, spacing: 15) {
+        HStack(alignment: .bottom, spacing: 10) {
             Spacer()
             
-            VStack(alignment: HorizontalAlignment.trailing, spacing: 2) {
+            VStack(alignment: .trailing, spacing: 6) {
                 Text(chatMessage.userName)
-                    .bold()
+                    .font(.system(size: 13, weight: .medium))
+                    .foregroundColor(Color(hex: "36FFC4"))
+
                 Text(chatMessage.messageText)
+                    .font(.system(size: 16, weight: .regular))
+                    .foregroundColor(Color(hex: "071413"))
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 14)
+                    .background(
+                        RoundedRectangle(cornerRadius: 18)
+                            .fill(Color(hex: "36FFC4"))
+                            .shadow(color: Color(hex: "36FFC4").opacity(0.25), radius: 12)
+                    )
             }
-            .padding(10)
-            .background(Color.green)
-            .cornerRadius(10)
-            
-            KFImage(URL(string: chatMessage.userImage))
-                .resizable()
-                .frame(width: 40, height: 40, alignment: .center)
-                .cornerRadius(20)
         }
     }
 }

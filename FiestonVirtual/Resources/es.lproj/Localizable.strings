@@ -9,6 +9,8 @@
 "login.access_request.action" = "Solicita acceso";
 "login.support.title" = "Centro de Soporte y Ayuda";
 "common.accept" = "Aceptar";
+"chat.event_banner" = "Hoy · Fiesta de Graduación 2025";
+"chat.message_placeholder" = "Escribe algo para la fiesta...";
 
 
 "photos.title_placeholder" = "Ingresa un título (opcional)";

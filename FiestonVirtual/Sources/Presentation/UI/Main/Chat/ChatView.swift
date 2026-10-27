@@ -15,38 +15,97 @@ struct ChatView: View {
     var body: some View {
         
         ZStack {
-            
-            Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
-            
-            VStack {
+
+            LinearGradient(
+                colors: [
+                    Color.loginGradientStart,
+                    Color.loginGradientMiddle,
+                    Color.loginGradientEnd
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .edgesIgnoringSafeArea(.all)
+
+            VStack(spacing: 0) {
+                HStack(spacing: 7) {
+                    Image(systemName: "party.popper")
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundColor(Color(hex: "36FFC4"))
+                    Text("chat.event_banner")
+                        .font(.system(size: 13, weight: .medium))
+                        .foregroundColor(Color(hex: "D8D8DC"))
+                }
+                .padding(.horizontal, 14)
+                .frame(height: 31)
+                .background(
+                    Capsule()
+                        .fill(Color(hex: "282B31").opacity(0.9))
+                        .overlay(
+                            Capsule()
+                                .stroke(Color.white.opacity(0.12), lineWidth: 1)
+                        )
+                )
+                .padding(.top, 16)
+                .padding(.bottom, 12)
                 
                 if(!self.chatMessages.isEmpty) {
-                    ScrollView {
-                        ForEach(chatMessages, id: \.self) { chatMessage in
-                            switch(chatMessage.viewType) {
-                            case ChatMessageViewType.INCOMING:
-                                IncomingChatMessage(chatMessage: chatMessage)
-                            case ChatMessageViewType.OUTGOING:
-                                OutgoingChatMessage(chatMessage: chatMessage)
+                    ScrollView(showsIndicators: false) {
+                        LazyVStack(spacing: 18) {
+                            ForEach(chatMessages, id: \.self) { chatMessage in
+                                switch(chatMessage.viewType) {
+                                case ChatMessageViewType.INCOMING:
+                                    IncomingChatMessage(chatMessage: chatMessage)
+                                case ChatMessageViewType.OUTGOING:
+                                    OutgoingChatMessage(chatMessage: chatMessage)
+                                }
                             }
                         }
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 12)
                     }.introspectScrollView { scrollView in
                         scrollView.scrollToBottom()
                         self.scrollView=scrollView
                     }
                     
-                    HStack {
-                        TextField("Mensaje...", text: self.$typingMessage)
-                            .foregroundColor(Color.black)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                    HStack(spacing: 12) {
+                        Image(systemName: "face.smiling")
+                            .font(.system(size: 22))
+                            .foregroundColor(Color(hex: "D0CBD6"))
+
+                        TextField("chat.message_placeholder", text: self.$typingMessage)
+                            .font(.system(size: 15))
+                            .foregroundColor(Color(hex: "E4E1E7"))
+                            .accentColor(Color(hex: "36FFC4"))
                             .keyboardType(.default)
+
+                        Image(systemName: "paperclip")
+                            .font(.system(size: 20, weight: .medium))
+                            .foregroundColor(Color(hex: "D0CBD6"))
+
                         Button(action: {
                             sendMessage(typingMessage: typingMessage)
                         }) {
                             Image(systemName: "paperplane.fill")
-                                .foregroundColor(Color.white)
+                                .font(.system(size: 19, weight: .bold))
+                                .foregroundColor(Color(hex: "071413"))
+                                .frame(width: 50, height: 50)
+                                .background(Circle().fill(Color(hex: "36FFC4")))
+                                .shadow(color: Color(hex: "36FFC4").opacity(0.42), radius: 12)
                         }
-                    }.padding(.all, 10)
+                    }
+                    .padding(.leading, 14)
+                    .padding(.vertical, 5)
+                    .background(
+                        Capsule()
+                            .fill(Color(hex: "11191A").opacity(0.92))
+                            .overlay(
+                                Capsule()
+                                    .stroke(Color.white.opacity(0.12), lineWidth: 1)
+                            )
+                    )
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 10)
                     
                 } else {
                     LoadingView(isShowing: .constant(true)) {
@@ -117,9 +176,8 @@ struct ChatView: View {
     }
     
     func sendMessage(typingMessage: String) {
-        
+        guard !typingMessage.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
         self.chatViewModel.sendMessage(chatMessage: typingMessage)
-        
     }
 }
 
