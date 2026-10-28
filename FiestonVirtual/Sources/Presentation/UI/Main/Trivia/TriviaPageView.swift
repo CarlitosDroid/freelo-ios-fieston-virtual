@@ -1,51 +1,215 @@
-
 import SwiftUI
 
 struct TriviaPageView: View {
-    
-    @State var trivia : Trivia
-    
-    var onAlternativeSelected: (_ alternative : Alternative) -> Void
-    
+
+    private let questionDuration = 45
+
+    @State var trivia: Trivia
+    let questionNumber: Int
+    let totalQuestions: Int
+    var onAlternativeSelected: (_ alternative: Alternative) -> Void
+
+    @State private var selectedAlternativeID: Int?
+    @State private var remainingSeconds = 45
+    @State private var showTimeExpiredAlert = false
+
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     var body: some View {
-        VStack(spacing: 0, content: {
-            
-            Text(self.trivia.questionName)
-                .font(.system(size: 26))
-                .bold()
-                .foregroundColor(Color.amber_600)
-                .frame(maxWidth: .infinity,alignment: .center)
-                .multilineTextAlignment(.center)
-                .padding(.top, 15)
+        GeometryReader { geometry in
+            VStack(spacing: 0) {
+                Spacer(minLength: max(42, geometry.size.height * 0.18))
 
-            Text(self.trivia.question)
-                .font(.system(size: 26))
-                .bold()
-                .foregroundColor(Color.aquamarine)
-                .frame(maxWidth: .infinity,alignment: .center)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-                .padding(.top, 15)
-                .padding(.bottom, 15)
+                HStack {
+                    TriviaQuestionBadge(
+                        text: String(
+                            format: NSLocalizedString("trivia.question_progress", comment: ""),
+                            questionNumber,
+                            totalQuestions
+                        ),
+                        color: Color(hex: "36FFC4")
+                    )
 
-            ForEach(self.trivia.questionAlternative){ alternative in
-                Button(action: {
-                    self.onAlternativeSelected(alternative)
-                }){
-                    Text(alternative.alternativeDescription)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50, alignment: .center)
-                        .background(Color.white.cornerRadius(8))
-                        .foregroundColor(Color.deep_purple_intense)
+                    Spacer()
+
+                    TriviaQuestionBadge(
+                        text: String(
+                            format: NSLocalizedString("trivia.time_remaining", comment: ""),
+                            remainingSeconds
+                        ),
+                        color: Color(hex: "FFD000"),
+                        icon: "timer"
+                    )
+                }
+                .padding(.horizontal, 24)
+
+                GeometryReader { progressGeometry in
+                    ZStack(alignment: .leading) {
+                        Capsule()
+                            .fill(Color.white.opacity(0.14))
+
+                        Capsule()
+                            .fill(Color(hex: "36FFC4"))
+                            .frame(
+                                width: progressGeometry.size.width
+                                    * CGFloat(remainingSeconds) / CGFloat(questionDuration)
+                            )
+                    }
+                }
+                .frame(height: 5)
+                .padding(.horizontal, 16)
+                .padding(.top, 16)
+
+                Text(trivia.question)
+                    .font(.system(size: 27, weight: .black, design: .rounded))
+                    .foregroundColor(Color(hex: "F2F1F4"))
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(3)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 24)
+                    .padding(.top, 32)
+
+                VStack(spacing: 11) {
+                    ForEach(Array(trivia.questionAlternative.enumerated()), id: \.element.id) { index, alternative in
+                        TriviaAlternativeButton(
+                            letter: String(UnicodeScalar(65 + index)!),
+                            alternative: alternative,
+                            isSelected: selectedAlternativeID == alternative.alternativeId,
+                            isDisabled: remainingSeconds == 0
+                        ) {
+                            guard remainingSeconds > 0 else { return }
+                            selectedAlternativeID = alternative.alternativeId
+                            onAlternativeSelected(alternative)
+                        }
+                    }
+                }
+                .padding(.horizontal, 16)
+                .padding(.top, 48)
+
+                Spacer()
+            }
+        }
+        .onChange(of: trivia.questionId) { _ in
+            selectedAlternativeID = nil
+            remainingSeconds = questionDuration
+            showTimeExpiredAlert = false
+        }
+        .onReceive(timer) { _ in
+            guard remainingSeconds > 0 else { return }
+            remainingSeconds -= 1
+            if remainingSeconds == 0 {
+                showTimeExpiredAlert = true
+            }
+        }
+        .alert(
+            "trivia.time_expired_title",
+            isPresented: $showTimeExpiredAlert
+        ) {
+            Button("common.accept", role: .cancel) { }
+        } message: {
+            Text("trivia.time_expired_message")
+        }
+    }
+}
+
+private struct TriviaQuestionBadge: View {
+
+    let text: String
+    let color: Color
+    var icon: String?
+
+    var body: some View {
+        HStack(spacing: 7) {
+            if let icon {
+                Image(systemName: icon)
+                    .font(.system(size: 12, weight: .bold))
+            } else {
+                Circle()
+                    .fill(color)
+                    .frame(width: 8, height: 8)
+            }
+
+            Text(text)
+                .font(.system(size: 12, weight: .bold, design: .rounded))
+        }
+        .foregroundColor(color)
+        .padding(.horizontal, 12)
+        .frame(height: 27)
+        .background(
+            Capsule()
+                .fill(color.opacity(0.08))
+                .overlay(
+                    Capsule()
+                        .stroke(color.opacity(0.5), lineWidth: 1)
+                )
+        )
+    }
+}
+
+private struct TriviaAlternativeButton: View {
+
+    let letter: String
+    let alternative: Alternative
+    let isSelected: Bool
+    let isDisabled: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 16) {
+                Text(letter)
+                    .font(.system(size: 15, weight: .black, design: .rounded))
+                    .foregroundColor(isSelected ? Color(hex: "071413") : Color(hex: "D8D8DC"))
+                    .frame(width: 43, height: 43)
+                    .background(
+                        RoundedRectangle(cornerRadius: 11)
+                            .fill(isSelected ? Color(hex: "36FFC4") : Color(hex: "101719"))
+                    )
+
+                Text(alternative.alternativeDescription)
+                    .font(.system(size: 21, weight: .bold, design: .rounded))
+                    .foregroundColor(Color(hex: "E4E1E7"))
+
+                Spacer()
+
+                ZStack {
+                    Circle()
+                        .stroke(isSelected ? Color(hex: "36FFC4") : Color.white.opacity(0.25), lineWidth: 1)
+                        .frame(width: 24, height: 24)
+
+                    if isSelected {
+                        Circle()
+                            .fill(Color(hex: "36FFC4"))
+                            .frame(width: 24, height: 24)
+
+                        Image(systemName: "checkmark")
+                            .font(.system(size: 12, weight: .black))
+                            .foregroundColor(Color(hex: "071413"))
+                    }
                 }
             }
-            .padding(.top, 14)
-            
-            Spacer()
-            
-        })
-        .padding(15)        
-        
+            .padding(.horizontal, 17)
+            .frame(maxWidth: .infinity)
+            .frame(height: 78)
+            .background(
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color(hex: "1A2224").opacity(0.92))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(
+                                isSelected ? Color(hex: "36FFC4") : Color.white.opacity(0.15),
+                                lineWidth: isSelected ? 2 : 1
+                            )
+                    )
+                    .shadow(
+                        color: isSelected ? Color(hex: "36FFC4").opacity(0.35) : .clear,
+                        radius: 12
+                    )
+            )
+        }
+        .buttonStyle(.plain)
+        .disabled(isDisabled)
+        .opacity(isDisabled && !isSelected ? 0.72 : 1)
     }
 }
 
@@ -56,27 +220,19 @@ struct TriviaPageView_Previews: PreviewProvider {
                 questionId: 155,
                 questionType: "Adivinanza",
                 questionName: "204",
-                question: "¿Donde originaron los juegos olímpicos?",
+                question: "¿En qué año se fundó nuestra empresa?",
                 questionScore: 5,
                 questionImageUrl: "",
                 questionStatus: 1,
                 questionAlternative: [
-                    Alternative(
-                        alternativeId: 1,
-                        alternativeDescription: "Perú",
-                        isAlternativeAnswer: false),
-                    Alternative(
-                        alternativeId: 2,
-                        alternativeDescription: "Ecuador",
-                        isAlternativeAnswer: false),
-                    Alternative(
-                        alternativeId: 3,
-                        alternativeDescription: "Grecia",
-                        isAlternativeAnswer: false)
+                    Alternative(alternativeId: 1, alternativeDescription: "1998", isAlternativeAnswer: false),
+                    Alternative(alternativeId: 2, alternativeDescription: "2001", isAlternativeAnswer: true),
+                    Alternative(alternativeId: 3, alternativeDescription: "2010", isAlternativeAnswer: false)
                 ]
-            )
-        ){_ in 
-            
-        }
+            ),
+            questionNumber: 2,
+            totalQuestions: 5
+        ) { _ in }
+        .preferredColorScheme(.dark)
     }
 }

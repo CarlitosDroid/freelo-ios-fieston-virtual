@@ -46,7 +46,11 @@ struct TriviaView: View {
                         Pager(page: self.$page,
                               data: self.trivias,
                               id: \.self) { trivia in
-                            TriviaPageView(trivia : trivia){
+                            TriviaPageView(
+                                trivia: trivia,
+                                questionNumber: self.page + 1,
+                                totalQuestions: self.trivias.count
+                            ) {
                                 (alternative : Alternative) in
                                 self.viewModel.answerTrivia(idAlternative: alternative.alternativeId)
                             }

@@ -72,3 +72,7 @@
 "trivia.time_per_question" = "Per question";
 "trivia.party_prize" = "Party prize";
 "trivia.play" = "PLAY";
+"trivia.question_progress" = "Question %d of %d";
+"trivia.time_remaining" = "%ds";
+"trivia.time_expired_title" = "Time's up!";
+"trivia.time_expired_message" = "The time to answer this question has expired.";
