@@ -16,8 +16,17 @@ struct TriviaView: View {
     
     var body: some View {
         
-        ZStack{
-            Color.deep_purple_intense.edgesIgnoringSafeArea(.all)
+        ZStack {
+            LinearGradient(
+                colors: [
+                    Color.loginGradientStart,
+                    Color.loginGradientMiddle,
+                    Color.loginGradientEnd
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .edgesIgnoringSafeArea(.all)
             
             LoadingView(isShowing: self.$viewModel.isLoading) {
                 ZStack{
@@ -37,7 +46,11 @@ struct TriviaView: View {
                         Pager(page: self.$page,
                               data: self.trivias,
                               id: \.self) { trivia in
-                            TriviaPageView(trivia : trivia){
+                            TriviaPageView(
+                                trivia: trivia,
+                                questionNumber: self.page + 1,
+                                totalQuestions: self.trivias.count
+                            ) {
                                 (alternative : Alternative) in
                                 self.viewModel.answerTrivia(idAlternative: alternative.alternativeId)
                             }

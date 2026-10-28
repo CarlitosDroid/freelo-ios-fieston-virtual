@@ -65,3 +65,14 @@
 "home.card.trivia.title" = "TRIVIAS";
 "home.card.trivia.subtitle" = "Gana puntos";
 "home.card.trivia.badge" = "Pregunta activa";
+"trivia.live_badge" = "EN VIVO • SALA PRINCIPAL";
+"trivia.title" = "TRIVIA";
+"trivia.subtitle" = "Demuestra tus conocimientos y llévate el\npremio de la fiesta.";
+"trivia.players_now" = "84 personas jugando ahora";
+"trivia.time_per_question" = "Por pregunta";
+"trivia.party_prize" = "Premio fiesta";
+"trivia.play" = "JUGAR";
+"trivia.question_progress" = "Pregunta %d de %d";
+"trivia.time_remaining" = "%ds";
+"trivia.time_expired_title" = "¡Se acabó el tiempo!";
+"trivia.time_expired_message" = "El tiempo para responder esta pregunta terminó.";
