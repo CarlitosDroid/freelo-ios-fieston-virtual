@@ -53,4 +53,12 @@ extension Color {
     static let loginMutedText = Color("LoginMutedText")
     static let loginLink = Color("LoginLink")
     static let chatPink = Color("ChatPink")
+    static let triviaTurquoise = Color(hex: "36FFC4")
+    static let triviaYellow = Color(hex: "FFD000")
+    static let triviaSelectedText = Color(hex: "071413")
+    static let triviaMutedText = Color(hex: "D8D8DC")
+    static let triviaQuestionText = Color(hex: "F2F1F4")
+    static let triviaAnswerText = Color(hex: "E4E1E7")
+    static let triviaOptionBackground = Color(hex: "101719")
+    static let triviaCardBackground = Color(hex: "1A2224")
 }

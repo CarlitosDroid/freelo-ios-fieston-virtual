@@ -27,7 +27,7 @@ struct TriviaPageView: View {
                             questionNumber,
                             totalQuestions
                         ),
-                        color: Color(hex: "36FFC4")
+                        color: Color.triviaTurquoise
                     )
 
                     Spacer()
@@ -37,7 +37,7 @@ struct TriviaPageView: View {
                             format: NSLocalizedString("trivia.time_remaining", comment: ""),
                             remainingSeconds
                         ),
-                        color: Color(hex: "FFD000"),
+                        color: Color.triviaYellow,
                         icon: "timer"
                     )
                 }
@@ -49,7 +49,7 @@ struct TriviaPageView: View {
                             .fill(Color.white.opacity(0.14))
 
                         Capsule()
-                            .fill(Color(hex: "36FFC4"))
+                            .fill(Color.triviaTurquoise)
                             .frame(
                                 width: progressGeometry.size.width
                                     * CGFloat(remainingSeconds) / CGFloat(questionDuration)
@@ -62,7 +62,7 @@ struct TriviaPageView: View {
 
                 Text(trivia.question)
                     .font(.system(size: 27, weight: .black, design: .rounded))
-                    .foregroundColor(Color(hex: "F2F1F4"))
+                    .foregroundColor(Color.triviaQuestionText)
                     .multilineTextAlignment(.center)
                     .lineSpacing(3)
                     .frame(maxWidth: .infinity)
@@ -159,32 +159,32 @@ private struct TriviaAlternativeButton: View {
             HStack(spacing: 16) {
                 Text(letter)
                     .font(.system(size: 15, weight: .black, design: .rounded))
-                    .foregroundColor(isSelected ? Color(hex: "071413") : Color(hex: "D8D8DC"))
+                    .foregroundColor(isSelected ? Color.triviaSelectedText : Color.triviaMutedText)
                     .frame(width: 43, height: 43)
                     .background(
                         RoundedRectangle(cornerRadius: 11)
-                            .fill(isSelected ? Color(hex: "36FFC4") : Color(hex: "101719"))
+                            .fill(isSelected ? Color.triviaTurquoise : Color.triviaOptionBackground)
                     )
 
                 Text(alternative.alternativeDescription)
                     .font(.system(size: 21, weight: .bold, design: .rounded))
-                    .foregroundColor(Color(hex: "E4E1E7"))
+                    .foregroundColor(Color.triviaAnswerText)
 
                 Spacer()
 
                 ZStack {
                     Circle()
-                        .stroke(isSelected ? Color(hex: "36FFC4") : Color.white.opacity(0.25), lineWidth: 1)
+                        .stroke(isSelected ? Color.triviaTurquoise : Color.white.opacity(0.25), lineWidth: 1)
                         .frame(width: 24, height: 24)
 
                     if isSelected {
                         Circle()
-                            .fill(Color(hex: "36FFC4"))
+                            .fill(Color.triviaTurquoise)
                             .frame(width: 24, height: 24)
 
                         Image(systemName: "checkmark")
                             .font(.system(size: 12, weight: .black))
-                            .foregroundColor(Color(hex: "071413"))
+                            .foregroundColor(Color.triviaSelectedText)
                     }
                 }
             }
@@ -193,16 +193,16 @@ private struct TriviaAlternativeButton: View {
             .frame(height: 78)
             .background(
                 RoundedRectangle(cornerRadius: 15)
-                    .fill(Color(hex: "1A2224").opacity(0.92))
+                    .fill(Color.triviaCardBackground.opacity(0.92))
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)
                             .stroke(
-                                isSelected ? Color(hex: "36FFC4") : Color.white.opacity(0.15),
+                                isSelected ? Color.triviaTurquoise : Color.white.opacity(0.15),
                                 lineWidth: isSelected ? 2 : 1
                             )
                     )
                     .shadow(
-                        color: isSelected ? Color(hex: "36FFC4").opacity(0.35) : .clear,
+                        color: isSelected ? Color.triviaTurquoise.opacity(0.35) : .clear,
                         radius: 12
                     )
             )
