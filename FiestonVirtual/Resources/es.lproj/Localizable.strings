@@ -65,6 +65,16 @@
 "home.card.trivia.title" = "TRIVIAS";
 "home.card.trivia.subtitle" = "Gana puntos";
 "home.card.trivia.badge" = "Pregunta activa";
+"ranking.title" = "Ranking en Vivo";
+"ranking.subtitle" = "FIESTÓN VIRTUAL";
+"ranking.prizes" = "Premios";
+"ranking.honor_title" = "Tabla de Honor";
+"ranking.description" = "Compite en juegos y bailes para alcanzar la cima";
+"ranking.score_badge" = "Tienes %1$@ pts · Puesto #3";
+"ranking.level" = "Nivel %d";
+"ranking.points" = "PTS";
+"ranking.current_leader" = "LÍDER ACTUAL";
+"ranking.online_status" = "Online · Rey de la Pista";
 "trivia.live_badge" = "EN VIVO • SALA PRINCIPAL";
 "trivia.title" = "TRIVIA";
 "trivia.subtitle" = "Demuestra tus conocimientos y llévate el\npremio de la fiesta.";

@@ -65,6 +65,16 @@
 "home.card.trivia.title" = "TRIVIA";
 "home.card.trivia.subtitle" = "Earn points";
 "home.card.trivia.badge" = "Active question";
+"ranking.title" = "Live Ranking";
+"ranking.subtitle" = "FIESTON VIRTUAL";
+"ranking.prizes" = "Prizes";
+"ranking.honor_title" = "Hall of Fame";
+"ranking.description" = "Compete in games and dances to reach the top";
+"ranking.score_badge" = "You have %1$@ pts · Rank #3";
+"ranking.level" = "Level %d";
+"ranking.points" = "PTS";
+"ranking.current_leader" = "CURRENT LEADER";
+"ranking.online_status" = "Online · King of the Track";
 "trivia.live_badge" = "LIVE • MAIN ROOM";
 "trivia.title" = "TRIVIA";
 "trivia.subtitle" = "Show what you know and win\nthe party prize.";
