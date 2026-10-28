@@ -65,3 +65,10 @@
 "home.card.trivia.title" = "TRIVIAS";
 "home.card.trivia.subtitle" = "Gana puntos";
 "home.card.trivia.badge" = "Pregunta activa";
+"trivia.live_badge" = "EN VIVO • SALA PRINCIPAL";
+"trivia.title" = "TRIVIA";
+"trivia.subtitle" = "Demuestra tus conocimientos y llévate el\npremio de la fiesta.";
+"trivia.players_now" = "84 personas jugando ahora";
+"trivia.time_per_question" = "Por pregunta";
+"trivia.party_prize" = "Premio fiesta";
+"trivia.play" = "JUGAR";
