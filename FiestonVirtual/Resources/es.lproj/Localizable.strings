@@ -44,6 +44,9 @@
 
 
 "welcome.continue" = "CONTINUAR";
+"welcome.title" = "Evento de prueba";
+"welcome.description" = "Bienvenido al evento.";
+"welcome.subtitle" = "Premio del evento";
 
 
 "home.now_playing.title" = "Sonando: Titi Me Preguntó - Bad Bunny";

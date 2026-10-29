@@ -80,7 +80,7 @@ struct WelcomeView: View {
                             }
 
                             VStack(spacing: compact ? 14 : 20) {
-                                Text(welcome.title)
+                                Text(NSLocalizedString("welcome.title", comment: "Welcome event title"))
                                     .font(
                                         .system(
                                             size: compact ? 22 : 26,
@@ -93,7 +93,7 @@ struct WelcomeView: View {
                                     .lineLimit(3)
                                     .minimumScaleFactor(0.7)
 
-                                Text(welcome.description)
+                                Text(NSLocalizedString("welcome.description", comment: "Welcome event description"))
                                     .font(
                                         .system(
                                             size: compact ? 15 : 17,
@@ -131,7 +131,7 @@ struct WelcomeView: View {
                                         .stroke(Color.loginCardBorder, lineWidth: 1)
                                 )
 
-                                Text(welcome.subtitle)
+                                Text(NSLocalizedString("welcome.subtitle", comment: "Welcome event prize"))
                                     .font(
                                         .system(
                                             size: compact ? 15 : 17,
