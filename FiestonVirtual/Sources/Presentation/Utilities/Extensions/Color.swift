@@ -14,15 +14,15 @@ extension Color {
         let scanner = Scanner(string: hex)
         var rgbValue: UInt64 = 0
         scanner.scanHexInt64(&rgbValue)
-        
+
         let r = (rgbValue & 0xff0000) >> 16
         let g = (rgbValue & 0xff00) >> 8
         let b = rgbValue & 0xff
-        
+
         self.init(red: Double(r) / 0xff, green: Double(g) / 0xff, blue: Double(b) / 0xff, opacity: 1)
-        
+
     }
-    
+
     static let deep_purple_intense = Color("DeepPurpleIntense")
     static let aquamarine = Color("Aquamarine")
     static let orange_500 = Color("Orange500")
@@ -61,4 +61,16 @@ extension Color {
     static let triviaAnswerText = Color(hex: "E4E1E7")
     static let triviaOptionBackground = Color(hex: "101719")
     static let triviaCardBackground = Color(hex: "1A2224")
+    static let rankingPrimaryText = Color(hex: "F7F5FA")
+    static let rankingSecondaryText = Color(hex: "C3BBD3")
+    static let rankingTurquoise = Color(hex: "36FFC4")
+    static let rankingYellow = Color(hex: "FFD000")
+    static let rankingPurple = Color(hex: "BBA7E8")
+    static let rankingHeaderBackground = Color(hex: "151A24")
+    static let rankingBadgeBackground = Color(hex: "27354A")
+    static let rankingRowBackground = Color(hex: "25204D")
+    static let rankingAvatarBackground = Color(hex: "202331")
+    static let rankingMutedText = Color(hex: "AAA6B4")
+    static let rankingSelectedText = Color(hex: "071413")
+    static let rankingLeaderStart = Color(hex: "5A3D57")
 }
