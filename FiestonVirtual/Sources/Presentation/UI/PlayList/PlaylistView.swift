@@ -12,6 +12,9 @@ struct PlaylistView: View {
 
     @State private var songs = [Song]()
     @State private var selectedCategory = 0
+    @StateObject private var musicPlayer = MusicMediaPlayer(
+        url: URL(string: "https://s3.amazonaws.com/kargopolov/kukushka.mp3")!
+    )
 
     private let categories = [
         "playlist.category.all",
@@ -48,6 +51,9 @@ struct PlaylistView: View {
         .navigationBarHidden(true)
         .onAppear {
             viewModel.getSongs()
+        }
+        .onDisappear {
+            musicPlayer.pause()
         }
         .onReceive(viewModel.$songs) { songs in
             self.songs = songs ?? []
@@ -113,65 +119,85 @@ struct PlaylistView: View {
     }
 
     private var nowPlayingCard: some View {
-        HStack(spacing: 14) {
-            VStack(alignment: .leading, spacing: 16) {
-                HStack(spacing: 8) {
-                    Circle()
-                        .fill(Color.loginBrandTurquoise)
-                        .frame(width: 12, height: 12)
-                    Text(NSLocalizedString("playlist.live", comment: "Live playlist status"))
-                        .font(.system(size: 15, weight: .bold, design: .rounded))
-                        .foregroundColor(Color.loginBrandTurquoise)
-                }
-
-                HStack(spacing: 14) {
-                    Image(systemName: "opticaldisc.fill")
-                        .font(.system(size: 38))
-                        .foregroundColor(Color.loginBrandYellow)
-                        .frame(width: 104, height: 104)
-                        .background(
-                            LinearGradient(
-                                colors: [Color.loginBrandPurple, Color.loginBrandYellow],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .clipShape(RoundedRectangle(cornerRadius: 18))
-
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(NSLocalizedString("playlist.now_playing", comment: "Now playing title"))
-                            .font(.system(size: 18, weight: .bold, design: .rounded))
-                            .foregroundColor(Color.loginTextPrimary)
-                            .lineLimit(2)
-
-                        Text(NSLocalizedString("playlist.now_playing_artist", comment: "Now playing artist"))
-                            .font(.system(size: 16, weight: .medium, design: .rounded))
-                            .foregroundColor(Color.loginBrandTurquoise)
-
-                        HStack(spacing: 8) {
-                            Text("0:00")
-                            Capsule()
-                                .fill(Color.loginBrandTurquoise)
-                                .frame(height: 7)
-                            Text("—")
-                        }
-                        .font(.system(size: 12, weight: .medium, design: .rounded))
-                        .foregroundColor(Color.loginMutedText)
-                    }
-                }
+        VStack(alignment: .leading, spacing: 16) {
+            HStack(spacing: 8) {
+                Circle()
+                    .fill(Color.loginBrandTurquoise)
+                    .frame(width: 12, height: 12)
+                Text(NSLocalizedString("playlist.live", comment: "Live playlist status"))
+                    .font(.system(size: 15, weight: .bold, design: .rounded))
+                    .foregroundColor(Color.loginBrandTurquoise)
             }
 
-            VStack(spacing: 4) {
-                Image(systemName: "chart.bar.fill")
+            HStack(spacing: 12) {
+                Image(systemName: "opticaldisc.fill")
+                    .font(.system(size: 34))
                     .foregroundColor(Color.loginBrandYellow)
-                Text(NSLocalizedString("playlist.bpm", comment: "Beats per minute"))
-                    .font(.system(size: 13, weight: .medium, design: .rounded))
+                    .frame(width: 92, height: 92)
+                    .background(
+                        LinearGradient(
+                            colors: [Color.loginBrandPurple, Color.loginBrandYellow],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 18))
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(NSLocalizedString("playlist.now_playing", comment: "Now playing title"))
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                        .foregroundColor(Color.loginTextPrimary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.75)
+
+                    Text(NSLocalizedString("playlist.now_playing_artist", comment: "Now playing artist"))
+                        .font(.system(size: 16, weight: .medium, design: .rounded))
+                        .foregroundColor(Color.loginBrandTurquoise)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.75)
+
+                    HStack(spacing: 8) {
+                        Button(action: {
+                            musicPlayer.togglePlayback()
+                        }) {
+                            Image(systemName: musicPlayer.isPlaying ? "pause.fill" : "play.fill")
+                                .font(.system(size: 12, weight: .bold))
+                                .foregroundColor(Color.loginButtonText)
+                                .frame(width: 26, height: 26)
+                                .background(Color.loginButtonBackground)
+                                .clipShape(Circle())
+                        }
+                        .buttonStyle(.plain)
+
+                        Text(formatTime(musicPlayer.currentTime))
+                            .frame(width: 34, alignment: .leading)
+
+                        ProgressView(value: musicPlayer.progress)
+                            .tint(Color.loginBrandTurquoise)
+                            .frame(maxWidth: .infinity)
+
+                        Text(formatTime(musicPlayer.duration))
+                            .frame(width: 34, alignment: .trailing)
+                    }
+                    .font(.system(size: 12, weight: .medium, design: .rounded))
                     .foregroundColor(Color.loginMutedText)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+                VStack(spacing: 4) {
+                    Image(systemName: "chart.bar.fill")
+                        .foregroundColor(Color.loginBrandYellow)
+                    Text(NSLocalizedString("playlist.bpm", comment: "Beats per minute"))
+                        .font(.system(size: 13, weight: .medium, design: .rounded))
+                        .foregroundColor(Color.loginMutedText)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+                }
+                .frame(width: 48)
+                .padding(.vertical, 8)
+                .background(Color.loginBadgeBackground.opacity(0.7))
+                .clipShape(Capsule())
             }
-            .padding(.horizontal, 10)
-            .padding(.vertical, 8)
-            .background(Color.loginBadgeBackground.opacity(0.7))
-            .clipShape(Capsule())
         }
         .padding(16)
         .background(
@@ -250,11 +276,11 @@ struct PlaylistView: View {
     }
 
     private func songRow(_ song: Song, index: Int) -> some View {
-        HStack(spacing: 14) {
+        HStack(spacing: 10) {
             Image(systemName: index.isMultiple(of: 2) ? "music.note" : "waveform")
                 .font(.system(size: 27, weight: .bold))
                 .foregroundColor(Color.loginTextPrimary)
-                .frame(width: 70, height: 70)
+                .frame(width: 62, height: 62)
                 .background(songColor(index))
                 .clipShape(RoundedRectangle(cornerRadius: 16))
 
@@ -263,18 +289,19 @@ struct PlaylistView: View {
                     .font(.system(size: 18, weight: .bold, design: .rounded))
                     .foregroundColor(Color.loginTextPrimary)
                     .lineLimit(1)
+                    .minimumScaleFactor(0.7)
 
                 Text(song.band)
                     .font(.system(size: 16, weight: .medium, design: .rounded))
                     .foregroundColor(Color.loginBrandTurquoise)
                     .lineLimit(1)
+                    .minimumScaleFactor(0.7)
 
                 Text(NSLocalizedString("playlist.duration_unavailable", comment: "Unavailable song duration"))
                     .font(.system(size: 13, weight: .medium, design: .rounded))
                     .foregroundColor(Color.loginMutedText)
             }
-
-            Spacer(minLength: 4)
+            .frame(maxWidth: .infinity, alignment: .leading)
 
             Button(action: {
                 viewModel.requestSongUseCase(idPlaylist: song.id)
@@ -287,10 +314,14 @@ struct PlaylistView: View {
                             comment: "Request song button"
                         )
                     )
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
+                    .fixedSize(horizontal: false, vertical: true)
                 }
                 .font(.system(size: 14, weight: .bold, design: .rounded))
                 .foregroundColor(song.requested ? Color.loginBrandTurquoise : Color.loginButtonText)
-                .padding(.horizontal, 14)
+                .padding(.horizontal, 10)
+                .frame(width: 112)
                 .frame(height: 48)
                 .background(song.requested ? Color.clear : Color.loginButtonBackground)
                 .overlay(
@@ -304,7 +335,7 @@ struct PlaylistView: View {
             }
             .buttonStyle(.plain)
         }
-        .padding(14)
+        .padding(12)
         .background(Color.loginCardBackground.opacity(0.72))
         .overlay(
             RoundedRectangle(cornerRadius: 22)
@@ -325,6 +356,12 @@ struct PlaylistView: View {
         ]
         let selected = colors[index % colors.count]
         return LinearGradient(colors: selected, startPoint: .topLeading, endPoint: .bottomTrailing)
+    }
+
+    private func formatTime(_ seconds: Double) -> String {
+        guard seconds.isFinite, seconds >= 0 else { return "0:00" }
+        let totalSeconds = Int(seconds)
+        return String(format: "%d:%02d", totalSeconds / 60, totalSeconds % 60)
     }
 }
 
