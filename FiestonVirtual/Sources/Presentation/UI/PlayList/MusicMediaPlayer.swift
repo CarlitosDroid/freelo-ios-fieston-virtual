@@ -8,11 +8,10 @@ final class MusicMediaPlayer: ObservableObject {
     @Published private(set) var currentTime = Double.zero
     @Published private(set) var duration = Double.zero
 
-    private let player: AVPlayer
+    private var player = AVPlayer()
     private var timeObserverToken: Any?
 
-    init(url: URL) {
-        player = AVPlayer(url: url)
+    init() {
         configureAudioSession()
         addPeriodicObserver()
     }
@@ -24,6 +23,7 @@ final class MusicMediaPlayer: ObservableObject {
     }
 
     func play() {
+        guard player.currentItem != nil else { return }
         player.play()
         isPlaying = true
     }
@@ -35,6 +35,14 @@ final class MusicMediaPlayer: ObservableObject {
 
     func togglePlayback() {
         isPlaying ? pause() : play()
+    }
+
+    func load(url: URL) {
+        pause()
+        player.replaceCurrentItem(with: AVPlayerItem(url: url))
+        currentTime = 0
+        duration = 0
+        progress = 0
     }
 
     private func configureAudioSession() {

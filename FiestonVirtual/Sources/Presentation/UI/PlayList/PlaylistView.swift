@@ -12,9 +12,8 @@ struct PlaylistView: View {
 
     @State private var songs = [Song]()
     @State private var selectedCategory = 0
-    @StateObject private var musicPlayer = MusicMediaPlayer(
-        url: URL(string: "https://s3.amazonaws.com/kargopolov/kukushka.mp3")!
-    )
+    @State private var nowPlayingSong: Song?
+    @StateObject private var musicPlayer = MusicMediaPlayer()
 
     private let categories = [
         "playlist.category.all",
@@ -57,11 +56,18 @@ struct PlaylistView: View {
         }
         .onReceive(viewModel.$songs) { songs in
             self.songs = songs ?? []
+            if nowPlayingSong == nil, let firstSong = songs?.first {
+                nowPlayingSong = firstSong
+                loadSong(firstSong)
+            }
         }
         .onReceive(viewModel.$song) { requestedSong in
             guard let requestedSong else { return }
             guard let index = songs.firstIndex(where: { $0.id == requestedSong.id }) else { return }
             songs[index].requested = requestedSong.requested
+            if nowPlayingSong?.id == requestedSong.id {
+                nowPlayingSong = requestedSong
+            }
         }
         .alert(isPresented: $viewModel.showErrorMessage) {
             Alert(
@@ -144,13 +150,13 @@ struct PlaylistView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 18))
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(NSLocalizedString("playlist.now_playing", comment: "Now playing title"))
+                    Text(nowPlayingSong?.title ?? NSLocalizedString("playlist.now_playing", comment: "Now playing title"))
                         .font(.system(size: 18, weight: .bold, design: .rounded))
                         .foregroundColor(Color.loginTextPrimary)
                         .lineLimit(1)
                         .minimumScaleFactor(0.75)
 
-                    Text(NSLocalizedString("playlist.now_playing_artist", comment: "Now playing artist"))
+                    Text(nowPlayingSong?.band ?? NSLocalizedString("playlist.now_playing_artist", comment: "Now playing artist"))
                         .font(.system(size: 16, weight: .medium, design: .rounded))
                         .foregroundColor(Color.loginBrandTurquoise)
                         .lineLimit(1)
@@ -345,6 +351,20 @@ struct PlaylistView: View {
                 )
         )
         .clipShape(RoundedRectangle(cornerRadius: 22))
+        .contentShape(RoundedRectangle(cornerRadius: 22))
+        .onTapGesture {
+            loadSong(song)
+        }
+    }
+
+    private func loadSong(_ song: Song) {
+        nowPlayingSong = song
+        guard let urlString = song.playListURL,
+              let url = URL(string: urlString) else {
+            musicPlayer.pause()
+            return
+        }
+        musicPlayer.load(url: url)
     }
 
     private func songColor(_ index: Int) -> LinearGradient {
