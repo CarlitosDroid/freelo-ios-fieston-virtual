@@ -28,7 +28,7 @@ class RequestSongUseCaseImpl : RequestSongUseCase {
             
         case .failure(let error):
             return Just(
-                Song(id: 0, title: "", band: "", requested: false)
+                Song(id: 0, title: "", band: "", playListURL: nil, requested: false)
             )
             .mapError({ (_) in
                 ErrorResponse(code: 1, title: "", message: error.localizedDescription)

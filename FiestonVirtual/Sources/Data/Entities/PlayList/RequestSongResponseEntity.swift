@@ -22,6 +22,7 @@ struct ChildRequestSongResponseEntity : Decodable {
     let idPlaylist: Int
     let playlistSong, playlistBand, playlistRegistrationDate: String
     let playlistStatus: Bool
+    let playListURL: String?
     
     enum CodingKeys: String, CodingKey {
         case idPlaylist
@@ -29,5 +30,6 @@ struct ChildRequestSongResponseEntity : Decodable {
         case playlistBand
         case playlistRegistrationDate
         case playlistStatus
+        case playListURL
     }
 }
