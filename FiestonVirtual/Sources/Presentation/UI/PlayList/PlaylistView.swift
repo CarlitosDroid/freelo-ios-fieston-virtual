@@ -281,37 +281,48 @@ struct PlaylistView: View {
         .padding(.top, 28)
     }
 
+    @ViewBuilder
     private func songRow(_ song: Song, index: Int) -> some View {
+        let isPlaying = nowPlayingSong?.id == song.id
+
         HStack(spacing: 10) {
-            Image(systemName: index.isMultiple(of: 2) ? "music.note" : "waveform")
-                .font(.system(size: 27, weight: .bold))
-                .foregroundColor(Color.loginTextPrimary)
-                .frame(width: 62, height: 62)
-                .background(songColor(index))
-                .clipShape(RoundedRectangle(cornerRadius: 16))
+            Button {
+                loadSong(song)
+            } label: {
+                HStack(spacing: 10) {
+                    Image(systemName: index.isMultiple(of: 2) ? "music.note" : "waveform")
+                        .font(.system(size: 27, weight: .bold))
+                        .foregroundColor(Color.loginTextPrimary)
+                        .frame(width: 62, height: 62)
+                        .background(songColor(index))
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
 
-            VStack(alignment: .leading, spacing: 3) {
-                Text(song.title)
-                    .font(.system(size: 18, weight: .bold, design: .rounded))
-                    .foregroundColor(Color.loginTextPrimary)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(song.title)
+                            .font(.system(size: 18, weight: .bold, design: .rounded))
+                            .foregroundColor(Color.loginTextPrimary)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
 
-                Text(song.band)
-                    .font(.system(size: 16, weight: .medium, design: .rounded))
-                    .foregroundColor(Color.loginBrandTurquoise)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.7)
+                        Text(song.band)
+                            .font(.system(size: 16, weight: .medium, design: .rounded))
+                            .foregroundColor(Color.loginBrandTurquoise)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
 
-                Text(NSLocalizedString("playlist.duration_unavailable", comment: "Unavailable song duration"))
-                    .font(.system(size: 13, weight: .medium, design: .rounded))
-                    .foregroundColor(Color.loginMutedText)
+                        Text(NSLocalizedString("playlist.duration_unavailable", comment: "Unavailable song duration"))
+                            .font(.system(size: 13, weight: .medium, design: .rounded))
+                            .foregroundColor(Color.loginMutedText)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                }
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .buttonStyle(.plain)
+            .contentShape(Rectangle())
 
-            Button(action: {
+            Button {
                 viewModel.requestSongUseCase(idPlaylist: song.id)
-            }) {
+            } label: {
                 HStack(spacing: 6) {
                     Image(systemName: song.requested ? "checkmark.circle" : "text.badge.plus")
                     Text(
@@ -325,36 +336,33 @@ struct PlaylistView: View {
                     .fixedSize(horizontal: false, vertical: true)
                 }
                 .font(.system(size: 14, weight: .bold, design: .rounded))
-                .foregroundColor(song.requested ? Color.loginBrandTurquoise : Color.loginButtonText)
+                .foregroundColor(isPlaying ? Color.loginButtonText : Color.loginBrandTurquoise)
                 .padding(.horizontal, 10)
                 .frame(width: 112)
                 .frame(height: 48)
-                .background(song.requested ? Color.clear : Color.loginButtonBackground)
+                .background(isPlaying ? Color.loginButtonBackground : Color.clear)
                 .overlay(
                     Capsule()
                         .stroke(
-                            song.requested ? Color.loginBrandTurquoise : Color.clear,
+                            isPlaying ? Color.clear : Color.loginBrandTurquoise,
                             lineWidth: 1
                         )
                 )
                 .clipShape(Capsule())
             }
-            .buttonStyle(.plain)
+            .contentShape(Capsule())
+            .buttonStyle(PlaylistRequestButtonStyle())
         }
         .padding(12)
         .background(Color.loginCardBackground.opacity(0.72))
         .overlay(
             RoundedRectangle(cornerRadius: 22)
                 .stroke(
-                    song.requested ? Color.loginBrandTurquoise.opacity(0.8) : Color.loginMutedText.opacity(0.25),
+                    isPlaying ? Color.loginBrandTurquoise.opacity(0.8) : Color.loginMutedText.opacity(0.25),
                     lineWidth: 1
                 )
         )
         .clipShape(RoundedRectangle(cornerRadius: 22))
-        .contentShape(RoundedRectangle(cornerRadius: 22))
-        .onTapGesture {
-            loadSong(song)
-        }
     }
 
     private func loadSong(_ song: Song) {
@@ -382,6 +390,15 @@ struct PlaylistView: View {
         guard seconds.isFinite, seconds >= 0 else { return "0:00" }
         let totalSeconds = Int(seconds)
         return String(format: "%d:%02d", totalSeconds / 60, totalSeconds % 60)
+    }
+}
+
+private struct PlaylistRequestButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.94 : 1)
+            .opacity(configuration.isPressed ? 0.7 : 1)
+            .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
     }
 }
 
