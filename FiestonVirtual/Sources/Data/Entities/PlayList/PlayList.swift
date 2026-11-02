@@ -8,5 +8,6 @@ struct PlayList : Decodable {
     let playlistRegistrationDate: String
     let playlistSong: String
     let playlistStatus: Bool
+    let playListURL: String?
     
 }
