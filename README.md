@@ -37,6 +37,10 @@ el resto de la comunidad.
 
 <img src="Screenshots/welcome.png" alt="Pantalla de bienvenida" width="45%">
 
+### Home
+
+<img src="Screenshots/home.png" alt="Pantalla principal del evento" width="45%">
+
 ### Actividades del evento
 
 <div style="display: flex; gap: 10px;">
