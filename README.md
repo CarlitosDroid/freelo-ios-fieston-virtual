@@ -45,6 +45,13 @@ el resto de la comunidad.
 
 <img src="Screenshots/gallery.png" alt="Galería del evento" width="45%">
 
+### Foto y Chat
+
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/photo.png" alt="Pantalla para compartir fotos y vídeos" width="45%">
+    <img src="Screenshots/chat.png" alt="Chat del evento" width="45%">
+</div>
+
 ---
 
 # 🏗 Arquitectura
