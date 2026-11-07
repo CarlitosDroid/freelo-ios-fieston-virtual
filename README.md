@@ -64,6 +64,10 @@ el resto de la comunidad.
     <img src="Screenshots/play-trivia.png" alt="Pantalla de preguntas de Trivia" width="45%">
 </div>
 
+### Playlist
+
+<img src="Screenshots/playlist.png" alt="Playlist del evento" width="45%">
+
 ---
 
 # 🏗 Arquitectura
