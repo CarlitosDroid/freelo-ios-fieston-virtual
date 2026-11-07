@@ -26,12 +26,9 @@ el resto de la comunidad.
 
 # 📸 Experiencia visual
 
-### Identidad y acceso
+### Login
 
-<div style="display: flex; gap: 10px;">
-    <img src="FiestonVirtual/Resources/Assets.xcassets/Fieston.imageset/LogoFieston.png" alt="Logo de Fiestón Virtual" width="45%">
-    <img src="FiestonVirtual/Resources/Assets.xcassets/IconoFieston.imageset/IconoFieston.png" alt="Icono de Fiestón Virtual" width="45%">
-</div>
+<img src="Screenshots/login.png" alt="Pantalla de login de Fiestón Virtual" width="45%">
 
 ### Actividades del evento
 
