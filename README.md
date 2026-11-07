@@ -68,6 +68,10 @@ el resto de la comunidad.
 
 <img src="Screenshots/playlist.png" alt="Playlist del evento" width="45%">
 
+### Cerrar sesión
+
+<img src="Screenshots/logout.png" alt="Confirmación para cerrar sesión" width="45%">
+
 ---
 
 # 🏗 Arquitectura
