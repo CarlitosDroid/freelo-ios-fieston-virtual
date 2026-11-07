@@ -26,9 +26,12 @@ el resto de la comunidad.
 
 # 📸 Experiencia visual
 
-### Login
+### Identidad y acceso
 
-<img src="Screenshots/login.png" alt="Pantalla de login de Fiestón Virtual" width="45%">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/login.png" alt="Pantalla de Login" width="45%">
+    <img src="Screenshots/register.png" alt="Pantalla de registro" width="45%">
+</div>
 
 ### Actividades del evento
 
