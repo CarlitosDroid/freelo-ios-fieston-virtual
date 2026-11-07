@@ -57,6 +57,10 @@ el resto de la comunidad.
     <img src="Screenshots/chat.png" alt="Chat del evento" width="45%">
 </div>
 
+### Trivia
+
+<img src="Screenshots/trivia.png" alt="Trivia del evento" width="45%">
+
 ---
 
 # 🏗 Arquitectura
