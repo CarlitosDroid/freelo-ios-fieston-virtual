@@ -33,13 +33,13 @@ el resto de la comunidad.
     <img src="Screenshots/register.png" alt="Pantalla de registro" width="45%">
 </div>
 
+### Welcome
+
+<img src="Screenshots/welcome.png" alt="Pantalla de bienvenida" width="45%">
+
 ### Actividades del evento
 
 <div style="display: flex; gap: 10px;">
-    <img src="FiestonVirtual/Resources/Assets.xcassets/HomeChat.imageset/home_chat.png" alt="Chat del evento" width="22%">
-    <img src="FiestonVirtual/Resources/Assets.xcassets/HomeFotos.imageset/home_fotos.png" alt="Galería de fotos" width="22%">
-    <img src="FiestonVirtual/Resources/Assets.xcassets/HomePlaylist.imageset/home_playlist.png" alt="Playlist del evento" width="22%">
-    <img src="FiestonVirtual/Resources/Assets.xcassets/HomeTrivia.imageset/home_trivia.png" alt="Trivia del evento" width="22%">
 </div>
 
 ---
