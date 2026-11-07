@@ -59,7 +59,10 @@ el resto de la comunidad.
 
 ### Trivia
 
-<img src="Screenshots/trivia.png" alt="Trivia del evento" width="45%">
+<div style="display: flex; gap: 10px;">
+    <img src="Screenshots/trivia.png" alt="Pantalla de Trivia" width="45%">
+    <img src="Screenshots/play-trivia.png" alt="Pantalla de preguntas de Trivia" width="45%">
+</div>
 
 ---
 
