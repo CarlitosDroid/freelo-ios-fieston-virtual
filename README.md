@@ -41,10 +41,9 @@ el resto de la comunidad.
 
 <img src="Screenshots/home.png" alt="Pantalla principal del evento" width="45%">
 
-### Actividades del evento
+### Galería
 
-<div style="display: flex; gap: 10px;">
-</div>
+<img src="Screenshots/gallery.png" alt="Galería del evento" width="45%">
 
 ---
 
